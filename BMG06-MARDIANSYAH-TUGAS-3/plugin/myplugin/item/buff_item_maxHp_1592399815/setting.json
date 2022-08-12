@@ -1,0 +1,23 @@
+{
+		"itemname":"max_hp",
+		"itembuff":"myplugin\/maxHp_self_1_1592399815",
+		"editBaseFunc":"buff_item_maxHp",
+		"basePropDesc":{
+			"max_hp_bonus":[
+				5
+			]
+		},
+		"icon2":"maxHp2.png",
+		"icon_path":"plugin\/myplugin\/item\/buff_item_maxHp\/maxHp_self2.png",
+		"desc":"{max_hp_bonus}5\n",
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"forTeam":false,
+		"icon":"set:buff_icon.json image:maxHp_self2.png"
+	}

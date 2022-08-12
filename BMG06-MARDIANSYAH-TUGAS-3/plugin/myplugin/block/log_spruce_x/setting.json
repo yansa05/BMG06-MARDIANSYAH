@@ -1,0 +1,217 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/log_spruce_x",
+          "block:myplugin/log_spruce_x",
+          "myplugin/log_spruce_x_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/tree_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": true,
+  "blockType": "wood",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/log_spruce_x",
+      "block:myplugin/log_spruce_x",
+      "myplugin/log_spruce_x_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "itemname": "myplugin/log_spruce_x_itemname",
+  "lightOpacity": 15,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        }
+      ],
+      "texture": "log_spruce_log_spruce_x.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        }
+      ],
+      "texture": "log_spruce_log_spruce_x.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "log_spruce_log_spruce_x.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      ],
+      "texture": "log_spruce_log_spruce_x.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        }
+      ],
+      "texture": "log_spruce_top_log_spruce_x.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      ],
+      "texture": "log_spruce_top_log_spruce_x.png"
+    }
+  ],
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

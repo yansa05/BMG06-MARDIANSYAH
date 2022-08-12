@@ -1,0 +1,29 @@
+{
+		"icon_path":"set:buff_icon.json image:deDamage_self.png",
+		"itemname":"deDamage_attach",
+		"icon2":"item_deDamage.png",
+		"forTeam":true,
+		"itemintroduction":"item.deDamage_1.intro",
+		"desc":"{defense_bonus}3\n{队伍}true\n",
+		"icon":"set:buff_icon.json image:deDamage_self.png",
+		"isAttach":true,
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"buff_item_deDamage_1",
+		"attachBuff":"myplugin\/deDamage1_1590639783",
+		"statusFuncName":"IsUsing",
+		"basePropDesc":{
+			"defense_bonus":[
+				3
+			],
+			"队伍":[
+				true
+			]
+		}
+	}

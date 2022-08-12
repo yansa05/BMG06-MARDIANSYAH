@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/redstone_wire_0",
+            "block:myplugin/redstone_wire_0",
+            "redstone_wire_0"
+        ]
+    ],
+    "isOpaqueFullCube": false,
+    "breakTime": 20,
+    "editBaseFunc": "block_breakTime",
+    "texture": [
+        "redstone_dust_cross_overlay.png",
+        "redstone_dust_cross.png",
+        "redstone_dust_cross.png",
+        "redstone_dust_cross.png",
+        "redstone_dust_cross.png",
+        "redstone_dust_cross.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

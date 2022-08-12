@@ -1,0 +1,60 @@
+{
+    "Editor_NameKey": "tr.13872",
+    "iconArea": {
+        "HA": -60,
+        "VA": -300
+    },
+    "buffTime": 0,
+    "castAction": null,
+    "container": null,
+    "damage": 0,
+    "frontSight": null,
+    "hurtDistance": 0,
+    "maxSustainTime": 0,
+    "minSustainTime": 0,
+    "range": 999,
+    "startFrom": "foot",
+    "startPitch": [
+        0
+    ],
+    "startWait": [
+        0
+    ],
+    "targetType": null,
+    "throwDistance": 0,
+    "triggers": null,
+    "type": "Reload",
+	"reloadTime" : 40,
+	"progress": {
+		"image": "set:bed_mainui_icon.json image:icon_missile_act.png",
+		"size": [70, 70]
+	},
+	"castSound": {
+        "loop": false,
+        "selfOnly": false,
+        "sound": "Load_Pistol.mp3",
+        "volume": 1
+    },
+    "icon":true,
+    "showImage": {
+      "image":{
+        "name":"bed_mainui_icon/icon_missile_nor"
+      }, 
+      "resourceGroup":"gameres" 
+    },
+    "pushImage": {
+      "image":{
+        "name":"bed_mainui_icon/icon_missile_act"
+      }, 
+      "resourceGroup":"gameres" 
+    },
+    "customizeSkill":true,
+    "verticalAlignment":1,
+    "horizontalAlignment":2,
+    "area":[
+        [0,-205],
+        [0, 135],
+        [0, 86],
+        [0, 86]
+    ]
+}

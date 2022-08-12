@@ -1,0 +1,11 @@
+{
+  "extraHp": {
+    "flashBeforeMissing": 60,
+    "hp": 4.0
+  },
+  "recoverHpStepByStep": {
+    "interval": 20,
+    "step": 1,
+    "times": 4.0
+  }
+}

@@ -1,0 +1,91 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/torch_east",
+            "block:myplugin/torch_east",
+            "torch_east"
+        ]
+    ],
+    "isOpaqueFullCube": false,
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0.5,
+                    "x": 0.5,
+                    "y": 0
+                },
+                {
+                    "z": 0.5,
+                    "x": 1,
+                    "y": 0.5
+                },
+                {
+                    "z": 0.5,
+                    "x": 0.5,
+                    "y": 1
+                },
+                {
+                    "z": 0.5,
+                    "x": 0,
+                    "y": 0.5
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "defaultTexture": "/block/torch/torch_on.png",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "editBaseFunc": "block_breakTime",
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

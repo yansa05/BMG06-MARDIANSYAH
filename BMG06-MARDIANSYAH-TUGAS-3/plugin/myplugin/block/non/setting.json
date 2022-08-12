@@ -1,0 +1,26 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/non",
+            "block:myplugin/non",
+            "non"
+        ]
+    ],
+    "renderable": false,
+    "breakTime": -1,
+    "isOpaqueFullCube": false,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "editBaseFunc": "block_breakTime",
+    "base": "base_block",
+    "lightOpacity": 0
+}

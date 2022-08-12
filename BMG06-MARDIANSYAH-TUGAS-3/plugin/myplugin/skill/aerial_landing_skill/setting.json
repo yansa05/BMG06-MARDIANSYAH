@@ -1,0 +1,6 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "idle",
+    "effectPath": "plugin\/myplugin\/skill\/aerial_landing_skill\/Burst_mario_jump.effect"
+}

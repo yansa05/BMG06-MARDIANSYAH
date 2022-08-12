@@ -1,0 +1,61 @@
+{
+  "attachType": [
+    "deDamage"
+  ],
+  "auto_equip_by_bts": true,
+  "base": "equip_base",
+  "baseDesc": "myplugin/equip_leather_leggings_base_desc",
+  "basePropDesc": {
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      1
+    ],
+    "props_jump": [
+      0
+    ],
+    "props_max_hp": [
+      0
+    ],
+    "props_shield_bonus": [
+      0
+    ]
+  },
+  "candrop": false,
+  "changeGroup": [
+    "equip_red_leggings",
+    "equip_yellow_leggings",
+    "equip_green_leggings",
+    "equip_blue_leggings"
+  ],
+  "desc": "{myplugin/equip_leather_leggings_base_desc}\n{props_defense_bonus}1\n",
+  "droplifetime": 1000,
+  "equip_buff": "myplugin/item_buff_equip_leather_leggings[equip_buff",
+  "equip_skin": {
+    "armor_thigh": "leather"
+  },
+  "equipTemporaryShield": 0,
+  "icon": "leather_leggings.png",
+  "itemintroduction": "item.leather_leggings.intro",
+  "itemname": "myplugin/equip_leather_leggings_itemname",
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 0.7,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  },
+  "quality": 0,
+  "stack_count_max": 1,
+  "tray": [
+    3
+  ]
+}

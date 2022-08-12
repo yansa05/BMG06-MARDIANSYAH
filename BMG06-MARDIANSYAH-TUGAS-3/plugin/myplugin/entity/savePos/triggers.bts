@@ -1,0 +1,25 @@
+ENTITY_ENTER {
+	$pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+	$regionCfg = GetConfigVar(obj = $obj1, key = "regionCfg")
+	$min = GetConfigVar(obj = $obj1, key = "min")
+	$max = GetConfigVar(obj = $obj1, key = "max")
+	$key = GetConfigVar(obj = $obj1, key = "key")
+	$region = Table(
+		min = ComputeV3(op = "sub", p1 = $pos, p2 = $min),
+		max = ComputeV3(op = "add", p1 = $pos, p2 = $max)
+	)
+	If(not @regionIndex){
+		@regionIndex = 0
+	}
+	@regionIndex = Compute(op = "add", p1 = @regionIndex, p2 = 1)
+	$key = Concat(p1 = $key, p2 = @regionIndex)
+	$region = AddRegion(map = $map, key = $key, region = $region, regionCfg = $regionCfg, obj1 = $obj1)
+	$region.owner = $obj1
+	AddEntityBuff(cfg = "myplugin/save_pos_before", entity = $obj1)
+}
+
+CHANGE_ACTOR {
+	ChangeEntityActor(entity = $obj1, name = GetConfigVar(obj = $obj1, key = "changeActorName"))
+	AddEntityBuff(cfg = "myplugin/save_pos_before", entity = $obj1)
+}

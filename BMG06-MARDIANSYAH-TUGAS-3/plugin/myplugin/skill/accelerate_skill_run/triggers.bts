@@ -1,0 +1,26 @@
+SKILL_CAST(){ -- 点击切换移动状态
+
+    RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_walk")
+    RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_run")
+
+    $propMaxVp = GetProps(entity = $obj1, key = "maxVp") or 0
+    $entityCurVp = GetEntityCurVp(entity = $obj1)
+    If(IsOpenSpintSkill(player = $obj1) and $entityCurVp > $propMaxVp * 0.3){
+        $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")
+        If(not $buff){
+            AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_buff")
+        }
+        AddSkill(entity = $obj1, name = "myplugin/accelerate_skill_sprint")
+
+        CastSkill(skill = "myplugin/moving_change_skill_1" ,from = $obj1 ,packet = {needPre = true})
+    }
+    Else{
+        $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")
+        If($buff){
+            RemoveEntityBuff(entity = $obj1, buff = $buff)
+        }
+        AddSkill(entity = $obj1, name = "myplugin/accelerate_skill_walk")
+        UpdateMovingStyle(entity = $obj1, movingStyle = 0)
+        CastSkill(skill = "myplugin/moving_change_skill_1" ,from = $obj1 ,packet = {needPre = true})
+    }
+}

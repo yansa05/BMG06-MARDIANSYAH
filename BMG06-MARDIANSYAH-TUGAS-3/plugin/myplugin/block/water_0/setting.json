@@ -1,0 +1,27 @@
+{
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "isOpaqueFullCube": false,
+    "texture": [
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png"
+    ],
+    "canBreak": false,
+    "emitLightInMaxLightMode": true,
+    "waterCfg": {
+        "dir": 4,
+        "heigh": 7
+    },
+	"blockType": "water",
+    "focusable": false,
+    "renderPass": 5,
+    "lightOpacity": 0,
+    "clickPenetrate": true,
+	"canSwim": true,
+    "willLodCull": false,
+    "base": "base_block"
+}

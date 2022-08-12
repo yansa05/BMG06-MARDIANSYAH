@@ -1,0 +1,96 @@
+{
+    "attachType": [
+        "pressing"
+    ],
+    "base": "tool_base",
+    "baseDesc": "myplugin/shear_base_desc",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            0
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_effectiveness": [
+            0.2
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "boundingVolume": {
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "type": "Box"
+    },
+    "canAbandon": true,
+    "candrop": true,
+    "desc": "{myplugin/shear_base_desc}\n{props_effectiveness}0.2\n",
+    "droplifetime": 100,
+    "dropSpeed": 0.1,
+    "editBaseFunc": "toolPropEdit",
+    "editBuffList": "toolBuffList",
+    "effAllBlock": 0.2,
+    "effTypeBlock": {
+        "wool": 0.4
+    },
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_shear[handBuff",
+    "icon": "shear.png",
+    "isAddItem": true,
+    "itemintroduction": "item.shear.intro",
+    "itemname": "myplugin/shear_itemname",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "stack_count_max": 1,
+    "mesh": "jiandao.mesh",
+    "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 90,
+        "rotateZ": -120,
+        "scale": 0.1,
+        "translate": {
+            "x": 0,
+            "y": 0.5,
+            "z": 1.5
+        }
+    },
+    "matItem_third": {
+        "rotateX": -5,
+        "rotateY": 270,
+        "rotateZ": 630,
+        "scale": 0.2,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.2,
+        "rotateX": 450,
+        "translate": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+        }
+    }
+}

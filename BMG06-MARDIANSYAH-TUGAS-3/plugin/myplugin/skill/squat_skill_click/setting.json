@@ -1,0 +1,10 @@
+{
+    "type": "Any",
+    "cdTime": 10,
+	"startSound": {
+        "volumn": 5,
+        "selfOnly": true,
+        "loop": false,
+        "sound": "squat_skill_click.mp3"
+    }
+}

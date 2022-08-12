@@ -1,0 +1,16 @@
+{
+  "targetType": "Camera",
+  "startFrom": "head",
+  "type": "Missile",
+  "missileCfg":"myplugin/tnt_missile",
+  "startPitch": [
+    10
+  ],
+  "priority": 1,
+  "frontSight":"myplugin/frontsight_1",
+  "startPos": {
+    "x": 0,
+    "y": -0.1,
+    "z": -0.85
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "baseDesc": "myplugin/gun",
+  "basePropDesc": {
+    "gunCapacity": [
+      true
+    ],
+    "initCapacity": [
+      16
+    ],
+    "maxCapacity": [
+      64
+    ],
+    "props_attack": [
+      21
+    ]
+  },
+  "boundingVolume": {
+    "params": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "type": "Box"
+  },
+  "canAbandon": true,
+  "candrop": true,
+  "container": {
+    "gunCapacity": true,
+    "initCapacity": 16,
+    "maxCapacity": 64,
+    "reloadName": "myplugin/gun_paodan_bullet",
+    "reloadType": "Item"
+  },
+  "desc": "{myplugin/gun}\n{initCapacity}16\n{maxCapacity}64\n{gunCapacity}\n{props_attack}21\n",
+  "editBaseFunc": "gunPropEdit",
+  "handBuff": "myplugin/gun_explosive_terminator_hand_buff",
+  "icon": "gun_explosive_terminator.png",
+  "isAddItem": true,
+  "itemname": "myplugin/explosive_terminator",
+  "mesh": "gun_explosive_terminator.mesh",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "skill": [
+    "myplugin/gun_explosive_terminator_attack",
+    "myplugin/snipe_reload"
+  ],
+  "stack_count_max": 1
+}

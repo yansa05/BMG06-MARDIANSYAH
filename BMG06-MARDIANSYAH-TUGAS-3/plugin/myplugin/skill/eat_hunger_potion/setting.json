@@ -1,0 +1,15 @@
+{
+  "type": "UseItem",
+  "startAction": "eat",
+  "castAction": "",
+  "cdTime": 3,
+  "startSound": {
+    "loop": true,
+    "selfOnly": true,
+    "sound": "eat.mp3",
+    "path": "plugin/myplugin/sound/drink.mp3",
+    "volume": 0.5
+  },
+  "isTouch": true,
+  "touchTime": 40
+}

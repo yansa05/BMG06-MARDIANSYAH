@@ -1,0 +1,1 @@
+{"cdTime":5,"hurtDistance":0.1,"damage":5,"range":999,"missileCount":1,"buffTime":null,"startPitch":[0],"startWait":[0],"castAction":"attack","type":"MeleeAttack","startFrom":"","targetType":"Any","Editor_NameKey":"tr.10723","buffCfg":"myplugin/4","triggers":[{"type":"SKILL_CAST","actions":[]}]}

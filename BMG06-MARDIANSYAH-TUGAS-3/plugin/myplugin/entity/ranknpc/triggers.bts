@@ -1,0 +1,8 @@
+ENTITY_CLICK {
+	ShowRank(rankType = 2, entity = $obj2, npc = $obj1, uiName = "world_rank")
+}
+
+ENTITY_ENTER 
+{
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/hand_point_effect")
+}

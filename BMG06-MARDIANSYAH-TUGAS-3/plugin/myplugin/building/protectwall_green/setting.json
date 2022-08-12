@@ -1,0 +1,16 @@
+{
+	"offset": [0,0,0],
+	"blocks":[
+		{ "pos":[0, 0, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[-2, 1, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[-1, 1, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[0, 1, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[1, 1, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[2, 1, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[-2, 2, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[-1, 2, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[0, 2, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[1, 2, 0], "blockName": "myplugin/wool_5" }, 
+		{ "pos":[2, 2, 0], "blockName": "myplugin/wool_5" }
+	]
+}

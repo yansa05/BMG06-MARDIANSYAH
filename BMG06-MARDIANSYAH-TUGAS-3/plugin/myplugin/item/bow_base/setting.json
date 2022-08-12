@@ -1,0 +1,29 @@
+{
+	"boundingVolume": {
+		"params": [
+		  1,
+		  1,
+		  1
+		],
+		"type": "Box"
+	},
+	"eboundingVolume": {
+		"params": [
+		  1,
+		  1,
+		  1
+		],
+		"type": "Box"
+	},
+	"showBoundBox": true,
+	"editBuffList":"bowBuffList",
+	"editBaseFunc":"equipPropEdit",
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	}
+}

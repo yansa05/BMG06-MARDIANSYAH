@@ -1,0 +1,19 @@
+{
+  "baseDesc": "myplugin/emerald_base_desc",
+  "canAbandon": true,
+  "desc": "{myplugin/emerald_base_desc}\n",
+  "icon": "emerald.png",
+  "itemname": "myplugin/emerald_itemname",
+  "stack_count_max": 64,
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": -30,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "collideBlock": 4,
+  "collideEntity": 1,
+  "moveAcc": 0,
+  "hitInterval": 1,
+  "followTarget": false,
+  "moveSpeed": 1.5,
+  "gravity": 0,
+  "hitCount": 1,
+  "hitSkill": "myplugin/snipe_hit",
+  "hitHeadEffect": {
+	"yaw": 0,
+	"pos": {
+		"x": 0,
+		"y": 0,
+		"z": 0
+  },
+  "isFixedPosition": false,
+	"effect": "headshot.effect"
+  },
+  "startEffect": {
+	"effect": "daodantuowei.effect",
+	"pos": {
+		"y": 0,
+		"x": 0,
+		"z": 0
+	},
+	"yaw": 0
+  },
+  "hitEntitySound":{
+	"volume": 1,
+	"loop": false,
+	"selfOnly": false,
+	"sound": "boy_hurt.mp3",
+	"path": "plugin/myplugin/sound/boy_hurt.mp3"
+  },
+  "hitBlockSound":{
+	"volume": 1,
+	"loop": false,
+	"selfOnly": false,
+	"sound": "bowhit1.mp3",
+	"path": "plugin/myplugin/sound/bowhit1.mp3"
+  },
+  "isPitch": true,
+  "canPick": true,
+  "pickItem": "myplugin/arrow",
+  "boundingVolume": {
+    "type": "VerticalBox",
+    "params": [
+      0.1,
+      0.1,
+      0.4
+    ]
+  },
+  "rotateCheckCollide":true,
+  "autoRotateColliderBox": true,
+  "calCoord": 6,
+  "vanishShow": true
+}

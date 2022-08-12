@@ -1,0 +1,11 @@
+{
+    "type": "HandBuff",
+    "actionMap": {
+        "idle": "smg_idle",
+        "walk": "smg_walk",
+        "jump": "smg_jump",
+        "sneak": "smg_sneak_1",
+        "run": "smg_run",
+        "jump2": "smg_jump_3"
+    }
+}

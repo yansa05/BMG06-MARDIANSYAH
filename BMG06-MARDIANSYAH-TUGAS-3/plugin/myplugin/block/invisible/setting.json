@@ -1,0 +1,55 @@
+{
+    "base": "base_block",
+    "basePropDesc": {
+      "block.die.drop.title": [
+        [
+          [
+            "block",
+            1,
+            1,
+            "myplugin/invisible",
+            "block:myplugin/invisible",
+            "invisible"
+          ]
+        ]
+      ],
+      "golden_apple_hardness": [
+        1.0
+      ]
+    },
+    "breakTime": 20,
+    "baseDesc": "invisible_block_desc",
+    "canBreak": false,
+    "desc": "{invisible_block_desc}\n{golden_apple_hardness}:1.0\n",
+    "dropItemList": [
+      [
+        "block",
+        1,
+        1,
+        "myplugin/invisible",
+        "block:myplugin/invisible",
+        "invisible"
+      ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "isOpaqueFullCube": false,
+    "lightOpacity": 0,
+    "notShowTexture":true,
+    "settingUI": {
+      "tabList": [
+        {
+          "leftName": "editor.ui.baseProp",
+          "wndName": "BaseProp"
+        }
+      ]
+    },
+  "icon":"invisible_icon.png",
+  "texture": [
+      "invisible.png",
+      "invisible.png",
+      "invisible.png",
+      "invisible.png",
+      "invisible.png",
+      "invisible.png"
+    ]
+  }

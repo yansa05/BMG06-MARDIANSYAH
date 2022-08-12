@@ -1,0 +1,183 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/water_7_0",
+            "block:myplugin/water_7_0",
+            "water_7_0"
+        ]
+    ],
+	"blockType": "water",
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "isOpaqueFullCube": false,
+    "canBreak": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.22
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.22
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.22
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.22
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.22
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.22
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.22
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "emitLightInMaxLightMode": true,
+    "defaultTexture": "/water_skew.png",
+    "waterCfg": {
+        "dir": 0,
+        "heigh": 0
+    },
+    "focusable": false,
+    "renderPass": 5,
+    "lightOpacity": 0,
+    "clickPenetrate" : true,"canSwim": true,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

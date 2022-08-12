@@ -1,0 +1,18 @@
+{
+	"castAction": "",
+	"jack": 3,
+	"icon":true,
+	"showImage": {
+	  "image":{
+		"name":"bed_mainui_icon/icon_throw_nor"
+	  }, 
+	  "resourceGroup":"gameres" 
+	},
+	"pushImage": {
+	  "image":{
+		"name":"bed_mainui_icon/icon_throw_act"
+	  }, 
+	  "resourceGroup":"gameres" 
+	},
+	"type": ""
+  }

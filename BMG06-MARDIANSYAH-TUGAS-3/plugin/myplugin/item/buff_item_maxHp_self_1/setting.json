@@ -1,0 +1,10 @@
+{
+    "icon": "item_maxHp_self.png",
+    "itemname": "item_maxHp_self_1.name",
+    "itemintroduction": "item_maxHp_self_1.intro",
+    "itembuff": "myplugin/maxHp_self_1",
+    "isBuff": true,
+    "forTeam": false,
+    "statusFuncName": "IsUsing"
+
+}

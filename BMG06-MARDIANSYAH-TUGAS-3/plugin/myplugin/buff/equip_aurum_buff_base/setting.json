@@ -1,0 +1,18 @@
+{
+		"defense":3,
+		"base":"equip_aurum_buff_base",
+		"needSave":true,
+		"gravity":0,
+		"moveAcc":0,
+		"hide":0,
+		"moveFactor":0,
+		"maxHp":0,
+		"moveSpeed":0,
+		"hurtTime":0,
+		"jumpSpeed":0,
+		"maxMp":0,
+		"upgradeBuff":false,
+		"upgradePrice":0,
+		"dropDamageRatio":0,
+		"damage":0
+	}

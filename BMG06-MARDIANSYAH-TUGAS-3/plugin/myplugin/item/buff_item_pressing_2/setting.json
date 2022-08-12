@@ -1,0 +1,9 @@
+{
+    "icon": "item_pressing.png",
+    "itemname": "item.pressing_2.name",
+    "itemintroduction": "item.pressing_2.intro",
+    "isAttach": true,
+    "forTeam": true,
+	"attachBuff": "myplugin/pressing2",
+	"statusFuncName": "IsUsing"
+}

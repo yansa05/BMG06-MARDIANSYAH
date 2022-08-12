@@ -1,0 +1,17 @@
+{
+    "type": "Charge",
+    "minSustainTime": 10,
+    "maxSustainTime": 20,
+    "handItem": "myplugin/bow_standby_high",
+    "consumeItem": "myplugin/arrow",
+    "aimTarget": true,
+    "skillName": "myplugin/release_arrow_standby_high",
+    "frontSight": "myplugin/frontsight_1",
+    "castSound": {
+        "loop": false,
+        "volume": 1,
+        "sound": "bow.mp3",
+        "selfOnly": false
+    },
+    "cycleSustainActionTime": 20
+}

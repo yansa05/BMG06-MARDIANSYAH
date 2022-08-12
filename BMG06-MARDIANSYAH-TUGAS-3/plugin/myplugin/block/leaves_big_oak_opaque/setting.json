@@ -1,0 +1,33 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/leaves_big_oak_opaque",
+            "block:myplugin/leaves_big_oak_opaque",
+            "leaves_big_oak_opaque"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "isOpaqueFullCube": false,
+    "texture": [
+        "leaves_big_oak_opaque.png",
+        "leaves_big_oak_opaque.png",
+        "leaves_big_oak_opaque.png",
+        "leaves_big_oak_opaque.png",
+        "leaves_big_oak_opaque.png",
+        "leaves_big_oak_opaque.png"
+    ],
+     
+    "base": "base_block"
+}

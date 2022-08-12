@@ -1,0 +1,9 @@
+ENTITY_TOUCH{ -- 碰到无敌道具/entity，5S无敌加分
+	If(IsPlayer(entity = $obj2) and $obj1 and not $obj1.dead){
+        $obj1.dead = true
+        AddEntityBuff(entity = $obj2, cfg = GetConfigVar(obj = $obj1, key = "addBuff"), buffTime = 100)
+        UpdateStageScore(player = $obj2, score = GetConfigVar(obj = $obj1, key = "addScore"))
+		CallTrigger(event = "ADD_SCORE", object = $obj2, score = GetConfigVar(obj = $obj1, key = "addScore"))
+        KillEntity(entity = $obj1)
+    }
+}

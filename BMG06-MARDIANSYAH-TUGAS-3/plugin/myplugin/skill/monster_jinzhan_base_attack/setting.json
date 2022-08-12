@@ -1,0 +1,25 @@
+{
+    "hurtDistance": 0,
+    "damage": null,
+    "cdTime": 20,
+    "dmgFactor": null,
+    "damagePct": 0,
+    "prepareTime": -1,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/monster_jinzhan",
+    "followTarget": false,
+    "type": "Missile",
+    "castAction": "",
+    "castActionTime": 10,
+    "startActionTime": 10,
+    "startAction": "attack",
+	"castSound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "/sound/dungeon_emozhanshi_attack.mp3"
+	}
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_stone_slab_seamless",
+            "block:myplugin/double_stone_slab_seamless",
+            "double_stone_slab_seamless"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "stone_slab_top_double_stone_slab_seamless.png",
+        "stone_slab_top_double_stone_slab_seamless.png",
+        "stone_slab_top_double_stone_slab_seamless.png",
+        "stone_slab_top_double_stone_slab_seamless.png",
+        "stone_slab_top_double_stone_slab_seamless.png",
+        "stone_slab_top_double_stone_slab_seamless.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,33 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/leaves_jungle_nodecay",
+            "block:myplugin/leaves_jungle_nodecay",
+            "leaves_jungle_nodecay"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+     
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "isOpaqueFullCube": false,
+    "texture": [
+        "leaves_jungle_leaves_jungle_nodecay.png",
+        "leaves_jungle_leaves_jungle_nodecay.png",
+        "leaves_jungle_leaves_jungle_nodecay.png",
+        "leaves_jungle_leaves_jungle_nodecay.png",
+        "leaves_jungle_leaves_jungle_nodecay.png",
+        "leaves_jungle_leaves_jungle_nodecay.png"
+    ],
+    "breakTime": 20,
+    "base": "base_block"
+}

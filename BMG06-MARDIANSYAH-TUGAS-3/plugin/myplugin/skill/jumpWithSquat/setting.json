@@ -1,0 +1,11 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "jumpWithSquat",
+    "castSound": {
+        "volumn": 10,
+        "selfOnly": true,
+        "loop": false,
+        "sound": "jumpWithSquat.mp3"
+    }
+}

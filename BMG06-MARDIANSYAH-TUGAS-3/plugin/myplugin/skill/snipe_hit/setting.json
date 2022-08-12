@@ -1,0 +1,9 @@
+{
+    "type":"Missile",
+	"targetType": "Self",
+	"missileCfg": "myplugin/snipe_missile_2",
+	"startFrom": "foot",
+	"range": 5,
+	"castSound": null,
+    "hurtDistance": 0
+}

@@ -1,0 +1,8 @@
+{
+    "icon": "item_damage_self.png",
+    "itemname": "item.damage_1.name",
+    "itemintroduction": "item.damage_1.intro",
+    "isBuff": true,
+    "forTeam": false,
+	"itembuff": "myplugin/damage_self_1"
+}

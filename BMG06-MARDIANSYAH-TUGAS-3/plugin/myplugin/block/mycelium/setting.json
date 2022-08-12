@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/mycelium",
+            "block:myplugin/mycelium",
+            "mycelium"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "mycelium_side.png",
+        "mycelium_top.png",
+        "mycelium_side.png",
+        "mycelium_side.png",
+        "mycelium_side.png",
+        "mycelium_side.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

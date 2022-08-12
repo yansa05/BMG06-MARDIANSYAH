@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/red_sandstone_1",
+            "block:myplugin/red_sandstone_1",
+            "red_sandstone_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "red_sandstone_bottom_red_sandstone_1.png",
+        "red_sandstone_top_red_sandstone_1.png",
+        "red_sandstone_carved.png",
+        "red_sandstone_carved.png",
+        "red_sandstone_carved.png",
+        "red_sandstone_carved.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

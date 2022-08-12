@@ -1,0 +1,118 @@
+{
+  "base": "base_block",
+  "baseDesc": "myplugin/end_stone_base_desc",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/end_stone",
+          "block:myplugin/end_stone",
+          "myplugin/end_stone_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      18
+    ]
+  },
+  "blockObjectOnCollision": false,
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "breakBlockSound": {
+    "loop": true,
+    "path": "plugin/myplugin/sound/stone.mp3",
+    "selfOnly": false,
+    "sound": "cloth1.mp3",
+    "volume": 1
+  },
+  "breakTime": 360,
+  "canClick": false,
+  "canSwim": false,
+  "climbSpeed": 0,
+  "collisionBoxes": [
+    {
+      "__OBJ_TYPE": "Box",
+      "max": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "min": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "color": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "desc": "{myplugin/end_stone_base_desc}\n{golden_apple_hardness}:18\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/end_stone",
+      "block:myplugin/end_stone",
+      "myplugin/end_stone_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "emitLightInMaxLightMode": false,
+  "fall": false,
+  "isDropItem": true,
+  "isOpaqueFullCube": true,
+  "itemintroduction": "end_stone.intro",
+  "itemname": "myplugin/end_stone_itemname",
+  "jumpBuff": [
+    "myplugin/jump_sound"
+  ],
+  "lightEmitted": 0,
+  "lightOpacity": 15,
+  "maxFallSpeed": 1.5,
+  "maxSpeed": 0,
+  "placeBlockSound": {
+    "loop": false,
+    "path": "plugin/myplugin/sound/lay1.mp3",
+    "selfOnly": false,
+    "sound": "lay1.mp3",
+    "volume": 1
+  },
+  "recycle": false,
+  "recycleTime": 20,
+  "renderable": true,
+  "renderPass": 0,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "showBoundBox": true,
+  "spring": 0,
+  "texture": [
+    "end_stone_end_stone.png",
+    "end_stone_end_stone.png",
+    "end_stone_end_stone.png",
+    "end_stone_end_stone.png",
+    "end_stone_end_stone.png",
+    "end_stone_end_stone.png"
+  ]
+}

@@ -1,0 +1,33 @@
+USE_ITEM (debug = false){
+    $playerPos = GetEntityPosition(entity = $obj1)
+    $pos = V3ToBlockPos(v3 = V3(0, -1, 0) + $playerPos)
+    $yaw = GetEntityYaw(entity = $obj1) % 360
+    $dx = 0
+    $dz = 0
+
+    If(22.5 < $yaw and $yaw <= 157.5){
+        $dx = -1
+    }
+    ElseIf($yaw <= 337.5 and 202.5 < $yaw)
+    {
+        $dx = 1
+    }
+
+    If(112.5 < $yaw and $yaw <= 247.5)
+    {
+        $dz = -1
+    }
+    ElseIf($yaw <= 67.5 or 292.5 < $yaw)
+    {
+        $dz = 1
+    }
+    $targetBlock = GetWorldVar(key = "bridgeEggBlockFullName")
+    $blockCount = GetWorldVar(key = "bridgeEggBlockCount")
+    ForLoop(from  = 1, to = $blockCount, key = "num"){
+        $blockPos = V3ToBlockPos(v3 = V3($dx * $num, 0, $dz * $num) + $pos)
+        If((GetBlockFullName(map = GetEntityMap(entity = $obj1), pos = $blockPos) == "/air") or BlockCanBeReplace(map = GetEntityMap(entity = $obj1), pos = $blockPos)){
+            $targetBlock = $targetBlock
+            CreateBlock(map = GetEntityMap(entity = $obj1), block = $targetBlock, pos = $blockPos)
+        }
+    }
+}

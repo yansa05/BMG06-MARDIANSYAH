@@ -1,0 +1,39 @@
+{
+    "icon": "icon.png",
+    "actorName": "cundang.actor",
+    "regionCfg": "myplugin/save_data_region",
+    "undamageable": 1,
+    "hurtInColor": {
+        "a": 255,
+        "r": 255,
+        "g": 255,
+        "b": 255
+    },
+    "key": "save_data_region",
+    "min": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+    },
+    "max": {
+        "x": 1,
+        "y": 2,
+        "z": 1
+    },
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1.8,
+            1
+        ]
+    },
+    "collisionCamp": 3,
+    "changeActorName": "flag_after.actor",
+    "name": " ",
+    "viewDistance": 999999999,
+    "desc": "savePos_desc",
+    "disableShadow": true,
+    "customCmd": true,
+    "entityDerive": "savePoint"
+}

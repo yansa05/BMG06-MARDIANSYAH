@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_netherbrick_slab",
+            "block:myplugin/double_netherbrick_slab",
+            "double_netherbrick_slab"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "nether_brick.png",
+        "nether_brick.png",
+        "nether_brick.png",
+        "nether_brick.png",
+        "nether_brick.png",
+        "nether_brick.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

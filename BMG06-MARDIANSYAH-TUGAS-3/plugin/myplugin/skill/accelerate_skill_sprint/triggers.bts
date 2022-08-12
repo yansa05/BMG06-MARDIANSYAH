@@ -1,0 +1,12 @@
+SKILL_CAST(){ -- 点击切换移动状态
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_sprint")
+    RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_run")
+    
+	AddSkill(entity = $obj1, name = "myplugin/accelerate_skill_walk")
+    UpdateMovingStyle(entity = $obj1, movingStyle = 0)
+    CastSkill(skill = "myplugin/moving_change_skill_1" ,from = $obj1 ,packet = {needPre = true})
+}

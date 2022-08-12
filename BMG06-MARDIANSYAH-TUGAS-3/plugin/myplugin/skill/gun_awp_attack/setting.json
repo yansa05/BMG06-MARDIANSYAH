@@ -1,0 +1,108 @@
+﻿{
+  "cameraShake": {
+    "duration": 0.2,
+    "scale": {
+      "x": 0,
+      "y": 0.1,
+      "z": 0.1
+    },
+    "shakeTimes": 1
+  },
+  "castAction": "g2035_rifle_shoot",
+  "castActionTime": -1,
+  "castEffect": [
+    {
+      "effect": "@g2035_gun_flame_yellow.effect",
+      "once": true,
+      "pos": {
+        "x": -0.2,
+        "y": 0.8,
+        "z": 1.1
+      },
+      "scale": {
+        "x": 0.2,
+        "y": 0.2,
+        "z": 0.2
+      },
+      "yaw": 90
+    }
+  ],
+  "castInterval": -1,
+  "castSound": {
+    "loop": false,
+    "selfOnly": false,
+    "sound": "/sound/sniper_shoot.mp3",
+    "volume": 0.7
+  },
+  "cdTime": 20,
+  "cdMaskConfig":{
+    "horizontalAlignment":1,
+    "verticalAlignment":1,
+    "image":{
+      "leftImage":{
+        "name":"attack_effect/cdMask_left"
+      },
+      "rightImage":{
+        "name":"attack_effect/cdMask_right"
+      },
+      "resourceGroup":"_imagesets_",
+      "scale":0.5,
+      "alpha":0.8
+    }
+  },
+  "container": {
+    "autoReloadSkill": "myplugin/snipe_reload",
+    "takeNum": 1
+  },
+  "diffuseVal": 40,
+  "enableRayTest": true,
+  "enableCdMask": true,
+  "frontSight": "myplugin/frontsight_1",
+  "hitEffect": "@g2035_gun_hit_wall.effect",
+  "hitEntityHeadSkill": "myplugin/gun_damage_ak47",
+  "hitEntitySkill": "myplugin/gun_damage_ak47",
+  "hitHeadEffect": "g2035_gun_hit.effect",
+  "hitPlayerEffect": "g2035_gun_hit.effect",
+  "isHitPointRandom": false,
+  "jack": "B",
+  "netDelay": 0,
+  "rayLenth": 150,
+  "recoil": {
+    "autoRecoverRecoil": 1.5,
+    "recoil": 1.5,
+    "recoilInSnipe": 1,
+    "recoverInterval": 0
+  },
+  "snipe": "myplugin/main",
+  "startOffset": {
+    "len": 1,
+    "pitch": 33,
+    "yaw": 0
+  },
+  "touchIcon": "set:gta_main.json image:shoot_select",
+  "icon":true,
+  "showImage": {
+    "image":{
+      "name":"bed_mainui_icon/icon_fire_nor"
+    }, 
+    "resourceGroup":"gameres" 
+  },
+  "pushImage": {
+    "image":{
+      "name":"bed_mainui_icon/icon_fire_act"
+    }, 
+    "resourceGroup":"gameres" 
+  },
+  "trackCamera": true,
+  "trajectoryEffect": "@g2035_bullet_trace.effect",
+  "type": "Ray",
+  "customizeSkill":true,
+  "verticalAlignment":1,
+  "horizontalAlignment":2,
+  "area":[
+    [0,-200],
+    [0, 265],
+    [0, 86],
+    [0, 86]
+  ]
+}

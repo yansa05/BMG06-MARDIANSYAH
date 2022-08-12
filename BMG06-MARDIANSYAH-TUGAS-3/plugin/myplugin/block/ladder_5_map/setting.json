@@ -1,0 +1,120 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/ladder",
+            "block:myplugin/ladder",
+            "myplugin/ladder_itemname"
+        ]
+    ],
+    "cannotStack": true,
+    "attackSide": "1:0:0",
+    "breakTime": 20,
+    "placeBlockSound": {
+        "selfOnly": false,
+        "path": "plugin/myplugin/sound/ladder.mp3",
+        "volume": 1,
+        "loop": false,
+        "sound": "ladder.mp3"
+    },
+    "climbBuff": [
+        "myplugin/run_ladder"
+    ],
+    "lightEmitted": 0,
+    "recycle": false,
+    "spring": 0,
+    "editBaseFunc": "block_breakTime",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "mountBlock": false,
+    "maxFallSpeed": 1.5,
+    "lightOpacity": 15,
+    "canSwim": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.02,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0.02,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.02,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.02,
+                    "y": 1
+                }
+            ],
+            "texture": "ladder_ladder_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0.02,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0.02,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0.02,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0.02,
+                    "y": 1
+                }
+            ],
+            "texture": "ladder_ladder_5.png"
+        }
+    ],
+    "climbDirType": 1,
+    "climbSpeed": 0.05,
+    "collisionBoxes": {},
+    "maxSpeed": 0.05,
+    "fall": false,
+    "blockObjectOnCollision": false,
+    "emitLightInMaxLightMode": true,
+    "renderable": true,
+    "color": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "recycleTime": 20,
+    "renderPass": 0,
+    "isOpaqueFullCube": false,
+    "breakBlockSound": {
+        "selfOnly": false,
+        "path": "plugin/myplugin/sound/wood.mp3",
+        "volume": 1,
+        "loop": true,
+        "sound": "cloth1.mp3"
+    },
+    "canClick": false,
+    "base": "base_block",
+    "blockType": "wood"
+}

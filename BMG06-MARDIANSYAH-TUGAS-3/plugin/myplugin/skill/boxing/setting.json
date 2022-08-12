@@ -1,0 +1,6 @@
+{
+  "type": "MeleeAttack",
+  "damage": 2,
+  "targetType": "Any",
+  "range": 999
+}

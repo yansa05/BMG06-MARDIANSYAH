@@ -1,0 +1,29 @@
+{
+	"useAttach": true,
+	"boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+	},
+	"useAddBuff":true,
+	"stack_count_max":64,
+	"showBoundBox": true,
+	"editBuffList":"foodBuffList",
+	"editBaseFunc":"foodPropEdit",
+	"skill":[
+		"myplugin\/eat_food"
+	],
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	},
+	"startAction": "eat",
+	"useAction": "eat"
+}

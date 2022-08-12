@@ -1,0 +1,23 @@
+{
+	"desc":"{buff_jump}1.0\n",
+	"basePropDesc":{
+		"buff_jump":[
+			1
+		]
+	},
+	"icon": "set:buff_icon.json image:jump_self.png",
+	"icon_path": "plugin/myplugin/item/buff_item_jump/jump_self.png",
+	"icon2": "jump.png",
+    "itemname": "jump_boot",
+	"itembuff": "myplugin/jump_buff",
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	},
+	"isBuff": true,
+	"editBaseFunc":"buff_item_jump"
+}

@@ -1,0 +1,6 @@
+{
+	"headUIHeight": 1,
+	"uiShowList": [
+		"setDropItem", "delete"
+	]
+}

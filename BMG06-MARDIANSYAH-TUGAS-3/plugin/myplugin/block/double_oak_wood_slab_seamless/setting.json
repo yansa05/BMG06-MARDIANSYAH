@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_oak_wood_slab_seamless",
+            "block:myplugin/double_oak_wood_slab_seamless",
+            "double_oak_wood_slab_seamless"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "planks_oak_double_oak_wood_slab_seamless.png",
+        "planks_oak_double_oak_wood_slab_seamless.png",
+        "planks_oak_double_oak_wood_slab_seamless.png",
+        "planks_oak_double_oak_wood_slab_seamless.png",
+        "planks_oak_double_oak_wood_slab_seamless.png",
+        "planks_oak_double_oak_wood_slab_seamless.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

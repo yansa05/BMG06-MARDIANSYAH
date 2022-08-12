@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/ender_chest",
+            "block:myplugin/ender_chest",
+            "ender_chest"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "obsidian.png",
+        "obsidian.png",
+        "obsidian.png",
+        "obsidian.png",
+        "obsidian.png",
+        "obsidian.png"
+    ],
+    "blockType": "stone",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

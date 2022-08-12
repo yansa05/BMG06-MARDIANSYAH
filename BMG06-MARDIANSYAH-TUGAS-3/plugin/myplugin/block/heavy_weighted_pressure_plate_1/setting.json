@@ -1,0 +1,67 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/heavy_weighted_pressure_plate_1",
+            "block:myplugin/heavy_weighted_pressure_plate_1",
+            "heavy_weighted_pressure_plate_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 1,
+                "x": 1,
+                "y": 0.2
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.2
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.2
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.2
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.2
+                }
+            ],
+            "texture": "iron_block_heavy_weighted_pressure_plate_1.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

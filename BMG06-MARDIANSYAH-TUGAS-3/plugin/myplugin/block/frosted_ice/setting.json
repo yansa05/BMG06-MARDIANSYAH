@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/frosted_ice",
+            "block:myplugin/frosted_ice",
+            "frosted_ice"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "frosted_ice_0_frosted_ice.png",
+        "frosted_ice_0_frosted_ice.png",
+        "frosted_ice_0_frosted_ice.png",
+        "frosted_ice_0_frosted_ice.png",
+        "frosted_ice_0_frosted_ice.png",
+        "frosted_ice_0_frosted_ice.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

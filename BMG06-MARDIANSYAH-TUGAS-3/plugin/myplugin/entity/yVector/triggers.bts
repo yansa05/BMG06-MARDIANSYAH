@@ -1,0 +1,57 @@
+ENTITY_TOUCH_ALL {
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+    If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+
+ENTITY_TOUCH_ON{
+    $buff = GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/squat_buff_break_vector")
+    If($buff){
+        RemoveEntityBuff(entity = $obj2, buff = $buff)
+        If(not $obj1.oldPosition){ -- 向下浮动效果
+            $obj1.oldPosition = GetEntityPosition(entity = $obj1)
+            SetEntityPosition(entity = $obj1, pos = ComputeV3(op = "add", p1 = GetEntityPosition(entity = $obj1), p2 = {x = 0, y = -0.5, z= 0}))
+            StartTimer(object = $obj1, event = "REDUCTION_VECTOR_BLOCK", time = 5)
+            RideOn(entity = $obj2, target = $obj1)
+        }
+    }
+    ------------------------------------------------------------ 砸出道具
+}
+
+ENTITY_TOUCH_TOP {
+    CastSkill(skill = "myplugin/blockJump" ,from = $obj1 ,packet = {needPre = true})
+
+	$count = GetEntityEditorVar(entity = $obj1, key = "count")
+	$type = GetEntityEditorVar(entity = $obj1, key = "type")
+	$fullName = GetEntityEditorVar(entity = $obj1, key = "fullName")
+	If(not $count)
+	{
+		SetEntityEditorVar(entity = $obj1, key = "count", value = 0)
+	}
+	$pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+	If($count >= 1)
+	{
+		VectorBlockSpaw(pos = $pos, map = $map , block=$obj1, player = $obj2, fullName = $fullName, type = $type)
+		SetEntityEditorVar(entity = $obj1, key = "count", value = $count - 1)
+	}
+	ElseIf($count == 0)
+	{
+		SetEntityEditorVar(entity = $obj1, key = "count", value = $count - 1)
+	}	
+}
+
+REDUCTION_VECTOR_BLOCK{
+    SetEntityPosition(entity = $obj1, pos = $obj1.oldPosition)
+    $obj1.oldPosition = nil
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/mossy_cobblestone",
+            "block:myplugin/mossy_cobblestone",
+            "mossy_cobblestone"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "cobblestone_mossy_mossy_cobblestone.png",
+        "cobblestone_mossy_mossy_cobblestone.png",
+        "cobblestone_mossy_mossy_cobblestone.png",
+        "cobblestone_mossy_mossy_cobblestone.png",
+        "cobblestone_mossy_mossy_cobblestone.png",
+        "cobblestone_mossy_mossy_cobblestone.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

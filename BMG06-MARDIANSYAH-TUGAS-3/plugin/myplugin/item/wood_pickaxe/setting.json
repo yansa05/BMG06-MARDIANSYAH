@@ -1,0 +1,74 @@
+{
+    "attachType": [
+        "pressing"
+    ],
+    "base": "tool_base",
+    "baseDesc": "myplugin/wood_pickaxe_base_desc",
+    "mesh": "mugao.mesh",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            2
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_effectiveness": [
+            0.1
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "boundingVolume": {
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "type": "Box"
+    },
+    "canAbandon": true,
+    "candrop": true,
+    "desc": "{myplugin/wood_pickaxe_base_desc}\n{props_attack}2\n{props_effectiveness}0.1\n",
+    "droplifetime": 100,
+    "dropSpeed": 0.1,
+    "effAllBlock": 0.1,
+    "effTypeBlock": {
+        "stone": 0.1
+    },
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_wood_pickaxe[handBuff",
+    "icon": "wood_pickaxe.png",
+    "isAddItem": true,
+    "itemintroduction": "item.wood_pickaxe.intro",
+    "itemname": "myplugin/wood_pickaxe_itemname",
+    "stack_count_max": 1,
+    "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.6,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.2
+        }
+    }
+}

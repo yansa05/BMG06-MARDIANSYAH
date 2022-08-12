@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="bottom_bar.png" name="bottom_bar" nativeHorzRes="1024" nativeVertRes="128" resourceGroup="imagesets" version="2">
+	<Image height="77" name="bar_bag" width="60" xPos="0" yPos="0"/>
+	<Image height="53" name="bar_bg" width="746" xPos="60" yPos="0"/>
+	<Image height="8" name="bar_item_light" width="68" xPos="806" yPos="0"/>
+	<Image height="69" name="bar_item_nor" width="62" xPos="874" yPos="0"/>
+	<Image height="69" name="bar_item_sel" width="62" xPos="936" yPos="0"/>
+</Imageset>

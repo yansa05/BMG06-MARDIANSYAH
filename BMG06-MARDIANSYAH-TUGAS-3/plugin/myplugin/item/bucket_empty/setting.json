@@ -1,0 +1,34 @@
+{
+  "baseDesc": "myplugin/bucket_empty_base_desc",
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "canAbandon": true,
+  "desc": "myplugin/bucket_empty_base_desc",
+  "handBuff": "myplugin/handbuff_bucket",
+  "icon": "bucket_empty.png",
+  "isDropItem": true,
+  "itemintroduction": "item.bucket_empty.intro",
+  "itemname": "myplugin/bucket_empty_itemname",
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": -30,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  },
+  "showBoundBox": true,
+  "skill": [
+    "myplugin/bucket_empty_skill"
+  ],
+  "stack_count_max": 1
+}

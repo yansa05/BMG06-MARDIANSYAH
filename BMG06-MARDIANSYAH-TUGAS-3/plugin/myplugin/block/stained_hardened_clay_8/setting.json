@@ -1,0 +1,70 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/stained_hardened_clay_8",
+          "block:myplugin/stained_hardened_clay_8",
+          "myplugin/stained_hardened_clay_8_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/sand_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/sand_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/sand_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockType": "stone",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/stained_hardened_clay_8",
+      "block:myplugin/stained_hardened_clay_8",
+      "myplugin/stained_hardened_clay_8_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "itemname": "myplugin/stained_hardened_clay_8_itemname",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "hardened_clay_stained_silver.png",
+    "hardened_clay_stained_silver.png",
+    "hardened_clay_stained_silver.png",
+    "hardened_clay_stained_silver.png",
+    "hardened_clay_stained_silver.png",
+    "hardened_clay_stained_silver.png"
+  ]
+}

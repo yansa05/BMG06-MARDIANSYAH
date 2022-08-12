@@ -1,0 +1,65 @@
+ENTITY_TOUCH_ALL{ -- 捡到技能道具，加技能加分
+    If( (IsPlayer(entity = $obj2) or $obj2.master) and $obj1 and not $obj1.dead){
+		$obj1.dead = true
+        $addplayer = IsPlayer(entity = $obj2) and $obj2
+        If($obj2.master){
+            $addplayer = GetObject(objID = $obj2.master)
+        }
+        If(not $addplayer or not IsValidObject(object = $addplayer) or not IsPlayer(entity = $addplayer))
+        {
+            Return()
+        }
+        AddEntityHp(entity = $addplayer, step = GetConfigVar(obj = $obj1, key = "addHp"))
+        AddSkill(entity = $addplayer, name = GetConfigVar(obj = $obj1, key = "addSkill"))
+		CallTrigger(event = "ADD_SCORE", obj1 = $addplayer, score = GetConfigVar(obj = $obj1, key = "addScore"))
+
+        $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/eat_flower_sound_buff")
+        If(not $buff){
+            AddEntityBuff(entity = $addplayer, cfg = "myplugin/eat_flower_sound_buff", buffTime = 30)
+        }
+
+        StartTimer(event = "KILL_OWNER", time = 2, object = $obj1)
+        ------------------------------------------------------------------- 吃到花变成红色
+		Test(GetEntityActorName(entity = $obj1))
+		If(GetEntityActorName(entity = $addplayer) == "character_new_blue_mario_nohat.actor"){
+			CallTrigger(object = $addplayer, event = "PRE_CHANGE_ACTOR", name = "character_new_red_mario_nohat.actor", changeBuff = "small")
+		}ElseIf(GetEntityActorName(entity = $addplayer) == "character_new_blue_mario.actor"){
+			CallTrigger(object = $addplayer, event = "PRE_CHANGE_ACTOR", name = "character_new_red_mario.actor", changeBuff = "big")
+		}
+    }
+}
+
+KILL_OWNER{
+    KillEntity(entity = $obj1)
+}
+
+VECTOR_SPAW {
+	$pos = ComputeV3(op = "add", p1 = $pos, p2 = {x = 0, y = 1.5, z = 0})
+	$map = GetEntityMap(entity = $player)
+	$entity = CreateNpc(cfgName = "myplugin/flower", pos = $pos, map = $map)
+    $buff = GetEntityTypeBuff(entity = $entity, key = "fullName", value = "myplugin/flower_gravity")
+    If(not $buff){
+        AddEntityBuff(entity = $entity, cfg = "myplugin/flower_gravity")
+    }
+    $yaw = 180 + GetEntityYaw(entity = $player)
+    $moveDir = ComputeV3(op = "sub", p1 = $pos, p2 = GetEntityPosition(entity =  $player))
+    --$yaw = V3ToYaw(moveDir = $moveDir)
+	SetAiData(entity = $entity, key = "StartRunYaw", value = $yaw)
+	StartAI(entity = $entity)
+    If($touchTop){
+        --CastSkill(skill = "myplugin/flowerJump" ,from = $entity ,packet = {needPre = true})
+    }
+   -- StartTimer(object = $entity, event = "FLOWER_IDLE", time = 8)
+}
+
+FLOWER_IDLE{
+    If(not $obj1){
+        Return()
+    }
+    -- StopAI(entity = $obj1)
+    CastSkill(skill = "myplugin/idle" ,from = $obj1,packet = {needPre = true})
+}
+
+ENTITY_HITTED{
+    CallTrigger(event = "ENTITY_TOUCH_ALL", object = $obj1, obj2 = $obj2)
+}

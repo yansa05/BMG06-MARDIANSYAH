@@ -1,0 +1,11 @@
+{
+    "damage": -999999,
+    "defense": 999999,
+    "undamageable": 1,
+    "unassailable": 1,
+    "_actionMap": {
+        "attack": "idle",
+        "attack2": "idle",
+        "click": "idle"
+    }
+}

@@ -1,0 +1,129 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/flower_tulip_white",
+          "block:myplugin/flower_tulip_white",
+          "flower_tulip_white"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/plant_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/plant_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/plant2_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "breakTime": 20,
+  "canBeReplace": true,
+  "collisionBoxes": [
+    {
+      "max": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "min": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/flower_tulip_white",
+      "block:myplugin/flower_tulip_white",
+      "flower_tulip_white"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "lightOpacity": 0,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "flower_tulip_white.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "flower_tulip_white.png"
+    }
+  ],
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

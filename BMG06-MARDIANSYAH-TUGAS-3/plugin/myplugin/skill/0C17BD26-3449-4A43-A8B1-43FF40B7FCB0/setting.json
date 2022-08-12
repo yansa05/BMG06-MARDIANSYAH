@@ -1,0 +1,21 @@
+{
+  "castAction": "",
+  "castActionTime": 0,
+  "cdTime": 0,
+  "consumeVp": 0,
+  "damage": 0,
+  "dmgFactor": 1,
+  "frontSight": "",
+  "hurtDistance": 0.1,
+  "icon": "",
+  "isClick": true,
+  "isJump": false,
+  "isTouch": false,
+  "jack": 0,
+  "pos": "",
+  "range": 4,
+  "snipe": false,
+  "startAction": "",
+  "sustainAction": "",
+  "type": "MeleeAttack"
+}

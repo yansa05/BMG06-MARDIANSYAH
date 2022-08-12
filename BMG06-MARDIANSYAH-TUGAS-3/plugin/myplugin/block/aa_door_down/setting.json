@@ -1,0 +1,342 @@
+{
+    "base": "base_block",
+    "baseDesc": "myplugin/aa_door_down_base_desc",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/aa_door_down",
+                    "block:myplugin/aa_door_down",
+                    "aa_door_down"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+    "cannotStack": true,
+    "blockObjectOnCollision": false,
+    "breakTime": 20,
+    "changers": {
+        "0:1:0": [
+            "myplugin/aa_door_down_90",
+            "myplugin/aa_door_down_180",
+            "myplugin/aa_door_down_270",
+            "myplugin/aa_door_down_360"
+        ]
+    },
+    "collisionBoxes": [
+        {
+            "max": {
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "min": {
+                "x": 0,
+                "y": 0,
+                "z": 0.85
+            }
+        }
+    ],
+    "CombinationID": 1,
+    "desc": "{myplugin/aa_door_down_base_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/aa_door_down",
+            "block:myplugin/aa_door_down",
+            "aa_door_down"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "enableEditorBuilding": false,
+    "icon": "icon.png",
+    "isOpaqueFullCube": false,
+    "itemname": "myplugin/aa_door_down_itemname",
+    "lightOpacity": 0,
+    "matItem_third": {
+        "rotateX": 90,
+        "rotateY": 0,
+        "rotateZ": -120,
+        "scale": 0.85,
+        "translate": {
+            "x": -0.5,
+            "y": 0,
+            "z": 0.15
+        }
+    },
+    "placeCombination": [
+        {
+            "blockName": "myplugin/aa_door_down_180",
+            "pos": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        },
+        {
+            "blockName": "myplugin/aa_door_up_180",
+            "pos": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            }
+        }
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.92
+                }
+            ],
+            "texture": "men_zhengxia.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.99
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_zhengxia.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_cexia.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.92
+                }
+            ],
+            "texture": "men_cexia.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 0.01,
+                    "z": 0.92
+                },
+                {
+                    "x": 0,
+                    "y": 0.01,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 0.01,
+                    "z": 0.99
+                },
+                {
+                    "x": 1,
+                    "y": 0.01,
+                    "z": 0.92
+                }
+            ],
+            "texture": "men_cexia.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.34,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.34,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.34,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 0.34,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_ceshang.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.42,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.42,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.42,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 0.42,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_ceshang.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.59,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.59,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.59,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 0.59,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_ceshang.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.67,
+                    "y": 1,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.67,
+                    "y": 0,
+                    "z": 0.92
+                },
+                {
+                    "x": 0.67,
+                    "y": 0,
+                    "z": 0.99
+                },
+                {
+                    "x": 0.67,
+                    "y": 1,
+                    "z": 0.99
+                }
+            ],
+            "texture": "men_ceshang.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "blockType": "wood",
+    "matItem_first": {
+        "rotateX": 180,
+        "rotateY": -54,
+        "rotateZ": 216,
+        "scale": 0.8,
+        "translate": {
+            "x": -1,
+            "y": 0.5,
+            "z": 0.63
+        }
+    },
+    "icon1": "icon1.png",
+    "canClick": true
+}

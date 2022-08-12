@@ -1,0 +1,23 @@
+{
+	"desc":"{buff_accelerate}0.5\n",
+	"basePropDesc":{
+		"buff_accelerate":[
+			0.5
+		]
+	},
+	"icon": "set:buff_icon.json image:expedite_self.png",
+	"icon_path": "plugin/myplugin/item/buff_item_moveSpeed/expedite_self.png",
+	"icon2": "expedite.png",
+    "itemname": "speed_boot",
+	"itembuff": "myplugin/moveSpeed_buff",
+	"isBuff": true,
+	"editBaseFunc": "buff_item_moveSpeed",
+	"settingUI": {
+		"tabList": [
+			{
+				"wndName": "BaseProp",
+				"leftName": "editor.ui.baseProp"
+			}
+		]
+	}
+}

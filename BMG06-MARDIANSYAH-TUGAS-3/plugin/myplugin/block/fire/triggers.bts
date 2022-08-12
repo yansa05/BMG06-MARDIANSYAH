@@ -1,0 +1,6 @@
+
+BLOCK_IN 
+{
+	$time = GetBlockData(map = GetEntityMap(entity = $obj1), pos = $pos, key = "burnTime")
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/flame_bomb_burn_buff", buffTime = $time)
+}

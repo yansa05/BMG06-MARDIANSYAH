@@ -1,0 +1,57 @@
+{
+  "base": "food_base",
+  "baseDesc": "food_wheat_desc",
+  "basePropDesc": {
+    "jump_bonus_duration": [
+      10,
+      "jump_bonus_duration_unit"
+    ],
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "recover_vp": [
+      5
+    ],
+    "restore_hp": [
+      0
+    ]
+  },
+  "buffContinueTime": 200,
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{food_wheat_desc}\n{jump_bonus_duration}10{jump_bonus_duration_unit}\n{recover_vp}5\n",
+  "dropMatItem": {
+    "scale": 0.5,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "food_buff": "myplugin/item_buff_food_wheat[food_buff",
+  "icon": "food_wheat.png",
+  "itemname": "food_wheat",
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "scale": 1.5,
+    "translate": {
+      "x": 0,
+      "y": 0.1,
+      "z": 0.1
+    }
+  },
+  "mesh": "xiaomai.mesh",
+  "needSave": true,
+  "recoverHpStep": 0,
+  "recoverVpStep": 5
+}

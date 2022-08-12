@@ -1,0 +1,23 @@
+SKILL_CAST_Del {
+	If(not $obj2)
+	{
+		Return()
+	}
+	$tPos = GetEntityPosition(entity = $obj2)
+	$fPos = GetEntityPosition(entity = $obj1)
+	If(not $tPos or not $fPos)
+	{
+		Return()
+	}
+	$cv3 = ComputeV3_SUB(second=$fPos, first=$tPos)
+	$yaw = V3AngleXZ(vector = $cv3)
+	$hd = GetSkillVar(fullName = $fullName, key = "hurtDistance") or 0
+	$targetDir = {
+		x = 0,
+		y = $hd / 5 > 1 and $hd / 5 or 1,
+		z = $hd
+	}
+	$targetDir = V3RotationYaw(vector = $targetDir, yaw = $yaw)
+	$time = 10
+	SetForceMoveTimePos(entity = $obj2, targetDir = $targetDir, time = $time)
+}

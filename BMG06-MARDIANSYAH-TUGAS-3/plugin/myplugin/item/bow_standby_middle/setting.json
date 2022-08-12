@@ -1,0 +1,117 @@
+{
+  "base": "sword_base",
+  "baseDesc": "myplugin/bow_standby_middle_base_desc",
+  "basePropDesc": {
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      10
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "props_max_hp": [
+      0
+    ],
+    "props_shield_bonus": [
+      0
+    ]
+  },
+  "consumeItem": "myplugin/arrow",
+  "desc": "{myplugin/bow_standby_middle_base_desc}\n{props_attack}10\n",
+  "dropMatItem": {
+    "scale": 0.3,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.4
+    }
+  },
+  "equipTemporaryShield": 0,
+  "handBuff": "myplugin/handbuff_bow_standby_middle",
+  "icon": "bow_standby.png",
+  "iconArray": [
+    {
+      "icon": "bow_pulling_0.png",
+      "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 0,
+        "rotateZ": -120,
+        "scale": 1.6,
+        "translate": {
+          "x": 0.1,
+          "y": 0.8,
+          "z": 0.4
+        }
+      },
+      "mesh": "zhongjijian1.mesh"
+    },
+    {
+      "icon": "bow_pulling_1.png",
+      "matItem_first": {
+        "rotateX": 85,
+        "rotateY": -50,
+        "rotateZ": 0,
+        "scale": 0.5,
+        "translate": {
+          "x": 0.6,
+          "y": -0.4,
+          "z": -0.5
+        }
+      },
+      "mesh": "zhongjijian1.mesh"
+    },
+    {
+      "icon": "bow_pulling_1.png",
+      "matItem_first": {
+        "rotateX": 85,
+        "rotateY": -50,
+        "rotateZ": 0,
+        "scale": 0.5,
+        "translate": {
+          "x": 0.6,
+          "y": -0.4,
+          "z": -0.5
+        }
+      },
+      "mesh": "zhongjijian1.mesh"
+    },
+    {
+      "icon": "bow_pulling_2.png",
+      "matItem_first": {
+        "rotateX": 85,
+        "rotateY": -50,
+        "rotateZ": 0,
+        "scale": 0.5,
+        "translate": {
+          "x": 0.6,
+          "y": -0.4,
+          "z": -0.5
+        }
+      },
+      "mesh": "zhongjijian1.mesh"
+    }
+  ],
+  "isSwings": true,
+  "itemintroduction": "item.bow_standby_middle.intro",
+  "itemname": "myplugin/bow_standby_middle_itemname",
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": -110,
+    "scale": 2,
+    "translate": {
+      "x": 0.2,
+      "y": 0.8,
+      "z": 0.2
+    }
+  },
+  "mesh": "zhongjijian.mesh",
+  "noAttackBuff": true,
+  "stack_count_max": 1,
+  "useTime": 50
+}

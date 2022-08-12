@@ -1,0 +1,24 @@
+{
+		"itembuff":"myplugin/maxVpBuff",
+		"icon":"set:buff_icon.json image:maxVp_self.png",
+		"icon_path":"set:buff_icon.json image:maxVp_self.png",
+		"icon2": "maxVp.png",
+		"itemname":"max_Vp",
+		"editBaseFunc":"buff_item_maxVp",
+		"desc":"max_vp_bonus",
+		"basePropDesc":{
+			"max_vp_bonus":[
+				1
+			]
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName": "editor.ui.baseProp"
+				}
+			]
+		},
+		"isBuff": true,
+		"forTeam":false
+	}

@@ -1,0 +1,10 @@
+{
+    "cdTime": 40,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/fire_ball_missile_1",
+    "followTarget": true,
+    "type": "Missile"
+}

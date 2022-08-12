@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="egg_icon.png" name="egg_icon" nativeHorzRes="256" nativeVertRes="64" resourceGroup="imagesets" version="2">
+	<Image height="38" name="egg_blue" width="38" xPos="1" yPos="1"/>
+	<Image height="38" name="egg_gray" width="38" xPos="40" yPos="1"/>
+	<Image height="38" name="egg_green" width="38" xPos="79" yPos="1"/>
+	<Image height="38" name="egg_red" width="38" xPos="118" yPos="1"/>
+	<Image height="38" name="egg_yellow" width="38" xPos="157" yPos="1"/>
+</Imageset>

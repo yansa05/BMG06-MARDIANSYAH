@@ -1,0 +1,47 @@
+ENTITY_ENTER(debug = false)
+{
+	$owner = GetOwner(entity = $obj1)
+	If($owner.guideStep == 1 and $owner.playerStep == 1)
+	{
+		StartTimer(object = $obj1, time = 60, event = "GUIDE_JUMP1")
+	}
+	If($owner.guideStep == 2 and $owner.playerStep == 2)
+	{
+		StartTimer(object = $obj1, time = 60, event = "GUIDE_JUMP1")
+	}
+	If($owner.guideStep == 3 and $owner.playerStep == 3)
+	{
+		StartTimer(object = $obj1, time = 60, rep = 100, event = "GUIDE_JUMP2")
+	}
+}
+
+ENTITY_DIE
+{
+	If($obj2.guideStep == 1 and $obj2.playerStep == 1)
+	{
+		--SetGuidePostion(entity = $obj2, pos = {x=23, y=6.8, z=42})
+		$obj2.GUIDE = CreateNpc(cfgName = "myplugin/guide_jump", name = "", pos = {x=23, y=6, z=42}, map = GetEntityMap(entity = $obj1), ry = 180, rp = 0, owner = $obj2)
+	}
+	
+	If($obj2.guideStep == 2 and $obj2.playerStep == 2)
+	{
+		--SetGuidePostion(entity = $obj2, pos = {x = 22.5, y = 8, z = 22})
+		$obj2.GUIDE = CreateNpc(cfgName = "myplugin/guide_jump", name = "", pos = {x = 21.4, y = 8, z = 22.2}, map = GetEntityMap(entity = $obj2), ry = 180, rp = 0, owner = $obj2)
+	}
+
+	If($obj2.guideStep == 3 and $obj2.playerStep == 3)
+	{
+		--SetGuidePostion(entity = $obj2, pos = {x = 27.5, y = 12, z = -16.5})
+		$obj2.GUIDE = CreateNpc(cfgName = "myplugin/guide_jump", name = "", pos = {x = 27.5, y = 12, z = -16.5}, map = GetEntityMap(entity = $obj2), ry = 180, rp = 0, owner = $obj2)
+	}
+}
+
+GUIDE_JUMP1(debug = false) {
+	SetActorAlpha(entity = $obj1, alpha = 0.5)
+	PlayAction(entity = $obj1, actionName = "jump1111", actionTime = 200000)
+}
+
+GUIDE_JUMP2(debug = false) {
+	SetActorAlpha(entity = $obj1, alpha = 0.5)
+	PlayAction(entity = $obj1, actionName = "jump_sneak", actionTime = 80)
+}

@@ -1,0 +1,25 @@
+{
+		"isBuff":true,
+		"forTeam":false,
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"icon2":"revive.png",
+		"desc":"{rebirth_bonus}{rebirth_bonus_unit}\n",
+		"basePropDesc":{
+			"rebirth_bonus":[
+				10,
+				"rebirth_bonus_unit"
+			]
+		},
+		"icon":"set:buff_icon.json image:revive_self.png",
+		"editBaseFunc":"buff_item_accelerate_rebirth",
+		"itembuff":"myplugin\/accelerate_rebirth_1590724259",
+		"icon_path":"plugin\/myplugin\/item\/buff_item_accelerate_rebirth\/revive_self.png",
+		"itemname":"rebith_boot"
+	}

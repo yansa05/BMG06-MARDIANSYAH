@@ -1,0 +1,4 @@
+ENTITY_ENTER(debug = false){
+	$fillBlock = GetEntityEditorVar(entity = $obj1, key = "fillBlock")
+	SetEntityToBlock(entity = $obj1, fillBlock = $fillBlock)
+}

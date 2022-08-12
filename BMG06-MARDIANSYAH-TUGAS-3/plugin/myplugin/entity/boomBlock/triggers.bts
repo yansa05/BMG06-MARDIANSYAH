@@ -1,0 +1,51 @@
+ENTITY_TOUCH_ALL(debug = false){
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+    If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+--爆炸方块
+--被顶或者砸 把周围的容器方块的东西炸出来，木/红容器方块炸爆(杀死)
+--不可破坏的容器方块：是循环调用顶容器方块
+--怪物直接炸死
+ENTITY_TOUCH_ON{
+    If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+    If(not GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/squat_buff_break_vector")){
+        Return()
+    }
+    CallTrigger(object = $obj1, event = "BOOM_VECTOR_BOOM", obj2 = $obj2)
+}
+
+ENTITY_TOUCH_TOP{
+    If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+    CallTrigger(object = $obj1, event = "BOOM_VECTOR_BOOM", obj2 = $obj2)
+}
+
+BOOM_VECTOR_BOOM{
+    BoomBlock(entity = $obj1, from = $obj2)
+    If(not $obj1.var_die)
+    {
+        KillEntity(entity = $obj1, from = IsEntityAlive(entity = $obj2) and $obj2 or nil)
+    }
+}
+
+ENTITY_DIE{
+    If($obj2 and IsPlayer(entity = $obj2)){
+        AddEntityBuff(entity = $obj2, cfg = "myplugin/boom_block_break_sound_buff", buffTime = 60)
+    }
+    $obj1.var_die = true
+    CallTrigger(object = $obj1, event = "BOOM_VECTOR_BOOM", obj2 = $obj2)
+}

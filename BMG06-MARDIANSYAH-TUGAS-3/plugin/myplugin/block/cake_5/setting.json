@@ -1,0 +1,204 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/cake_5",
+            "block:myplugin/cake_5",
+            "cake_5"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0.5,
+                "x": 1,
+                "y": 1
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0.5
+            }
+        },
+        {
+            "max": {
+                "z": 1,
+                "x": 1,
+                "y": 1
+            },
+            "min": {
+                "z": 0.5,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0.06,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0.06,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.06,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.06,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "cake_side_cake_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.94,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0.94,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.94,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.94,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "cake_side_cake_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.06,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0.06,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.06,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.06,
+                    "y": 1
+                }
+            ],
+            "texture": "cake_side_cake_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.94,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0.94,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.94,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.94,
+                    "y": 1
+                }
+            ],
+            "texture": "cake_side_cake_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.5
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.5
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.5
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.5
+                }
+            ],
+            "texture": "cake_top_cake_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "texture": "cake_bottom_cake_5.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

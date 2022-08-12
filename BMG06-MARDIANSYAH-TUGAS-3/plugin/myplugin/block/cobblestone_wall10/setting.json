@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/cobblestone_wall10",
+				"block:myplugin\/cobblestone_wall10",
+				"cobblestone_wall10"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"cobblestone_wall5"
+	}

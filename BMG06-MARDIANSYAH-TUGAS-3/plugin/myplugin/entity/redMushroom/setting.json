@@ -1,0 +1,43 @@
+{
+		"showBoundBox":true,
+		"viewDistance":32,
+		"editBaseFunc":"mushroom_edit",
+		"hideHp":1,
+		"boundBoxColor":[
+			1,
+			1,
+			1,
+			1
+		],
+		"actorName":"object_mushroom.actor",
+		"basePropDesc":{
+			"editor.ui.addScore":[
+				1
+			],
+			"editor.ui.addHp":[
+				1
+			]
+		},
+		"addHp":1,
+		"desc":"{redMushroom_desc}\n{editor.ui.addScore}1\n{editor.ui.addHp}1\n",
+		"name":"",
+		"base":"baseMushroom",
+		"baseDesc":"redMushroom_desc",
+		"addScore":1,
+		"icon":"mushroom.png",
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"StraightPoint":true,
+		"disableShadow":true,
+		"meetCollisionBackRun":true,
+		"entityDerive":"buffItem",
+		"canClick":false,
+		"unassailable": 1,
+		"undamageable": 1
+	}

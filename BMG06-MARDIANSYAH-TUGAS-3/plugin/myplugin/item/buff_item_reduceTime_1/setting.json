@@ -1,0 +1,8 @@
+{
+    "icon": "item_reduceTime.png",
+    "itemname": "item.reduceTime_1.name",
+    "itemintroduction": "item.reduceTime_1.intro",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/reduceTime1"
+}

@@ -1,0 +1,6 @@
+HIT_ENTITY{
+    If(GetConfigVar(obj = $obj1, key = "reboundMissile")){
+        SetEntityPosition(entity = $missile, 
+            pos = GetEntityPosition(entity = $missile), ry = (GetEntityYaw(entity = $missile) or 0) + 180)
+    }
+}

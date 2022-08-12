@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/nether_brick_fence9",
+				"block:myplugin\/nether_brick_fence9",
+				"nether_brick_fence9"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"fence3"
+	}

@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/lit_pumpkin_2",
+            "block:myplugin/lit_pumpkin_2",
+            "lit_pumpkin_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "pumpkin_top_lit_pumpkin_2.png",
+        "pumpkin_top_lit_pumpkin_2.png",
+        "pumpkin_side_lit_pumpkin_2.png",
+        "pumpkin_side_lit_pumpkin_2.png",
+        "pumpkin_face_on_lit_pumpkin_2.png",
+        "pumpkin_side_lit_pumpkin_2.png"
+    ],
+    "lightEmitted": 15,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

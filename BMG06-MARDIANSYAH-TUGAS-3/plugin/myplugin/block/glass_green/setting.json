@@ -1,0 +1,128 @@
+{
+  "base": "base_block",
+  "baseDesc": "myplugin/glass_0_base_desc",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/glass_0",
+          "block:myplugin/glass_0",
+          "myplugin/glass_0_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/glass_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/glass_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": false,
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "breakTime": 20,
+  "canClick": false,
+  "canSwim": false,
+  "climbSpeed": 0,
+  "collisionBoxes": [
+    {
+      "__OBJ_TYPE": "Box",
+      "max": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "min": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "color": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "colorBlocks": {
+    "BLUE": "myplugin/glass_blue",
+    "GREEN": "myplugin/glass_green",
+    "RED": "myplugin/glass_red",
+    "YELLOW": "myplugin/glass_yellow"
+  },
+  "desc": "{myplugin/glass_0_base_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/glass_0",
+      "block:myplugin/glass_0",
+      "myplugin/glass_0_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "emitLightInMaxLightMode": true,
+  "fall": false,
+  "isDropItem": true,
+  "isOpaqueFullCube": false,
+  "itemintroduction": "glass_green.intro",
+  "itemname": "myplugin/glass_0_itemname",
+  "jumpBuff": [
+    "myplugin/jump_sound"
+  ],
+  "lightEmitted": 0,
+  "lightOpacity": 0,
+  "maxFallSpeed": 1.5,
+  "maxSpeed": 0,
+  "recycle": false,
+  "recycleTime": 20,
+  "renderable": true,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "showBoundBox": true,
+  "spring": 0,
+  "texture": [
+    "glass_green.png",
+    "glass_green.png",
+    "glass_green.png",
+    "glass_green.png",
+    "glass_green.png",
+    "glass_green.png"
+  ]
+}

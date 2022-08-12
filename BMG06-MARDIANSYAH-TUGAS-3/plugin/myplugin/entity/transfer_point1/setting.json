@@ -1,0 +1,38 @@
+{
+  "actorName": "object_tube_blue.actor",
+  "icon": "icon.png",
+  "isStatic": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "regionCfg": "myplugin/transfer_region",
+  "boundingVolume": {
+    "type": "Box",
+    "params": [ 2, 2, 2 ]
+  },
+  "name": "",
+  "oneWay": true,
+  "maxPairCount": 5,
+  "tipTime": 100,
+  "collision": true,
+  "dirCfgs": {
+    "6": "_horizontal",
+    "0": "_horizontal",
+    "2": "_horizontal",
+    "4": "_horizontal",
+    "5": "",
+    "1": "_reversed"
+  },
+  "dirOffset": {
+    "0": {
+      "x": 0,
+      "y": 3,
+      "z": 0
+    }
+  },
+  "entityDerive": "teleporter",
+  "dontCreateDynamically": true,
+  "customCmd": true,
+  "viewDistance": 32,
+  "desc": "transfer_point1_desc",
+  "disableShadow": true
+}

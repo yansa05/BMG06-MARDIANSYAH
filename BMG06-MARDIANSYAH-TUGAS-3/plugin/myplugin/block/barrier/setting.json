@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/barrier",
+            "block:myplugin/barrier",
+            "barrier"
+        ]
+    ],
+    "isOpaqueFullCube": false,
+    "breakTime": 20,
+    "editBaseFunc": "block_breakTime",
+    "texture": [
+        "empty.png",
+        "empty.png",
+        "empty.png",
+        "empty.png",
+        "empty.png",
+        "empty.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

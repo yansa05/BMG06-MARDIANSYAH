@@ -1,0 +1,5 @@
+{
+		"showIcon":"set:buff_icon.json image:revive_self.png",
+		"type":"rebirth",
+		"reduceTime":200
+	}

@@ -1,0 +1,9 @@
+{
+    "damage": 10,
+    "defense": 0,
+    "jumpSpeed": 0,
+    "maxHp": 0,
+    "moveSpeed": 0,
+    "skill": "myplugin/bow_skill_standby_middle",
+    "type": "HandBuff"
+}

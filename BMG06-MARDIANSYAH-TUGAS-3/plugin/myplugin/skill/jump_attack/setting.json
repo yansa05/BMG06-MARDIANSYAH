@@ -1,0 +1,13 @@
+{
+    "type": "MeleeAttack",
+    "range": 999,
+    "damage": 1,
+    "hurtDistance": 0.2,
+    "castAction": "",
+    "castSound": {
+        "volumn": 10,
+        "selfOnly": true,
+        "loop": false,
+        "sound": "tread_monster.mp3"
+    }
+}

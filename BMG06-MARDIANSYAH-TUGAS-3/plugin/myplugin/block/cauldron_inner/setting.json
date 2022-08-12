@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/cauldron_inner",
+            "block:myplugin/cauldron_inner",
+            "cauldron_inner"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "cauldron_inner_cauldron_inner.png",
+        "cauldron_inner_cauldron_inner.png",
+        "cauldron_inner_cauldron_inner.png",
+        "cauldron_inner_cauldron_inner.png",
+        "cauldron_inner_cauldron_inner.png",
+        "cauldron_inner_cauldron_inner.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

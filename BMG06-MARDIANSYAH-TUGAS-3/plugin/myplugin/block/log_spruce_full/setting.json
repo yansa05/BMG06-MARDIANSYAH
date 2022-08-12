@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/log_spruce_full",
+            "block:myplugin/log_spruce_full",
+            "log_spruce_full"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "log_spruce_log_spruce_full.png",
+        "log_spruce_log_spruce_full.png",
+        "log_spruce_log_spruce_full.png",
+        "log_spruce_log_spruce_full.png",
+        "log_spruce_log_spruce_full.png",
+        "log_spruce_log_spruce_full.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

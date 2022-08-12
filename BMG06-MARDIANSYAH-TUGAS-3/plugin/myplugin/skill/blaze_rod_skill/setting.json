@@ -1,0 +1,6 @@
+{
+	"type": "MeleeAttack",
+	"damage": 0,
+	"range": 3.5,
+	"hurtDistance": 2
+}

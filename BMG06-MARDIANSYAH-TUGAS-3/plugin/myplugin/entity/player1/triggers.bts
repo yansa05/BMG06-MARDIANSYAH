@@ -1,0 +1,1372 @@
+UPDATE_TEAM_INFO_HEAD_TEXT{
+	SetHeadText(entity = $obj1, x = 0, y = 0, headText = $headText)
+}
+
+CHECK_CAN_ATTACK{
+	If( GetGameState() ~= "GAME_GO" or GetConfigVar(obj = $obj2, key = "shopGroupName") or IsPlayerReloading(player = $obj1)){
+		$canAttack = false
+	}
+}
+
+JOIN_TEAM{
+	UpdateAlivePlayerCount(entity = $obj1)
+}
+
+LEAVE_TEAM{
+	UpdateAlivePlayerCount(entity = $obj1)
+}
+
+CHECK_ENTITY_FLY_STATE{
+	$unit = {x = 0, y = 0.1, z = 0}
+	$pos = GetEntityPosition(entity = $obj1)
+	$downPos = ComputeV3(op = "sub", p1 = $pos, p2 = $unit)
+	$blockId = GetPosBlockId(map = GetEntityMap(entity = $obj1), pos = $downPos)
+	$blockType = GetBlockTypeByPos(map = GetEntityMap(entity = $obj1), pos = $downPos)
+	$objID = GetObjectIdUnderFoot(entity = $obj1)
+	If($objID > 0 or ($blockId > 0 and $blockType ~= "water" and $blockType ~= "lava")){
+		CallTrigger(event = "RESET_FLY_STATE_ONGROUND", object = $obj1)
+	}
+}
+
+RESET_FLY_STATE_ONGROUND{
+	If($obj1.checkFlyStateTimer){
+		StopTimer(timer = $obj1.checkFlyStateTimer)
+		$obj1.checkFlyStateTimer = nil
+	}
+	RemoveSkill(entity = $obj1, name = "myplugin/fly_skill_cancel")
+	CallTrigger(event = "ADD_FLY_SKILL", obj1 = $obj1)
+	If(IsOpenSquatSkill(player = $obj1)){
+		AddSkill(entity = $obj1, name = "myplugin/squat_skill_base")
+	}
+	RemoveBuffByFullName(entity = $obj1, buff = "myplugin/fly_buff")
+}
+
+ENTITY_VP_FORBID_SPRINT{
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")
+	If($buff){
+		RemoveEntityBuff(entity = $obj1, buff = $buff)
+	}
+	RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_sprint")
+	RemoveSkill(entity = $obj1, name = "myplugin/accelerate_skill_walk")
+
+	AddSkill(entity = $obj1, name = "myplugin/accelerate_skill_run")
+	UpdateMovingStyle(entity = $obj1, movingStyle = 1)
+	ShowTip(entity = $obj1, tipType = 2, textKey = "player_lowvp_forbid_sprint", keepTime = 40)
+	CastSkill(skill = "myplugin/moving_change_skill_1" ,from = $obj1 ,packet = {needPre = true})
+}
+
+ENTITY_ENTER(debug = false){
+	-- 进入游戏，游戏未开始，无敌！
+	If(GetGameState() ~= "GAME_GO"){
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/not_game_go_buff")
+	}
+	$obj1.teamId = GetEntityTeam(entity = $obj1)
+	If(not IsUserCanPlay(entity = $obj1)){
+		$obj1.disRevive = true
+		KickOutPlayer(entity = $obj1, msg = "player_die_over")
+		Return()
+	}
+
+	If(GetGameState() == "GAME_GO"){
+		CheckSendToStartPos(entity = $obj1)
+	}
+
+	BroadcastPlayersRank()
+	CallTrigger(object = $obj1, event = "ADD_BASIC_ITEM")
+	CallTrigger(object = $obj1, event = "ADD_FLY_SKILL")
+	GetTeamHeadText(player = $obj1)
+
+	$time = GetTime()
+	$obj1.outTele = false
+	@timeToScore = 50
+
+	If(not IsSameDay(time1 = $obj1.loginTime, time2 = $time)){
+		$obj1.unlockStageTimes = 0
+		$obj1.loginTime = $time
+	}
+	If(IsOpenSquatSkill(player = $obj1)){
+		AddSkill(entity = $obj1, name = "myplugin/squat_skill_base")
+	}
+	AddSkill(entity = $obj1, name = "myplugin/accelerate_skill_run")
+
+	--CallTrigger(event = "INIT_MONSTER", obj1 = $obj1)
+
+	CallTrigger(event = "INIT_TEAM_DATA", obj1 = $obj1)
+	ClacTemporaryShieldBar(player = $obj1)
+
+	--玩家进入游戏默认地图
+	$obj1.savePoint = {}
+	UpdateAlivePlayerCount(entity = $obj1)
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/init_vp_buff")
+}
+
+ADD_FLY_SKILL {
+	$gameState = GetGameState()
+	If($gameState ~= "GAME_GO"){
+		Return()
+	}
+	If(GetConfigVar(obj = $obj1, key = "allowFly")){
+		AddSkill(entity = $obj1, name = "myplugin/fly_skill")
+	}
+}
+
+ADD_BASIC_ITEM{
+	$gameState = GetGameState()
+	If($gameState ~= "GAME_GO"){
+		Return()
+	}
+	$teams = GetWorldVar(key = "team")
+ 
+	$resourcesMod = GetWorldVar(key = "resourcesMod")
+	If($resourcesMod == "rich")
+	{
+		$basicEquip = GetWorldVar(key = "richEquip")
+	}ElseIf($resourcesMod == "basic"){
+		$basicEquip = GetWorldVar(key = "basicEquip")
+	}
+	If($basicEquip){
+		Foreach(array = $basicEquip, key = "value"){
+			$equip = NewDictionary($value)
+			$name = DictionaryGet(dict = $equip, key = "name")
+			$count = DictionaryGet(dict = $equip, key = "count")
+			$type = DictionaryGet(dict = $equip, key = "type")
+			If(GetItemCfg(fullName = $name, key = "auto_equip_by_bts")){
+				$obj1.currAutoEquipItem = true
+			}
+			AddItemAsMore(entity = $obj1, fullName = $name, type = $type, count = $count)
+		}
+	}
+}
+
+ON_OPEN_NPC_CHEST{
+	OpenNpcChest(player = $obj1, chest = $chest, closeEvent = "ON_CLOSE_NPC_CHEST")
+}
+ON_CLOSE_NPC_CHEST(debug1 = true){
+	If($obj1.openChestBuff){
+		RemoveEntityBuff(entity = $chest, buff = $obj1.openChestBuff)
+		$obj1.openChestBuff = nil
+	}
+}
+INIT_TEAM_DATA()
+{
+	$obj1.killPlayerCount = 0
+	$obj1.score = 0
+	$teamID = GetEntityTeam(entity = $obj1)
+	If($teamID ~= 0)
+	{
+		If(not GetTeamVar(teamId = $teamID, key = "killPlayerCount")){
+			SetHeadText(headText = GetTeamVar(teamId = $teamID, key = "nameHeadText"), x = -2, y = 0, entity = $obj1)
+			SetTeamVar(teamId = $teamID, key = "score", value = 0)
+			SetTeamVar(teamId = $teamID, key = "killPlayerCount", value = 0)
+		}
+		BroadcastTeamsRank()
+	}
+	Else{
+		BroadcastPlayersRank()
+	}
+}
+
+-- 添加分数到队伍或者个人
+ADD_SCORE_TO_TEAM_OR_PERSON {
+	$teamID = GetEntityTeam(entity = $obj1)
+	$score = $score or 0
+	$obj1.score = ($obj1.score or 0) + $score
+	If($teamID ~= 0)
+	{
+		$curScore = GetTeamVar(teamId = $teamID, key = "score")
+		SetTeamVar(teamId = $teamID, key = "score", value = $curScore + $score)
+		-- 组队中
+		BroadcastTeamsRank()
+	}
+	Else
+	{
+		BroadcastPlayersRank()
+	}
+	CallTrigger(event = "CHECK_GAME_OVER_BY_SCORE", obj1 = $obj1, score = $score)
+}
+
+KILL_ENTITY {
+	If(not IsPlayer(entity = $obj2))
+	{
+		Return()
+	}
+	CallTrigger(event = "KILL_PLAYER", obj1 = $obj1)
+}
+
+-- 击杀玩家
+KILL_PLAYER {
+	$teamID = GetEntityTeam(entity = $obj1)
+	$obj1.killPlayerCount = $obj1.killPlayerCount + 1
+	If($teamID ~= 0)
+	{
+		$curKillPlayerCount = GetTeamVar(teamId = $teamID, key = "killPlayerCount")
+		SetTeamVar(teamId = $teamID, key = "killPlayerCount", value = $curKillPlayerCount + 1)
+		-- 组队中
+		BroadcastTeamsRank()
+	}
+	Else{
+		BroadcastPlayersRank()
+	}
+	CallTrigger(event = "CHECK_GAME_OVER_BY_KILL_COUNT", obj1 = $obj1)
+}
+
+ENTITY_LEAVE(debug = false)
+{
+	If(GetGameState() == "GAME_OVER"){
+		Return()
+	}
+	If(GetGameState() ~= "GAME_GO"){
+		Return()
+	}
+	$obj1.disRevive = true
+	CallTrigger(event = "SEND_PLAYER_REPORT", obj1 = $obj1)
+	BroadcastPlayersRank()
+	CallTrigger(event = "CHECK_GAME_OVER_BY_DIE")
+	CheckPlayerTimer(player = $obj1)
+}
+
+SEND_PLAYER_REPORT{
+	RecordLeavePlayerData(player = $obj1)
+	UpdateAlivePlayerCount(entity = $obj1)
+}
+
+ENTITY_REBIRTH{
+	RemoveSkill(entity = $obj1, name = "myplugin/fire_ball")
+}
+
+ENTITY_DIE {
+	If(GetGameState() == "GAME_OVER"){
+		Return()
+	}
+	If(GetGameState() ~= "GAME_GO"){
+		ReviveEntity(entity = $obj1)
+		Return()
+	}
+	RecordPlayerRebirthTimes(entity = $obj1)
+	If($obj2 and IsPlayer(entity = $obj2) and IsPlayer(entity = $obj1)){
+		CallTrigger(event = "KILL_REWARD", object = $obj2, obj2 = $obj1)
+	}
+	CallTrigger(event = "SHOW_MESSAGE", object = $obj1, killer = $obj2, dead = $obj1, cause = $cause)
+	CallTrigger(event = "STOP_BGM", obj1 = $obj1)
+	CallTrigger(object = $obj1, event = "PRE_CHANGE_ACTOR", name = "character_new_blue_mario.actor", changeBuff = "big")
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/aggravation_buff")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+
+	-- 检查玩家死亡是否是火焰附魔死亡
+	CallTrigger(event = "CHECK_PLAYER_DIE_FROM_FIRE", from = $obj2)
+
+	-- 死亡后去除玩家身上的附魔Buff
+	RemoveAllAttachBuff(player = $obj1)
+
+	-------------------------------- 死亡时停止头部计时检测
+	If($obj1.checkHeadTimer){
+		StopTimer(timer = $obj1.checkHeadTimer)
+		$obj1.checkHeadTimer = nil
+
+		$obj1.headHadEntityOrBlock = nil
+		$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_gravity_buff")
+        If($buff){
+            RemoveEntityBuff(entity = $obj1, buff = $buff)
+        }
+		$obj1.hadSquatTouch = false
+		$obj1.beginSquat = nil
+		
+		If($obj1.squatSutainTimer){
+			StopTimer(timer = $obj1.squatSutainTimer)
+			$obj1.squatSutainTimer = nil
+		}
+		CastSkill(skill = "myplugin/idle" ,from = $obj1 ,packet = {needPre = true})
+		$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_move_buff")
+		If($buff){
+			RemoveEntityBuff(entity = $obj1, buff = $buff)
+		}
+		$obj1.hadSquatSkillTouch = false
+	}
+	CallTrigger(event = "REMOVE_SQUAT_BUFF", obj1 = $obj1)
+
+	--重置飞行状态
+	CallTrigger(event = "RESET_FLY_STATE_ONGROUND", obj1 = $obj1)
+	$rebirth = NewDictionary(GetWorldVar(key = "rebirth"))
+	$totalTimes = DictionaryGet(dict = $rebirth, key = "times")
+	$rebirthTime = DictionaryGet(dict = $rebirth, key = "time")
+	If(not $rebirthTime or $rebirthTime < 0){
+		$rebirthTime = 1
+	}
+	$rebirthTime = $rebirthTime - $obj1.reduceRebirthTime --新增：可以改变的复活时间值
+	If(not $rebirthTime or $rebirthTime < 0){
+		$rebirthTime = 1
+	}
+	$teamId = GetEntityTeam(entity = $obj1)
+	If(IsBedBroken(teamId = $teamId)){
+		If(GetTeamAlivePlayerCount(teamId = $teamId) > 0 or DictionaryGet(dict = @gameOverCondition, key = "noCondition")){
+			CallTrigger(event = "PRE_REVIVE_ENTITY", obj1 = $obj1, canRevive = false, bedBreak = true)
+			Return()
+		}
+		If(GetTeamAlivePlayerCount(teamId = $teamId) <= 0){
+			SendGameResult(reachCond = "otherAllDie", isGameOver = true)
+		}
+		CallTrigger(event = "PLAYER_CANT_REVIVE", obj1 = $obj1)
+		Return()
+	}
+	If(IsRebirthTimesEnough(entity = $obj1)){
+		StartTimer(time = $rebirthTime, event = "PRE_REVIVE_ENTITY", object = $obj1, canRevive = true)--无限复活
+		ShowCountDown(entity = $obj1, time = $rebirthTime)
+		Return()
+	}Else{
+		CallTrigger(event = "PRE_REVIVE_ENTITY", obj1 = $obj1, canRevive = false)
+		Return()
+	}
+	ShowOverPopView(entity = $obj1, type = "can_not_revive", eventSure = "SEND_EXIT_GAME", bedBreak = $bedBreak)
+	CallTrigger(event = "PLAYER_CANT_REVIVE", obj1 = $obj1)
+}
+
+PLAYER_CANT_REVIVE{
+	$obj1.disRevive = true
+	CallTrigger(event = "SEND_PLAYER_REPORT", obj1 = $obj1)
+	CallTrigger(event = "CHECK_GAME_OVER_BY_DIE")
+	RemoveBuffByFullName(entity = $obj1, buff = "myplugin/flame_bomb_burn_buff")
+}
+
+EXIT_STAGE{
+	CallTrigger(event = "STOP_BGM", obj1 = $obj1)
+	SetHeadText(entity = $obj1, headText = GetEntityName(entity = $obj1), x = 0, y = 0)
+	If(not IsEntityAlive(entity = $obj1)){
+		ReviveEntity(entity = $obj1, map = $map)
+	}
+	ExitStage(player = $obj1)
+	$obj1.inStage = false
+}
+
+PLAY_BGM {
+	CallTrigger(event = "STOP_BGM", obj1 = $obj1)
+	If(not $obj1.inStage){
+	    Return()
+	}
+	If(not $obj1.startBuff){
+		Return()
+	}
+	If(IsEntityAlive(entity = $obj1)){
+		$obj1.bg_sound_buff = AddEntityBuff(entity = $obj1, cfg = $obj1.startBuff)
+	}
+}
+
+STOP_BGM {
+	If ($obj1.bg_sound_buff){
+		RemoveEntityBuff(entity = $obj1, buff = $obj1.bg_sound_buff)
+		$obj1.bg_sound_buff = nil
+	}
+}
+
+--开启关卡失败
+STAGE_CAN_NOT_START {
+	If(not $canUnlock){
+		If($errMsg == "stage_notReach"){
+			CallTrigger(event = "SHOW_PAY_UNLOCK_UI", obj1 = $obj1, fullName = $fullName, chapterId = $chapterId, stage = $stage, unLockStar = $condition)
+		}Else{
+			ShowNotice(entity = $obj1, style = "mary", buttonType = 1, content = $errMsg, textP1 = $condition, sureKey = "stage.unlock.commit", showMask = true, titleKey = "")
+		}
+		Return()
+	}
+	$stars = PassedStagesTranscript(player = $obj1, fullName = $fullName, key = "totalStars")
+	$unLockStar = GetStageCfg(fullName = $fullName, chapterId = $chapterId, stage = $stage, key = "unLockStar")
+	If($stars >= $unLockStar){
+		$result = UnlockStage(player = $obj1, fullName = $fullName, chapterId = $chapterId, stage = $stage, refreshUI = true, winName = "win_stage")
+		--TODO 弹窗提醒
+		ShowNotice(entity = $obj1, style = "mary", buttonType = 1, content = "stage.unlock.star", textP1 = $unLockStar, sureKey = "stage.unlock.commit", showMask = true, titleKey = "")
+		Return()
+	}
+	CallTrigger(event = "SHOW_PAY_UNLOCK_UI", obj1 = $obj1, fullName = $fullName, chapterId = $chapterId, stage = $stage, unLockStar = $unLockStar)
+}
+
+--魔方解锁弹窗
+SHOW_PAY_UNLOCK_UI{
+	$unlockStageCost = GetStageCfg(fullName = $fullName, key = "unlockStageCost")
+	$totalTimes = ArraySize(array = $unlockStageCost)
+	If($totalTimes <= $obj1.unlockStageTimes){
+		ShowNotice(entity = $obj1, style = "mary", buttonType = 1, content = "stage.unlock.times.limit", textP1 = $unLockStar, sureKey = "stage.unlock.commit", showMask = true, titleKey = "")
+		Return()
+	}
+	--TODO弹窗是否金魔方解锁
+	$curTime = $obj1.unlockStageTimes + 1
+	$cost = ArrayGet(array = $unlockStageCost, index = $curTime)
+	ShowNotice(entity = $obj1, eventYes = "PAY_UNLOCK_STAGE", buttonType = 2, style = "mary", content = "stage.unlock.pay", yesKey = "stage.unlock.commit", noKey = "stage.unlock.cancel", textP1 = $unLockStar, textP2 = $cost, 
+		cost = $cost, showMask = true, titleKey = "", fullName = $fullName, chapterId = $chapterId, stage = $stage)
+}
+
+--金魔方解锁关卡
+PAY_UNLOCK_STAGE{
+	ConsumeDiamonds(entity = $obj1, coinName = "gDiamonds", count = $cost, event = "BUY_RESULT")
+	$obj1._unlock_fullName = $fullName
+	$obj1._unlock_chapterId = $chapterId
+	$obj1._unlock_stage = $stage
+}
+
+BUY_RESULT{
+	If ($result == true) {
+        UnlockStage(player = $obj1, fullName = $obj1._unlock_fullName, chapterId = $obj1._unlock_chapterId, stage = $obj1._unlock_stage, refreshUI = true, winName = "win_stage", pay = true)
+		$obj1.unlockStageTimes = $obj1.unlockStageTimes + 1
+	} Else {
+        ShowNotice(entity = $obj1, style = "mary", buttonType = 1, content = "pay.unlock.fail", sureKey = "stage.unlock.commit", showMask = true, titleKey = "")
+    }
+}
+
+--请求章节内容失败
+LOAD_CHAPTER_FAIL{
+	$key = "stage.chapter.lock"
+	If($chapterId == "chapterThree" or $chapterId == "chapterFour"){
+		$key = "stage.chapter.wait"
+	}
+	ShowTip(entity = $obj1, tipType = 2, textKey = $key, keepTime = 30)
+}
+
+--开始闯关，清空一些数据（积分，存档点, 星星）
+STAGE_BEGIN {
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/monster_inv_buff")
+	If($buff)
+	{
+		RemoveEntityBuff(entity = $obj1, buff = $buff)
+	}
+	SetHeadText(entity = $obj1, headText = "", x = 0, y = 0)
+	SetEntityRebirthPosition(entity = $obj1, pos = GetEntityPosition(entity = $obj1))
+	If(not IsEntityAlive(entity = $obj1)){
+		$map = GetEntityMap(entity = $obj1)
+		ReviveEntity(entity = $obj1, map = $map)
+	}
+	$obj1.inStage = true
+	$obj1.startBuff = GetStageCfg(fullName = $fullName, chapterId = $chapterId, stage = $stage, key = "startBuff")
+	If(Compare(co = "<", p1 = $obj1.life, p2 = 1)){
+		$obj1.life = 1
+	}
+	$obj1.savePoint = {}
+	--金币清零
+	$obj1.gold = 0
+	--RecoverFullHp(entity = $obj1)
+	UpdateStageScore(player = $obj1, score = 0)
+	CallTrigger(event = "UPDATE_PLAYER_GOLD", obj1 = $obj1, count = 0)
+	CallTrigger(event = "UPDATE_PLAYER_LIFE", obj1 = $obj1)
+	CallTrigger(event = "PLAY_BGM", obj1 = $obj1)
+	--If($obj1.isSuccedGuide == 0)
+	--{
+	--	--引导顶容器方块
+	--	--SetGuidePostion(entity = $obj1, pos = {x=23, y=6.8, z=42})
+	--	$obj1.guideStep = 1
+	--	$obj1.playerStep = 1
+	--	$obj1.GUIDE = CreateNpc(cfgName = "myplugin/guide_jump", name = "", pos = {x=23, y=6, z=42}, map = GetEntityMap(entity = $obj1), ry = 180, rp = 0, owner = $obj1)
+	--}
+	
+	$stars = GetStageArchiveValue(player = $obj1, fullName = $fullName, stage = $stage, chapterId = $chapterId, key = "stars")
+	If($stars){
+		$td = [1,2,3]
+		Foreach(array = $td, key = "index"){
+			AddStageStars(player = $obj1, index = $index, light = ArrayGet(array = $stars, index = $index) or false)
+		}
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/end_point_sound")
+	If($buff){
+		RemoveEntityBuff(entity = $obj1, buff = $buff)
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/save_point_sound")
+	If($buff){
+		RemoveEntityBuff(entity = $obj1, buff = $buff)
+	}
+}
+
+--结束关卡
+STAGE_END{
+	--非正常结束，扣一命
+	If(not $finish){
+		$obj1.life = $obj1.life - 1
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/monster_inv_buff")
+	If(not $buff)
+	{
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/monster_inv_buff")
+	}
+}
+
+PRE_REVIVE_ENTITY{
+	If(GetGameState() ~= "GAME_GO"){
+		Return()
+	}
+	If($canRevive){
+		ShowOverPopView(entity = $obj1, type = "can_revive", eventYes = "REVIVE_ENTITY", eventNo = "SEND_EXIT_GAME")
+	}Else{
+		ShowOverPopView(entity = $obj1, type = "can_not_revive", eventSure = "SEND_EXIT_GAME", bedBreak = $bedBreak)
+	}
+}
+
+SEND_EXIT_GAME{
+	CallTrigger(event = "PRE_REVIVE_ENTITY", obj1 = $obj1, canRevive = $canRevive)--为了把弹窗再次弹出
+	ExitGame(player = $obj1, canRevive = $canRevive)
+}
+
+REVIVE_ENTITY {
+	If(IsEntityAlive(entity = $obj1)){
+		Return()
+	}
+	ReviveEntity(entity = $obj1)
+	If(not $obj1.inStage){
+		Return()
+	}
+	CallTrigger(event = "UPDATE_PLAYER_LIFE", obj1 = $obj1)
+	CallTrigger(event = "PLAY_BGM", obj1 = $obj1)
+}
+
+--到达终点
+SHOW_STAGE {
+	If(not $obj1.inStage){
+		Return()
+	}
+	CallTrigger(event = "STOP_BGM", obj1 = $obj1)
+	ShowStageSettlement(entity = $obj1, winName = "win_plumber_settlement")
+	--金币清零
+	$obj1.gold = 0
+}
+
+CLAC_TEMPORARY_SHIELD{
+	If(not $damage or $damage <= 0 or not $clacEntityEquipTrays){
+		Return()
+	}
+	$offsetDamageEquips = {}
+	Foreach(array = $clacEntityEquipTrays, key = "etray"){
+		$equip = GetItemByTrayTypeAndSlot(entity = $obj1, type = $etray, slot = 1)
+		If($equip and (GetItemVar(entity = $obj1, item = $equip, key = "equipTemporaryShield") or 0) > 0){
+			ArrayAppend(array = $offsetDamageEquips, value = $equip)
+		}
+	}
+	$handItem = GetEntityHandItem(entity = $obj1)
+	If($handItem and (GetItemVar(entity = $obj1, item = $handItem, key = "equipTemporaryShield") or 0) > 0)
+	{
+		ArrayAppend(array = $offsetDamageEquips, value = $handItem)
+	}
+	If(ArraySize(array = $offsetDamageEquips) <= 0){
+		--减伤： 护盾全部没有的时候减少伤害：
+		CallTrigger(event = "PLAYER_DEDAMAGE", object = $obj1, damage = $damage, cause = $cause)
+		Return()
+	}
+	$averageDamage = $damage / ArraySize(array = $offsetDamageEquips)
+	$lessDamage = 0
+	Foreach(array = $offsetDamageEquips, key = "equip"){
+		$ets = GetItemVar(entity = $obj1, item = $equip, key = "equipTemporaryShield")
+		$lessEts = $ets - $averageDamage
+		If($lessEts < 0){
+			$lessDamage = $lessDamage - $lessEts
+		}
+		SetItemVar(item = $equip, key = "equipTemporaryShield", value = $lessEts > 0 and $lessEts or 0, entity = $obj1)
+		AddEntityHp(entity = $obj1, step = $ets < $averageDamage and $ets or $averageDamage)
+	}
+	If($lessDamage > 0){
+		CallTrigger(event = "CLAC_TEMPORARY_SHIELD", object = $obj1, obj1 = $obj1, damage = $lessDamage, clacEntityEquipTrays = $clacEntityEquipTrays, cause = $cause)
+	}
+}
+--减伤效果
+PLAYER_DEDAMAGE()
+{
+	If($cause == "ENGINE_TOUCHDOWN")
+	{
+		Return()
+	}
+	$deDamage = GetProps(entity = $obj1, key = "deDamage") or 0
+	$reHp = $deDamage > $damage and $damage or $deDamage
+	If(GetEntityCurHp(entity = $obj1) + $reHp > 0)
+	{
+		AddEntityHp(entity = $obj1, step = $reHp)
+	}
+}
+ENTITY_PRE_DAMAGE()
+{
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/shield_buff")
+	If($buff){
+		CallTrigger(object = $obj1, event = "ENTITY_TOUCH_AROUND", obj1 = $obj1, obj2 = $obj2)
+	}
+}
+ENTITY_TOUCHDOWN{
+	RemoveEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move")
+	If(GetGameState() == "GAME_GO"){
+		Return()
+	}
+	KillEntity(entity = $obj1, cause = "ENGINE_TOUCHDOWN")
+	$canDoDamage = false
+}
+ENTITY_DAMAGE{
+	RemoveSkill(entity = $obj1, name = "myplugin/fire_ball")
+
+	-- 计算道具的 临时护盾/耐久 承伤值 begin
+	-- 如果有临时护盾/耐久，则装备值，给玩家回相对应的血 = 玩家没扣血，装备承伤
+	-- 伤害值护盾均分，如果有装备护盾值不够的话，则把扣剩下的给分到其他够的装备上
+	$hadDedamage = false
+	$clacEntityEquipTrays = GetConfigVar(obj = $obj1, key = "equipTrays")
+	If($clacEntityEquipTrays and ArraySize(array = $clacEntityEquipTrays) > 0){
+		$hadDedamage = true
+		CallTrigger(event = "CLAC_TEMPORARY_SHIELD", cause = $cause, object = $obj1, obj1 = $obj1, damage = $damage, clacEntityEquipTrays = $clacEntityEquipTrays)
+	}
+	-- 计算道具的 临时护盾/耐久 承伤值 end
+	--减伤： 护盾全部没有的时候减少伤害：
+	If(not $hadDedamage){
+		CallTrigger(event = "PLAYER_DEDAMAGE", object = $obj1, damage = $damage, cause = $cause)
+	}
+	-- 触发计算护盾
+	ClacTemporaryShieldBar(player = $obj1)
+	--存一下受伤时是否有伤害来源
+	If($obj2)
+	{
+		If($obj1.stopClearDamage)
+		{
+			StopTimer(timer = $obj1.stopClearDamage)
+		}
+		$obj1.damageFrom = $obj2
+		$obj1.stopClearDamage = StartTimer(time = 80, event = "CLEAR_DAMAGEFROME", object = $obj1)
+	}
+}
+
+CLEAR_DAMAGEFROME {
+	$obj1.damageFrom = nil
+}
+----------------------------------------------------------------------------------------------- 改变模型
+ENTITY_HP_NOTIFY{
+	$actorName = GetEntityActorName(entity = $obj1)
+	If(not IsMaryModel(entity = $obj1) or $add >= 0 or GetEntityCurHp(entity = $obj1) <= 0 or $actorName == "character_new_blue_mario_nohat.actor"){
+		Return()
+	}
+	RemoveSkill(entity = $obj1, name = "myplugin/fire_ball")
+	If($actorName == "character_new_red_mario.actor"){
+		CallTrigger(object = $obj1, event = "PRE_CHANGE_ACTOR", name = "character_new_blue_mario.actor", changeBuff = "big")
+	}Else{
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/become_smaller", buffTime = 40)
+		CallTrigger(object = $obj1, event = "PRE_CHANGE_ACTOR", name = "character_new_blue_mario_nohat.actor", changeBuff = "small")
+	}
+}
+
+PRE_CHANGE_ACTOR{
+	If(not IsMaryModel(entity = $obj1)){
+		Return()
+	}
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/change_actor_buff", buffTime = 60)
+	SetEntityActorFlashEffect(entity = $obj1, add = true)
+	StartTimer(object = $obj1, event = "CHANGE_ACTOR", time = 20, name = $name, changeBuff = $changeBuff)
+}
+
+CHANGE_ACTOR{
+	If(not IsMaryModel(entity = $obj1)){
+		Return()
+	}
+	SetEntityActorFlashEffect(entity = $obj1, add = false)
+	CallTrigger(event = "CHANG_PLAYER_ACTOR", obj1 = $obj1, name = $name)
+	CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = $changeBuff) 
+	CastSkill(skill = "myplugin/change_actor_idle" ,from = $obj1 ,packet = {needPre = true})
+}
+
+CHANG_PLAYER_ACTOR {
+	$actorName = GetEntityActorName(entity = $obj1)
+	If(not IsMaryModel(entity = $obj1) or $actorName == $name){
+		Return()
+	}
+	
+	If($name == "character_new_blue_mario_nohat.actor"){
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/jump_decrease_buff")
+	}ElseIf($name == "character_new_blue_mario.actor" or $actorName == "character_new_red_mario.actor"){
+		RemoveEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/jump_decrease_buff")
+	}
+	ChangeEntityActor(entity = $obj1, name = $name)
+}
+
+----------------------------------------------------------------------------------------------- 蹲相关
+PLAY_SQUAT_TOUCH_START{
+	------------------------------------------------------------- 下蹲时播放下蹲动作技能
+	CastSkill(skill = "myplugin/squat" ,from = $obj1 ,packet = {needPre = true})
+	------------------------------------------------------------- 在地上下蹲一段时间后，播放蓄力
+	If(not $obj1.squatSutainTimer and not IsEntityMoving(entity = $obj1)){ -- 蓄力时必须是没在动
+		$obj1.squatSutainTimer = StartTimer(object = $obj1, event = "PLAY_SQUAT_TOUCH_SUTAIN", time = 20)
+	}ElseIf(IsEntityMoving(entity = $obj1)){ -- 移动中则直接播放蓄力走
+		CastSkill(skill = "myplugin/moveWithSquat" ,from = $obj1 ,packet = {needPre = true})
+	}
+}
+
+PLAY_SQUAT_TOUCH_SUTAIN{
+	If(not GetEntityOnGround(entity = $obj1) or IsEntityMoving(entity = $obj1)){
+		Return()
+	}
+	CastSkill(skill = "myplugin/powerStorage" ,from = $obj1 ,packet = {needPre = true})
+	$obj1.squatSutainTimer = nil
+}
+
+PLAY_SQUAT_TOUCH_STOP{
+	If($obj1.squatSutainTimer){ -- 停止长按，恢复常态
+		StopTimer(timer = $obj1.squatSutainTimer)
+		$obj1.squatSutainTimer = nil
+	}
+	CastSkill(skill = "myplugin/idle" ,from = $obj1 ,packet = {needPre = true})
+	If(not GetEntityOnGround(entity = $obj1) or not $obj1.hadSquatSkillTouch){
+		Return()
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_move_buff")
+	If($buff){
+		RemoveEntityBuff(entity = $obj1, buff = $buff)
+	}
+	If($obj1.resertSquatTouchTimer){
+		StopTimer(timer = $obj1.resertSquatTouchTimer)
+	}
+	$obj1.resertSquatTouchTimer = StartTimer(object = $obj1, event = "RESERT_SQUAT_TOUCH", time = 20)
+}
+
+RESERT_SQUAT_TOUCH{
+	$obj1.hadSquatSkillTouch = false
+	$obj1.resertSquatTouchTimer = nil
+}
+
+PLAY_SQUAT_CLICK_CAST{
+	------------------------------------------------------------- 跳蹲播放对应动作/特效
+	CastSkill(skill = "myplugin/rotateWithSquat" ,from = $obj1 ,packet = {needPre = true})
+	------------------------------------------------------------- 跳蹲时漂浮一下并且不能动
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/floating_buff")
+    If(not $buff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/floating_buff", buffTime = 10) -- 翻跟头时空中浮着
+    }
+	If($obj1.setSquatClickCastBuffTimer){
+		StopTimer(timer = $obj1.setSquatClickCastBuffTimer)
+		$obj1.setSquatClickCastBuffTimer = nil
+    }
+	$obj1.setSquatClickCastBuffTimer = StartTimer(object = $obj1, event = "SET_SQUAT_CLICK_CAST_BUFF", time = 10)
+}
+
+SET_SQUAT_CLICK_CAST_BUFF{
+	------------------------------------------------------------- 如果跳蹲翻滚结束后已经在地上了则不追加相关buff
+	If(GetEntityOnGround(entity = $obj1) or IsEntitySwimming(entity = $obj1)){
+		Return()
+	}
+	------------------------------------------------------------- 加重/不能移动buff
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move")
+    If(not $buff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_buff_move")
+    }
+	------------------------------------------------------------- 破坏 可破坏容器方块buff
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_break_vector")
+    If(not $buff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_buff_break_vector")
+    }
+}
+------------------------------------------------------------- 重置跳蹲时的砸状态相关
+REMOVE_SQUAT_BUFF{
+	If($obj1.setSquatClickCastBuffTimer){
+		StopTimer(timer = $obj1.setSquatClickCastBuffTimer)
+		$obj1.setSquatClickCastBuffTimer = nil
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_break_vector")
+    If(not $isMoving and $buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+	$obj1.hadSquatSkillClick = nil
+}
+------------------------------------------------------------- 碰撞检测相关
+ENTITY_TOUCH_ALL(debug = false){
+	If(GetGameState() ~= "GAME_GO")
+	{
+		Return()
+	}
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+	If(not $obj2 or IsPlayer(entity = $obj2) or not IsValidObject(object = $obj2)){
+		Return()
+	}
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+
+ENTITY_TOUCH_TOP(debug = false){
+	---------------------------------------- 二段跳
+	If("monster" ~= GetConfigVar(obj = $obj2, key = "entityDerive")){
+		Return()
+	}
+	-- $obj1.invincible = true
+	-- StartTimer(object = $obj1, event = "STOP_INVINCIBLE", time = 12)
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/jump_anti_gravity_buff")
+    If(not $buff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/jump_anti_gravity_buff", buffTime = 5)
+    }
+	---------------------------------------- 起床编辑器踩怪物不受伤 -- g更新：马里奥有的，编辑器也要有
+	If(GetEntityCurHp(entity = $obj2) >= 1 and not $obj2.touch_on_flag){
+		$obj2.touch_on_flag = true
+		StartTimer(object = $obj1, event = "CLEARN_TOUCH_ON_FLAG", time = 4, target = $obj2)
+		Damage(damage = 1, entity = $obj2 , from = $obj1)
+	}
+}
+
+CLEARN_TOUCH_ON_FLAG {
+	$target.touch_on_flag = false
+}
+
+STOP_INVINCIBLE {
+	-- $obj1.invincible = false
+}
+
+ENTITY_TOUCH_ON(debug = false){
+	CallTrigger(object = $obj1, event = "ENTITY_TOUCH_AROUND", obj1 = $obj2, obj2 = $obj1)
+	If(not "monster" ~= GetConfigVar(obj = $obj2, key = "entityDerive")){ -- 顶到不是怪物的任何东西加速下降
+		If(not GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/aggravation_buff")){
+			-- AddEntityBuff(entity = $obj1, cfg = "myplugin/aggravation_buff")
+		}
+	}
+}
+ENTITY_TOUCH_AROUND{
+	If("monster" ~= GetConfigVar(obj = $obj2, key = "entityDerive")){
+		Return()
+	}
+	If(GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/invincible_buff")
+		and not GetConfigVar(obj = $obj2, key = "cantTouchKill")){
+		AddEntityBuff(entity = $obj2, cfg = "myplugin/die_boundbox_buff")
+		SendPlayDeadAction(entity = $obj2, actionCfgName = "die")
+		-- SendPlayDeadAction(entity = $obj2, actionCfgName = "squashed")
+		KillEntity(entity = $obj2, from = $obj1)
+		-- Damage(damage = 999, entity = $obj2, from = $obj1) 
+	}ElseIf(not GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/free_from_injury_buff")){
+		$playerDef = GetPlayerDefense(player = $obj1)
+		$damage = GetConfigVar(obj = $obj2, key = "damage")
+		$damage = $damage and ($damage - $playerDef) or 0
+		If($damage <= 0){
+			$damage = 1
+		}
+		Damage(damage = $damage, entity = $obj1, from = $obj2) 
+	}
+}
+
+-- 更新玩家所得星星 context: index 所得的星星位置 obj1 玩家
+UPDATE_PLAYER_STAR {
+	AddStageStars(player = $obj1, index = $index)
+}
+
+-- 更新玩家所得金币 context: count 需要加的金币 显示上会自动求余 30  obj1 玩家
+UPDATE_PLAYER_GOLD {
+	$gold = $obj1.gold + $count
+	$addLife = $gold // 30
+	$obj1.gold = $gold % 30
+	If($addLife > 0){
+		$obj1.life = $obj1.life + $addLife
+		If($obj1.life <= 10){
+			$pos = GetEntityPosition(entity = $obj1)
+			AddEntityBuff(entity = $obj1, cfg = "myplugin/add_life_buff", buffTime = 60)
+			ShowImagesEffect(player = $obj1, pos = ComputeV3(op = "add", p1 = $pos, p2 = {x = 0, y = 2.5, z = 0}), imageWidth = 20, imageHeight = 20, 
+				images = Table("set:plumber_stage.json image:addLife.png", "set:plumber_stage.json image:one.png", "set:plumber_stage.json image:greenLife.png"))
+		}
+		$obj1.life  = $obj1.life > 10 and 10 or $obj1.life
+		CallTrigger(event = "UPDATE_PLAYER_LIFE", obj1 = $obj1)
+	}
+	SetStageTopInfo(player = $obj1, key = "gold", value = $obj1.gold)
+}
+
+-- 更新玩家命数显示 context: count 当前拥有的命数  obj1 玩家
+UPDATE_PLAYER_LIFE {
+	SetStageTopInfo(player = $obj1, key = "life", value = $obj1.life)
+}
+CHECK_PORTAL(debug = false){
+	If($obj1.needSneakKey == 1){
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/frozen", buffTime = 10)	
+		StartTimer(object = $obj1, time = 10, rep = false, event = "SET_ENTITY_POSITION")
+	}
+}
+SET_ENTITY_POSITION(debug = false){
+    If($obj1.targetPos){
+		$obj1.outTele = true
+		SetEntityPosition(pos = $obj1.targetPos + V3(0,0.1,0), entity = $obj1)
+		StartTimer(event = "RESET_OUTTELE_FLAG", time = 10, rep = false, object = $obj1)
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/climb_tube_sound")
+		If($obj1.guideStep == 4 and $obj1.playerStep == 4)
+		{
+			--SetGuidePostion(entity = $obj1, pos = {x = 75.5, y = 7, z = -83.5})
+		}
+    }
+}
+
+RESET_OUTTELE_FLAG(debug = false){
+	$obj1.outTele = false
+}
+
+
+CHECK_SQUAT_MOVE{
+	$isMoving = IsEntityMoving(entity = $obj1)
+	If($isMoving and $obj1.hadSquatTouch){
+        CastSkill(skill = "myplugin/moveWithSquat" ,from = $obj1 ,packet = {needPre = true})
+    }ElseIf(not $isMoving and $obj1.hadSquatTouch){
+        CastSkill(skill = "myplugin/powerStorage" ,from = $obj1 ,packet = {needPre = true})
+    }
+}
+
+CHECK_SPRINT_MOVE{
+    If(IsEntityMoving(entity = $obj1) and GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")){
+        $obj1.moveWithAccBeginTime = GetGameTime()
+    }
+}
+
+CHECK_HEAD_ENTITY_OR_BLOCK{ -- 检测头顶是否有东西
+	If(GetEntityCurHp(entity = $obj1) <= 1){ -- 小人状态不需要干嘛
+		$obj1.headHadEntityOrBlock = false
+        Return()
+	}
+	$block = GetBlockConfig(pos = V3ToBlockPos(v3 = ComputeV3(p1 = Table(x = 0, y = 1, z = 0), p2 = GetEntityPosition(entity = $obj1), op = "add")), 
+            map = GetEntityMap(entity = $obj1), key = "fullName")
+    If($block and "/air" ~= $block){
+        $obj1.headHadEntityOrBlock = true
+        Return()
+    }
+    $objs = GetNearbyEntities(entity = $obj1, distance = 4) or {}
+	If(ArraySize(array = $objs) > 1){
+		CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "big") 
+		Foreach(array = $objs, key = "entity"){
+			If(IsEntityTouch(entity1 = $entity, entity2 = $obj1) 
+				and (GetPosY(pos = GetEntityPosition(entity = $entity))-(GetPosY(pos = GetEntityPosition(entity = $obj1)))) > 0.5){
+				CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "squat") 
+				$obj1.headHadEntityOrBlock = true
+				Return()
+			}
+		}
+	}
+	$obj1.headHadEntityOrBlock = false
+}
+
+CHECK_HEAD_ENTITY_OR_BLOCK_TICK{
+	CallTrigger(object = $obj1, event = "CHECK_HEAD_ENTITY_OR_BLOCK")
+	If(not $obj1.headHadEntityOrBlock){
+		$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_gravity_buff")
+        If($buff){
+            RemoveEntityBuff(entity = $obj1, buff = $buff)
+        }
+		$obj1.hadSquatTouch = false
+		If(GetEntityCurHp(entity = $obj1) == 1){
+			CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "small") 
+		}ElseIf(GetEntityCurHp(entity = $obj1) == 2){
+			CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "big") 
+		}
+		$obj1.beginSquat = nil
+		CallTrigger(object = $obj1, event = "PLAY_SQUAT_TOUCH_STOP")
+		Return()
+	}
+	If($obj1.checkHeadTimer){
+		StopTimer(timer = $obj1.checkHeadTimer)
+		$obj1.checkHeadTimer = nil
+	}
+	$obj1.checkHeadTimer = StartTimer(object = $obj1, time = 10, event = "CHECK_HEAD_ENTITY_OR_BLOCK_TICK")
+}
+
+SKIP_WITH_MOVE_AND_JUMP{
+	If(not IsMaryModel(entity = $obj1)){
+		Return()
+	}
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/skid_move_sound_buff")
+	If(not $buff and (GetGameTime() - ($obj1.moveWithAccBeginTime or GetGameTime()) > 15)){
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/skid_move_sound_buff", buffTime = 20)
+		CastSkill(skill = "myplugin/skidWithSprintAndSprintJump" ,from = $obj1 ,packet = {needPre = true})
+		$obj1.moveWithAccBeginTime = nil
+	}
+}
+
+HIT_ENTITY(debug = false){
+    If(not IsPlayer(entity = $obj2) and GetConfigVar(obj = $obj2, key = "entityDerive") == "monster"){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/fire_ball_missile_hit_entity_buff", buffTime = 20)
+    }
+}
+
+--游戏时间结束处理
+STAGE_TIME_END {
+	If(IsEntityAlive(entity = $obj1)){
+		KillEntity(entity = $obj1)
+		$obj1.life = $obj1.life + 1
+	}Else{
+		If($obj1.life > 1){
+			$obj1.rebirthTimer = StartTimer(object = $obj1, time = 50, event = "REVIVE_ENTITY")
+			$obj1.reStartStageTimer = StartTimer(object = $obj1, time = 50, event = "AGAIN_START_STAGE", fullName = $fullName, chapterId = $chapterId, stage = $stage)
+		}Else{
+			StartTimer(object = $obj1, time = 2, event = "EXIT_STAGE")
+			$obj1.life = 2
+		}
+		Return()
+	}
+	If($obj1.life > 1){
+		StartStage(entity = $obj1, fullName = $fullName, chapterId = $chapterId, stage = $stage, test = IsEditor())	
+	}
+}
+
+AGAIN_START_STAGE {
+	StartStage(entity = $obj1, fullName = $fullName, chapterId = $chapterId, stage = $stage)
+}
+
+STAGE_SETTLEMENT(debug = false) {
+	$addSubId = 0
+	If($chapterId == "chapterTwo"){
+		$addSubId = 4
+	}
+	If($chapterId == "chapterThree"){
+		$addSubId = 8
+	}
+	If($chapterId == "chapterFour"){
+		$addSubId = 12
+	}
+	UpdateRankScore(entity = $obj1, rankType = 1, subId = $stage + $addSubId, score = $score)
+	StartTimer(object = $obj1, time = 30, event = "UPDATA_STAGE_RANK", rankType = $rankType)
+	--更新排行榜分数
+	$totscore = PassedStagesTranscript(player = $obj1, fullName = $fullName, key = "totalScore")
+	$totstar = PassedStagesTranscript(player = $obj1, fullName = $fullName, key = "totalStars")
+	$combScore = ($totstar or 0) * @maxbit + $totscore
+	UpdateRankScore(entity = $obj1, rankType = 2, subId = 1, score = $combScore)
+	requestRankData(player = $obj1, rankType = 2)
+	CallTrigger(object = $obj1, event = "UPDATA_NEW_RANK", obj1 = $obj1)
+}
+
+UPDATA_STAGE_RANK {
+	requestRankData(rankType = $rankType)
+}
+
+STAGE_TIME_NEARLY_END {
+	SetBgmRate(player = $obj1, rate = 1.3)
+}
+
+ADD_SCORE {
+	If(not $score)
+	{
+		$score = GetConfigVar(obj = $obj2, key = "addScore")
+	}
+	CallTrigger(event = "ADD_SCORE_TO_TEAM_OR_PERSON", obj1 = $obj1, score = $score)
+	If($obj2 and IsPlayer(entity = $obj2))
+	{
+		CallTrigger(event = "KILL_PLAYER", obj1 = $obj1, killPlayerCount = 1)
+	}
+	--UpdateStageScore(player = $obj1, score = $score)
+}
+
+STOP_ON_ADD_SCORE{
+	$obj1.onaddTimer = nil
+}
+
+CHANGE_BOUNDING_BOX{
+	If(IsMaryModel(entity = $obj1)){
+		$canChange = true
+	}
+    $smallBoundBuff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/small_boundbox_buff")
+    If($smallBoundBuff){
+        RemoveEntityBuff(entity = $obj1, buff = $smallBoundBuff)
+    }
+    $squatBoundBuff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_boundbox_buff")
+    If($squatBoundBuff){
+        RemoveEntityBuff(entity = $obj1, buff = $squatBoundBuff)
+    }
+    $bigBoundBuff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/big_boundbox_buff")
+    If($bigBoundBuff){
+        RemoveEntityBuff(entity = $obj1, buff = $bigBoundBuff)
+    }
+    If($changeBuff == "small" and $canChange){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/small_boundbox_buff")
+    }ElseIf($changeBuff == "squat"){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_boundbox_buff")
+    }ElseIf($canChange){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/big_boundbox_buff")
+    }
+}
+
+--点击返回大厅按键event
+RETURN_LPBBY {
+	If($obj1.inStage){
+		CallTrigger(object = $obj1, event = "EXIT_STAGE")
+		If($obj1.life < 1){
+			$obj1.life = 2
+		}
+	}
+}
+
+DO_BLINK {
+	SetEntityPosition(entity = $obj1, pos = $tarPos)
+}
+
+DO_BUILDING {
+	RemoveBlock(block = $blockPos, map = GetEntityMap(entity = $obj1))
+	DoBuildByFullName(fullName = $fullName, rotate = GetEntityYaw(entity = $obj1), map = GetEntityMap(entity = $obj1), pos = $blockPos)
+}
+
+--商人商店购买道具
+ENTITY_BUY_COMMODITY {
+	If(GetItemCfg(fullName = $itemName, key = "auto_equip_by_bts"))
+	{
+		$obj1.currAutoEquipItem = true
+	}
+    --商店销售buff
+    $teamId = GetEntityTeam(entity = $obj1)
+	$addBuff = GetItemCfg(fullName = $itemName, key = "itembuff")
+    If($addBuff)
+    {
+		$additem = false
+		CallTrigger(event = "ADD_BUFF_BY_ITEM", object = $obj1, itemName = $itemName)
+		$msg = "gui_buy_goods_successful"
+	}
+	--商店销售附魔
+	If(GetItemCfg(fullName = $itemName, key = "isAttach")) -- 如果是附魔，则给所有道具附魔
+	{
+		$additem = false
+		$msg = "gui_buy_goods_successful"
+		CallTrigger(event = "PLAYER_UPDATE_ATTACH_BUFF_DATA",object = $obj1, itemName = $itemName)
+	}
+
+	--处理自动装备的道具相关逻辑
+	$obj1.currAutoEquipItem = GetItemCfg(fullName = $itemName, key = "auto_equip_by_bts")
+	$obj1.currAutoEquipItemQuality = GetItemCfg(fullName = $itemName, key = "quality")
+  	--处理自动装备的道具相关逻辑
+}
+
+--删除物品
+TRAY_PICK_ITEM()
+{
+
+}
+--丢弃物品
+ITEM_ON_ABANDONED()
+{
+    
+}
+
+--购买温泉buff/立即生效
+BUY_HOT_SPRING_BUFF()
+{
+    DictionarySet(dict = @hotSpringBuff, key = $teamId, value = $addBuff)
+    $entityList = GetTeamEntityList(teamId = $teamId)
+	Foreach(array = @hotSpringRegion, key = "region")
+	{
+		If($region.teamId == $teamId)
+		{
+			ForeachDictionary(keyName = "objID", valueName = "object", dict = NewDictionary($entityList))
+			{
+				If(IsPosInRegion(region = $region, pos = GetEntityPosition(entity = $object)))
+				{
+					CallTrigger(event = "HOTSPRING_TAKE_EFFECT", object = $object, region = $region)
+				}
+			}
+		}
+	}
+}
+HOTSPRING_TAKE_EFFECT()--温泉buff起效
+{
+	$teamId = GetEntityTeam(entity = $obj1)
+	If($teamId == $region.teamId and not $obj1.hotSpringBuff){
+		$buffName = DictionaryGet(dict = @hotSpringBuff, key = $teamId)
+		If($buffName)
+		{
+			$obj1.hotSpringBuff = AddEntityBuff(cfg = $buffName, entity = $obj1)
+		}
+	}
+}
+HOTSPRING_LOSE_EFFECT()--温泉buff失效
+{
+    $teamId = GetEntityTeam(entity = $obj1)
+    If($obj1.hotSpringBuff and $teamId == $region.teamId){
+		RemoveEntityBuff(buff = $obj1.hotSpringBuff, entity = $obj1)
+		$obj1.hotSpringBuff = nil
+	}
+}
+--温泉加hp
+HOT_SPRING_BUFF()
+{
+	AddEntityHp(entity = $obj1, step = $addStep)
+}
+
+--队伍生产buff
+TEAM_BOOST_CREATE()
+{
+    Foreach(array = @resPointArray, key = "object"){
+		$id = $object.teamID
+		If($id == $teamId){
+			$resPoint = $object
+		}
+    }
+    If(not $resPoint)
+    {
+        Return()
+	}
+	$entityList = GetTeamEntityList(teamId = $teamId)
+	ForeachDictionary(keyName = "objID", valueName = "object", dict = NewDictionary($entityList))
+	{
+		If(IsPlayer(entity = $object))
+		{
+			--这里这是为了显示图标而已
+			RemoveEntityTypeBuff(entity = $object, key = "type", value = "create")
+			AddEntityBuff(entity = $object, cfg = $addBuff)
+		}
+	}
+	$resPoint.teamBoostBuff = $addBuff
+	$addStep = GetConfigValue(type = "buff", fullName = $addBuff, key = "addStep")
+	$accTime = $addStep - ($resPoint.lastAcc or 0)
+	$resPoint.lastAcc = $addStep
+
+	CallTrigger(event = "ADD_PRODUCT_SPEED", object = $resPoint, accTime = $accTime*20)
+}
+
+--攻击
+ENTITY_CLICK(debug = false){
+	
+}
+
+
+
+--道具进入背包
+ENTER_EQUIPMEN(debug = false) {
+	$itemName = GetConfigVar(obj = $item, key = "fullName")
+
+	$isBuff = GetItemCfg(fullName = $itemName, key = "isBuff") or GetItemCfg(fullName = $itemName, key = "itembuff")
+	$isAttach = GetItemCfg(fullName = $itemName, key = "isAttach") or GetItemCfg(fullName = $itemName, key = "attachBuff")-- 如果是附魔
+	If($isBuff) -- 如果是buff/附魔item哲加buff和附魔后删除
+	{
+		ConsumeItemForce(item = $item, num = 1)
+		CallTrigger(event = "ADD_BUFF_BY_ITEM", object = $obj1, itemName = $itemName)
+		Return()
+	}ElseIf($isAttach){
+		ConsumeItemForce(item = $item, num = 1)
+		CallTrigger(event = "PLAYER_UPDATE_ATTACH_BUFF_DATA",object = $obj1, itemName = $itemName)
+		Return()
+	}
+
+	-- 生成临时护盾/耐久值 begin
+	$equipTemporaryShield = GetItemVar(entity = $obj1, item = $item, key = "equipTemporaryShield")
+	$entityEquipTrays = GetConfigVar(obj = $obj1, key = "equipTrays")
+	If(not $equipTemporaryShield and $entityEquipTrays and ArraySize(array = $entityEquipTrays) > 0){
+		$itemCfgDict = NewDictionary(GetItemCfgByItemClass(item = $item) or {})
+		$trays = DictionaryGet(dict = $itemCfgDict, key = "tray") or {}
+		If(DictionaryGet(dict = $itemCfgDict, key = "equipTemporaryShield")){
+			SetItemVar(item = $item, key = "equipTemporaryShield", value = DictionaryGet(dict = $itemCfgDict, key = "equipTemporaryShield"), entity = $obj1)
+		}
+	}
+	-- 生成临时护盾/耐久值 end
+
+	--附魔：item自己原来就有的附魔，配置或者编辑器生成
+    CallTrigger(event = "ITEM_CFG_ATTACH_BUFF", object = $obj1, item = $item)
+	--附魔, 给进入背包的item设置var: 附魔值
+	CallTrigger(event = "ITEM_ATTACH_BUFF", object = $obj1, item = $item)
+	
+	--商店购买道具自动装备
+	If($obj1.currAutoEquipItem)
+	{
+		PlayerPutOn(player = $obj1, bagitem = $item)
+		$obj1.currAutoEquipItem = false
+	}
+}
+
+ENTITY_DODAMAGE()
+{
+	
+}
+ENTITY_DO_ATTACK()
+{
+	If($skillName == "/attack" and $obj1.noAttackBuff){
+		Return()
+	}
+    CallTrigger(event = "FIRE_ATTACH_BUFF", object = $obj1, obj2 = $obj2)
+}
+
+--子弹打到床，不能造成伤害
+ENTITY_HIT_CAST_SKILL()
+{
+	$target = $targetID and GetObject(objID = $targetID)
+	If($target)
+	{
+		$base = GetConfigVar(obj = $target, key = "base")
+		If($base == "base_revive")
+		{
+			$canCast = false
+		}
+	}
+	If(not $canCast and $from and not IsPlayer(entity = $target))
+	{
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$msg = $isegg and "gui_attack_egg_only_tool" or "gui_attack_bed_only_tool"
+		ShowTip(entity = $from, tipType = 2, textKey = $msg)
+	}
+}
+
+--信息展示相关
+SHOW_MESSAGE {
+	$killerName = ($killer and GetEntityName(entity = $killer)) or ($obj1.damageFrom and GetEntityName(entity = $obj1.damageFrom)) or GetEntityName(entity = $obj1)
+	$deadName = $dead and GetEntityName(entity = $dead) or GetEntityName(entity = $obj1)
+	$teams = GetWorldVar(key = "team")
+	$killerFrom = $killer or $obj1.damageFrom
+	If($teams)
+	{
+		$deadColor = $dead and GetTeamColor(teamId = GetEntityTeam(entity = $dead)) or ""
+		$deadName = Concat(p1 = $deadColor, p2 = $deadName)
+		$killColor = ($killer or $obj1.damageFrom) and GetTeamColor(teamId = GetEntityTeam(entity = $killer or $obj1.damageFrom)) or ""
+		$killerName = Concat(p1 = $killColor, p2 = $killerName)
+	}
+	If($cause == "ENGINE_TOUCHDOWN")
+	{
+		--死于虚空
+		If($obj1.damageFrom)
+		{
+			CallTrigger(event = "KILL_PLAYER", obj1 = $obj1.damageFrom)
+			CallTrigger(event = "KILL_REWARD", object = $obj1.damageFrom, obj2 = $obj1)
+			BroadcastNotice(tipType = 4, textKey = "enigne.touchdown.tip1", keepTime = 40, textP1 = ToString($killerName), textP2 = ToString($deadName))
+			$obj1.damageFrom = nil
+		}Else{
+			BroadcastNotice(tipType = 4, textKey = "enigne.touchdown.tip2", keepTime = 40, textP1 = ToString($deadName))
+		}
+		Return()
+	}
+	--死于玩家击杀
+	If(not $killer)
+	{
+		Return()
+	}
+	If($killerFrom)
+	{
+		$killerName = GetEntityName(entity = $killerFrom)
+		If(not $killerName or $killerName == "" or $killerName == "")
+		{
+			$killerName = GetConfigVar(obj = $killerFrom, key = "itemname") or GetConfigVar(obj = $killerFrom, key = "_name")
+		}
+	}
+	BroadcastNotice(tipType = 4, textKey = "kill.tip", keepTime = 40, textP1 = ToString($killerName), textP2 = ToString($deadName))
+}
+--信息展示相关
+
+--捡掉落物/不加背包的掉落物
+AUTOUSE_DROPITEM()
+{
+	
+}
+
+--跳转到下一个地图
+GO_TO_NEXT_MAP()
+{
+	$mapName = GetNextMapName(player = $obj1)
+	
+		
+	If(not $mapName){ -- 如果没有直接游戏结束
+		If(DictionaryGet(dict = @gameOverCondition, key = "noCondition")){
+			SendGameResult(reachCond = "timeOver", player = $obj1)
+		}
+		Else
+		{
+			SendGameResult(reachCond = "endPointOver", player = $obj1, isGameOver = true)
+			GameOver()
+		}
+		StopDeadCountDown(entity = $obj1)
+		Return()
+	}
+	--去下一个地图
+	GoToNextMap(player = $obj1, mapName = $mapName)
+	SetEntityRebirthPosition(entity = $obj1, pos = GetEntityPosition(entity = $obj1))	
+}
+
+-- 捡起地上的掉落物
+PICK_DROPITEM
+{
+	If($dropItem and $dropItem.spawFrom)
+	{
+		$dropItem.spawFrom.maxSpawCount = ($dropItem.spawFrom.maxSpawCount or 0) - 1
+	}
+	-- 判断是否满足收集道具的条件
+	OpenPropCollect(obj1 = $obj1, item = $item)
+}

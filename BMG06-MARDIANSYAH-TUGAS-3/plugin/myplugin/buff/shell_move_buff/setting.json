@@ -1,0 +1,10 @@
+{
+    "needSave": true,
+	"sound": {
+		"selfOnly": false,
+		"sound": "dust.mp3",
+		"loop": true,
+		"volume": 1
+	},
+	"ifSound": 1
+}

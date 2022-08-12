@@ -1,0 +1,101 @@
+ENTITY_DIE (debug = false){
+
+    If($obj2 and (IsPlayer(entity = $obj2) or $obj2.master)){
+        $addplayer = IsPlayer(entity = $obj2) and $obj2
+        If($obj2.master){
+            $addplayer = GetObject(objID = $obj2.master)
+        }
+		If($addplayer and IsValidObject(object = $addplayer) and IsPlayer(entity = $addplayer))
+        {
+             CallTrigger(object = $obj2, event = "ADD_SCORE", obj1 = $addplayer, obj2 = $obj1)
+        }
+    }
+    $obj1.killFrom = $obj2
+    CallTrigger(event = "ENTITY_DIE_DROP_ITEM", from = $obj1)
+   
+}
+
+ENTITY_REBIRTH{
+    $obj1.isdie = false
+	UpdateScaleWhenRebirth(entity = $obj1)
+}
+ENTITY_TOUCH_ALL(debug = false){
+	$damageByCollision = GetConfigVar(obj = $obj1, key = "damageByCollision")
+	If(not $damageByCollision)
+	{
+		Return()
+	}
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+	If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+
+ENTITY_TOUCH_AROUND_SHELL(debug = false) --被乌龟壳撞变成龟壳
+{
+    If(GetConfigVar(obj = $obj2, key="fullName") == "myplugin/turtle_shell")
+    {
+        If($obj1.isdie == true or not IsValidObject(object = $obj1)){
+            Return()
+        }
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/turtle_be_on")
+        $obj1.isdie = true
+        $pos = GetEntityPosition(entity = $obj1)
+        $map = GetEntityMap(entity = $obj1)
+        $yaw = GetEntityYaw(entity = $obj2)
+        KillEntity(entity = $obj1, from = $obj2, cause = "ENGINE_MELEE_ATTACK")
+        $npc = CreateNpc(cfgName = "myplugin/turtle_shell",enableAI = false, enableAIStateMachine = true)
+        StartTimer(rep = false, time = 20, event = "START_RUN", object = $npc, pos = $pos, map = $map, obj2 = GetObject(objID = $obj2.master), yaw = $yaw)
+        SetEntityPosition(entity = $obj1, pos = nil)
+    }
+}
+
+ENTITY_HITTED(debug = false) --被子弹打到变成龟壳
+{
+    If($obj1.isdie == true or not IsValidObject(object = $obj1) or GetProps(entity = $obj1, key = "undamageable") > 0){
+        Return()
+    }
+    AddEntityBuff(entity = $obj1, cfg = "myplugin/turtle_be_on")
+    $obj1.isdie = true
+    $pos = GetEntityPosition(entity = $obj1)
+    $map = GetEntityMap(entity = $obj1)
+    $vector = ComputeV3(p1 = $pos, p2 = GetEntityPosition(entity = $obj2), op = "sub")
+    $yaw = V3AngleXZ(vector = $vector)
+    KillEntity(entity = $obj1, from = $obj2, cause = "ENGINE_MELEE_ATTACK")
+    $npc = CreateNpc(cfgName = "myplugin/turtle_shell",enableAI = false, enableAIStateMachine = true)
+    StartTimer(rep = false, time = 20, event = "START_RUN", object = $npc, pos = $pos, map = $map, obj2 = $obj2, yaw = $yaw)
+    --SetEntityPosition(entity = $obj1, pos = nil)
+}
+
+ENTITY_TOUCH_ON(debug = false){
+    If($obj1.isdie == true or not IsValidObject(object = $obj1)){
+        Return()
+    }
+    AddEntityBuff(entity = $obj1, cfg = "myplugin/turtle_be_on")
+    $obj1.isdie = true
+    $pos = GetEntityPosition(entity = $obj1)
+    $map = GetEntityMap(entity = $obj1)
+    $yaw = GetEntityYaw(entity = $obj2)
+    KillEntity(entity = $obj1, from = $obj2)
+    $npc = CreateNpc(cfgName = "myplugin/turtle_shell",enableAI = false, enableAIStateMachine = true)
+    $npc.lastOnTime = GetTime()
+    StartTimer(rep = false, time = 1, event = "START_RUN", object = $npc, pos = $pos, map = $map, obj2 = $obj2, yaw = $yaw)
+    SetEntityPosition(entity = $obj1, pos = nil)
+}
+
+VECTOR_SPAW {
+	$pos = ComputeV3(op = "add", p1 = $pos, p2 = {x = 0.5, y = 1, z = 0.5})
+	$map = GetEntityMap(entity = $player)
+	$entity = CreateNpc(cfgName = "myplugin/turtle", pos = $pos, map = $map)
+	MonstersDisappeardayDuringDay(entity = $entity)
+	StartAI(entity = $entity)
+}

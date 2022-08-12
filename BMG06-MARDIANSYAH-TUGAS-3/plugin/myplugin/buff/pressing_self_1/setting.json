@@ -1,0 +1,6 @@
+{
+    "showIcon": "set:buff_icon.json image:pressing_self.png",
+    "attachType": "pressing",
+    "pressing": 1,
+    "breakEfficient": 0.2
+}

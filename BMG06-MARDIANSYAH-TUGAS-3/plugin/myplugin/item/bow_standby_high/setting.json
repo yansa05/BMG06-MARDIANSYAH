@@ -1,0 +1,127 @@
+{
+    "base": "sword_base",
+    "mesh": "gaojijian.mesh",
+    "baseDesc": "myplugin/bow_standby_high_base_desc",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            15
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "consumeItem": "myplugin/arrow",
+    "desc": "{myplugin/bow_standby_high_base_desc}\n{props_attack}15\n",
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/handbuff_bow_standby_high",
+    "icon": "bow_standby.png",
+    "iconArray": [
+        {
+            "icon": "bow_pulling_0.png",
+            "mesh": "gaojijian1.mesh",
+            "matItem_first": {
+                "rotateX": 10,
+                "rotateY": 0,
+                "rotateZ": -120,
+                "scale": 1.6,
+                "translate": {
+                    "x": 0.1,
+                    "y": 0.8,
+                    "z": 0.4
+                }
+            }
+        },
+        {
+            "mesh": "gaojijian1.mesh",
+            "icon": "bow_pulling_1.png",
+            "matItem_first": {
+                "rotateX": 85,
+                "rotateY": -50,
+                "rotateZ": 0,
+                "scale": 0.5,
+                "translate": {
+                    "x": 0.6,
+                    "y": -0.4,
+                    "z": -0.5
+                }
+            }
+        },
+        {
+            "mesh": "gaojijian1.mesh",
+            "icon": "bow_pulling_1.png",
+            "matItem_first": {
+                "rotateX": 85,
+                "rotateY": -50,
+                "rotateZ": 0,
+                "scale": 0.5,
+                "translate": {
+                    "x": 0.6,
+                    "y": -0.4,
+                    "z": -0.5
+                }
+            }
+        },
+        {
+            "mesh": "gaojijian1.mesh",
+            "icon": "bow_pulling_2.png",
+            "matItem_first": {
+                "rotateX": 85,
+                "rotateY": -50,
+                "rotateZ": 0,
+                "scale": 0.5,
+                "translate": {
+                    "x": 0.6,
+                    "y": -0.4,
+                    "z": -0.5
+                }
+            }
+        }
+    ],
+    "isSwings": true,
+    "itemintroduction": "item.bow_standby_high.intro",
+    "itemname": "myplugin/bow_standby_high_itemname",
+    "matItem_third": {
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 0.85,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "stack_count_max": 1,
+    "useTime": 50,
+    "matItem_first": {
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": -110,
+        "scale": 2,
+        "translate": {
+            "x": 0.2,
+            "y": 0.8,
+            "z": 0.2
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.3,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.4
+        }
+    }
+}

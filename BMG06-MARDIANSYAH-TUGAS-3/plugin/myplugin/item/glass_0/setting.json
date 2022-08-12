@@ -1,0 +1,36 @@
+{
+    "breakTime": 20,
+    "jumpBuff": [
+        "myplugin/jump_sound"
+    ],
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/stone_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "plugin/myplugin/sound/glass1.mp3",
+        "selfOnly": false,
+        "sound": "glass1.mp3",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "plugin/myplugin/sound/glass2.mp3",
+        "selfOnly": false,
+        "sound": "glass2.mp3",
+        "volume": 1
+    },
+    "lightOpacity": 0,
+    "texture": [
+        "glass.png",
+        "glass.png",
+        "glass.png",
+        "glass.png",
+        "glass.png",
+        "glass.png"
+    ],
+    "isOpaqueFullCube": false
+}

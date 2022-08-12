@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/stonebrick_2",
+            "block:myplugin/stonebrick_2",
+            "stonebrick_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "stonebrick_cracked_stonebrick_2.png",
+        "stonebrick_cracked_stonebrick_2.png",
+        "stonebrick_cracked_stonebrick_2.png",
+        "stonebrick_cracked_stonebrick_2.png",
+        "stonebrick_cracked_stonebrick_2.png",
+        "stonebrick_cracked_stonebrick_2.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

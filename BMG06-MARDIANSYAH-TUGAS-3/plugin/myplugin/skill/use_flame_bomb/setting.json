@@ -1,0 +1,8 @@
+{
+  "type": "UseItem",
+  "castAction": "throw",
+  "cdTime": 3,
+  "frontSight":"myplugin/frontsight_1",
+  "base": "all_use_item_skill_base",
+  "isTouch": false
+}

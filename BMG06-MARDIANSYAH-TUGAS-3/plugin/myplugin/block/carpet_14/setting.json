@@ -1,0 +1,53 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/carpet_14",
+            "block:myplugin/carpet_14",
+            "carpet_14"
+        ]
+    ],
+    "isOpaqueFullCube": false,
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.01
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.01
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.01
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.01
+                }
+            ],
+            "texture": "wool_colored_orange.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "editBaseFunc": "block_breakTime",
+    "base": "base_block"
+}

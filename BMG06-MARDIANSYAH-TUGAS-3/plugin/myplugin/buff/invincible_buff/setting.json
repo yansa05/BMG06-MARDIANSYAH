@@ -1,0 +1,16 @@
+{
+	"undamageable":1,
+    "effect": {
+			"effect": "Continuous_star_aura.effect",
+			"once": false,
+			"pos": {"x":0,"y":1,"z":0},
+			"yaw": 180
+	},
+	"moveSpeed": 0.04,
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "invincible.mp3"
+	}
+}

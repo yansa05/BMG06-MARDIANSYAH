@@ -1,0 +1,33 @@
+{
+    "icon":true,
+    "showImage": {
+      "image":{
+        "name":"bed_mainui_icon/icon_fireball_nor"
+      }, 
+      "resourceGroup":"gameres" 
+    },
+    "pushImage": {
+      "image":{
+        "name":"bed_mainui_icon/icon_fireball_act"
+      }, 
+      "resourceGroup":"gameres" 
+    },
+    "cdTime": 20,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/fire_ball_missile",
+    "followTarget": true,
+    "type": "Missile",
+    "castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "fire_ball.mp3"
+    },
+    "castAction": "attack",
+    "enableCdMask": true,
+    "jack": 1,
+    "maskIcon": "set:bed_mainui_icon.json image:icon_fireball_act.png"
+}

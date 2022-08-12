@@ -1,0 +1,54 @@
+{
+	"lifeTime": 200,
+	"collideBlock": 4,
+	"collideEntity": 1,
+	"moveAcc": 0,
+	"hitInterval": 1,
+	"followTarget": false,
+	"moveSpeed": 1.5,
+	"gravity": 0,
+	"hitCount": 1,
+	"hitEntityCount": 1,
+	"modelMesh": "",
+	"hitEffect": {
+		"effect": "effect_gun_be_shot.effect",
+		"isFixedPosition": true
+	},
+	"hitHeadEffect": {
+		"isFixedPosition": true,
+		"effect": "headshot.effect"
+	},
+	"_hitEntitySkill": "myplugin/flame_bomb_burn_check",
+	"_hitBlockSkill1": "myplugin/bomb_block",
+	"isPitch": true,
+	"boundingVolume": {
+		"type": "Box",
+		"params": [
+			0.1,
+			0.1,
+			0.1
+		]
+	},
+	"calCoord": 6,
+	"startEffect": {
+		"yaw": 90,
+		"pos": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"time": 1000,
+		"effect": "Continuous_mario_mob_ranged_attack.effect"
+    },
+	"vanishTime": 0,
+    "_vanishEffect": {
+		"yaw": 0,
+		"pos": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"effect": "tnt_boom.effect"
+    },
+	"vanishShow": false
+}

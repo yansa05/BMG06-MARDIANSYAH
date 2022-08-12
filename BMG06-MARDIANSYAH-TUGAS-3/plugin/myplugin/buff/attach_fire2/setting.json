@@ -1,0 +1,8 @@
+{
+	"showIcon":"set:buff_icon.json image:flame_self.png",
+	"attachType": "fire",
+    "continueDamage": 2,
+	"fixTime": "max",
+	"continueTime": 5,
+	"base":"fire_effect"
+}

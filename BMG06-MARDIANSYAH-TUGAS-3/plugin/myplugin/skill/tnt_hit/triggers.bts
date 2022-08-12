@@ -1,0 +1,30 @@
+SKILL_CAST {
+	$blowDist = GetSkillVar(fullName = $fullName, key = "blowDist")--破坏范围
+	$combustionDist = GetSkillVar(fullName = $fullName, key = "combustionDist")--燃烧范围
+	$blowBuff = GetSkillVar(fullName = $fullName, key = "blowBuff")
+	$blowBuffTime = GetSkillVar(fullName = $fullName, key = "blowBuffTime")
+	
+	$blowPos = $pos
+	If($obj2)
+	{
+		$blowPos = GetEntityPosition(entity = $obj2)
+	}
+	$entities = GetNearbyPos(entity = $obj1, pos = $blowPos, distance = $combustionDist)
+	Foreach(array = $entities or [], key = "entity")
+	{
+		$undamageable = GetConfigVar(obj = $entity, key = "undamageable") or 0
+		If(GetConfigVar(obj = $entity, key = "base") == "base_revive" || $entity == $obj1 || $undamageable > 0 || GetConfigVar(obj = $entity, key = "shopGroupName"))
+		{
+			Continue()
+		}
+		AddEntityBuff(cfg = $blowBuff, buffTime = $blowBuffTime, entity = $entity, from = $obj1)
+	}
+	ExplodeAreaBlockHandle(blowDist = $blowDist, combustionDist = $combustionDist, pos = $pos,
+		entity = $obj1, burnTime = $blowBuffTime, excludeBlocks = [
+			"myplugin/glass_0",
+			"myplugin/glass_red",
+			"myplugin/glass_yellow",
+			"myplugin/glass_green",
+			"myplugin/glass_blue"
+		])
+}

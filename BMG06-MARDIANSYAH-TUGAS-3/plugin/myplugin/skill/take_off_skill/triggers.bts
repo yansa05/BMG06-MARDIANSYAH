@@ -1,0 +1,82 @@
+SKILL_CAST(debug = false){
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_break_vector")
+    If(not $isMoving and $buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    If(IsPlayer(entity = $obj1))
+	{
+        $guide = GetGuideStep(player = $obj1)
+        If($guide == "step005")
+        {
+		    SetGuideStep(player = $obj1, step = "step006")
+        }
+	}
+    ------------------------------------------------------------- 起跳，如果还处于蹲砸状态中则不能起跳
+    If(GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move_on_ground")){
+        Return()
+    }
+    ------------------------------------------------------------- 起跳，移除跳蹲时砸东西的buff，以及重置跳蹲状态
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_break_vector")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    $obj1.hadSquatSkillClick = nil
+	-- $obj1.invincible = true
+	StartTimer(object = $obj1, event = "STOP_INVINCIBLE", time = 12)
+    ------------------------------------------------------------- 追加根据当前状态选择对应的技能/播放对应的动作， 并设置当前起跳状态供落地判断
+    If($obj1.hadSquatSkillTouch){   -- 蹲跳，权重最大 
+        ------------------------------------------------------------- 跳的时候，如果是蹲着的并且，头顶有东西，那么不能跳
+        If(GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_gravity_buff")){
+            Return()
+        }
+        CallTrigger(object = $obj1, event = "CHECK_HEAD_ENTITY_OR_BLOCK")
+        If($obj1.headHadEntityOrBlock){
+            $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_gravity_buff")
+            If(not $buff){
+                AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_touch_gravity_buff")
+            }
+            CallTrigger(object = $obj1, event = "CHECK_HEAD_ENTITY_OR_BLOCK_TICK")
+            Return()
+        }
+        $obj1.hadSquatSkillTouch = false -- 取消长按蹲状态
+        $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_touch_move_buff")
+        If($buff){
+            RemoveEntityBuff(entity = $obj1, buff = $buff)
+        }
+        $obj1.takeoffStatus = "idleTouch"
+        If($obj1.squatSutainTimer){ -- 停止长按，恢复常态
+            StopTimer(timer = $obj1.squatSutainTimer)
+            $obj1.squatSutainTimer = nil
+        }
+        If(GetEntityCurHp(entity = $obj1) == 1){
+            CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "small") 
+		}ElseIf(GetEntityCurHp(entity = $obj1) == 2){
+			If($obj1.hadSquatTouch){
+				CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "squat") 
+			}Else{
+				CallTrigger(object = $obj1, event = "CHANGE_BOUNDING_BOX", changeBuff = "big") 
+			}
+		}
+        CastSkill(skill = "myplugin/jumpWithSquat" ,from = $obj1 ,packet = {needPre = true})
+    }Else{
+        If(not IsEntityMoving(entity = $obj1)){    -- 站着起跳，普通起跳， 此处是单点
+            $obj1.takeoffStatus = "idle"
+        }ElseIf(GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate_buff")){    -- 加速走起跳，向前跳
+            $obj1.takeoffStatus = "sprint"
+        }Else{    -- 走路起跳，向前跳
+            $obj1.takeoffStatus = "move"
+        }
+        If(GetWorldVar(key = "enableTwiceJump"))
+        {
+            CastSkill(skill = "myplugin/jumpWithIdle" ,from = $obj1 ,packet = {needPre = true})
+        }
+    }
+    ------------------------------------------------------------- 起跳时播放起跳灰尘
+    If(not IsEntitySwimming(entity = $obj1)){
+        PlayEffectByPos(entity = $obj1, effectPath = GetSkillVar(fullName = "myplugin/take_off_skill", key = "effectPath"), times = -1)
+    }
+}

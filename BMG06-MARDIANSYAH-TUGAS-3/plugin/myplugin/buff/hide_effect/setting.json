@@ -1,0 +1,24 @@
+{
+    "effect": {
+        "pos": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "scale":{
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5
+        },
+        "effect": "Burst_mario_die.effect",
+        "yaw": 0,
+        "once": false,
+        "selfOnly": false
+    },
+    "sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "hide_effect.mp3"
+	}
+}

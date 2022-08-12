@@ -1,0 +1,7 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "reduce_rebirth_time",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/accelerate_rebirth"
+}

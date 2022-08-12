@@ -1,0 +1,54 @@
+{
+  "baseDesc": "myplugin/gun",
+  "basePropDesc": {
+    "gunCapacity":[
+      true
+    ],
+    "initCapacity":[
+      8
+    ],
+    "maxCapacity":[
+      8
+    ],
+    "props_attack":[
+      67
+    ]
+  },
+  "boundingVolume": {
+    "params": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "type": "Box"
+  },
+  "canAbandon": true,
+  "candrop": true,
+  "container": {
+    "gunCapacity": true,
+    "initCapacity": 8,
+    "maxCapacity": 8,
+    "reloadName": "myplugin/gun_sniper_bullet",
+    "reloadType": "Item"
+  },
+  "desc": "{myplugin/gun}\n{gunCapacity}\n{initCapacity}8\n{maxCapacity}8\n{props_attack}67\n",
+  "editBaseFunc": "gunPropEdit",
+  "handBuff": "myplugin/gun_awp_hand_buff",
+  "icon": "gun_awp.png",
+  "isAddItem": true,
+  "itemname": "awp",
+  "mesh": "gun_awp.mesh",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "skill": [
+    "myplugin/gun_awp_attack",
+    "myplugin/snipe_reload"
+  ],
+  "stack_count_max": 1
+}

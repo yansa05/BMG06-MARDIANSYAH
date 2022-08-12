@@ -1,0 +1,72 @@
+{
+  "base": "cobblestone",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/redstone_ore",
+          "block:myplugin/redstone_ore",
+          "redstone_ore"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/ore_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockHp": 150,
+  "blockType": "stone",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/redstone_ore",
+      "block:myplugin/redstone_ore",
+      "redstone_ore"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "fall": false,
+  "reward": 210,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "redstone_ore_redstone_ore.png",
+    "redstone_ore_redstone_ore.png",
+    "redstone_ore_redstone_ore.png",
+    "redstone_ore_redstone_ore.png",
+    "redstone_ore_redstone_ore.png",
+    "redstone_ore_redstone_ore.png"
+  ]
+}

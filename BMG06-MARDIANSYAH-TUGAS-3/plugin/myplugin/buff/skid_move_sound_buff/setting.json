@@ -1,0 +1,14 @@
+{
+    "effect": {
+			"effect": "Continuous_dust_1s.effect",
+			"once": true,
+			"pos": {"x":0,"y":0.1,"z":0},
+			"yaw": 90
+	},
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "skid.mp3"
+	}
+}

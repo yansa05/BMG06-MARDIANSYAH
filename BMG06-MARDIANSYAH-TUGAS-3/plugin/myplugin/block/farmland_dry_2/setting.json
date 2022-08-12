@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/farmland_dry_2",
+            "block:myplugin/farmland_dry_2",
+            "farmland_dry_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "farmland_dry_farmland_dry_2.png",
+        "farmland_dry_farmland_dry_2.png",
+        "farmland_dry_farmland_dry_2.png",
+        "farmland_dry_farmland_dry_2.png",
+        "farmland_dry_farmland_dry_2.png",
+        "farmland_dry_farmland_dry_2.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,18 @@
+{
+    "stack_count_max": 5,
+    "icon": "protective cover.png",
+    "itemname": "",
+    "needSave": false,
+    "skill": null,
+    "_useBuff": {"cfg":"myplugin/rebirth", "time": 400},
+	"cooldown": 100,
+    "name": "",
+    "canUse": true,
+    "itemintroduction": "Automatically obtaining coins around the character for a period of time",
+    "tray": null,
+    "candrop": false,
+    "candestroy": true,
+	"_fastUse": true,
+    "dropSpeed": 0.1,
+    "useTime": 5
+}

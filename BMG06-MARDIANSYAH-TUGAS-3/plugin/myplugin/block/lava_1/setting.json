@@ -1,0 +1,30 @@
+{
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/water_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "base": "base_block",
+    "blockType": "lava",
+    "breakTime": 20,
+    "canBreak": false,
+    "collisionBoxes": [],
+    "desc": "{base_block_desc}\n",
+    "editBaseFunc": "lava_prop_edit",
+    "emissionScale": 6,
+    "isOpaqueFullCube": false,
+    "lightEmitted": 3,
+    "lightEmittedB": 3,
+    "lightEmittedG": 3,
+    "lightEmittedR": 3,
+    "renderPass": 2,
+    "texture": [
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png"
+    ]
+}

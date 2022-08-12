@@ -1,0 +1,10 @@
+{
+		"undamageable":1,
+		"unassailable":1,
+    "effect": {
+			"effect": "fireworks_blue01.effect",
+			"once": false,
+			"pos": {"x":0,"y":0,"z":0},
+			"yaw": 180
+	}
+}

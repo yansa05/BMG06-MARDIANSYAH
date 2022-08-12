@@ -1,0 +1,14 @@
+{
+    "actorName": "character_new_blue_mario.actor",
+    "hideHp": 1,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.1,
+            0.1,
+            0.1
+        ]
+    },
+    "viewDistance": 32,
+	"disableShadow": true
+}

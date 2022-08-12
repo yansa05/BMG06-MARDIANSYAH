@@ -1,0 +1,33 @@
+{
+  "base": "base_block",
+  "breakTime": 20,
+
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/leaves_oak_nodecay",
+      "block:myplugin/leaves_oak_nodecay",
+      "leaves_oak_nodecay"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "leaves_oak_leaves_oak_nodecay.png",
+    "leaves_oak_leaves_oak_nodecay.png",
+    "leaves_oak_leaves_oak_nodecay.png",
+    "leaves_oak_leaves_oak_nodecay.png",
+    "leaves_oak_leaves_oak_nodecay.png",
+    "leaves_oak_leaves_oak_nodecay.png"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "skidWithSprintAndSprintJump",
+    "castActionTime": 9,
+	 "castSound_": {
+        "volume": 0.5,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "skid.mp3"
+    },
+	"castEffect_": {
+        "yaw": 90,
+        "pos": {
+            "z": 0,
+            "y": 0.1,
+            "x": 0
+        },
+        "effect": "Continuous_dust_1s.effect",
+		"once":true
+		}
+}

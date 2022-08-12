@@ -1,0 +1,5 @@
+{
+	"type": "moveSpeed",
+	"showIcon":"set:buff_icon.json image:expedite_self.png",
+    "moveSpeed": 1
+}

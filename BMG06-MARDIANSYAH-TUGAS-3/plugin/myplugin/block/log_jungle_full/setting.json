@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/log_jungle_full",
+            "block:myplugin/log_jungle_full",
+            "log_jungle_full"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "log_jungle_log_jungle_full.png",
+        "log_jungle_log_jungle_full.png",
+        "log_jungle_log_jungle_full.png",
+        "log_jungle_log_jungle_full.png",
+        "log_jungle_log_jungle_full.png",
+        "log_jungle_log_jungle_full.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

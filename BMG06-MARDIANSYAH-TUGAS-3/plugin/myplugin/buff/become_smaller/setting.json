@@ -1,0 +1,7 @@
+{
+	"sound": {
+		"sound": "vectorBlockWoodBreak.mp3",
+		"loop": false,
+		"volume": 1
+	}
+}

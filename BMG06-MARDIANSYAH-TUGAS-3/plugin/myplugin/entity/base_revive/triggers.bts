@@ -1,0 +1,138 @@
+
+ENTITY_ENTER{
+	$pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+	AddNoWaterArea(map = $map, center = $pos, radius = 1.5, waterType = "lava")
+	AddNoWaterArea(map = $map, center = $pos, radius = 1.5, waterType = "water")
+}
+
+ENTITY_DIE {
+	If(@team_beds){
+		DictionarySet(dict = @team_beds, key = Concat(p1 = "teamId_", p2 = $obj1.teamId), value = false)
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$textKey = $isegg and "team.egg.destroy" or "team.bed.destroy"
+		ShowTipToTeam(teamId = $obj1.teamId, tipType = 2, textKey = $textKey,  keepTime = 100)
+		CallTrigger(obj1 = $obj2, event = "BED_BREAK_REWARD")
+	}
+	UpdateTeamInfo(teamId = $obj1.teamId, state = "TEAM_BED_DIE")
+}
+
+ENTITY_DAMAGE {
+	--Test("=============btsskill", $skillName, $damage)
+	$useItem = GetEntityHandItem(entity = $obj2)
+	If($useItem)
+	{
+		$itemBase =  GetConfigVar(obj = $useItem, key = "base")
+	}
+	If($skillName ~= "/attack" or $itemBase ~= "tool_base") -- 如果不是使用工具则不会造成伤害
+	{
+		If(GetEntityCurHp(entity = $obj1) + $damage > 0)
+		{
+			$cantDamage = true
+			AddEntityHp(entity = $obj1, step = $damage)
+		}
+	}
+	If($cantDamage and IsPlayer(entity = $obj2) and $skillName){
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$msg = $isegg and "gui_attack_egg_only_tool" or "gui_attack_bed_only_tool"
+		ShowTip(entity = $obj2, tipType = 2, textKey = $msg)
+	}
+}
+
+ENTITY_TOUCH()
+{
+	--Test("=======ENTITY_TOUCH")
+	If(GetEntityTeam(entity = $obj1) == GetEntityTeam(entity = $obj2))
+	{
+		Return()
+	}
+	$useItem = GetEntityHandItem(entity = $obj2)
+	If($useItem)
+	{
+		$itemBase =  GetConfigVar(obj = $useItem, key = "base")
+	}
+	If( $itemBase == "tool_base") -- 如果不是使用工具则不会造成伤害
+	{
+		KillEntity(entity = $obj1, from = $obj2)
+	}Else{
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$msg = $isegg and "gui_attack_egg_only_tool" or "gui_attack_bed_only_tool"
+		ShowTip(entity = $obj2, tipType = 2, textKey = $msg)
+	}
+}
+
+ENTITY_CLICK()
+{
+	--Test("=======ENTITY_CLICK")
+	If(GetEntityTeam(entity = $obj1) == GetEntityTeam(entity = $obj2))
+	{
+		Return()
+	}
+	$useItem = GetEntityHandItem(entity = $obj2)
+	If($useItem)
+	{
+		$itemBase =  GetConfigVar(obj = $useItem, key = "base")
+	}
+	If($itemBase ~= "tool_base") -- 如果不是使用工具则不会造成伤害
+	{
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$msg = $isegg and "gui_attack_egg_only_tool" or "gui_attack_bed_only_tool"
+		ShowTip(entity = $obj2, tipType = 2, textKey = $msg)
+	}
+}
+
+ENTITY_START_TOUCH()
+{
+	--Test("==============ENTITY_START_TOUCH")
+	If(GetEntityTeam(entity = $obj1) == GetEntityTeam(entity = $obj2))
+	{
+		Return()
+	}
+	$useItem = GetEntityHandItem(entity = $obj2)
+	If($useItem)
+	{
+		$itemBase =  GetConfigVar(obj = $useItem, key = "base")
+	}
+	If($itemBase ~= "tool_base") -- 如果不是使用工具则不会造成伤害
+	{
+		$isegg = GetConfigVar(obj = $obj1, key ="isEgg")
+		$msg = $isegg and "gui_attack_egg_only_tool" or "gui_attack_bed_only_tool"
+		ShowTip(entity = $obj2, tipType = 2, textKey = $msg)
+		Return()
+	}
+	$time = GetConfigVar(obj = $obj1, key = "touchTime")
+	$obj1.countDownHp = StartTimer(event = "COUNT_DOUWN_HP", time = 10, rep = true, object = $obj1)
+	$obj1.killSound = AddEntityBuff(entity = $obj1, cfg = "myplugin/kill_bed_sound", buffTime = 100)
+	--PlayAction(entity = $obj1, actionName = "attack7", actionsTime = 100)
+}
+
+ENTITY_STOP_TOUCH()
+{
+	--Test("==============ENTITY_STOP_TOUCH")
+	If(GetEntityTeam(entity = $obj1) == GetEntityTeam(entity = $obj2))
+	{
+		Return()
+	}
+	--PlayAction(entity = $obj1, actionName = "", actionsTime = 100)
+	If($obj1.countDownHp)
+	{
+		$maxHp = GetConfigVar(obj = $obj1, key = "maxHp")
+		SetHp(entity = $obj1, hp = $maxHp)
+		StopTimer(timer = $obj1.countDownHp)
+	}
+	If($obj1.killSound)
+	{
+		RemoveEntityBuff(entity = $obj1, buff = $obj1.killSound)
+	}
+}
+
+COUNT_DOUWN_HP()
+{
+	$len = GetConfigVar(obj = $obj1, key = "touchTime") / 10
+	$maxHp = GetConfigVar(obj = $obj1, key = "maxHp")
+	$val = NumberFloor(p1 = $maxHp / $len)  * -1
+	If(GetEntityCurHp(entity = $obj1) + $val > 0)
+	{
+		AddEntityHp(entity = $obj1, step = $val)
+	}
+}

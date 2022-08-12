@@ -1,0 +1,12 @@
+ENTITY_TOUCH_ALL(debug = false){ 
+    If(IsEntityTouchOn(entity1 = $obj1, entity2 = $obj2)){
+        $jumpBuff = GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/twice_jump_buff")
+        If(not $jumpBuff){
+            AddEntityBuff(entity = $obj2, cfg = "myplugin/twice_jump_buff", buffTime = 10)
+        }
+        Damage(damage = 1, entity = $obj1)
+    }
+}
+ENTITY_REBIRTH{
+	UpdateScaleWhenRebirth(entity = $obj1)
+}

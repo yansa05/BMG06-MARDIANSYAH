@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/chorus_plant",
+            "block:myplugin/chorus_plant",
+            "chorus_plant"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "chorus_plant.png",
+        "chorus_plant.png",
+        "chorus_plant.png",
+        "chorus_plant.png",
+        "chorus_plant.png",
+        "chorus_plant.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

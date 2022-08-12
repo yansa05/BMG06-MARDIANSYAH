@@ -1,0 +1,33 @@
+{
+    "actorName": "all_box.actor",
+    "clickDistance":5,
+    "icon": "icon.png",
+    "collision": true,
+    "canClick": true,
+    "trays": [
+        {
+            "type": 0,
+            "cap": 54
+        }
+    ],
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+    "entityDerive": "box",
+    "uiShowList": [
+        "setting",
+        "delete"
+    ],
+    "name": " ",
+    "viewDistance": "32",
+	"undamageable": 1,
+    "desc": "myplugin/npc_chest_base_desc",
+    "disableShadow": true,
+    "itemname": "myplugin/npc_chest_itemname",
+    "baseDesc": "myplugin/npc_chest_base_desc"
+}

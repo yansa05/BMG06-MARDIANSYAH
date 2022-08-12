@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/beacon",
+            "block:myplugin/beacon",
+            "beacon"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "beacon.png",
+        "beacon.png",
+        "beacon.png",
+        "beacon.png",
+        "beacon.png",
+        "beacon.png"
+    ],
+    "lightEmitted": 15,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

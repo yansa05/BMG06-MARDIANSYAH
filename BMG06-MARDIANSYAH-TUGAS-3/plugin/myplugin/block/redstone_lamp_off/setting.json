@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/redstone_lamp_off",
+            "block:myplugin/redstone_lamp_off",
+            "redstone_lamp_off"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "redstone_lamp_off.png",
+        "redstone_lamp_off.png",
+        "redstone_lamp_off.png",
+        "redstone_lamp_off.png",
+        "redstone_lamp_off.png",
+        "redstone_lamp_off.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

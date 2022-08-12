@@ -1,0 +1,109 @@
+{
+  "actorName": "mob_new_turtle_witch.actor",
+  "addScore": 0,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "autoAttack": true,
+  "base": "monster_base",
+  "baseDesc": "turtleWitch_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      1
+    ],
+    "monster_hp": [
+      5
+    ],
+    "monster_score": [
+      0
+    ]
+  },
+  "bodyTurnMin": 3,
+  "boundingVolume": {
+    "params": [
+      1.2,
+      1.7,
+      1.2
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canJump": false,
+  "canKill": true,
+  "canMove": true,
+  "chaseDistance": 7,
+  "collision": true,
+  "damage": 1,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.5
+    }
+  },
+  "deadSound": {
+    "loop": false,
+    "path": "resource/sound/turtleWitch_death.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{turtleWitch_desc}\n{monster_attack}1\n{monster_hp}5\n",
+  "destroyTime": 26,
+  "disableShadow": true,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "gravity": 0,
+  "headBoneName": "Bip001_Head",
+  "hideHp": 1,
+  "homeSize": 10,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/turtleWitch_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "turtleWitch.png",
+  "idleProb": 0.2,
+  "maxHp": 5,
+  "maxVisualAngle": 360,
+  "missDuringDay": true,
+  "moveSpeed": 0.14,
+  "name": "",
+  "patrolDistance": 7,
+  "ShowSettingUI": true,
+  "skillList": [
+    {
+      "attackDis": 7,
+      "fullName": "myplugin/turtleWitch_attack",
+      "hpRateMax": 1,
+      "hpRateMin": 0,
+      "prioity": 1,
+      "sameLevel": true,
+      "startOffest": {
+        "x": 0,
+        "y": 0.7,
+        "z": 0
+      }
+    }
+  ],
+  "textHeight": 2,
+  "uiType": "1",
+  "viewDistance": 32
+}

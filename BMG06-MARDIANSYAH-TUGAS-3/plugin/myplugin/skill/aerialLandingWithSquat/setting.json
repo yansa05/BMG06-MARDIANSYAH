@@ -1,0 +1,11 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "aerialLandingWithSquat",
+    "castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "aerial_landing.mp3"
+    }
+}

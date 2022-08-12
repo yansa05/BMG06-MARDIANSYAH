@@ -1,0 +1,33 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/glass_silver",
+            "block:myplugin/glass_silver",
+            "glass_silver"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "isOpaqueFullCube": false,
+    "texture": [
+        "glass_silver_glass_silver.png",
+        "glass_silver_glass_silver.png",
+        "glass_silver_glass_silver.png",
+        "glass_silver_glass_silver.png",
+        "glass_silver_glass_silver.png",
+        "glass_silver_glass_silver.png"
+    ],
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/terracotta",
+            "block:myplugin/terracotta",
+            "terracotta"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "hardened_clay.png",
+        "hardened_clay.png",
+        "hardened_clay.png",
+        "hardened_clay.png",
+        "hardened_clay.png",
+        "hardened_clay.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

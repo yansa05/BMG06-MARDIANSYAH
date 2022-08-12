@@ -1,0 +1,9 @@
+{
+  "sound": {
+    "loop": true,
+    "selfOnly": false,
+    "sound": "stone.mp3",
+    "volume": 0.07
+  },
+  "sync": "other"
+}

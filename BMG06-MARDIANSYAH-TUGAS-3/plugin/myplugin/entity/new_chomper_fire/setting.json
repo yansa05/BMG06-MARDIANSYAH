@@ -1,0 +1,121 @@
+{
+  "actorName": "mob_Chomper_green.actor",
+  "addScore": 0.0,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "autoAttack": true,
+  "base": "monster_base",
+  "baseDesc": "new_chomper_fire_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      10.0
+    ],
+    "monster_hp": [
+      5.0
+    ],
+    "monster_score": [
+      0.0
+    ]
+  },
+  "bodyTurnMin": 3,
+  "boundingVolume": {
+    "params": [
+      1.2,
+      2,
+      1.2
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canJump": false,
+  "canKill": true,
+  "chaseDistance": 20,
+  "collision": true,
+  "damage": 10.0,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.4
+    }
+  },
+  "deadSound": {
+    "delayTime": 18,
+    "loop": false,
+    "path": "resource/sound/mushroom_death.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.7,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{new_chomper_fire_desc}\n{monster_attack}10.0\n{monster_hp}5.0\n",
+  "destroyTime": 26,
+  "dieInColor": {
+    "a": 255,
+    "b": 255,
+    "g": 255,
+    "r": 255
+  },
+  "disableShadow": true,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "hideHp": 1,
+  "homeSize": 10,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/chomper_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "new_chomper_fire.png",
+  "idleProb": 0.2,
+  "maxHp": 5.0,
+  "maxVisualAngle": 360,
+  "missDuringDay": true,
+  "moveSpeed": 0,
+  "name": "",
+  "patrolDistance": 10,
+  "ShowSettingUI": true,
+  "skillList": [
+    {
+      "attackDis": 20,
+      "fullName": "myplugin/new_chomper_fire_attack",
+      "hpRateMax": 1,
+      "hpRateMin": 0,
+      "prioity": 1,
+      "sameLevel": true,
+      "startOffest": {
+        "x": 0,
+        "y": 0.8,
+        "z": 0
+      }
+    }
+  ],
+  "textHeight": 2.7,
+  "uiShowList": [
+    "changMonsterModle",
+    "setting",
+    "setPosition",
+    "shopSetting",
+    "delete"
+  ],
+  "uiType": "5",
+  "viewDistance": 32
+}

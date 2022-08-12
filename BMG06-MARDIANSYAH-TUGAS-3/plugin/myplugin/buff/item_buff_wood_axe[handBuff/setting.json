@@ -1,0 +1,8 @@
+{
+    "damage": 2,
+    "defense": 0,
+    "jumpSpeed": 0,
+    "maxHp": 0,
+    "moveSpeed": 0,
+    "type": "HandBuff"
+}

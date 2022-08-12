@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/structure_block_3",
+            "block:myplugin/structure_block_3",
+            "structure_block_3"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "structure_block_data.png",
+        "structure_block_data.png",
+        "structure_block_data.png",
+        "structure_block_data.png",
+        "structure_block_data.png",
+        "structure_block_data.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

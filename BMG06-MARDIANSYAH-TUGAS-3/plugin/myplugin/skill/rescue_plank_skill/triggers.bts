@@ -1,0 +1,34 @@
+SKILL_CAST {
+	$mPos = GetEntityPosition(entity = $obj1)
+	$posCenterX = NumberFloor(p1 = GetPosX(pos = $mPos))
+	$posCenterY = NumberFloor(p1 = GetPosY(pos = $mPos)) - 1
+	$posCenterZ = NumberFloor(p1 = GetPosZ(pos = $mPos))
+	If (GetPosBlockId(pos = {x = $posCenterX, y = $posCenterY, z = $posCenterZ}) ~= 0)
+	{
+		ShowTip(textKey = "gui.rescue_plank.used_on_air", tipType = 2, entity = $obj1)
+		Return()
+	}
+	If (not isUnlimitRes() and not ConsumeItem2(item = "myplugin/rescue_plank", entity = $obj1, num = 1))
+	{
+		Return()
+	}
+	
+	
+	$teamId = GetEntityTeam(entity = $obj1)
+	
+	$plank_radus = 2
+	ForLoop(from = $posCenterX - $plank_radus, to = $posCenterX + $plank_radus, key = "posX")
+	{
+		ForLoop(from = $posCenterZ - $plank_radus, to = $posCenterZ + $plank_radus, key = "posZ")
+		{
+			$blockPos = {x = $posX, y = $posCenterY, z = $posZ}
+			If (GetPosBlockId(pos = $blockPos) == 0)
+			{
+				CreateBlock(pos = $blockPos, block = "myplugin/slime")
+			}
+		}
+	}
+	SetEntityPosition(entity = $obj1, pos = $mPos, ry = GetEntityYaw(entity = $obj1), rp = GetEntityPitch(entity = $obj1))
+	StartTimer(object = $obj1, event = "REMOVE_RESCUE_PLANK", rep = false, time = 300, plank_radus = $plank_radus,
+				center = {x = $posCenterX, y = $posCenterY, z = $posCenterZ})
+}

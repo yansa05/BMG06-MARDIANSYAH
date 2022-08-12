@@ -1,0 +1,10 @@
+{
+	"distance":8,
+	"iconPos":{"x":0.85,"y":0.65},
+	"exitWhenReload": true,
+	"showFrontSight": true,
+	"level": 100,
+	"shieldEvent": true,
+	"openIcon":"set:bed_mainui_icon.json image:icon_openMir_nor.png",
+	"closeIcon":"set:bed_mainui_icon.json image:icon_openMir_act.png"
+}

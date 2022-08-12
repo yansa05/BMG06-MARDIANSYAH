@@ -1,0 +1,16 @@
+{
+  "icon": "set:bed_mainui_icon.json image:icon_squat_nor.png",
+  "type": "Any",
+  "jack": 2,
+  "castClickSkill": "myplugin/squat_skill_click",
+  "castTouchSkill": "myplugin/squat_skill_touch",
+  "customizeSkill":true,
+  "verticalAlignment":1,
+  "horizontalAlignment":2,
+  "area":[
+    [0,-120],
+    [0,-70],
+    [0, 70],
+    [0, 70]
+  ]
+}

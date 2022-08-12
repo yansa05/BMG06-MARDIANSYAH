@@ -1,0 +1,6 @@
+{
+    "actorName": "team_box.actor",
+    "clickDistance":5,
+  "undamageable": 1,
+  "base": "npc_chest"
+}

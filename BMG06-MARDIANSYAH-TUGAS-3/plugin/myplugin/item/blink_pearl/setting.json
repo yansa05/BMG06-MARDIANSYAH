@@ -1,0 +1,39 @@
+{
+  "base": "item_base",
+  "baseDesc": "myplugin/blink_pearl_base_desc",
+  "canAbandon": true,
+  "desc": "{myplugin/blink_pearl_base_desc}\n",
+  "handBuff": "myplugin/handbuff_blink_pearl",
+  "icon": "end_small.png",
+  "isClick": true,
+  "isSwings": false,
+  "itemintroduction": "item.blink_pearl.intro",
+  "itemname": "myplugin/blink_pearl_itemname",
+  "matItem_first": {
+    "rotateX": 60,
+    "rotateY": 60,
+    "rotateZ": 105,
+    "scale": 1,
+    "translate": {
+      "x": -0.1,
+      "y": 0.3,
+      "z": 0.1
+    }
+  },
+  "matItem_third": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 0.85,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "mesh": "wyqiu.mesh",
+  "stack_count_max": 64,
+  "startAction": "throw",
+  "useAction": "throw",
+  "useTime": 50
+}

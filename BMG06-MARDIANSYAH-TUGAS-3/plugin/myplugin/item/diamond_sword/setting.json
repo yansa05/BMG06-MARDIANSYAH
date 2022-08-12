@@ -1,0 +1,60 @@
+{
+  "attachType": [
+    "fire",
+    "damage",
+    "deArmour"
+  ],
+  "base": "sword_base",
+  "baseDesc": "myplugin/diamond_sword_base_desc",
+  "basePropDesc": {
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      30
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "props_max_hp": [
+      0
+    ],
+    "props_shield_bonus": [
+      0
+    ]
+  },
+  "canAbandon": true,
+  "desc": "{myplugin/diamond_sword_base_desc}\n{props_attack}30\n",
+  "dropMatItem": {
+    "scale": 0.4,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "equipTemporaryShield": 0,
+  "handBuff": "myplugin/item_buff_diamond_sword[handBuff",
+  "icon": "diamond_sword.png",
+  "itemintroduction": "diamond_sword.intro",
+  "itemname": "myplugin/diamond_sword_itemname",
+  "matItem_first": {
+    "rotateX": 10,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 1,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "mesh": "zhuanshijian.mesh",
+  "needSave": true,
+  "skill": [
+    "myplugin/diamond_sword_skill"
+  ]
+}

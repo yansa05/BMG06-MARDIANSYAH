@@ -1,0 +1,41 @@
+{
+	"minDiffuse": 30,
+	"maxDiffuse": 60,
+	"moveDiffuse": 45,
+	"showLevel": 0,
+	"shrinkVal": 5,
+	"onlyFpShow": false,
+	"List":
+	[
+		{
+			"type":"Image",
+			"Image":
+			[
+				{
+                    "path":"up.png",
+					"hitPath":"up.png",
+					"hitFriendlyPath":"up.png",
+				    "initPos":{"x":0,"y":-8}
+                },
+				{
+                    "path":"down.png",
+					"hitPath":"down.png",
+					"hitFriendlyPath":"down.png",
+				    "initPos":{"x":0,"y":8}
+                },
+                {
+                   "path":"left.png",
+				   "hitPath":"left.png",
+				   "hitFriendlyPath":"left.png",
+				   "initPos":{"x":-8,"y":0}
+                },
+                {
+                   "path":"right.png",
+				   "hitPath":"right.png",
+				   "hitFriendlyPath":"right.png",
+				   "initPos":{"x":8,"y":0}
+                }
+			]
+		}
+	]
+}

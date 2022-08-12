@@ -1,0 +1,11 @@
+ENTITY_CLICK {
+	ShowStageOptions(player = $obj2, fullName = "myplugin/main", winName = "win_stage")
+	--SetGuidePostion(entity = $obj2, pos = nil)
+	SetGuideStep(player = $obj2, step = "step002")
+	RemoveEntityTypeBuff(entity = $obj1, key = "guide", value = true)
+}
+
+ENTITY_ENTER 
+{
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/hand_point_effect")
+}

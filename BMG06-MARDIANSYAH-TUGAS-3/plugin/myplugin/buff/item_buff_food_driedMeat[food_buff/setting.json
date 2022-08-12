@@ -1,0 +1,9 @@
+{
+  "damage": 0,
+  "defense": 5,
+  "jumpSpeed": 0,
+  "moveSpeed": 0,
+  "recoverHpStep": 1,
+  "recoverVpStep": 1,
+  "type": "FoodBuff"
+}

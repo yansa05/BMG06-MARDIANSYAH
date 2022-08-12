@@ -1,0 +1,23 @@
+{
+  "actorName": "empty.actor",
+  "canKill": false,
+  "maxHp": 1,
+  "name": "",
+  "hpBarColor": 0,
+  "checkObjectCollision": false,
+  "boundingVolume":{
+    "type":"Box",
+    "params":[
+      0,
+      0,
+      0
+    ]
+  },
+  "hideHp": true,
+  "unassailable": 1,
+  "collision":false,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "disableShadow": false,
+  "notNeedSaveToPatch": true
+}

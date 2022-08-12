@@ -1,0 +1,255 @@
+ENTITY_ENTER {
+	$resCfg = GetEntityEditorVar(entity = $obj1, key = "resourcePoint")
+	$resCfg = NewDictionary($resCfg)
+	$obj1.teamID = DictionaryGet(dict = $resCfg, key = "teamID") or 0
+	$obj1.teamID = CheckTeamID(teamID = $obj1.teamID)
+	$obj1.resCfg = $resCfg 
+	ArrayAppend(array = @resPointArray, value = $obj1)
+}
+
+--减少生产时间
+ADD_PRODUCT_SPEED()
+{
+	$resCfg = $obj1.resCfg
+	$levelInfos = DictionaryGet(dict = $resCfg, key = "levelInfos")
+	$curLevel = GetObjectVar(obj = $obj1, key = "level") 
+	$NewLevelInfos = NewArray()
+	ForLoop(from = 1, to = 99, key = "index"){
+		$levelInfo = ArrayGet(array = $levelInfos, index = $index)
+		If(not $levelInfos){
+			Break()
+		}
+		$Info = NewDictionary($levelInfo)
+		$speed = DictionaryGet(dict = $Info, key = "speed")
+		If($index == $curLevel){
+			$oldSpeed = $speed
+		}
+		If($speed){
+			$speed = $speed - $accTime
+			$speed = $speed >= 20 and $speed or 20
+			If($index == $curLevel){
+				$newSpeed = $speed
+			}
+			DictionarySet(dict = $Info, key = "speed", value = $speed)
+			$table = DictionaryToTable(dict = $Info)
+			ArrayAppend(array = $NewLevelInfos, value = $table)
+		}
+	}
+	DictionarySet(dict = $resCfg, key = "levelInfos", value = $NewLevelInfos)
+	$lastTime = $obj1.LastProductTime or 0
+	$remainTime = $oldSpeed - $accTime 
+	$remainTime = $remainTime - (GetTime() - $lastTime) * 20
+	If(not $obj1.productCoinTimer){
+		Return()
+	}
+	If($obj1.upSpeedTimer){
+		StopTimer(timer = $obj1.upSpeedTimer)
+	}
+	$remainTime = $remainTime >= 20 and $remainTime or 20
+	--销毁原来的定时器
+	StopTimer(timer = $obj1.productCoinTimer)
+	--更新剩下的时间
+	$coinFullName = DictionaryGet(dict = $resCfg, key = "coinFullName")
+	CallTrigger(entity = $obj1, event = "SYNC_HEAD_TEXT_PRODUCT_TIME", obj1 = $obj1, productTime = $remainTime)
+	$obj1.upSpeedTimer = StartTimer(event = "END_LAST_PRODUCT_COIN", object = $obj1, time = $remainTime, productTime = $newSpeed, coinFullName = $coinFullName)	
+}
+--结束此轮生产，以后开始新的
+END_LAST_PRODUCT_COIN()
+{
+	CallTrigger(event = "PRODUCT_ONE_COIN", obj1 = $obj1, productTime = $productTime,  coinFullName = $coinFullName)
+	CallTrigger(event = "PRODUCT_COIN", obj1 = $obj1)
+}
+
+-- 开始生产货币
+BEGIN_PRODUCT_COIN {
+	--$resCfg = GetEntityEditorVar(entity = $obj1, key = "resourcePoint")
+	--$resCfg = NewDictionary($resCfg)
+	$resCfg = $obj1.resCfg
+	$delayProductTime = DictionaryGet(dict = $resCfg, key = "delayProductTime")
+	StartTimer(event = "PRODUCT_COIN", object = $obj1, time = $delayProductTime, obj1 = $obj1)
+}
+
+-- 生产货币
+PRODUCT_COIN {
+	--广播同告
+	$teamID = $obj1.teamID
+	If((not $teamID or $teamID == 0 )and not $obj1.startPut)
+	{
+		$obj1.startPut = true
+		$resCfg = $obj1.resCfg
+		$coinFullName = DictionaryGet(dict = $resCfg, key = "coinFullName")
+		$itemType = DictionaryGet(dict = $resCfg, key = "itemType")
+		$itemname = GetConfigValue(type = $itemType, fullName = $coinFullName, key = "itemname")
+		ShowTipToAll(tipType = 1, textKey = "respoint_start", textP1 = $itemname)
+	}
+
+	$curLevel = GetObjectVar(obj = $obj1, key = "level") 
+	If(not $curLevel)
+	{
+		SetObjectVar(obj = $obj1, key = "level", value = 1)
+		$curLevel = 1
+		CallTrigger(entity = $obj1, event = "SYNC_HEAD_TEXT_LEVEL", obj1 = $obj1, curLevel = $curLevel)
+
+	}
+	--$resCfg = GetEntityEditorVar(entity = $obj1, key = "resourcePoint")
+	--$resCfg = NewDictionary($resCfg)
+	$resCfg = $obj1.resCfg
+	$maxLevel = DictionaryGet(dict = $resCfg, key = "maxLevel")
+
+	If($maxLevel < $curLevel)
+	{
+		$curLevel = $maxLevel
+	}
+
+	$coinFullName = DictionaryGet(dict = $resCfg, key = "coinFullName")
+
+	$levelInfos = DictionaryGet(dict = $resCfg, key = "levelInfos")
+	$curLevelInfo = ArrayGet(array = $levelInfos, index = $curLevel) 
+	$curLevelInfo = NewDictionary($curLevelInfo)
+
+	$autoUpLevel = DictionaryGet(dict = $resCfg, key = "autoUpLevel")
+	
+	If(not $curLevelInfo)
+	{
+		Test("error, resourcePoint not the level info")
+		Return()
+	}
+	
+	$speed = DictionaryGet(dict = $curLevelInfo, key = "speed")
+	$upLevelTime = DictionaryGet(dict = $curLevelInfo, key = "upLevelTime")
+
+	If(not $speed)
+	{
+		Test("error, can not find level speed, may be out the range")
+		Return()
+	}
+
+	If($autoUpLevel and $maxLevel > $curLevel)
+	{
+		CallTrigger(entity = $obj1, event = "TIMER_TO_UP_LEVEL", obj1 = $obj1, upLevelTime = $upLevelTime)
+	}
+
+	If($coinFullName)
+	{
+		-- 同步头顶文字
+		CallTrigger(entity = $obj1, event = "SYNC_HEAD_TEXT_PRODUCT_TIME", obj1 = $obj1, productTime = $speed)
+		$obj1.productCoinTimer = StartTimer(event = "PRODUCT_ONE_COIN", rep = true, object = $obj1, time = $speed, obj1 = $obj1, coinFullName = $coinFullName, productTime = $speed)
+	}
+	Else
+	{
+		Test("error, resourcePoint not the coin name")
+	}
+}
+
+-- 生产一次货币
+PRODUCT_ONE_COIN {
+	$resCfg = $obj1.resCfg
+	$levelInfos = DictionaryGet(dict = $resCfg, key = "levelInfos")
+	$curLevel = GetObjectVar(obj = $obj1, key = "level") 
+	$curLevelInfo = ArrayGet(array = $levelInfos, index = $curLevel) 
+	$curLevelInfo = NewDictionary($curLevelInfo)
+	$productNumMaxSwitch = DictionaryGet(dict = $curLevelInfo, key = "productNumMaxSwitch")
+	$productNumMax = DictionaryGet(dict = $curLevelInfo, key = "productNumMax")
+	$productNumMax = $productNumMaxSwitch and $productNumMax or GetConfigVar(obj = $obj1, key = "maxSpawCount")
+	If(($obj1.maxSpawCount or 0) >= $productNumMax)
+	{
+		Return()
+	}
+	$obj1.LastProductTime = GetTime() --记录每次生产的具体时间
+	--todo: 没有考虑障碍物问题, 建议使用CreateRandomDropItemsInRegion方法
+	$center = GetEntityPosition(entity = $obj1)
+	$center = V3(GetPosX(pos = $center), GetPosY(pos = $center), GetPosZ(pos = $center))
+	$moveMin = V3ToBlockPos(v3 = $center + V3(-2, 1, -2))
+	$moveMax = V3ToBlockPos(v3 = $center + V3(2, 1, 2))
+	$targetPos = GetRandomPosInArea(region = Table(min = $moveMin, max = $moveMax))
+	$itemType = DictionaryGet(dict = $resCfg, key = "itemType")
+	$ret = SpawnItemToWorld(
+		fullName = $coinFullName, 
+		count = 1, 
+		map = GetEntityMap(entity = $obj1), 
+		pos = $targetPos, 
+		dropItemType = "resPointItem",
+		from = $obj1,
+		createType = $itemType
+	)
+	If($ret)
+	{
+		$obj1.maxSpawCount = ($obj1.maxSpawCount or 0) + 1
+		$ret.spawFrom = $obj1
+	}
+}
+
+-- 停止生产货币
+STOP_PRODUCT_COIN {
+
+}
+
+-- 定时器执行升级
+TIMER_TO_UP_LEVEL {
+	$obj1.endLevelTime = GetGameTime() + $upLevelTime
+	$obj1.upLevelTimer = StartTimer(event = "UPGRADE", object = $obj1, time = $upLevelTime, obj1 = $obj1, coinFullName = $coinFullName)
+
+	-- 同步头顶文字
+	CallTrigger(entity = $obj1, event = "SYNC_HEAD_TEXT_UP_LEVEL_TIME", obj1 = $obj1, upLevelTime = $upLevelTime)
+}
+
+-- 升级资源点
+UPGRADE {
+	-- 清除定时器
+	StopTimer(object = $obj1, timer = $obj1.upLevelTimer)
+	StopTimer(object = $obj1, timer = $obj1.productCoinTimer)
+	If($obj1.upSpeedTimer){
+		StopTimer(timer = $obj1.upSpeedTimer)
+	}
+	--广播同告
+	$teamID = $obj1.teamID
+	If(not $teamID or $teamID == 0)
+	{
+		$resCfg = $obj1.resCfg
+		$coinFullName = DictionaryGet(dict = $resCfg, key = "coinFullName")
+		$itemType = DictionaryGet(dict = $resCfg, key = "itemType")
+		$itemname = GetConfigValue(type = $itemType, fullName = $coinFullName, key = "itemname")
+		ShowTipToAll(tipType = 1, textKey = "respoint_upgraded", textP1 = $itemname)
+	}
+	$curLevel = GetObjectVar(obj = $obj1, key = "level") 
+	$curLevel = $curLevel + 1
+	$curLevel = SetObjectVar(obj = $obj1, key = "level", value = $curLevel) 
+	CallTrigger(entity = $obj1, event = "PRODUCT_COIN", obj1 = $obj1)
+	-- 同步头顶文字
+	CallTrigger(entity = $obj1, event = "SYNC_HEAD_TEXT_LEVEL", obj1 = $obj1, curLevel = $curLevel)
+}
+
+-- 附魔加速升级
+ENCHANTED_ACC_LEVEL{
+	--$accTime : input
+	$curTime = GetGameTime()
+	$obj1.endLevelTime = $obj1.endLevelTime - $accTime
+	If($curTime >= $obj1.endLevelTime)
+	{
+		-- 可以升级
+		CallTrigger(entity = $obj1, event = "UPGRADE", obj1 = $obj1)
+	}
+	Else
+	{
+		-- 不可以升级
+		$upLevelTime = $obj1.endLevelTime -  $curTime
+		StopTimer(object = $obj1, timer = $obj1.upLevelTimer)
+		CallTrigger(entity = $obj1, event = "TIMER_TO_UP_LEVEL", obj1 = $obj1, upLevelTime = $upLevelTime)
+	}
+}
+
+-- 同步头顶文字等级
+SYNC_HEAD_TEXT_LEVEL {
+	$curLevel = GetObjectVar(obj = $obj1, key = "level") 
+	SyncResPointHeadInfo(entity = $obj1, curLevel = $curLevel)
+}
+
+-- 同步头顶文字升级时间
+SYNC_HEAD_TEXT_UP_LEVEL_TIME {
+	SyncResPointHeadInfo(entity = $obj1, upLevelTime = $upLevelTime)
+}
+
+-- 同步头顶文字生产时间
+SYNC_HEAD_TEXT_PRODUCT_TIME {
+	SyncResPointHeadInfo(entity = $obj1, productTime = $productTime)
+}

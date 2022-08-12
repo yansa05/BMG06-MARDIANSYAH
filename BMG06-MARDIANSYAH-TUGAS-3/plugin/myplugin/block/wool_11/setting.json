@@ -1,0 +1,126 @@
+{
+  "_baseDesc": "myplugin/wool_11_base_desc",
+  "_desc": "myplugin/wool_11_base_desc",
+  "aerialBuff": [
+    "myplugin/jump_sound"
+  ],
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/wool_0",
+          "block:myplugin/wool_0",
+          "wool_0"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "blockObjectOnCollision": false,
+  "blockType": "wool",
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "breakBlockSound": {
+    "loop": true,
+    "path": "plugin/myplugin/sound/cloth1.mp3",
+    "selfOnly": false,
+    "sound": "cloth1.mp3",
+    "volume": 1
+  },
+  "breakTime": 20,
+  "canClick": false,
+  "canSwim": false,
+  "climbSpeed": 0,
+  "collisionBoxes": [
+    {
+      "__OBJ_TYPE": "Box",
+      "max": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "min": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "colorBlocks": {
+    "BLUE": "myplugin/wool_11",
+    "GREEN": "myplugin/wool_5",
+    "RED": "myplugin/wool_14",
+    "YELLOW": "myplugin/wool_4"
+  },
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/wool_11",
+      "block:myplugin/wool_11",
+      "wool_11"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "emitLightInMaxLightMode": false,
+  "fall": false,
+  "hitBreakEffect": {
+    "effect": "fangkuaisuilie.effect"
+  },
+  "isDropItem": true,
+  "isOpaqueFullCube": true,
+  "itemintroduction": "wool.intro",
+  "itemname": "wool_11",
+  "jumpBuff": [
+    "myplugin/jump_sound"
+  ],
+  "lightEmitted": 0,
+  "lightOpacity": 15,
+  "maxFallSpeed": 1.5,
+  "maxSpeed": 0,
+  "placeBlockSound": {
+    "loop": false,
+    "path": "plugin/myplugin/sound/lay1.mp3",
+    "selfOnly": false,
+    "sound": "lay1.mp3",
+    "volume": 1
+  },
+  "recycle": false,
+  "recycleTime": 20,
+  "renderable": true,
+  "renderPass": 0,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "showBoundBox": true,
+  "spring": 0,
+  "texture": [
+    "wool_colored_blue_wool_11.png",
+    "wool_colored_blue_wool_11.png",
+    "wool_colored_blue_wool_11.png",
+    "wool_colored_blue_wool_11.png",
+    "wool_colored_blue_wool_11.png",
+    "wool_colored_blue_wool_11.png"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/pumpkin_face_off_2",
+            "block:myplugin/pumpkin_face_off_2",
+            "pumpkin_face_off_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "pumpkin_top_pumpkin_face_off_2.png",
+        "pumpkin_top_pumpkin_face_off_2.png",
+        "pumpkin_side_pumpkin_face_off_2.png",
+        "pumpkin_side_pumpkin_face_off_2.png",
+        "pumpkin_face_off_pumpkin_face_off_2.png",
+        "pumpkin_side_pumpkin_face_off_2.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

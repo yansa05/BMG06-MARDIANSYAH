@@ -1,0 +1,49 @@
+{
+    "Editor_NameKey": "tr.13796",
+    "Editor_Tag": null,
+    "canUse": false,
+    "candestroy": true,
+    "candrop": false,
+    "container": {
+        "initCapacity": 3,
+        "reloadType": "Item",
+        "maxCapacity": 3,
+		"reloadName": "myplugin\/arrow"
+    },
+    "equip_buff": null,
+    "equip_skill": null,
+    "icon": "gun_77.png",
+    "itemintroduction": "tr.13797",
+    "itemname": "tr.13798",
+    "mesh": "gun_77.mesh",
+    "name": "snipe_gun",
+    "handBuff": "myplugin/hand_gun1",
+    "needSave": true,
+    "recoil": 0,
+    "skill": [
+        "myplugin/snipe_shoot",
+        "myplugin/snipe_reload"
+    ],
+    "matItem_first": {
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+          "x": 10,
+          "y": 10,
+          "z": 10
+        }
+    },
+    "stack_count_max": 1,
+    "syncGameData": {
+        "currentCapacity": true,
+        "extCapacity": true
+    },
+    "syncVars": {
+        "currentCapacity": true
+    },
+    "tray": null,
+    "triggers": null,
+    "useBuff": null
+}

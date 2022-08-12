@@ -1,0 +1,42 @@
+{
+  "base": "item_base",
+  "baseDesc": "myplugin/bridge_egg_base_desc",
+  "basePropDesc": {
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{myplugin/bridge_egg_base_desc}\n{golden_apple_hardness}1.0\n",
+  "editBaseFunc": "egg_block",
+  "handBuff": "myplugin/preview_egg_bridge",
+  "icon": "bridgeEgg.png",
+  "isAddItem": true,
+  "itemintroduction": "item.bridgeEgg.intro",
+  "itemname": "myplugin/bridge_egg_itemname",
+  "matItem_first": {
+    "rotateX": -15,
+    "rotateY": -30,
+    "rotateZ": 10,
+    "scale": 2.2,
+    "translate": {
+      "x": -0.05,
+      "y": 0.1,
+      "z": 0.25
+    }
+  },
+  "mesh": "daqiaodan.mesh",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "stack_count_max": 64,
+  "startAction": "throw",
+  "useAction": "throw",
+  "useTime": 20
+}

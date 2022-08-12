@@ -1,0 +1,92 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_plant_sunflower_bottom",
+            "block:myplugin/double_plant_sunflower_bottom",
+            "double_plant_sunflower_bottom"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "blockObjectOnCollision": false,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "double_plant_sunflower_bottom.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "double_plant_sunflower_bottom.png"
+        }
+    ],
+    "base": "base_block"
+}

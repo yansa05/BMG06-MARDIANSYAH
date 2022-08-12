@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="buff_icon.png" name="buff_icon" nativeHorzRes="512" nativeVertRes="1024" resourceGroup="imagesets" version="2">
+	<Image height="100" name="addStep2" width="100" xPos="0" yPos="0"/>
+	<Image height="100" name="addStep_other" width="100" xPos="100" yPos="0"/>
+	<Image height="100" name="attack" width="100" xPos="200" yPos="0"/>
+	<Image height="100" name="attack_self" width="100" xPos="300" yPos="0"/>
+	<Image height="100" name="deArmour" width="100" xPos="400" yPos="0"/>
+	<Image height="100" name="deArmour_self" width="100" xPos="0" yPos="100"/>
+	<Image height="100" name="deDamage" width="100" xPos="100" yPos="100"/>
+	<Image height="100" name="deDamage_self" width="100" xPos="200" yPos="100"/>
+	<Image height="100" name="expedite" width="100" xPos="300" yPos="100"/>
+	<Image height="100" name="expedite_self" width="100" xPos="400" yPos="100"/>
+	<Image height="100" name="flame" width="100" xPos="0" yPos="200"/>
+	<Image height="100" name="flame_self" width="100" xPos="100" yPos="200"/>
+	<Image height="100" name="hide" width="100" xPos="200" yPos="200"/>
+	<Image height="100" name="jump" width="100" xPos="300" yPos="200"/>
+	<Image height="100" name="jump_self" width="100" xPos="400" yPos="200"/>
+	<Image height="60" name="mask" width="12" xPos="0" yPos="300"/>
+	<Image height="100" name="maxHp2" width="100" xPos="12" yPos="300"/>
+	<Image height="100" name="maxHp_self2" width="100" xPos="112" yPos="300"/>
+	<Image height="128" name="maxVp" width="128" xPos="212" yPos="300"/>
+	<Image height="128" name="maxVp_self" width="128" xPos="340" yPos="300"/>
+	<Image height="100" name="pressing" width="100" xPos="0" yPos="428"/>
+	<Image height="100" name="pressing_self" width="100" xPos="100" yPos="428"/>
+	<Image height="100" name="revive" width="100" xPos="200" yPos="428"/>
+	<Image height="100" name="revive_self" width="100" xPos="300" yPos="428"/>
+</Imageset>

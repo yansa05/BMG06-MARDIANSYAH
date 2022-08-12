@@ -1,0 +1,6 @@
+{
+    "openChestCount":1,
+    "sync": "all",
+    "openSound": "myplugin/open_chest_sound",
+    "closeSound": "myplugin/close_chest_sound"
+}

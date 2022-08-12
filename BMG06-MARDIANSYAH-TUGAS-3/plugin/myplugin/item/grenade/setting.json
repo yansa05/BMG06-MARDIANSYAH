@@ -1,0 +1,48 @@
+{
+  "aimTargetaa": true,
+  "base": "item_base",
+  "baseDesc": "myplugin/grenade_base_desc",
+  "basePropDesc": {
+    "tnt_explosion_damage": [
+      8
+    ],
+    "use_cd": [
+      6.0,
+      "use_cd_unit"
+    ]
+  },
+  "canAbandon": true,
+  "canUse": true,
+  "cooldown": 120,
+  "desc": "{myplugin/grenade_base_desc}\n{tnt_explosion_damage}8\n{use_cd}6.0{use_cd_unit}\n",
+  "editBaseFunc": "grenadePropEdit",
+  "handBuff": "myplugin/handbuff_grenade",
+  "icon": "icon_bed_grenade.png",
+  "itemintroduction": "item.grenade.intro",
+  "itemname": "myplugin/grenade_itemname",
+  "mesh": "bed_grenade.mesh",
+  "needSave": true,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "skillName": "myplugin/throw_grenade",
+  "stack_count_max": 64,
+  "startAction": "throw2",
+  "useTime": 20,
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 10,
+    "scale": 1,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  }
+}

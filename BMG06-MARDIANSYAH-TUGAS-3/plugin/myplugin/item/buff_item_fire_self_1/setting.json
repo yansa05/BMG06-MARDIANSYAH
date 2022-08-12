@@ -1,0 +1,8 @@
+{
+    "icon": "item_fire_self.png",
+    "itemname": "item.fire_1.name",
+    "itemintroduction": "item.fire_1.intro",
+    "isBuff": true,
+    "forTeam": false,
+	"itembuff": "myplugin/fire_self_1"
+}

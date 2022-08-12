@@ -1,0 +1,17 @@
+{
+    "actorName": "boytouming.actor",
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+    "gravity": 0,
+    "name": "",
+	"viewDistance": 32,
+	"entityDerive": "pointEntity",
+	"disableShadow": true,
+	"dontCreateDynamically": true
+}

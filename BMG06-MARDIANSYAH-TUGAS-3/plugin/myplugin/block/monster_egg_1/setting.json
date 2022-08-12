@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/monster_egg_1",
+            "block:myplugin/monster_egg_1",
+            "monster_egg_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "cobblestone_monster_egg_1.png",
+        "cobblestone_monster_egg_1.png",
+        "cobblestone_monster_egg_1.png",
+        "cobblestone_monster_egg_1.png",
+        "cobblestone_monster_egg_1.png",
+        "cobblestone_monster_egg_1.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

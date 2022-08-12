@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/purpur_pillar",
+            "block:myplugin/purpur_pillar",
+            "purpur_pillar"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "purpur_pillar_top.png",
+        "purpur_pillar_top.png",
+        "purpur_pillar.png",
+        "purpur_pillar.png",
+        "purpur_pillar.png",
+        "purpur_pillar.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

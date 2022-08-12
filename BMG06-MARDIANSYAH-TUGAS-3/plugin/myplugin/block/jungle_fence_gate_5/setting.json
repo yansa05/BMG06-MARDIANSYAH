@@ -1,0 +1,22 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/jungle_fence_gate_5",
+				"block:myplugin\/jungle_fence_gate_5",
+				"jungle_fence_gate_5"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"block_breakTime",
+		"base":"jungle_fence_gate_13"
+	}

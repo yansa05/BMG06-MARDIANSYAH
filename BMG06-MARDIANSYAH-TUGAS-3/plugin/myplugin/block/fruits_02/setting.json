@@ -1,0 +1,53 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/fruits_02",
+            "block:myplugin/fruits_02",
+            "fruits_02"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "quads": [
+        {
+            "texture": "fruits_02.png",
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 15,
+    "isOpaqueFullCube": false,
+    "base": "base_block"
+}

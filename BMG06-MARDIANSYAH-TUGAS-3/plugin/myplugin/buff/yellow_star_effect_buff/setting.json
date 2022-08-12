@@ -1,0 +1,8 @@
+{
+    "effect": {
+			"effect": "Continuous_tp_light.effect",
+			"once": false,
+			"pos": {"x":0,"y":0.5,"z":0},
+			"yaw": 180
+	}
+}

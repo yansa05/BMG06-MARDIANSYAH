@@ -1,0 +1,23 @@
+{
+	"targetType": "Camera",
+    "type": "Missile",
+    "minSustainTime": 10,
+    "maxSustainTime": 20,
+    "handItem": "myplugin/blink_pearl",
+    "consumeItem": "myplugin/blink_pearl",
+    "missileCfg": "myplugin/blink_pearl_missile",
+	"frontSight":"myplugin/frontsight_1",
+    "~castSound": {
+        "loop": false,
+        "volume": 1,
+        "sound": "bow.mp3",
+        "selfOnly": false
+    },
+	"base": "all_use_item_skill_base",
+    "castAction": "throw",
+    "startPos": {
+        "x": 0,
+        "y": -0.1,
+        "z": -0.85
+    }
+}

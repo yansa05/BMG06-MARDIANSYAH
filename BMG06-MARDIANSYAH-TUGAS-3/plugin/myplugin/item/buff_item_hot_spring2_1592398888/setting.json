@@ -1,0 +1,24 @@
+{
+		"itemname":"spring_hot",
+		"itembuff":"myplugin\/hot_spring_buff_1592398888",
+		"editBaseFunc":"buff_item_hot_spring2",
+		"basePropDesc":{
+			"buff_spa":[
+				1,
+				"buff_spa_unit"
+			]
+		},
+		"icon_path":"plugin\/myplugin\/item\/buff_item_hot_spring2\/addStep2.png",
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"desc":"{buff_spa}1{buff_spa_unit}\n",
+		"itemintroduction":"item_hot_spring_1.intro",
+		"forTeam":true,
+		"icon":"set:buff_icon.json image:addStep2.png"
+	}

@@ -1,0 +1,5 @@
+{
+  "damage": 4,
+  "skill": "myplugin/blink_pearl_skill",
+  "type": "HandBuff"
+}

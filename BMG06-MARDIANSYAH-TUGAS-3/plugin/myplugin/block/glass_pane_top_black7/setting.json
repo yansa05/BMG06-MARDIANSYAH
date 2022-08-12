@@ -1,0 +1,443 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/glass_pane_top_black7",
+            "block:myplugin/glass_pane_top_black7",
+            "glass_pane_top_black7"
+        ]
+    ],
+    "isOpaqueFullCube": false,
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 1,
+                "x": 0.6,
+                "y": 1
+            },
+            "min": {
+                "z": 0.4,
+                "x": 0.4,
+                "y": 0
+            }
+        },
+        {
+            "max": {
+                "z": 0.6,
+                "x": 1,
+                "y": 1
+            },
+            "min": {
+                "z": 0.6,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "blockObjectOnCollision": false,
+    "defaultTexture": "/block/glass_pane_top_black/glass_pane_top_black.png",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 15,
+    "editBaseFunc": "block_breakTime",
+    "quads": [
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.6,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.6,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.6,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 0.25
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.6,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0.25
+                    }
+                }
+            ],
+            "texture": "/block/glass_pane_top_black/glass_black.png"
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.4,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.4,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.4,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 0.25
+                    }
+                },
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.4,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0.25
+                    }
+                }
+            ],
+            "texture": "/block/glass_pane_top_black/glass_black.png"
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.6,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.6,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.4,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.4,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 0
+                    }
+                }
+            ]
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.6,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 1,
+                        "x": 0.4,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.4,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0.6,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 1,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 0,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 1,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0.25,
+                        "y": 0
+                    }
+                }
+            ],
+            "texture": "/block/glass_pane_top_black/glass_black.png"
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 1,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 1,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 0,
+                        "y": 0.25
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "textureCoord": {
+                        "x": 1,
+                        "y": 0.25
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 1,
+                        "y": 0
+                    }
+                }
+            ],
+            "texture": "/block/glass_pane_top_black/glass_black.png"
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 1,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 1,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 0,
+                        "y": 1
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "vertices": [
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 1,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 0
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.6,
+                        "x": 0,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.45,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 0,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 1
+                    }
+                },
+                {
+                    "position": {
+                        "z": 0.4,
+                        "x": 1,
+                        "y": 0.87
+                    },
+                    "textureCoord": {
+                        "x": 0.55,
+                        "y": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "base": "base_block"
+}

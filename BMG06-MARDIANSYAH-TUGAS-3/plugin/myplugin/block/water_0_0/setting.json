@@ -1,0 +1,182 @@
+{
+    "canBreak": false,
+    "isOpaqueFullCube": false,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+	"blockType": "water",
+    "collisionBoxes": {},
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/water_0_0",
+            "block:myplugin/water_0_0",
+            "water_0_0"
+        ]
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.77
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.77
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.77
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.77
+                }
+            ]
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "emitLightInMaxLightMode": true,
+    "defaultTexture": "/water_skew.png",
+    "waterCfg": {
+        "dir": 0,
+        "heigh": 7
+    },
+    "focusable": false,
+    "renderPass": 5,
+    "lightOpacity": 0,
+    "clickPenetrate" : true,"canSwim": true,
+    "editBaseFunc": "block_breakTime",
+    "base": "base_block"
+}

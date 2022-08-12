@@ -1,0 +1,57 @@
+{
+  "base": "item_base",
+  "baseDesc": "myplugin/gold_apple_base_desc",
+  "basePropDesc": {
+    "golden_apple_extra_hp": [
+      4
+    ],
+    "restore_hp": [
+      4
+    ],
+    "use_cd": [
+      5,
+      "use_cd_unit"
+    ]
+  },
+  "canAbandon": true,
+  "canUse": true,
+  "cooldown": 100,
+  "desc": "{myplugin/gold_apple_base_desc}\n{restore_hp}4\n{golden_apple_extra_hp}4\n{use_cd}5.0{use_cd_unit}\n",
+  "dropMatItem": {
+    "scale": 0.5,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "editBaseFunc": "apple_prop",
+  "icon": "gold_apple.png",
+  "itemintroduction": "item.gold_apple.intro",
+  "itemname": "myplugin/gold_apple_itemname",
+  "matItem_first": {
+    "scale": 3,
+    "translate": {
+      "x": 0,
+      "y": 0.05,
+      "z": 0.2
+    }
+  },
+  "mesh": "jinpingguo.mesh",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "skill": [
+    "myplugin/eat_apple"
+  ],
+  "stack_count_max": 64,
+  "useBuff": {
+    "cfg": "myplugin/gold_apple_buff",
+    "time": 900
+  }
+}

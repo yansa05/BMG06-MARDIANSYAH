@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/log_oak_full",
+            "block:myplugin/log_oak_full",
+            "log_oak_full"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "log_oak_log_oak_full.png",
+        "log_oak_log_oak_full.png",
+        "log_oak_log_oak_full.png",
+        "log_oak_log_oak_full.png",
+        "log_oak_log_oak_full.png",
+        "log_oak_log_oak_full.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,19 @@
+{
+  "continueDamage": 0,
+  "damage": 0,
+  "dropDamageRatio": 0,
+  "dropDamageStart": 0,
+  "gravity": 0,
+  "hide": 0,
+  "hideDeep": 0.4,
+  "jumpSpeed": 0,
+  "maxHp": 0,
+  "moveAcc": 0,
+  "moveFactor": 0,
+  "moveSpeed": 0,
+  "needSave": false,
+  "reachDistance": 0,
+  "sync": "all",
+  "unassailable": 0,
+  "undamageable": 0
+}

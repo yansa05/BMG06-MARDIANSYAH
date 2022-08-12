@@ -1,0 +1,6 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "buff_maxHp",
+    "forTeam": true,
+	"itembuff": "myplugin/jump_buff"
+}

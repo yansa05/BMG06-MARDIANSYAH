@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/acacia_fence10",
+				"block:myplugin\/acacia_fence10",
+				"acacia_fence10"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"acacia_fence5"
+	}

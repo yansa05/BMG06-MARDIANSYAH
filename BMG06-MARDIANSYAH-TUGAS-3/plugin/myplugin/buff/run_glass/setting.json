@@ -1,0 +1,9 @@
+{"sound": {
+    "sound": "glass_walk.mp3",
+    "loop": true,
+    "selfOnly": false,
+    "path": "plugin/myplugin/sound/glass_walk.mp3",
+    "volume": 0.7
+  },
+  "sync": "other"
+}

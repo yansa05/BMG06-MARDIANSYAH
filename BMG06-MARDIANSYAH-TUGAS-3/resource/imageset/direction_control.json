@@ -1,0 +1,52 @@
+{"frames": {
+
+"drag_bg.png":
+{
+	"frame": {"x":0,"y":60,"w":226,"h":226},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":226,"h":226},
+	"sourceSize": {"w":226,"h":226}
+},
+"drag_point_1.png":
+{
+	"frame": {"x":0,"y":0,"w":13,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":13,"h":13},
+	"sourceSize": {"w":13,"h":13}
+},
+"drag_point_2.png":
+{
+	"frame": {"x":13,"y":0,"w":19,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":19,"h":19},
+	"sourceSize": {"w":19,"h":19}
+},
+"drag_point_3.png":
+{
+	"frame": {"x":32,"y":0,"w":22,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":22,"h":22},
+	"sourceSize": {"w":22,"h":22}
+},
+"drag_point_4.png":
+{
+	"frame": {"x":54,"y":0,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "direction_control.png",
+	"format": "RGBA8888",
+	"size": {"w":226,"h":286},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:eb553baf94ef2f9cf0e7a46daf6f2749:15b7ea88aa3d60d9d2253eea9932ded8:77d81ee29ae43ad198dec71c8f92c707$"
+}
+}

@@ -1,0 +1,10 @@
+{
+    "type": "Charge",
+    "minSustainTime": 10,
+    "maxSustainTime": 30,
+    "handItem": "myplugin/bow_standby",
+    "consume": "myplugin\/arrow",
+    "skillName": "myplugin/release_arrow",
+	"crosshairCfg":"crosshair/testcrosshair",
+  "Editor_NameKey": "tr.10782"
+}

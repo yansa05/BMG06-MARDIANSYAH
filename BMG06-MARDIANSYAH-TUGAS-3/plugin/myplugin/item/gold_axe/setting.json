@@ -1,0 +1,74 @@
+{
+    "attachType": [
+        "pressing"
+    ],
+    "base": "tool_base",
+    "baseDesc": "myplugin/gold_axe_base_desc",
+    "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            4
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_effectiveness": [
+            0.3
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "boundingVolume": {
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "type": "Box"
+    },
+    "canAbandon": true,
+    "candrop": true,
+    "desc": "{myplugin/gold_axe_base_desc}\n{props_attack}4\n{props_effectiveness}0.3\n",
+    "mesh": "jinfu.mesh",
+    "droplifetime": 100,
+    "dropSpeed": 0.1,
+    "effAllBlock": 0.3,
+    "effTypeBlock": {
+        "wood": 0.2
+    },
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_gold_axe[handBuff",
+    "icon": "gold_axe.png",
+    "isAddItem": true,
+    "itemintroduction": "item.gold_axe.intro",
+    "itemname": "myplugin/gold_axe_itemname",
+    "stack_count_max": 1,
+    "dropMatItem": {
+        "scale": 0.6,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.3
+        }
+    }
+}

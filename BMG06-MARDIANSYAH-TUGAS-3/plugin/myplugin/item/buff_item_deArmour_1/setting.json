@@ -1,0 +1,9 @@
+{
+    "icon": "item_deArmour.png",
+    "itemname": "item_deArmour_1.name",
+    "itemintroduction": "item_deArmour_1.intro",
+    "isAttach": true,
+    "forTeam": true,
+	"attachBuff": "myplugin/deArmour1",
+	"statusFuncName": "IsUsing"
+}

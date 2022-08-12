@@ -1,0 +1,7 @@
+{
+	"bombDist": 1,
+	"combustionDist": 2,
+	"burnEffeft": "plugin/myplugin/buff/flame_bomb_burn_buff/Continuous_fireball.effect",
+	"burnTime": 2000,
+	"type": ""
+}

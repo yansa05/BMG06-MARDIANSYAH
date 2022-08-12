@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/podzol_dirt",
+            "block:myplugin/podzol_dirt",
+            "podzol_dirt"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "dirt_podzol_top.png",
+        "dirt_podzol_top.png",
+        "dirt_podzol_side.png",
+        "dirt_podzol_side.png",
+        "dirt_podzol_side.png",
+        "dirt_podzol_side.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

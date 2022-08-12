@@ -1,0 +1,35 @@
+{
+    "disableShadow": true,
+    "hpBarHeight": 0.2,
+    "canlongTouch": true,
+    "actorName": "g2021_dungeon3_4.actor",
+    "hpBarWidth": 2,
+    "maxHp": 200,
+	"canAttack": true,
+    "textHeight": 5,
+	"hideHp": 1,
+    "collision": true,
+    "clickDistance": 2,
+    "undamageable1": 1,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            3,
+            1
+        ]
+    },
+    "autoRotateColliderBox": true,
+    "lockRotateBodyYaw": 0,
+    "lockRotateBodyPitch": 1,
+    "lockRotateBodyRoll": 1,
+    "rotateNearBoxAngle": true,
+    "canClick": false,
+    "canTouch": true,
+    "touchTime": 60,
+    "deadSound": {
+        "volume": 3,
+        "loop": false,
+        "sound": "/sound/dungeon_binglong_die.mp3"
+    }
+}

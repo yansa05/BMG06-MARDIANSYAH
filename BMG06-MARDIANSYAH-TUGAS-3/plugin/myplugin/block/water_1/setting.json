@@ -1,0 +1,64 @@
+{
+    "base": "base_block",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/water_1",
+                    "block:myplugin/water_1",
+                    "water_1"
+                ]
+            ]
+        ]
+    },
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/water_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "blockType": "water",
+    "clickPenetrate": true,
+    "canSwim": true,
+    "collisionBoxes": [],
+    "desc": "{base_block_desc}\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/water_1",
+            "block:myplugin/water_1",
+            "water_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "emitLightInMaxLightMode": true,
+    "focusable": false,
+    "isOpaqueFullCube": false,
+    "lightOpacity": 1,
+    "renderPass": 4,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "texture": [
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png"
+    ],
+    "changeGroup": [
+        "myplugin/water_0"
+    ],
+    "willLodCull": false
+}

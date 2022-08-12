@@ -1,0 +1,11 @@
+REGION_ENTER(debug = false){
+	If(IsPlayer(entity = $obj1)){
+		ChangeCameraView(entity = $obj1, pitch = 35,yaw = 270,distance = 9,offset = {x = 0,y = 0,z = 1}, smooth = 5)
+		If($obj1.guideStep == 5 and $obj1.playerStep == 5)
+		{
+			--SetGuidePostion(entity = $obj1, pos = {x = 132.5, y = 17, z = 22.5})
+			$obj1.guideStep = 6
+			$obj1.playerStep = 6
+		}
+	}
+}

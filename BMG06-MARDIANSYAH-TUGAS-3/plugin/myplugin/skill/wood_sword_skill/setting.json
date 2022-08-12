@@ -1,0 +1,12 @@
+{
+	
+	"type": "MeleeAttack",
+	"range":3.5,
+	"startSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+		"sound": "boy_hurt.mp3",
+		"path":"plugin/myplugin/sound/boy_hurt.mp3"
+    }
+}

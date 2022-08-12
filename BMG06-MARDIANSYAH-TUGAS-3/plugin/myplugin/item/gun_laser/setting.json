@@ -1,0 +1,30 @@
+{
+    "stack_count_max": 64,
+    "itemname": "gun_laser",
+    "icon": "gun_80.png",
+    "mesh": "gun_80.mesh",
+    "candrop": true,
+    "isAddItem": true,
+    "container": {
+        "initCapacity": 30,
+        "reloadType": "Item",
+        "maxCapacity": 30,
+		"reloadName": "myplugin\/diamond"
+    },
+    "droplifetime": 100,
+    "itemintroduction": "item.diamond_axe.intro",
+    "dropSpeed": 0.1,
+    "handBuff": "myplugin/hand_gun1",
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ]
+    },
+    "skill":[
+        "myplugin/gun_laser",
+        "myplugin/snipe_reload"
+    ]
+}

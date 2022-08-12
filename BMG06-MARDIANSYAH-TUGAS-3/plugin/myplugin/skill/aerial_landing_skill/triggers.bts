@@ -1,0 +1,42 @@
+SKILL_CAST(){
+    ------------------------------------------------------------- 移除在空中顶到东西时给的加重buff
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/aggravation_buff")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+	$buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+	$unit = {x = 0, y = 0.3, z = 0}
+	$pos = GetEntityPosition(entity = $obj1)
+	$downPos = ComputeV3(op = "sub", p1 = $pos, p2 = $unit)
+	$blockType = GetBlockTypeByPos(map = GetEntityMap(entity = $obj1), pos = $downPos)
+	If($blockType ~= "water"){
+		PlayEffectByPos(entity = $obj1, effectPath = GetSkillVar(fullName = "myplugin/aerial_landing_skill", key = "effectPath"), times = -1)
+	}
+    ------------------------------------------------------------- 落地时如果处于移动状态则播放对应特效，处于移动状态则不播放刹车等动作
+    If(IsEntityMoving(entity = $obj1)){
+        CastSkill(skill = "myplugin/moving_change_skill_1" ,from = $obj1, packet = {needPre = true})
+    }
+    ------------------------------------------------------------- 根据起跳状态播放落地动作，并且清除起跳状态
+    If(IsEntitySwimming(entity = $obj1)){
+        CallTrigger(event = "REMOVE_SQUAT_BUFF", obj1 = $obj1)
+    }ElseIf("squat" == $obj1.takeoffStatus and not IsEntitySwimming(entity = $obj1)){    -- 如果跳+蹲，做从地上站起来
+        StartTimer(object = $obj1, event = "REMOVE_SQUAT_BUFF", time = 20)
+        CastSkill(skill = "myplugin/aerialLandingWithSquat" ,from = $obj1,packet = {needPre = true})
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_buff_move_on_ground", buffTime = 20)
+    }ElseIf(not GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move_on_ground")){
+        If("sprint" == $obj1.takeoffStatus){    -- 如果加速跳，做刹车动作
+			If(IsMaryModel(entity = $obj1)){
+				CastSkill(skill = "myplugin/skidWithSprintAndSprintJump" ,from = $obj1,packet = {needPre = true})
+			}
+        }ElseIf($obj1.hadSquatTouch){
+            CastSkill(skill = "myplugin/powerStorage" ,from = $obj1 ,packet = {needPre = true})
+        }Else{
+            CastSkill(skill = "myplugin/aerialLandingWithMoveJump" ,from = $obj1,packet = {needPre = true})
+			PlayAction(entity = $obj1, actionName = "idle", actionTime = 5, includeSelf = true)
+        }
+    }
+    $obj1.takeoffStatus = nil
+}

@@ -1,0 +1,12 @@
+{
+		"damage":1,
+		"type":"MeleeAttack",
+		"range":999,
+		"hurtDistance":0.2,
+		"castSound":{
+			"volume":1,
+			"selfOnly":false,
+			"sound":"attack.mp3",
+			"loop":false
+		}
+	}

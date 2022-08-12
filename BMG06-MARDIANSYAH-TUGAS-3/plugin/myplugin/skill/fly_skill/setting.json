@@ -1,0 +1,15 @@
+{
+  "type": "Base",
+  "icon": "set:fly.json image:fly.png",
+  "posKey": "fly",
+  "castAction": "",
+  "customizeSkill":true,
+  "verticalAlignment":1,
+  "horizontalAlignment":2,
+  "area":[
+    [0,-30],
+    [0,-160],
+    [0, 70],
+    [0, 70]
+  ]
+}

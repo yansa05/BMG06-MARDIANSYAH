@@ -1,0 +1,64 @@
+ENTITY_TOUCH_ON (debug = false) { -- 怪物被踩，玩家不在无敌状态时，踩到=死，并且给玩家二次跳跃
+    $invincibleBuff = GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/invincible_buff")
+    If(IsPlayer(entity = $obj2) and not $invincibleBuff){
+        Damage(damage = 1, entity = $obj1 , from = $obj2)
+    }
+}
+
+ENTITY_DAMAGE{
+
+}
+
+ENTITY_ENTER {
+	StartTimer(object = $obj1, event = "CHECK_RUN", time = 100, obj1 = $obj1)
+}
+
+CHECK_RUN {
+    $hitching = GetHitching(entity = $obj1)
+    If($hitching)
+    {
+        SetEntityYaw(entity = $obj1, rotationYaw = GetEntityYaw(entity = $hitching))
+        PlayAction(entity = $obj1, actionName = "accelerate_run", actionTime = 20)
+    }
+    ElseIf(not $obj1.luohan)
+    {
+        StartAI(entity = $obj1)
+        $obj1.luohan = true
+    }
+	StartTimer(object = $obj1, event = "CHECK_RUN", time = 3, obj1 = $obj1)
+}
+
+ENTITY_TOUCH_ALL(debug = false){
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+	If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+
+ENTITY_DIE (debug = false){
+	If($obj2 and (IsPlayer(entity = $obj2) or $obj2.master)){
+        $addplayer = IsPlayer(entity = $obj2) and $obj2
+        If($obj2.master){
+            $addplayer = GetObject(objID = $obj2.master)
+        }
+		If($addplayer and IsValidObject(object = $addplayer) and IsPlayer(entity = $addplayer))
+        {
+             CallTrigger(object = $obj2, event = "ADD_SCORE", obj1 = $addplayer, obj2 = $obj1)
+        }
+    }
+    $obj1.killFrom = $obj2
+    CallTrigger(event = "ENTITY_DIE_DROP_ITEM", from = $obj1)
+   
+}
+ENTITY_REBIRTH{
+	UpdateScaleWhenRebirth(entity = $obj1)
+}

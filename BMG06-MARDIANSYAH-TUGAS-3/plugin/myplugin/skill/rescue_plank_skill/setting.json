@@ -1,0 +1,6 @@
+{
+    "type": "",
+    "handItem": "myplugin/rescue_plank",
+	"base": "all_use_item_skill_base",
+	"castAction": ""
+}

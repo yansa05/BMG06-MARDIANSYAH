@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":180
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/dark_oak_fence4",
+				"block:myplugin\/dark_oak_fence4",
+				"dark_oak_fence4"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"dark_oak_fence1"
+	}

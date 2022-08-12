@@ -1,0 +1,69 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/concrete_white",
+          "block:myplugin/concrete_white",
+          "concrete_white"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/stone_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockType": "stone",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/concrete_white",
+      "block:myplugin/concrete_white",
+      "concrete_white"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "concrete_white.png",
+    "concrete_white.png",
+    "concrete_white.png",
+    "concrete_white.png",
+    "concrete_white.png",
+    "concrete_white.png"
+  ]
+}

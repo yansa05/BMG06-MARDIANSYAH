@@ -1,0 +1,20 @@
+{
+    "cdTime": 80,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/new_chomper_fire",
+    "followTarget": true,
+    "type": "Missile",
+    "startAction": "attack",
+    "startActionTime": 40,
+    "prepareTime": 4,
+	"startSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "big_turtle_fire_attack.mp3"
+    }
+
+}

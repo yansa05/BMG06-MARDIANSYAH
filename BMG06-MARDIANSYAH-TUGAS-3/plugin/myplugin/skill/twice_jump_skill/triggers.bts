@@ -1,0 +1,15 @@
+SKILL_CAST{
+    ------------------------------------------------------------- 二段跳，如果还处于蹲砸状态中则不能起跳
+    If(GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_buff_move_on_ground") or 
+        $obj1.hadSquatSkillClick or "idleTouch" == $obj1.takeoffStatus){
+        Return()
+    }
+    CastSkill(skill = "myplugin/twice_jump_skill_action" ,from = $obj1 ,packet = {needPre = true})
+    ------------------------------------------------------------- 二段跳空中停滞(浮空)
+    $jumpBuff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/twice_jump_buff")
+    If(not $jumpBuff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/twice_jump_buff", buffTime = 10)
+    }
+    ------------------------------------------------------------- 二段跳不能 跳蹲
+    $obj1.hadSquatSkillClick = true
+}

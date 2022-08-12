@@ -1,0 +1,8 @@
+{
+  "base": "fire_effect",
+  "continueDamage": 2.0,
+  "deadRemove": true,
+  "fixTime": "reset",
+  "initDamage": 5.0,
+  "type": "Buff"
+}

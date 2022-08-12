@@ -1,0 +1,526 @@
+{
+  "base": "base_block",
+  "blockType": "wood",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/oak_stairs",
+          "block:myplugin/oak_stairs",
+          "myplugin/oak_stairs_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1.0
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/tree_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": false,
+  "breakTime": 20,
+  "collisionBoxes": [
+    {
+      "max": {
+        "x": 1,
+        "y": 0.5,
+        "z": 1
+      },
+      "min": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "max": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "min": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0
+      }
+    }
+  ],
+  "defaultTexture": "/block/oak_stairs/oak.png",
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/oak_stairs",
+      "block:myplugin/oak_stairs",
+      "myplugin/oak_stairs_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "lightOpacity": 15,
+  "quads": [
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 1,
+            "y": 1,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 1,
+            "y": 1,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 0
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 1,
+            "y": 0,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 1
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0.5,
+            "y": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "vertices": [
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0
+          },
+          "textureCoord": {
+            "x": 0,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0.5
+          }
+        },
+        {
+          "position": {
+            "x": 0.5,
+            "y": 1,
+            "z": 1
+          },
+          "textureCoord": {
+            "x": 1,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ],
+  "renderPass": 0,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

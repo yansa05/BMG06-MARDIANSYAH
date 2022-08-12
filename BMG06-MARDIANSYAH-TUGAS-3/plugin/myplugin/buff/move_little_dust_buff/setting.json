@@ -1,0 +1,14 @@
+{
+    "effect": {
+			"effect": "Continuous_dust_small.effect",
+			"once": false,
+			"pos": {"x":0,"y":0.18,"z":-0.4},
+			"yaw": 180
+	},
+	"sound_":{
+		"volume": 1,
+        "loop": true,
+		"selfOnly": false,
+        "sound": "run_sound_1.mp3"
+	}
+}

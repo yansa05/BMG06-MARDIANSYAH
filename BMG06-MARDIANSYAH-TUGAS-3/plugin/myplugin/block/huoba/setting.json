@@ -1,0 +1,234 @@
+{
+    "base": "base_block",
+    "baseDesc": "myplugin/huoba_base_desc",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/huoba",
+                    "block:myplugin/huoba",
+                    "huoba"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+    "cannotStack": true,
+    "blockObjectOnCollision": false,
+    "breakTime": 20,
+    "attackSide": "0:1:0",
+    "changers": {
+        "-1:0:0": "myplugin/huoba_270",
+        "0:0:-1": "myplugin/huoba_360",
+        "0:0:1": "myplugin/huoba_180",
+        "0:1:0": "myplugin/huoba",
+        "1:0:0": "myplugin/huoba_90"
+    },
+    "checkPlaceFullCube": true,
+    "collisionBoxes": [
+        {
+            "max": {
+                "x": 0.55,
+                "y": 0.8,
+                "z": 0.55
+            },
+            "min": {
+                "x": 0.45,
+                "y": 0,
+                "z": 0.45
+            }
+        }
+    ],
+    "CombinationID": 1,
+    "desc": "{myplugin/huoba_base_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/huoba",
+            "block:myplugin/huoba",
+            "huoba"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "enableEditorBuilding": false,
+    "icon": "icon.png",
+    "isOpaqueFullCube": false,
+    "itemname": "myplugin/huoba_itemname",
+    "lightEmittedB": 1,
+    "lightEmittedG": 9,
+    "lightEmittedR": 13,
+    "lightOpacity": 0,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.55
+                }
+            ],
+            "texture": "huoba.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.45
+                }
+            ],
+            "texture": "huoba.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.45
+                }
+            ],
+            "texture": "huoba.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.55
+                }
+            ],
+            "texture": "huoba.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0,
+                    "z": 0.45
+                }
+            ],
+            "texture": "huoba_di.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.45
+                },
+                {
+                    "x": 0.45,
+                    "y": 0.8,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.55
+                },
+                {
+                    "x": 0.55,
+                    "y": 0.8,
+                    "z": 0.45
+                }
+            ],
+            "texture": "huoba_ding.png"
+        }
+    ],
+    "renderPass": 0,
+    "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    }
+}

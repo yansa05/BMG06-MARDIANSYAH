@@ -1,0 +1,10 @@
+{
+    "needSave": false,
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "chestopen.mp3"
+	},
+	"ifSound": 1
+}

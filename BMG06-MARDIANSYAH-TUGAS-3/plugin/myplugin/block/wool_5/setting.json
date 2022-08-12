@@ -1,0 +1,132 @@
+{
+  "_baseDesc": "myplugin/wool_5_base_desc",
+  "_desc": "myplugin/wool_5_base_desc",
+  "aerialBuff": [
+    "myplugin/jump_sound"
+  ],
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/wool_0",
+          "block:myplugin/wool_0",
+          "wool_0"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/wool_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/wool_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/wool_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": false,
+  "blockType": "wool",
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "breakTime": 20,
+  "canClick": false,
+  "canSwim": false,
+  "climbSpeed": 0,
+  "collisionBoxes": [
+    {
+      "__OBJ_TYPE": "Box",
+      "max": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "min": {
+        "__OBJ_TYPE": "Vector3",
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+
+  "colorBlocks": {
+    "BLUE": "myplugin/wool_11",
+    "GREEN": "myplugin/wool_5",
+    "RED": "myplugin/wool_14",
+    "YELLOW": "myplugin/wool_4"
+  },
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/wool_5",
+      "block:myplugin/wool_5",
+      "wool_5"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "emitLightInMaxLightMode": false,
+  "fall": false,
+  "hitBreakEffect": {
+    "effect": "fangkuaisuilie.effect"
+  },
+  "isDropItem": true,
+  "isOpaqueFullCube": true,
+  "itemintroduction": "wool.intro",
+  "itemname": "wool_5",
+  "jumpBuff": [
+    "myplugin/jump_sound"
+  ],
+  "lightEmitted": 0,
+  "lightOpacity": 15,
+  "maxFallSpeed": 1.5,
+  "maxSpeed": 0,
+  "recycle": false,
+  "recycleTime": 20,
+  "renderable": true,
+  "renderPass": 0,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "showBoundBox": true,
+  "spring": 0,
+  "texture": [
+    "wool_colored_lime_wool_5.png",
+    "wool_colored_lime_wool_5.png",
+    "wool_colored_lime_wool_5.png",
+    "wool_colored_lime_wool_5.png",
+    "wool_colored_lime_wool_5.png",
+    "wool_colored_lime_wool_5.png"
+  ]
+}

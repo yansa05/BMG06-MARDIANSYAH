@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/glass_pane_top10",
+				"block:myplugin\/glass_pane_top10",
+				"glass_pane_top10"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"glass_pane_top5"
+	}

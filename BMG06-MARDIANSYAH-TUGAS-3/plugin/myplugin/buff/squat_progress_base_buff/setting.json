@@ -1,0 +1,12 @@
+{
+        "showIcon": "set:bed_mainui_icon.json image:icon_squat_act.png",
+        "iconArea": {
+            "VA": -225.27,
+            "VAlign": 2,
+            "HA": -209.56,
+            "HAlign": 2,
+            "width": 75,
+            "height": 75
+        },
+        "progress": 10
+}

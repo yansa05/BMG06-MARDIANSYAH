@@ -1,0 +1,8 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "buff_maxHp",
+	"isAttach": true,
+	"forTeam": false,
+	"attachType": "pressing",
+	"attachBuff": "myplugin/attach_pressing"
+}

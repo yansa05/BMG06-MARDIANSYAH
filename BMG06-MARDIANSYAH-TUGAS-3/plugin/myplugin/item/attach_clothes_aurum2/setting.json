@@ -1,0 +1,22 @@
+{
+    "itemname": "equip_clothes_aurum",
+    "icon": "clothes.png",
+    "stack_count_max": 1,
+    "canAbandon":true,
+    "itemintroduction": "equip_clothes_aurum",
+    "tray": [
+        2
+    ],
+    "equip_skin": {
+        "armor_thigh": null,
+        "armor_chest": "diamond"
+    },
+    "base": "equip_base",
+    "type": "clothes",
+    "auto_equip_by_bts":true,
+    "quality": 2,
+	"attachType": ["deDamage"],
+	"syncVars": {
+      "attachVar": {}
+	}
+}

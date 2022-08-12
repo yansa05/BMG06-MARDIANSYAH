@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/concrete_silver",
+            "block:myplugin/concrete_silver",
+            "concrete_silver"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "concrete_silver_concrete_silver.png",
+        "concrete_silver_concrete_silver.png",
+        "concrete_silver_concrete_silver.png",
+        "concrete_silver_concrete_silver.png",
+        "concrete_silver_concrete_silver.png",
+        "concrete_silver_concrete_silver.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

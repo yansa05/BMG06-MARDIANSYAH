@@ -1,0 +1,4 @@
+{
+	"type": "HandBuff",
+	"skill":"myplugin/protect_wall_skill"
+}

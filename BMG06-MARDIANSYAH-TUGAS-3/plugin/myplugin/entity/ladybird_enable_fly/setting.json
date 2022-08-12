@@ -1,0 +1,99 @@
+{
+  "actorName": "mob_ladybug.actor",
+  "addScore": 0.0,
+  "aiTickInterval": 1,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "base": "monster_base",
+  "baseDesc": "ladybird_enable_fly_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      5.0
+    ],
+    "monster_hp": [
+      10.0
+    ],
+    "monster_score": [
+      0.0
+    ]
+  },
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canFly": true,
+  "canJump": false,
+  "canKill": true,
+  "canMove": true,
+  "collision": true,
+  "damage": 5.0,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.4
+    }
+  },
+  "deadSound": {
+    "delayTime": 18,
+    "loop": false,
+    "path": "resource/sound/mushroom_death.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{ladybird_enable_fly_desc}\n{monster_attack}5.0\n{monster_hp}10.0\n",
+  "destroyTime": 26,
+  "disableShadow": true,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "gravity": 0,
+  "hideHp": 1,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/mushroom_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "ladybird_enable_fly.png",
+  "idleProb": 0.2,
+  "idleTime": [
+    0,
+    0
+  ],
+  "maxHp": 10.0,
+  "meetCollisionEmptyRun": true,
+  "missDuringDay": true,
+  "moveSpeed": 0.05,
+  "name": "",
+  "patrolDistance": 7,
+  "posSyncDelay": 2,
+  "reactionTime": 10000,
+  "ShowSettingUI": true,
+  "textHeight": 1.3,
+  "uiType": "1",
+  "viewDistance": 32
+}

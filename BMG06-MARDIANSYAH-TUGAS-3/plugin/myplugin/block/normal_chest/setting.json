@@ -1,0 +1,215 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/normal_chest",
+          "block:myplugin/normal_chest",
+          "normal_chest"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/tree_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/normal_chest",
+      "block:myplugin/normal_chest",
+      "normal_chest"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "lightOpacity": 0,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.7,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.7,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.7,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.7,
+          "z": 0
+        }
+      ],
+      "texture": "normal_chest_top.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      ],
+      "texture": "normal_chest_top.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0.05,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0.05,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0.05,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0.05,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "normal_chest_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0.95,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 0.95,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0.95,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0.95,
+          "y": 1,
+          "z": 0
+        }
+      ],
+      "texture": "normal_chest_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0.05
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0.05
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.05
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0.05
+        }
+      ],
+      "texture": "normal_chest_front.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0.95
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.95
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0.95
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0.95
+        }
+      ],
+      "texture": "normal_chest_side.png"
+    }
+  ],
+  "renderPass": 0,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

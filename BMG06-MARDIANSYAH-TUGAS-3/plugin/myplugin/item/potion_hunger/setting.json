@@ -1,0 +1,57 @@
+{
+    "base": "item_base",
+    "baseDesc": "potion_hunger_baseDesc",
+    "basePropDesc": {
+        "recover_vp": [
+            50
+        ],
+        "use_cd": [
+            2.0,
+            "use_cd_unit"
+        ]
+    },
+    "matItem_first": {
+        "rotateX": 0,
+        "rotateY": -5,
+        "rotateZ": 0,
+        "scale": 2,
+        "translate": {
+            "x": 0,
+            "y": 0.1,
+            "z": 0.1
+        }
+    },
+    "mesh": "jieyaoshui.mesh",
+    "canAbandon": true,
+    "canUse": true,
+    "cooldown": 40,
+    "desc": "{potion_hunger_baseDesc}\n{recover_vp}50\n{use_cd}2.0{use_cd_unit}\n",
+    "editBaseFunc": "hungerPropEdit",
+    "icon": "potion_hunger_icon.png",
+    "itemname": "potion_hunger_itemname",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "skill": [
+        "myplugin/eat_hunger_potion"
+    ],
+    "stack_count_max": 64,
+    "useTime": 20,
+    "useBuff": {
+        "cfg": "myplugin/hunger_recover"
+    },
+    "brightnessScale": 1.3,
+    "dropMatItem": {
+        "scale": 0.8,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.1
+        }
+    }
+}

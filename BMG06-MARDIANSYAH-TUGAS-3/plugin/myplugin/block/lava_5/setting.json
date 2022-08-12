@@ -1,0 +1,167 @@
+{
+  "base": "base_block",
+  "blockType": "lava",
+  "breakTime": 20,
+  "canBreak": false,
+  "canSwim": true,
+  "collisionBoxes": [],
+  "emissionScale": 6,
+  "isOpaqueFullCube": false,
+  "lightEmitted": 1,
+  "lightEmittedB": 1,
+  "lightEmittedG": 1,
+  "lightEmittedR": 1,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.5,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.5,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    }
+  ],
+  "renderPass": 5
+}

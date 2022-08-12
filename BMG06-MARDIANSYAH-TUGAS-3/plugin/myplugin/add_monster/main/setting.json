@@ -1,0 +1,9 @@
+{
+  "addMonsters": [
+    []
+  ],
+  "monstersCheckInterval": 10,
+  "monstersDieRange": 108,
+  "monstersMaxCount": 10,
+  "monstersOutRange": 24
+}

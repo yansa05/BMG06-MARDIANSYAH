@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/oak_stairs11",
+				"block:myplugin\/oak_stairs11",
+				"oak_stairs11"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"oak_stairs08"
+	}

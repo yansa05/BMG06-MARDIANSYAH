@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/sticky_piston_1",
+            "block:myplugin/sticky_piston_1",
+            "sticky_piston_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "piston_bottom_sticky_piston_1.png",
+        "piston_top_sticky.png",
+        "piston_side_sticky_piston_1.png",
+        "piston_side_sticky_piston_1.png",
+        "piston_side_sticky_piston_1.png",
+        "piston_side_sticky_piston_1.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,55 @@
+REGION_ENTER(debug = false){
+	If(not IsPlayer(entity = $obj1)){
+		Return()
+	}
+	$owner = GetRegionOwner(region = $region)
+	If($obj1.outTele){--just comt out of the tube. Ps: telePos must be in region
+		$obj1.outTele = false
+		Return()
+	}
+	If(GetConfigVar(obj = $owner, key = "oneWay") and GetEntityEditorVar(entity = $owner, key = "order") == 2){
+		Return()
+	}
+	ElseIf(GetConfigVar(obj = $owner, key = "oneWay")){--oneWay, order = 1
+		$map = GetEntityMap(entity = $owner)
+		$pairID = GetEntityEditorVar(entity = $owner, key = "pairID")
+		$objKey = Concat(p1 = "teleEntity_", p2 = GetEntityMapId(entity = $obj1))
+		$objKey = Concat(p1 = $objKey, p2 = "_")
+		$objKey = Concat(p1 = $objKey, p2 = $pairID)
+		$tube = @[$objKey]
+		If($tube.invisibleBuff){
+			RemoveEntityTypeBuff(entity = $tube, key = "tube_invisible", value = "tube_invisible")
+			$tube.invisibleBuff = nil
+		}
+	}
+	$obj1.targetPos = GetEntityEditorVar(entity = $owner, key = "telePos")
+	$ownerName = GetConfigVar(obj = $owner, key = "fullName")
+	If($ownerName == "myplugin/transfer_point1" or $ownerName == "myplugin/transfer_point2"){-- upward-facing tube
+		$obj1.needSneakKey = 1
+		SetHeadText(entity = $obj1, headText = "[P=plugin/myplugin/image/sneak_head_text.png]", x = 0, y = 0)
+	}
+	Else{
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/frozen", buffTime = 10)
+		StartTimer(object = $obj1, time = 10, rep = false, event = "SET_ENTITY_POSITION")
+	}
+}
+REGION_LEAVE(debug = false){
+	If(not IsPlayer(entity = $obj1)){
+		Return()
+	}
+	If($obj1.needSneakKey == 1){
+		$obj1.needSneakKey = 0
+		$teamID = GetEntityTeam(entity = $obj1)
+		If($teamID ~= 0)
+		{
+			GetTeamHeadText(player = $obj1)
+		}
+		Else{
+			SetHeadText(entity = $obj1, headText = GetEntityName(entity = $obj1), x = 0, y = 0)
+		}
+	}
+	$owner = GetRegionOwner(region = $region)
+	If(GetConfigVar(obj = $owner, key = "oneWay") and GetEntityEditorVar(entity = $owner, key = "order") == 2){
+		CallTrigger(object = $owner, event = "ENTITY_HIDE_WITH_EFFECT")
+	}
+}

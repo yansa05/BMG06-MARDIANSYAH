@@ -1,0 +1,61 @@
+{
+    "base": "item_base",
+    "baseDesc": "myplugin/potion_speed_base_desc",
+    "basePropDesc": {
+        "accelerate_bonus": [
+            30.0
+        ],
+        "accelerate_duration": [
+            45.0,
+            "accelerate_duration_unit"
+        ],
+        "use_cd": [
+            10.0,
+            "use_cd_unit"
+        ]
+    },
+    "mesh": "jiasuyaoshui.mesh",
+    "matItem_first": {
+        "rotateX": 0,
+        "rotateY": -5,
+        "rotateZ": 0,
+        "scale": 2,
+        "translate": {
+            "x": 0,
+            "y": 0.1,
+            "z": 0.1
+        }
+    },
+    "canAbandon": true,
+    "canUse": true,
+    "cooldown": 200,
+    "desc": "{myplugin/potion_speed_base_desc}\n{accelerate_bonus}30.0\n{accelerate_duration}45.0{accelerate_duration_unit}\n{use_cd}10.0{use_cd_unit}\n",
+    "editBaseFunc": "moveSpeedDrugPropEdit",
+    "icon": "potion_bottle_yellow.png",
+    "itemintroduction": "item.potion_speedup.intro",
+    "itemname": "myplugin/potion_speed_itemname",
+    "model": 46,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "skill": [
+        "myplugin/eat_yellow_potion"
+    ],
+    "skillName": "myplugin/potion_speedup2",
+    "stack_count_max": 64,
+    "useTime": 20,
+    "brightnessScale": 1.3,
+    "dropMatItem": {
+        "scale": 0.8,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.1
+        }
+    }
+}

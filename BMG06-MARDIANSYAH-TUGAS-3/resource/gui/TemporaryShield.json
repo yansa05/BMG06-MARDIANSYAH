@@ -1,0 +1,182 @@
+{
+    "Dialog": {
+        "Window": {
+            "Type": "Layout",
+            "Name": "PlayerInfo-Bottom-Health",
+            "Property": [
+                {
+                    "Name": "Area",
+                    "Value": "{{0,0},{0,0},{0,150},{0,30}}"
+                },
+                {
+                    "Name": "VerticalAlignment",
+                    "Value": "Centre"
+                },
+                {
+                    "Name": "HorizontalAlignment",
+                    "Value": "Centre"
+                },
+                {
+                    "Name": "Touchable",
+                    "Value": "false"
+                },
+                {
+                    "Name": "WndOpenSound",
+                    "Value": "0"
+                },
+                {
+                    "Name": "WndCloseSound",
+                    "Value": "0"
+                }
+            ],
+            "Window": [
+                {
+                    "Type": "ProgressBar",
+                    "Name": "PlayerInfo-Bottom-Health-Value",
+                    "Property": [
+                        {
+                            "Name": "DrawColor",
+                            "Value": "0 0 0 1"
+                        },
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,20},{0,0},{1,0},{0,15}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "2 2 2 2"
+                        },
+                        {
+                            "Name": "ProgressBackImage",
+                            "Value": "set:other_icon.json image:player_info_healt_nor"
+                        },
+                        {
+                            "Name": "ProgressImage",
+                            "Value": "set:other_icon.json image:player_info_healt_pre"
+                        }
+                    ]
+                },
+                {
+                    "Type": "ProgressBar",
+                    "Name": "PlayerInfo-Bottom-Health-Value_TS",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,23},{0,1},{1,-4},{0,11}}"
+                        },
+                        {
+                            "Name": "VerticalAlignment",
+                            "Value": "Centre"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "StretchType",
+                            "Value": "NineGrid"
+                        },
+                        {
+                            "Name": "StretchOffset",
+                            "Value": "2 2 2 2"
+                        },
+                        {
+                            "Name": "ProgressBackImage",
+                            "Value": "set:endless_main.json image:exp.png"
+                        },
+                        {
+                            "Name": "ProgressImage",
+                            "Value": "set:endless_main.json image:exp.png"
+                        }
+                    ]
+                },
+                {
+                    "Type": "StaticImage",
+                    "Name": "PlayerInfo-Bottom-Health-Icon",
+                    "Property": [
+                        {
+                            "Name": "Area",
+                            "Value": "{{0,2},{0,4},{0,26},{0,28}}"
+                        },
+                        {
+                            "Name": "Touchable",
+                            "Value": "false"
+                        },
+                        {
+                            "Name": "WndOpenSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "WndCloseSound",
+                            "Value": "0"
+                        },
+                        {
+                            "Name": "HexgonOverlayerColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonOverlayerImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonSideColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonSideImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "HexgonTopColor",
+                            "Value": "1 1 1 1"
+                        },
+                        {
+                            "Name": "HexgonTopImage",
+                            "Value": ""
+                        },
+                        {
+                            "Name": "ImageName",
+                            "Value": "image\/icon_tempShiled.png"
+                        },
+                        {
+                            "Name": "ProgressBackImage",
+                            "Value": "set:backpack_display.json image:exp_progresbar_push.png"
+                        },
+                        {
+                            "Name": "ProgressImage",
+                            "Value": "set:backpack_display.json image:exp_progresbar_push.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

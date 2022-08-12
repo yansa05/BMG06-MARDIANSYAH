@@ -1,0 +1,7 @@
+{
+  "base": "fire_effect",
+  "calPerSecond": true,
+  "continueDamage": 3.0,
+  "fixTime": "reset",
+  "type": "Buff"
+}

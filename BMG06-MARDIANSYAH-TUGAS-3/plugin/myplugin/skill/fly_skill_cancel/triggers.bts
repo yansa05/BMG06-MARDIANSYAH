@@ -1,0 +1,3 @@
+SKILL_CAST{
+	CallTrigger(event = "RESET_FLY_STATE_ONGROUND", object = $obj1)
+}

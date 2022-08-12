@@ -1,0 +1,121 @@
+{
+    "base": "base_block",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/vine_1",
+                    "block:myplugin/vine_1",
+                    "vine_1"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/plant_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "resource/blocksound/plant_break.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "resource/blocksound/plant1_final.mp3",
+        "selfOnly": false,
+        "sound": "",
+        "volume": 1
+    },
+    "blockObjectOnCollision": false,
+    "breakTime": 20,
+    "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/vine_1",
+            "block:myplugin/vine_1",
+            "vine_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "isOpaqueFullCube": false,
+    "lightOpacity": 0,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 1
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 1
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 1
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                }
+            ],
+            "texture": "vine_vine_002.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 1
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0
+                }
+            ],
+            "texture": "vine_vine_002.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "color": [
+        0,
+        1,
+        0,
+        1
+    ]
+}

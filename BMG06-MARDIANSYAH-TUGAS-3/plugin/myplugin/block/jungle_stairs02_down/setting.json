@@ -1,0 +1,68 @@
+{
+  "base": "oak_stairs",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/jungle_stairs02_down",
+          "block:myplugin/jungle_stairs02_down",
+          "myplugin/jungle_stairs02_down_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1.0
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/tree_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/tree_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockType": "wood",
+  "breakTime": 20,
+  "defaultTexture": "/block/jungle_stairs/jungle.png",
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/jungle_stairs02_down",
+      "block:myplugin/jungle_stairs02_down",
+      "myplugin/jungle_stairs02_down_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "itemname": "myplugin/jungle_stairs02_down_itemname",
+  "rotation": {
+    "x": 180,
+    "y": 180,
+    "z": 0
+  },
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

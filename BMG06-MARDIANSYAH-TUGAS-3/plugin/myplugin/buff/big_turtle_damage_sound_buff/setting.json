@@ -1,0 +1,8 @@
+{
+    "sound":{
+		"volume": 0.8,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "big_turtle_damage_sound_buff.mp3"
+	}
+}

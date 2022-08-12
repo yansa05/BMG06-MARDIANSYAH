@@ -1,0 +1,5 @@
+{
+    "showIcon":"set:buff_icon.json image:addStep2.png",
+	"type": "hot_spring",
+	"addStep": 2 
+}

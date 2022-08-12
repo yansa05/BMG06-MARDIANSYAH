@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":90
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/jungle_fence8",
+				"block:myplugin\/jungle_fence8",
+				"jungle_fence8"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"jungle_fence1"
+	}

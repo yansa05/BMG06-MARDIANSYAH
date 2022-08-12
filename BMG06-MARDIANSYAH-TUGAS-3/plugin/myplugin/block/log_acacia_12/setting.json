@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/log_acacia_12",
+            "block:myplugin/log_acacia_12",
+            "log_acacia_12"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "log_acacia_log_acacia_12.png",
+        "log_acacia_log_acacia_12.png",
+        "log_acacia_log_acacia_12.png",
+        "log_acacia_log_acacia_12.png",
+        "log_acacia_log_acacia_12.png",
+        "log_acacia_log_acacia_12.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

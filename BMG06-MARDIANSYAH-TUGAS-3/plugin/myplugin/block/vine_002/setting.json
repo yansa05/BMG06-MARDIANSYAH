@@ -1,0 +1,92 @@
+{
+    "base": "base_block",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/vine_002",
+                    "block:myplugin/vine_002",
+                    "vine_002"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1.0
+        ]
+    },
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/plant_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "resource/blocksound/plant_break.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "resource/blocksound/plant2_final.mp3",
+        "selfOnly": false,
+        "sound": "",
+        "volume": 1
+    },
+    "breakTime": 20,
+    "canBeReplace": true,
+    "collisionBoxes": [],
+    "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/vine_002",
+            "block:myplugin/vine_002",
+            "vine_002"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "Editor_NameKey": "tr.11200",
+    "isOpaqueFullCube": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 1
+                }
+            ],
+            "texture": "vine_vine_002.png"
+        }
+    ],
+    "renderPass": 4,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    }
+}

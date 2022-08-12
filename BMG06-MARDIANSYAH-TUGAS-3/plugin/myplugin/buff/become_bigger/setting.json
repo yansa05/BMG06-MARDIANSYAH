@@ -1,0 +1,7 @@
+{
+	"sound": {
+		"sound": "eat.mp3",
+		"loop": false,
+		"volume": 1
+	}
+}

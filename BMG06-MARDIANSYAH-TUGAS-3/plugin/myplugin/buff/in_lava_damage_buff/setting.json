@@ -1,0 +1,12 @@
+{
+  "continueDamage": 5,
+  "actionMap": {
+    "swim": "run",
+    "swim_idle": "idle"
+  },
+  "base": "fire_effect",
+  "buffTime": 50,
+  "fixTime": "reset",
+  "deadRemove": true,
+  "calPerSecond": true
+}

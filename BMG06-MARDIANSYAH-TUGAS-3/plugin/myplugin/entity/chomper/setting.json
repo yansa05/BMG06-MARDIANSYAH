@@ -1,0 +1,58 @@
+{
+  "icon": "chomper.png",
+  "actorName": "mob_Chomper.actor",
+  "attackNpc": false,
+  "attackEffect": "attack_range.effect",
+  "autoAttack": true,
+  "enableAI": true,
+  "canClick": false,
+  "collision": true,
+  "canjump": true,
+  "canMove": false,
+  "ShowSettingUI": true,
+  "chaseDistance": 7,
+  "maxVisualAngle": 360,
+  "patrolDistance": 7,
+  "homeSize": 10,
+  "idleProb": 0.2,
+  "moveSpeed": 0.14,
+  "maxHp": 1,
+  "defense": 0,
+  "damage": 0,
+  "textHeight": 2,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "entityDerive": "monster",
+  "canKill": true,
+  "skillList": [
+    {
+      "prioity": 1,
+      "hpRateMax": 1,
+      "attackDis": 2,
+      "hpRateMin": 0,
+      "fullName": "myplugin/big_turtle_attack"
+    }
+  ],
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      1,
+      2,
+      1
+    ]
+  },
+  "name": "",
+  "hideHp": 1,
+  "destroyTime": 20,
+  "deadActions": {
+    "squashed": {
+      "scaleY": 0.1
+    },
+    "die": {
+      "name": "die",
+      "time": 20
+    }
+  },
+  "viewDistance": 32,
+  "disableShadow": true
+}

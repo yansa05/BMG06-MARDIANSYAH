@@ -1,0 +1,25 @@
+{
+    "icon": "star.png",
+    "actorName": "object_star.actor",
+    "addScore": 4000,
+    "name": "",
+    "canPassagerMove": true,
+    "enableAI": true,
+    "addBuff": "myplugin/invincible_buff",
+    "hideHp": 1,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.99,
+            1,
+            0.99
+        ]
+    },
+    "collision": true,
+    "idleProb": 0.2,
+    "idleTime": [
+        60, 60
+    ],
+    "viewDistance": 32,
+	"disableShadow": true
+}

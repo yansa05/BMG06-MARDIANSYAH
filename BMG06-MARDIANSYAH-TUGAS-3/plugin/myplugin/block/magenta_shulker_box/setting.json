@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/magenta_shulker_box",
+            "block:myplugin/magenta_shulker_box",
+            "magenta_shulker_box"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "shulker_top_magenta.png",
+        "shulker_top_magenta.png",
+        "shulker_top_magenta.png",
+        "shulker_top_magenta.png",
+        "shulker_top_magenta.png",
+        "shulker_top_magenta.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

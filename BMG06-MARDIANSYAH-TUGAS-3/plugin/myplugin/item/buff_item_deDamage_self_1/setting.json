@@ -1,0 +1,9 @@
+{
+    "icon": "item_deDamage_self.png",
+    "itemname": "item.deDamage_self_1.name",
+    "itemintroduction": "item.deDamage_self_1.intro",
+    "isAttach": true,
+    "forTeam": false,
+	"attachBuff": "myplugin/deDamage_self_1",
+	"statusFuncName": "IsUsing"
+}

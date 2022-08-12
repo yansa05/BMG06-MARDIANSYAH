@@ -1,0 +1,9 @@
+{"sound": {
+    "loop": true,
+    "selfOnly": false,
+    "sound": "ladder.mp3",
+    "path": "plugin/myplugin/sound/ladder.mp3",
+    "volume": 0.5
+  },
+  "sync": "other"
+}

@@ -1,0 +1,119 @@
+{
+    "base": "base_block",
+    "baseDesc": "myplugin/double_oak_wood_slab_base_desc",
+	"blockType": "wood",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/double_oak_wood_slab",
+                    "block:myplugin/double_oak_wood_slab",
+                    "myplugin/double_oak_wood_slab_itemname"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            6
+        ]
+    },
+    "blockObjectOnCollision": false,
+    "boundingVolume": {
+        "params": [
+            1,
+            1,
+            1
+        ],
+        "type": "Box"
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "plugin/myplugin/sound/wood.mp3",
+        "selfOnly": false,
+        "sound": "cloth1.mp3",
+        "volume": 1
+    },
+    "breakTime": 120,
+    "canClick": false,
+    "canSwim": false,
+    "climbSpeed": 0,
+    "collisionBoxes": [
+        {
+            "__OBJ_TYPE": "Box",
+            "max": {
+                "__OBJ_TYPE": "Vector3",
+                "x": 1,
+                "y": 1,
+                "z": 1
+            },
+            "min": {
+                "__OBJ_TYPE": "Vector3",
+                "x": 0,
+                "y": 0,
+                "z": 0
+            }
+        }
+    ],
+    "color": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "desc": "{myplugin/double_oak_wood_slab_base_desc}\n{golden_apple_hardness}:6\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_oak_wood_slab",
+            "block:myplugin/double_oak_wood_slab",
+            "myplugin/double_oak_wood_slab_itemname"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "emitLightInMaxLightMode": false,
+    "fall": false,
+    "isDropItem": true,
+    "isOpaqueFullCube": true,
+    "itemintroduction": "double_oak_wood_slab.intro",
+    "itemname": "myplugin/double_oak_wood_slab_itemname",
+    "jumpBuff": [
+        "myplugin/jump_sound"
+    ],
+    "lightEmitted": 0,
+    "lightOpacity": 15,
+    "maxFallSpeed": 1.5,
+    "maxSpeed": 0,
+    "placeBlockSound": {
+        "loop": false,
+        "path": "plugin/myplugin/sound/lay1.mp3",
+        "selfOnly": false,
+        "sound": "lay1.mp3",
+        "volume": 1
+    },
+    "recycle": false,
+    "recycleTime": 20,
+    "renderable": true,
+    "renderPass": 0,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "showBoundBox": true,
+    "spring": 0,
+    "texture": [
+        "planks_oak_double_oak_wood_slab.png",
+        "planks_oak_double_oak_wood_slab.png",
+        "planks_oak_double_oak_wood_slab.png",
+        "planks_oak_double_oak_wood_slab.png",
+        "planks_oak_double_oak_wood_slab.png",
+        "planks_oak_double_oak_wood_slab.png"
+    ]
+}

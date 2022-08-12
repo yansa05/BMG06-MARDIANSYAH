@@ -1,0 +1,8 @@
+{
+    "icon": "item_fire.png",
+    "itemname": "item.fire_1.name",
+    "itemintroduction": "item.fire_1.intro",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/fire1"
+}

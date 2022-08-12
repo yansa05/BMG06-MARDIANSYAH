@@ -1,0 +1,5 @@
+{
+	"jumpSpeed": -0.08,
+	"deadRemove": true,
+	"removeBuff": "myplugin/jump_decrease_buff"
+}

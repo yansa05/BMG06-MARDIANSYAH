@@ -1,0 +1,9 @@
+{
+  "moveSpeed": 0.3,
+  "bodyTurnMin": -49,
+  "bodyTurnSpeed": 15,
+  "bodyTurnMax": 50,
+  "actionMap": {
+    "run" : "hurt"
+  }
+}

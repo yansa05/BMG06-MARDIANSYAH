@@ -1,0 +1,24 @@
+CHARGE_CAST {
+    $div = Compute(op = "div", p1 = GetTableVar(table = $packet, key = "sustainTime"), p2 = GetTableVar(table = $packet, key = "touchTime"))
+    SetTableVar(table = $packet,key = "gravity",value = Compute(
+        op = "sub", 
+        p1 = 0.12, 
+        p2 = Compute(
+            op = "mul",
+            p1 = 0.01,
+            p2 = Compute(
+                op = "mul",
+                p1 = $div,
+                p2 = 9
+            ))))
+    SetTableVar(
+        table = $packet,key = "moveSpeed", value = Compute(
+            op = "add",
+            p1 = 0.5,
+            p2 = Compute(
+                op = "mul",
+                p1 = $div,
+                p2 = 1)
+        )
+    )
+}

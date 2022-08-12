@@ -1,0 +1,71 @@
+{
+  "base": "food_base",
+  "baseDesc": "food_canned_desc",
+  "basePropDesc": {
+    "jump_bonus_duration": [
+      30,
+      "jump_bonus_duration_unit"
+    ],
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      10
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "recover_vp": [
+      50
+    ],
+    "restore_hp": [
+      50
+    ]
+  },
+  "buffContinueTime": 600,
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{food_canned_desc}\n{props_attack}10\n{jump_bonus_duration}30{jump_bonus_duration_unit}\n{restore_hp}50\n{recover_vp}50\n",
+  "dropMatItem": {
+    "rotateX": 90,
+    "rotateZ": 90,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "food_buff": "myplugin/item_buff_food_canned[food_buff",
+  "icon": "food_canned.png",
+  "itemname": "food_canned",
+  "matItem_first": {
+    "rotateX": 90,
+    "rotateY": 45,
+    "rotateZ": 180,
+    "scale": 1,
+    "translate": {
+      "x": -0.3,
+      "y": 0.1,
+      "z": 0.3
+    }
+  },
+  "matItem_third": {
+    "rotateX": 10,
+    "rotateY": 20,
+    "rotateZ": 60,
+    "scale": 1,
+    "translate": {
+      "x": 0.2,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "mesh": "rouguantou.mesh",
+  "needSave": true,
+  "recoverHpStep": 50,
+  "recoverVpStep": 50
+}

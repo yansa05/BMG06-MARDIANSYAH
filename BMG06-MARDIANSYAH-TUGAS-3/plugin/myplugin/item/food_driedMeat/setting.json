@@ -1,0 +1,69 @@
+{
+  "base": "food_base",
+  "baseDesc": "food_driedMeat_desc",
+  "basePropDesc": {
+    "jump_bonus_duration": [
+      30,
+      "jump_bonus_duration_unit"
+    ],
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      5
+    ],
+    "props_jump": [
+      0
+    ],
+    "recover_vp": [
+      50
+    ],
+    "restore_hp": [
+      10
+    ]
+  },
+  "buffContinueTime": 600,
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{food_driedMeat_desc}\n{jump_bonus_duration}30{jump_bonus_duration_unit}\n{restore_hp}10\n{recover_vp}50\n{props_defense_bonus}5\n",
+  "dropMatItem": {
+    "rotateX": 90,
+    "rotateZ": 90,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "food_buff": "myplugin/item_buff_food_driedMeat[food_buff",
+  "icon": "food_driedMeat.png",
+  "itemname": "food_driedMeat",
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 2,
+    "translate": {
+        "x": 0,
+        "y": 0,
+        "z": 0.2
+    }
+  },
+  "matItem_third": {
+    "rotateY": 90,
+    "scale": 1.1,
+    "translate": {
+      "x": 0.12,
+      "y": -0.05,
+      "z": 0
+    }
+  },
+  "mesh": "rougan.mesh",
+  "needSave": true,
+  "recoverHpStep": 10,
+  "recoverVpStep": 50
+}

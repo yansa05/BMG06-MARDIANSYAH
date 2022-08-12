@@ -1,0 +1,22 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/acacia_fence_gate_7",
+				"block:myplugin\/acacia_fence_gate_7",
+				"acacia_fence_gate_7"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"block_breakTime",
+		"base":"acacia_fence_gate_15"
+	}

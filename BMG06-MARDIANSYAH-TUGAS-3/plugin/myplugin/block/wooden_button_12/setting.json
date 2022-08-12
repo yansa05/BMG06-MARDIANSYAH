@@ -1,0 +1,192 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/wooden_button_12",
+            "block:myplugin/wooden_button_12",
+            "wooden_button_12"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0.1,
+                "x": 0.7,
+                "y": 0.6
+            },
+            "min": {
+                "z": 0,
+                "x": 0.3,
+                "y": 0.4
+            }
+        }
+    ],
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.6
+                },
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.4
+                },
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.4
+                },
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.6
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.4
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.4
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.4
+                },
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.4
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.6
+                },
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.6
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.4
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.4
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.6
+                },
+                {
+                    "z": 0,
+                    "x": 0.3,
+                    "y": 0.6
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.4
+                },
+                {
+                    "z": 0,
+                    "x": 0.7,
+                    "y": 0.4
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.4
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.7,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.6
+                },
+                {
+                    "z": 0.1,
+                    "x": 0.3,
+                    "y": 0.4
+                }
+            ],
+            "texture": "planks_oak_wooden_button_12.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 15,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

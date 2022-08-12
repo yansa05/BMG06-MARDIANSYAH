@@ -1,0 +1,9 @@
+{
+    "needSave": false,
+	"sound":{
+		"volume": 0.8,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "eat.mp3"
+	}
+}

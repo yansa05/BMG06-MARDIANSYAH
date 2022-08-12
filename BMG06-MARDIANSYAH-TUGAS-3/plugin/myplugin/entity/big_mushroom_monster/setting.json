@@ -1,0 +1,50 @@
+{
+  "icon": "turtle.png",
+  "actorName": "mob_mushroom_monster_big.actor",
+  "attackNpc": false,
+  "attackEffect": "attack_range.effect",
+  "autoAttack": true,
+  "enableAI": true,
+  "canClick": false,
+  "collision": true,
+  "canjump": true,
+  "canMove": true,
+  "ShowSettingUI": true,
+  "chaseDistance": 7,
+  "maxVisualAngle": 360,
+  "patrolDistance": 7,
+  "homeSize": 10,
+  "idleProb": 0.2,
+  "moveSpeed": 0.14,
+  "maxHp": 2,
+  "defense": 0,
+  "damage": 0,
+  "textHeight": 2,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "entityDerive": "monster",
+  "canKill": true,
+  "skillList": [],
+  "chaseSkill": {
+    "fullName": "myplugin/accelerate_run"
+  },
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      1,
+      1,
+      1
+    ]
+  },
+  "name": "",
+  "hideHp": 1,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    }
+  },
+  "destroyTime": 26,
+  "viewDistance": 32,
+  "disableShadow": true
+}

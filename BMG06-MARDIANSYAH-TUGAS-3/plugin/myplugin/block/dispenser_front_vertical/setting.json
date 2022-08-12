@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/dispenser_front_vertical",
+            "block:myplugin/dispenser_front_vertical",
+            "dispenser_front_vertical"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "furnace_top_dispenser_front_vertical.png",
+        "furnace_top_dispenser_front_vertical.png",
+        "dispenser_front_vertical.png",
+        "furnace_side_dispenser_front_vertical.png",
+        "furnace_side_dispenser_front_vertical.png",
+        "furnace_side_dispenser_front_vertical.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,13 @@
+{
+    "icon": "icon.png",
+    "actorName": "object_mushroom.actor",
+    "base": "baseMushroom",
+    "addScore": 700,
+    "name": "",
+    "addHp": 1,
+    "meetCollisionBackRun": true,
+    "StraightPoint": true,
+    "hideHp": 1,
+    "viewDistance": 32,
+	"disableShadow": true
+}

@@ -1,0 +1,6 @@
+{
+  "buffCfg": "myplugin/jump_speed",
+  "buffTime": 900,
+  "target": "self",
+  "type": "Buff"
+}

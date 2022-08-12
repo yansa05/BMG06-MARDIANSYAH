@@ -1,0 +1,62 @@
+{
+    "base": "fence_gate_1",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/fence_gate_3",
+                    "block:myplugin/fence_gate_3",
+                    "myplugin/fence_gate_3_itemname"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1.0
+        ]
+    },
+    "blockType": "wood",
+    "breakTime": 20,
+    "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/fence_gate_3",
+            "block:myplugin/fence_gate_3",
+            "myplugin/fence_gate_3_itemname"
+        ]
+    ],
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/tree_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "resource/blocksound/tree_break.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "resource/blocksound/tree_final.mp3",
+        "selfOnly": false,
+        "sound": "",
+        "volume": 1
+    },
+    "editBaseFunc": "block_breakTime",
+    "itemname": "myplugin/fence_gate_3_itemname",
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    }
+}

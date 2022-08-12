@@ -1,0 +1,33 @@
+{
+	"attachType":[
+		"fire",
+		"damage",
+		"deArmour"
+	],
+	"boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+	},
+	"syncVars": {
+		"equipTemporaryShield": true,
+		"attachVar": {}
+	  },
+	  "saveVars": {
+		  "equipTemporaryShield": true
+	  },
+	"showBoundBox": true,
+	"editBuffList":"weaponBuffList",
+	"editBaseFunc":"weaponPropEdit",
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	}
+}

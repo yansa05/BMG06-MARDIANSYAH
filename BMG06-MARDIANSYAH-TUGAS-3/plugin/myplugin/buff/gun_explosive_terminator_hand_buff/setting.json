@@ -1,0 +1,5 @@
+{
+  "base": "gun_base_hand_buff",
+  "damage": 21,
+  "type": "HandBuff"
+}

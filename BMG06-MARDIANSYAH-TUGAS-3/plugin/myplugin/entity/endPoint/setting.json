@@ -1,0 +1,40 @@
+{
+  "actorName": "flag_end.actor",
+  "icon": "icon.png",
+  "collision": true,
+  "hurtInColor": {
+    "a": 255,
+    "r": 255,
+    "g": 255,
+    "b": 255
+  },
+  "regionCfg": "myplugin/destination_region",
+  "undamageable": 1,
+  "min": {
+    "x": 1,
+    "y": 0,
+    "z": 1
+  },
+  "max": {
+    "x": 1,
+    "y": 6,
+    "z": 1
+  },
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      1.5,
+      4,
+      1.5
+    ]
+  },
+  "key": "destination_area",
+  "addScore": 10000,
+  "name": " ",
+  "maxCount": 1,
+  "entityDerive": "endPos",
+  "viewDistance": "32",
+  "desc": "endPoint_desc",
+  "disableShadow": true,
+  "collisionCamp": 3
+}

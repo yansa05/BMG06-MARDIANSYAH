@@ -1,0 +1,99 @@
+{
+  "cameraShake": {
+      "duration": 0.15,
+      "scale": {
+        "x": 0.15,
+        "y": 0,
+        "z": 0
+      },
+      "shakeTimes": 1
+    },
+  "castAction": "g2035_rifle_shoot",
+  "castActionTime": -1,
+  "_castEffect": [
+      {
+      "effect": "@g2035_gun_flame_yellow.effect",
+        "once": true,
+        "pos": {
+          "x": -0.2,
+          "y": 0.8,
+          "z": 1.1
+        },
+        "scale": {
+          "x": 0.2,
+          "y": 0.2,
+          "z": 0.2
+        },
+        "yaw": 90
+      }
+  ],
+  "castSound": {
+      "volume": 1,
+      "selfOnly": false,
+      "loop": false,
+      "sound": "/sound/rifle_shoot.mp3"
+  },
+  "cdTime": 6,
+  "container": {
+      "autoReloadSkill": "myplugin/snipe_reload",
+      "takeNum": 1
+    },
+  "startWait": [
+      0
+  ],
+  "_frontSight": "myplugin/frontsight_1",
+  "targetType": "BodyYaw",
+  "startFrom": "trayTarget",
+  "bodyPitchOffset": [
+    90
+  ],
+  "missileCfg": "myplugin/missile_explosive_terminator",
+  "followTarget": true,
+  "enableCdMask": true,
+  "_muzzleEffect": {
+      "effect": "effect_gun_default_flame.effect",
+      "time": 300,
+      "scale": {"x": 8, "y": 8, "z":8},
+      "FPscale": {"x": 2.5, "y": 2.5, "z":2.5}
+  },
+  "muzzleOffset": {
+      "yaw": -10,
+      "pitch": -6,
+      "len": 1.5
+   },
+  "fPSmuzzleOffset" :{
+      "len": 1.1,
+      "x": 73,
+      "y": 15
+  },
+  "startOffset": {
+      "len": 1,
+      "pitch": 33,
+      "yaw": 0
+  },
+  "touchIcon": "set:gta_main.json image:shoot_select",
+  "icon":true,
+  "showImage": {
+    "image":{
+      "name":"bed_mainui_icon/icon_fire_nor"
+    }, 
+    "resourceGroup":"gameres" 
+  },
+  "pushImage": {
+    "image":{
+      "name":"bed_mainui_icon/icon_fire_act"
+    }, 
+    "resourceGroup":"gameres" 
+  },
+  "trackCamera": true,
+  "type": "Missile",
+  "customizeSkill":true,
+  "verticalAlignment":1,
+  "horizontalAlignment":2,
+  "area":[
+      [0,-200],
+      [0, 265],
+      [0, 86],
+      [0, 86]
+  ]
+}

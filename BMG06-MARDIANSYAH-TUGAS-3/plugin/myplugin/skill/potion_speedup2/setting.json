@@ -1,0 +1,6 @@
+{
+  "buffCfg": "myplugin/speedup",
+  "buffTime": 900,
+  "target": "self",
+  "type": "Buff"
+}

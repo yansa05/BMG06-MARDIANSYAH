@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/purpur_double_slab",
+            "block:myplugin/purpur_double_slab",
+            "purpur_double_slab"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "purpur_back.png",
+        "purpur_back.png",
+        "purpur_back.png",
+        "purpur_back.png",
+        "purpur_back.png",
+        "purpur_back.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

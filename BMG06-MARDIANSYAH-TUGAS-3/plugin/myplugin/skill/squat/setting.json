@@ -1,0 +1,15 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "squat",
+    "castActionTime": 9999,
+    "castEffect": {
+        "yaw": 0,
+        "pos": {
+            "z": 0,
+            "y": 0,
+            "x": 0
+        },
+        "effect": "Burst_mario_jump.effect"
+    }
+}

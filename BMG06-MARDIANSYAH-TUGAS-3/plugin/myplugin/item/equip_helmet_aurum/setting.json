@@ -1,0 +1,31 @@
+{
+    "itemname": "equip_helmet_aurum.name",
+    "icon": "helmet.png",
+    "stack_count_max": 1,
+    "canAbandon": true,
+    "itemintroduction": "equip_helmet_aurum.intro",
+    "tray": [
+        1
+    ],
+    "equip_skin": {
+        "armor_head": "gold"
+    },
+    "base": "equip_base",
+    "type": "helmet",
+    "auto_equip_by_bts": true,
+    "attachType": [
+        "deDamage"
+    ],
+    "quality": 2,
+    "matItem_first": {
+        "rotateX": -30,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 0.7,
+        "translate": {
+            "x": 0,
+            "y": -0.2,
+            "z": 0.05
+        }
+    }
+}

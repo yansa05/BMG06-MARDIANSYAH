@@ -1,0 +1,15 @@
+{
+	"effect": {
+		"pos": {
+            "x": 0,
+            "y": 2,
+            "z": 0
+        },
+        "effect": "attack_range.effect",
+		"yaw": 0,
+		"once": false,
+		"selfOnly": false
+	},
+	"guide": "hand_point",
+	"yiji":1
+}

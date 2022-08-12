@@ -1,0 +1,111 @@
+{
+    "actorName": "mob_Chomper_red.actor",
+    "addScore": 200,
+    "attackEffect": "attack_range.effect",
+    "attackNpc": false,
+    "autoAttack": true,
+    "base": "monster_base",
+    "baseDesc": "new_chomper_desc",
+    "basePropDesc": {
+        "monster_attack": [
+            1
+        ],
+        "monster_hp": [
+            10.0
+        ],
+        "monster_score": [
+            200
+        ]
+    },
+    "bodyTurnMin": 5,
+    "boundingVolume": {
+        "params": [
+            1.2,
+            2,
+            1.2
+        ],
+        "type": "Box"
+    },
+    "canClick": false,
+    "canJump": false,
+    "canKill": true,
+    "chaseDistance": 10,
+    "collision": true,
+    "damage": 1,
+    "deadActions": {
+        "die": {
+            "name": "die",
+            "time": 26
+        },
+        "squashed": {
+            "scaleY": 0.4
+        }
+    },
+    "deadSound": {
+        "delayTime": 18,
+        "loop": false,
+        "selfOnly": false,
+        "sound": "monster_die2.mp3",
+        "volume": 1
+    },
+    "deathEffect": {
+        "delayTime": 18,
+        "effect": "Burst_mario_die.effect",
+        "pos": {
+            "x": 0,
+            "y": 0.7,
+            "z": 0
+        },
+        "time": 80
+    },
+    "defense": 0,
+    "desc": "{new_chomper_desc}\n{monster_attack}1\n{monster_score}200\n",
+    "destroyTime": 26,
+    "dieInColor": {
+        "a": 255,
+        "b": 255,
+        "g": 255,
+        "r": 255
+    },
+    "disableShadow": true,
+    "enableAI": true,
+    "entityDerive": "monster",
+    "hideHp": 1,
+    "homeSize": 10,
+    "hpBarWidth": 2,
+    "hurtResistantTime ": 5,
+    "hurtSound": {
+        "path": "resource/sound/chomper_hurt.mp3",
+        "sound": "",
+        "volume": 0.5
+    },
+    "icon": "new_chomper.png",
+    "idleProb": 0.2,
+    "maxHp": 1,
+    "maxVisualAngle": 360,
+    "missDuringDay": true,
+    "moveSpeed": 0,
+    "name": "",
+    "patrolDistance": 10,
+    "ShowSettingUI": true,
+    "skillList": [
+        {
+            "attackDis": 8,
+            "fullName": "myplugin/new_chomper_attack",
+            "hpRateMax": 1,
+            "hpRateMin": 0,
+            "prioity": 1,
+            "sameLevel": true
+        }
+    ],
+    "textHeight": 2,
+    "uiShowList": [
+        "changMonsterModle",
+        "setting",
+        "setPosition",
+        "shopSetting",
+        "delete"
+    ],
+    "uiType": "5",
+    "viewDistance": 32
+}

@@ -1,0 +1,54 @@
+{
+    "baseDesc": "myplugin/arrow_base_desc",
+    "boundingVolume": {
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "type": "Box"
+    },
+    "canAbandon": true,
+    "candrop": true,
+    "desc": "{myplugin/arrow_base_desc}\n",
+    "droplifetime": 100,
+    "dropSpeed": 0,
+    "icon": "arrow.png",
+    "isAddItem": true,
+    "itemintroduction": "item.arrow.intro",
+    "handBuff": "myplugin/item_buff_arrow[handBuff",
+    "itemname": "myplugin/arrow_itemname",
+    "mesh": "jian.mesh",
+    "stack_count_max": 64,
+    "matItem_first": {
+        "rotateX": 80,
+        "rotateY": 35,
+        "rotateZ": 10,
+        "scale": 1.8,
+        "translate": {
+            "x": 0,
+            "y": 0.45,
+            "z": 0.15
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.4,
+        "rotateX": 0,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "matItem_third": {
+        "rotateX": -5,
+        "rotateY": 270,
+        "rotateZ": 450,
+        "scale": 1,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    }
+}

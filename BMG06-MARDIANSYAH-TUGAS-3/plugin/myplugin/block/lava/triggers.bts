@@ -1,0 +1,7 @@
+BLOCK_BREAK {
+	AddWaterSpreadPos(map = $map, pos = $pos)
+}
+
+BLOCK_REPLACED {
+	AddWaterSpreadPos(map = $map, pos = $pos)
+}

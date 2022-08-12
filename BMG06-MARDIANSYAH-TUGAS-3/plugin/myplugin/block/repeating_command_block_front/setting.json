@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/repeating_command_block_front",
+            "block:myplugin/repeating_command_block_front",
+            "repeating_command_block_front"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "repeating_command_block_front.png",
+        "repeating_command_block_front.png",
+        "repeating_command_block_front.png",
+        "repeating_command_block_front.png",
+        "repeating_command_block_front.png",
+        "repeating_command_block_front.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

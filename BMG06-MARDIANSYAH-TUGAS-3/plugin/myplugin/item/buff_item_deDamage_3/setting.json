@@ -1,0 +1,9 @@
+{
+    "icon": "item_deDamage.png",
+    "itemname": "item.deArmour_3.name",
+    "itemintroduction": "item.deArmour_3.intro",
+    "isAttach": true,
+    "forTeam": true,
+	"attachBuff": "myplugin/deDamage3",
+	"statusFuncName": "IsUsing"
+}

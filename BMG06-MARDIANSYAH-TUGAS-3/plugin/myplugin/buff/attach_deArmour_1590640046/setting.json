@@ -1,0 +1,5 @@
+{
+		"deArmour":2,
+		"attachType":"deArmour",
+		"showIcon":"set:buff_icon.json image:deArmour_self.png"
+	}

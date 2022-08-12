@@ -1,0 +1,23 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/spruce_fence7",
+				"block:myplugin\/spruce_fence7",
+				"spruce_fence7"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"defaultTexture":"\/block\/spruce_fence\/spruce_back.png",
+		"base":"fence7"
+	}

@@ -1,0 +1,5 @@
+{
+  "damage": 4,
+  "skill": "myplugin/use_flame_bomb",
+  "type": "HandBuff"
+}

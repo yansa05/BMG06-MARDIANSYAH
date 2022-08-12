@@ -1,0 +1,10 @@
+{
+  "blowBuff": "myplugin/tnt_burn_buff",
+  "blowBuffTime": 100,
+  "blowDist": 1,
+  "burnEffeft": "plugin/myplugin/buff/flame_bomb_burn_buff/Continuous_fireball.effect",
+  "combustionDist": 2,
+  "damage": 5.0,
+  "hurtDistance": 0.5,
+  "type": "MeleeAttack"
+}

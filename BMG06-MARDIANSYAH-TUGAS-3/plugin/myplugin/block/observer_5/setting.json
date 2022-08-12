@@ -1,0 +1,178 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/observer_5",
+            "block:myplugin/observer_5",
+            "observer_5"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "observer_back_lit_observer_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "observer_front_observer_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "observer_side_observer_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "observer_side_observer_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "texture": "observer_top_observer_5.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "observer_top_observer_5.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 15,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

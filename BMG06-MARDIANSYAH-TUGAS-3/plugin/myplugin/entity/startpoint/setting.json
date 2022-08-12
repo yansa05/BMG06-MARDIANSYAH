@@ -1,0 +1,19 @@
+{
+  "icon": "icon.png",
+  "actorName": "flag_start.actor",
+  "maxCount": 1,
+  "undamageable": 1,
+  "hurtInColor": {
+    "a": 255,
+    "r": 255,
+    "g": 255,
+    "b": 255
+  },
+  "entityDerive": "birthPos",
+  "name": " ",
+  "viewDistance": "32",
+  "desc": "startpoint_desc",
+  "disableShadow": true,
+  "collisionCamp": 3
+
+}

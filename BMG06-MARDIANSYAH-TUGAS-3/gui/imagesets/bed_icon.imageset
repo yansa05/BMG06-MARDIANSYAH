@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="bed_icon.png" name="bed_icon" nativeHorzRes="64" nativeVertRes="256" resourceGroup="imagesets" version="2">
+	<Image height="38" name="bed_blue" width="46" xPos="0" yPos="0"/>
+	<Image height="39" name="bed_gray" width="47" xPos="0" yPos="38"/>
+	<Image height="38" name="bed_green" width="46" xPos="0" yPos="77"/>
+	<Image height="37" name="bed_red" width="46" xPos="0" yPos="115"/>
+	<Image height="38" name="bed_yellow" width="46" xPos="0" yPos="152"/>
+</Imageset>

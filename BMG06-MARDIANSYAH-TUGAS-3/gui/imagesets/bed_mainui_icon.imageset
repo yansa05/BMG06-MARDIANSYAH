@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="bed_mainui_icon.png" name="bed_mainui_icon" resourceGroup="imagesets" nativeHorzRes="512" nativeVertRes="512" version="2">
+	<Image height="86" name="icon_throw_nor" width="86" xPos="5" yPos="252"/>
+	<Image height="60" name="icon_sprint_nor" width="60" xPos="200" yPos="5"/>
+	<Image height="60" name="icon_squat_act" width="60" xPos="265" yPos="5"/>
+	<Image height="60" name="icon_walk_nor" width="60" xPos="5" yPos="70"/>
+	<Image height="86" name="icon_openMir_act" width="86" xPos="187" yPos="161"/>
+	<Image height="86" name="icon_missile_act" width="86" xPos="5" yPos="161"/>
+	<Image height="60" name="icon_run_nor" width="60" xPos="70" yPos="5"/>
+	<Image height="86" name="icon_fire_nor" width="86" xPos="161" yPos="70"/>
+	<Image height="60" name="icon_squat_nor" width="60" xPos="330" yPos="5"/>
+	<Image height="184" name="icon_jump_act" width="184" xPos="96" yPos="252"/>
+	<Image height="86" name="icon_fireball_nor" width="86" xPos="343" yPos="70"/>
+	<Image height="86" name="icon_openMir_nor" width="86" xPos="278" yPos="161"/>
+	<Image height="60" name="icon_sprint_act" width="60" xPos="135" yPos="5"/>
+	<Image height="86" name="icon_throw_act" width="86" xPos="369" yPos="161"/>
+	<Image height="86" name="icon_missile_nor" width="86" xPos="96" yPos="161"/>
+	<Image height="184" name="icon_jump_nor" width="184" xPos="285" yPos="252"/>
+	<Image height="60" name="icon_run_act" width="60" xPos="5" yPos="5"/>
+	<Image height="86" name="icon_fireball_act" width="86" xPos="252" yPos="70"/>
+	<Image height="86" name="icon_fire_act" width="86" xPos="70" yPos="70"/>
+	<Image height="60" name="icon_walk_act" width="60" xPos="395" yPos="5"/>
+</Imageset>

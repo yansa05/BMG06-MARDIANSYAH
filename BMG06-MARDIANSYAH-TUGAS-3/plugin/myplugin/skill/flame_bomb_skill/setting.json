@@ -1,0 +1,10 @@
+{
+    "type": "Missile",
+	"targetType": "Camera",
+    "minSustainTime": 10,
+    "maxSustainTime": 20,
+    "handItem": "myplugin/flame_bomb",
+    "missileCfg": "myplugin/flame_bomb_missile",
+	"castAction": "throw",
+	"castActionTime": 100
+}

@@ -1,0 +1,5 @@
+{
+  "buffCfg": "myplugin/flame_bomb_burn_buff",
+  "buffTime": 100,
+  "type": "Buff"
+}

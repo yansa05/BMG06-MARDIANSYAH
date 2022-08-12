@@ -1,0 +1,19 @@
+{
+    "cdTime": 40,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/new_chomper_fire",
+    "followTarget": true,
+    "type": "Missile",
+    "startAction": "attack",
+    "startActionTime": 12,
+    "castActionTime":15,
+	"startSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "fire_ball2.mp3"
+    }
+}

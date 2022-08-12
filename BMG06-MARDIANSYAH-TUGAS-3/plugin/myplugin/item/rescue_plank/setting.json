@@ -1,0 +1,35 @@
+{
+    "baseDesc": "myplugin/rescue_plank_base_desc",
+    "boundingVolume": {
+        "params": [
+            1,
+            1,
+            1
+        ],
+        "type": "Box"
+    },
+    "canAbandon": true,
+    "desc": "{myplugin/rescue_plank_base_desc}\n",
+    "handBuff": "myplugin/handbuff_rescue_plank",
+    "icon": "icon.png",
+    "isClick": true,
+    "isDropItem": true,
+    "isSwings": false,
+    "itemintroduction": "item.rescue_plank.intro",
+    "itemname": "myplugin/rescue_plank_itemname",
+    "matItem_third": {
+        "rotateX": 0,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 0.85,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "mesh": "bed_slime.mesh",
+    "showBoundBox": true,
+    "stack_count_max": 64,
+    "useTime": 50
+}

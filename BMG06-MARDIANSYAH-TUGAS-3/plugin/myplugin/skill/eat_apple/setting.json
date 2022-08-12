@@ -1,0 +1,22 @@
+{
+  "type": "UseItem",
+  "startAction": "eat",
+  "castAction": "",
+  "cdTime": 3,
+  "startUIEffect": {
+	"effect": "jinpingguo.effect",
+	"area":[[0.25, 0], [0.5, 0], [0.5,0], [0.5,0]]
+  },
+  "startEffect": {
+	"effect": "jinpingguo.effect"
+  },
+  "startSound": {
+    "loop": true,
+    "selfOnly": true,
+    "sound": "eat.mp3",
+    "path": "plugin/myplugin/sound/eat.mp3",
+    "volume": 0.5
+  },
+  "isTouch": true,
+  "touchTime": 40
+}

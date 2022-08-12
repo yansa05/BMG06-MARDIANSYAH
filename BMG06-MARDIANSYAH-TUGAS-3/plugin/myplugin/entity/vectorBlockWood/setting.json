@@ -1,0 +1,27 @@
+{
+  "icon": "gold_sword.png",
+  "actorName": "object_crate.actor",
+  "boundingVolume": {
+    "type": "Box",
+    "params": [ 2, 2, 2 ]
+  },
+  "entityDerive": "vectorBlock",
+  "isStatic": true,
+  "name": "",
+  "collision": true,
+  "needCheckTouch": true,
+  "deathEffect": {
+    "effect": "Burst_crate_break.effect",
+    "time": 100
+  },
+  "canBreak": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "unassailable": 1,
+  "viewDistance": 32,
+  "uiType": "3",
+"base": "vector_base",
+  "desc": "vectorBlockWood_desc",
+  "disableShadow": true
+}

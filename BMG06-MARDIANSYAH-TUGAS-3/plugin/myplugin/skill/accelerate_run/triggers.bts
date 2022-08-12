@@ -1,0 +1,6 @@
+SKILL_CAST(){ -- 点击切换加速状态
+	If(not GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/accelerate"))
+	{
+	    AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate", buffTime = 100)
+	}
+}

@@ -1,0 +1,8 @@
+{"sound": {
+    "loop": true,
+    "selfOnly": false,
+    "sound": "wood.mp3",
+    "volume": 0.5
+  },
+  "sync": "other"
+}

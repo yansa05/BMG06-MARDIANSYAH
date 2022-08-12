@@ -1,0 +1,5 @@
+{
+	"type": "MeleeAttack",
+	"range":3.5,
+	"-diffuseVal":100
+}

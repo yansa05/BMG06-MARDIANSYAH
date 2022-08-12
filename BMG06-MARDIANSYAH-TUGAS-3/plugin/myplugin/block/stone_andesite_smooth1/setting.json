@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/stone_andesite_smooth1",
+            "block:myplugin/stone_andesite_smooth1",
+            "stone_andesite_smooth1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "stone_andesite_smooth1.png",
+        "stone_andesite_smooth1.png",
+        "stone_andesite_smooth1.png",
+        "stone_andesite_smooth1.png",
+        "stone_andesite_smooth1.png",
+        "stone_andesite_smooth1.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

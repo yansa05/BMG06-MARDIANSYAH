@@ -1,0 +1,8 @@
+{
+    "type": "Charge",
+    "minSustainTime": 10,
+    "maxSustainTime": 30,
+    "handItem": "myplugin/flames_bow_standby",
+    "consumeItem": "myplugin\/arrow",
+    "skillName": "myplugin/release_arrow"
+}

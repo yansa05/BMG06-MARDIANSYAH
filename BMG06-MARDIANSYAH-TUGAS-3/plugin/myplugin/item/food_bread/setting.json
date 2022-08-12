@@ -1,0 +1,60 @@
+{
+  "base": "food_base",
+  "baseDesc": "food_bread_desc",
+  "basePropDesc": {
+    "jump_bonus_duration": [
+      10.0,
+      "jump_bonus_duration_unit"
+    ],
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "recover_vp": [
+      10
+    ],
+    "restore_hp": [
+      10
+    ]
+  },
+  "buffContinueTime": 200.0,
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{food_bread_desc}\n{jump_bonus_duration}10.0{jump_bonus_duration_unit}\n{restore_hp}10\n{recover_vp}10\n",
+  "dropMatItem": {
+    "rotateX": 90,
+    "rotateZ": 90,
+    "scale": 0.7,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "food_buff": "myplugin/item_buff_food_bread[food_buff",
+  "icon": "food_bread.png",
+  "itemname": "food_bread",
+  "matItem_first": {
+    "rotateX": 170,
+    "rotateY": 0,
+    "rotateZ": 130,
+    "scale": 1,
+    "translate": {
+      "x": 0,
+      "y": 0.3,
+      "z": 0.6
+    }
+  },
+  "mesh": "mianbao.mesh",
+  "needSave": true,
+  "recoverHpStep": 10,
+  "recoverVpStep": 10
+}

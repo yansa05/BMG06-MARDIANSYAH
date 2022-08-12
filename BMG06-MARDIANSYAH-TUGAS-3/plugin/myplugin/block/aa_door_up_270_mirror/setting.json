@@ -1,0 +1,14 @@
+{
+  "base": "aa_door_up",
+  "rotation": {
+    "z": 0,
+    "x": 0,
+    "y": 90
+  },
+  "translation": {
+    "x": -1,
+    "y": 0,
+    "z": 0
+  },
+  "clickChangeBlock": "myplugin/aa_door_up_270_open_mirror"
+}

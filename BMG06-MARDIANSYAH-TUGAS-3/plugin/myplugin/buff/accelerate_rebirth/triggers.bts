@@ -1,0 +1,12 @@
+ENTITY_BUFF_ADD {
+	If(not IsPlayer(entity = $entity)){
+		Return()
+	}
+	$dict = NewDictionary($cfg)
+	$reduceTime = DictionaryGet(dict = $dict, key = "reduceTime")
+	$entity.reduceRebirthTime = $entity.reduceRebirthTime + $reduceTime
+}
+
+ENTITY_BUFF_REMOVE {
+	
+}

@@ -1,0 +1,34 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_cobblestone_slab",
+            "block:myplugin/double_cobblestone_slab",
+            "double_cobblestone_slab"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "reward": 30,
+    "texture": [
+        "cobblestone_double_cobblestone_slab.png",
+        "cobblestone_double_cobblestone_slab.png",
+        "cobblestone_double_cobblestone_slab.png",
+        "cobblestone_double_cobblestone_slab.png",
+        "cobblestone_double_cobblestone_slab.png",
+        "cobblestone_double_cobblestone_slab.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "blockHp": 30,
+    "fall": false,
+    "base": "base_block"
+}

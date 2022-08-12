@@ -1,0 +1,7 @@
+{	"sound":{
+    "volume": 1,
+    "loop": false,
+    "selfOnly": true,
+    "sound": "add_life_buff.mp3"
+}
+}

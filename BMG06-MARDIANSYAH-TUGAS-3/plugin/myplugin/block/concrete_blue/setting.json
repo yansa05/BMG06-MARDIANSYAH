@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/concrete_blue",
+            "block:myplugin/concrete_blue",
+            "concrete_blue"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "concrete_blue.png",
+        "concrete_blue.png",
+        "concrete_blue.png",
+        "concrete_blue.png",
+        "concrete_blue.png",
+        "concrete_blue.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,4 @@
+{
+  "base": "arrow_missile",
+  "hitEntitySkill":"myplugin/arrow_high_hit"
+}

@@ -1,0 +1,16 @@
+REGION_ENTER {
+	If(IsPlayer(entity = $obj1))
+	{
+		SetGuideStep(player = $obj1, step = "step005")
+		AddEntityBuff(entity = $obj1, cfg = "myplugin/guide_btn_1")
+	}
+}
+
+REGION_LEAVE {
+	If(IsPlayer(entity = $obj1))
+	{
+		RemoveEntityTypeBuff(entity = $obj1, key = "guide_btn", value = 2)
+		RemoveEntityTypeBuff(entity = $obj1, key = "guide_btn", value = 3)
+		RemoveRegion(map = GetEntityMap(entity = $obj1), key = "guide_two_vectorblock")
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "needSave": false,
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "vectorBlockPurpleBreak.mp3"
+	}
+}

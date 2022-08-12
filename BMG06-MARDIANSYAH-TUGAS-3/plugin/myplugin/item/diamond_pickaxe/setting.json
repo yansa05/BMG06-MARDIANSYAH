@@ -1,0 +1,73 @@
+{
+    "attachType": [
+        "pressing"
+    ],
+    "base": "tool_base",
+    "baseDesc": "myplugin/diamond_pickaxe_base_desc",
+    "mesh": "zhuanshigao.mesh",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            5
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_effectiveness": [
+            0.4
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "boundingVolume": {
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "type": "Box"
+    },
+    "candrop": true,
+    "desc": "{myplugin/diamond_pickaxe_base_desc}\n{props_attack}5\n{props_effectiveness}0.4\n",
+    "droplifetime": 100,
+    "dropSpeed": 0.1,
+    "effAllBlock": 0.4,
+    "effTypeBlock": {
+        "stone": 0.3
+    },
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_diamond_pickaxe[handBuff",
+    "icon": "diamond_pickaxe.png",
+    "isAddItem": true,
+    "itemintroduction": "item.diamond_pickaxe.intro",
+    "itemname": "myplugin/diamond_pickaxe_itemname",
+    "stack_count_max": 1,
+    "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.7,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.2
+        }
+    }
+}

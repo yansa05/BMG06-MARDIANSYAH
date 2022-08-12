@@ -1,0 +1,20 @@
+{
+	"style":1,
+	"min":0.5,
+	"max":1,
+	"minScaleImage":
+	{
+		"up.png":{"x":0.5, "y":0.5},
+		"down.png":{"x":0.5, "y":0.5},
+		"left.png":{"x":0.5, "y":0.5},
+		"right.png":{"x":0.5, "y":0.5}
+	},
+	"maxScaleImage": 
+	{
+		"up.png":{"x":0.5, "y":0},
+		"down.png":{"x":0.5, "y":1},
+		"left.png":{"x":0, "y":0.5},
+		"right.png":{"x":1, "y":0.5}
+	},
+	"crosshairCloseType":1
+}

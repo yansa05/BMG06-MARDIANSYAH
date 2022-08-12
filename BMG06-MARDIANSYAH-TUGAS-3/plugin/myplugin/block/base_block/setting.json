@@ -1,0 +1,37 @@
+{
+    "runBuff": [
+        "myplugin/run_base"
+    ],
+    "_placeBlockSound": {
+        "selfOnly": false,
+        "path": "plugin/myplugin/sound/lay1.mp3",
+        "volume": 1,
+        "loop": false,
+        "sound": "lay1.mp3"
+    },
+    "breakTime": 20,
+    "texture": {},
+    "sprintBuff": [
+        "myplugin/run_base"
+    ],
+    "_breakBlockSound": {
+        "selfOnly": false,
+        "path": "plugin/myplugin/sound/wood.mp3",
+        "volume": 1,
+        "loop": true,
+        "sound": "cloth1.mp3"
+    },
+    "jumpBuff": [
+        "myplugin/jump_sound"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "editBaseFunc": "block_breakTime",
+    "base": "base_block"
+}

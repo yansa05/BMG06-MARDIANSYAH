@@ -1,0 +1,4 @@
+{	
+    "showFire": true,
+    "showIcon":"set:buff_icon.json image:flame_self.png"
+}

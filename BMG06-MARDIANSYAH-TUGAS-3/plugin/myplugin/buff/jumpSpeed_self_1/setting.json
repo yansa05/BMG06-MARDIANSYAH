@@ -1,0 +1,5 @@
+{
+    "showIcon":"set:buff_icon.json image:jump_self.png",
+	"type": "jumpSpeed",
+    "jumpSpeed": 1
+}

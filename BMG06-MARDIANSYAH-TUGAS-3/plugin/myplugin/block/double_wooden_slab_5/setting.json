@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_wooden_slab_5",
+            "block:myplugin/double_wooden_slab_5",
+            "double_wooden_slab_5"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "planks_big_oak.png",
+        "planks_big_oak.png",
+        "planks_big_oak.png",
+        "planks_big_oak.png",
+        "planks_big_oak.png",
+        "planks_big_oak.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

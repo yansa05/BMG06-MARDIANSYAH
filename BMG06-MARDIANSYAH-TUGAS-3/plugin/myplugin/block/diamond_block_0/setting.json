@@ -1,0 +1,70 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/diamond_block_0",
+          "block:myplugin/diamond_block_0",
+          "myplugin/diamond_block_0_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/ore_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockType": "stone",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/diamond_block_0",
+      "block:myplugin/diamond_block_0",
+      "myplugin/diamond_block_0_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "itemname": "myplugin/diamond_block_0_itemname",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "diamond_block.png",
+    "diamond_block.png",
+    "diamond_block.png",
+    "diamond_block.png",
+    "diamond_block.png",
+    "diamond_block.png"
+  ]
+}

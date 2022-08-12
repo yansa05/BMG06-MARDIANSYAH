@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/quartz_block_2",
+            "block:myplugin/quartz_block_2",
+            "quartz_block_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "quartz_block_top.png",
+        "quartz_block_top.png",
+        "quartz_block_lines.png",
+        "quartz_block_lines.png",
+        "quartz_block_lines.png",
+        "quartz_block_lines.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

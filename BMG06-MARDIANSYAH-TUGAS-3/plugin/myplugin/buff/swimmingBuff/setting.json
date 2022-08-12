@@ -1,0 +1,10 @@
+{
+	"sound":{
+		"volume": 0.1,
+        "loop": true,
+		"selfOnly": false,
+		"sound": "swim.mp3",
+		"path":"plugin/myplugin/sound/swim.mp3"
+	},
+	"type": "Buff"
+}

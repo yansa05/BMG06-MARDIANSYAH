@@ -1,0 +1,44 @@
+{
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "collideBlock": 4,
+  "collideEntity": 0,
+  "followTarget": false,
+  "followTargetPositionOffset": {
+    "__OBJ_TYPE": "Vector3",
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "gravity": 0.01,
+  "hitBlockCount": 1,
+  "hitCount": 1,
+  "hitEntityCount": 1,
+  "hitEntitySkill": "myplugin/25c9fe23-ea2d-4c0b-a422-0621d03bb862",
+  "hitInterval": 10,
+  "hitSkill": "myplugin/25c9fe23-ea2d-4c0b-a422-0621d03bb862",
+  "isPitch": true,
+  "lifeTime": 200,
+  "modelMesh": "",
+  "moveAcc": 0,
+  "moveSpeed": 1.2,
+  "rotateSpeed": 0,
+  "startEffect": {
+    "effect": "@ecae93ca70cd3ea7b782d2335c026676.effect",
+    "once": false,
+    "pos": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "yaw": 0
+  },
+  "vanishShow": false,
+  "vanishTime": 0
+}

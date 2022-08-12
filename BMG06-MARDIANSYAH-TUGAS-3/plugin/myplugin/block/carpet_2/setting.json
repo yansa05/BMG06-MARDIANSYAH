@@ -1,0 +1,90 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/carpet_2",
+          "block:myplugin/carpet_2",
+          "carpet_2"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/wool_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/wool_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/wool_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "breakTime": 20,
+  "collisionBoxes": [],
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/carpet_2",
+      "block:myplugin/carpet_2",
+      "carpet_2"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "lightOpacity": 0,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.01,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.01,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.01,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.01,
+          "z": 0
+        }
+      ],
+      "texture": "wool_colored_green.png"
+    }
+  ],
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

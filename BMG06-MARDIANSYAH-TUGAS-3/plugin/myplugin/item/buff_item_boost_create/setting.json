@@ -1,0 +1,24 @@
+{
+    "icon": "set:buff_icon.json image:addStep_other.png",
+    "icon_path": "plugin/myplugin/item/buff_item_boost_create/addStep_other.png",
+    "itemname": "produce_boot",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/boost_create",
+	"editBaseFunc":"buff_item_boost_create",
+	"desc":"{produce_bonus}50.0{produce_bonus_unit}\n",
+	"basePropDesc":{
+		"produce_bonus":[
+			50,
+			"produce_bonus_unit"
+		]
+	},
+	"settingUI":{
+			"tabList":[
+				{
+					"leftName": "editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+	}
+}

@@ -1,0 +1,3 @@
+SKILL_CAST(){ -- 点击切换加速状态
+CallTrigger(event = "REMOVE_SQUAT_BUFF", obj1 = $obj1)
+}

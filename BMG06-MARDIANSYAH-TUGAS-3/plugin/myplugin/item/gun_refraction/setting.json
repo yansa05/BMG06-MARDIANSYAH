@@ -1,0 +1,30 @@
+{
+    "stack_count_max": 64,
+    "itemname": "gun_refraction",
+    "icon": "gun02.png",
+    "mesh": "gun_71.mesh",
+    "candrop": true,
+    "isAddItem": true,
+    "container": {
+        "initCapacity": 30,
+        "reloadType": "Item",
+        "maxCapacity": 30,
+		"reloadName": "myplugin\/arrow"
+    },
+    "droplifetime": 100,
+    "itemintroduction": "item.diamond_axe.intro",
+    "dropSpeed": 0.1,
+    "handBuff": "myplugin/hand_gun1",
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ]
+    },
+    "skill":[
+        "myplugin/gun_refraction",
+        "myplugin/snipe_reload"
+    ]
+}

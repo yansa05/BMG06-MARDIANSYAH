@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_sandstone_slab_seamless",
+            "block:myplugin/double_sandstone_slab_seamless",
+            "double_sandstone_slab_seamless"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "sandstone_bottom_double_sandstone_slab_seamless.png",
+        "sandstone_top_double_sandstone_slab_seamless.png",
+        "sandstone_top_double_sandstone_slab_seamless.png",
+        "sandstone_top_double_sandstone_slab_seamless.png",
+        "sandstone_top_double_sandstone_slab_seamless.png",
+        "sandstone_top_double_sandstone_slab_seamless.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

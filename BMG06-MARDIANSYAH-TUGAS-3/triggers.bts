@@ -1,0 +1,399 @@
+GAME_GO {
+	$teams = GetWorldVar(key = "team")
+	If($teams){
+		Foreach(array = $teams, key = "value"){
+			$team = NewDictionary($value)
+			$teamId = DictionaryGet(dict = $team, key = "id")
+			$bed = NewDictionary(DictionaryGet(dict = $team, key = "bed"))
+			If($bed){
+				$cfgName = GetTeamBedFullName(teamID = $teamId)
+				$pos = DictionaryGet(dict = $bed, key = "pos")
+				If($cfgName and $pos){--enable参数影响
+					$entity = CreateNpc(cfgName = $cfgName, name = "", pos = $pos, ry = DictionaryGet(dict = $bed, key = "ry"))
+					$entity.teamId = $teamId
+					If(not @team_beds){
+						@team_beds = NewDictionary()
+					}
+					DictionarySet(dict = @team_beds, key = Concat(p1 = "teamId_", p2 = $teamId), value = true)
+					SetEntityTeam(entity = $entity, teamId = $teamId)
+				}
+			}
+			
+			$rebirthPos = DictionaryGet(dict = $team, key = "rebirthPos") or {}
+
+			$hotSpring = NewDictionary(GetWorldVar(key = "hotSpring"))
+			If($hotSpring)
+			{
+				$regionCfg = DictionaryGet(dict = $hotSpring, key = "regionCfg")
+				$diameter = DictionaryGet(dict = $hotSpring, key = "diameter")
+				Foreach(array = $rebirthPos or {}, key = "rePos")
+				{
+					$map = DictionaryGet(dict = NewDictionary($rePos), key = "map")
+					$regionPos = GetHotSpringRegion(point = $rePos, diameter = $diameter)
+					$region = AddRegion(regionCfg = $regionCfg, region = $regionPos, map = $map)
+					$region.teamId = $teamId
+					ArrayAppend(array = @hotSpringRegion, value = $region)
+				}
+			}
+
+			--添加复活点也出生点特效
+			$startPos = DictionaryGet(dict = $team, key = "startPos") or {}
+			Foreach(array = $startPos, key = "spos")
+			{
+				@haveTeamStartPos = true
+				$initPosNpc = CreateNpc(cfgName = "myplugin/signPos_entity", name = "", pos = $spos)
+				AddEntityBuff(entity = $initPosNpc, cfg = "myplugin/start_point_buff")
+			}
+			Foreach(array = $rebirthPos, key = "rpos")
+			{
+				$rebirthPosNpc = CreateNpc(cfgName = "myplugin/signPos_entity", name = "", pos = $rpos)
+				AddEntityBuff(entity = $rebirthPosNpc, cfg = "myplugin/revive_point_buff")
+			}
+		}
+	}
+	--添加复活点出生点特效
+	$startPosW = GetWorldVar(key = "startPos")
+	Foreach(array = $startPosW or {}, key = "sPos")
+	{
+		$initPosNpcW = CreateNpc(cfgName = "myplugin/signPos_entity", name = "", pos = $sPos)
+		AddEntityBuff(entity = $initPosNpcW, cfg = "myplugin/start_point_buff")
+	}
+	$rebirthPosW = GetWorldVar(key = "revivePos") or {}
+	Foreach(array = $rebirthPosW or {}, key = "rpos")
+	{
+		$rebirthPosNpc = CreateNpc(cfgName = "myplugin/signPos_entity", name = "", pos = $rpos)
+		AddEntityBuff(entity = $rebirthPosNpc, cfg = "myplugin/revive_point_buff")
+	}
+	StartTimer(event = "GAME_GO_DEAL_PLAYERS", time = 1)
+	
+	CallTrigger(event = "ALL_BEGIN_PRODUCT_COIN")
+	CallTrigger(event = "CHECK_SKY_BOX")
+}
+
+GAME_GO_DEAL_PLAYERS{--GAME_GO时, player可能不全
+	$players = GetAllPlayers()
+	Foreach(array = $players, key = "player"){
+		CallTrigger(object = $player, event = "ADD_BASIC_ITEM")
+		CallTrigger(object = $player, event = "ADD_FLY_SKILL")
+		AddEntityHp(entity = $player, step = 100000000)
+		AddMonsterAroundPlayer(player = $player)
+		RemoveEntityTypeBuff(key = "fullName", value = "myplugin/not_game_go_buff", entity = $player)
+		CallTrigger(object = $player, event = "PLAYER_PLAY_TIMER_START")
+	}
+}
+
+ALL_BEGIN_PRODUCT_COIN(debug1 = true){
+	Foreach(array = @resPointArray, key = "object"){
+		CallTrigger(entity = $object, event = "BEGIN_PRODUCT_COIN", obj1 = $object)
+	}
+}
+
+REMOVE_RESCUE_PLANK
+{
+	RemoveBuffByFullName(entity = $obj1, buff = "myplugin/slime_jump")
+	
+	$posY = NumberFloor(p1 = GetPosY(pos = $center))
+	ForLoop(from = NumberFloor(p1 = GetPosX(pos = $center) - $plank_radus), to = NumberFloor(p1 = GetPosX(pos = $center) + $plank_radus), key = "posX")
+	{
+		ForLoop(from = NumberFloor(p1 = GetPosZ(pos = $center) - $plank_radus), to = NumberFloor(p1 = GetPosZ(pos = $center) + $plank_radus), key = "posZ")
+		{
+			$blockPos = {x = $posX, y = $posY, z = $posZ}
+			If (GetBlockFullName(pos = $blockPos) == "myplugin/slime")
+			{
+				RemoveBlock(block = $blockPos)
+			}
+		}
+	}
+}
+
+REMOVE_SPONGE
+{
+	DelNoWaterArea(areaId = $areaId)
+	RemoveBlock(map = $map, block = $center)
+}
+
+GAME_INIT()
+{
+	@maxbit = 10000000
+	$gameOverConditionCfg = GetWorldVar(key = "gameOverCondition")
+	@gameOverCondition = NewDictionary($gameOverConditionCfg)
+	@resPointArray = NewArray()
+	@hotSpringRegion = NewArray()
+	@hotSpringBuff = NewDictionary()
+	@teamGBuff = NewDictionary()
+	--initPos特效
+	$initPos = GetWorldVar(key = "initPos")
+	If($initPos)
+	{
+		$initPosNpcW = CreateNpc(cfgName = "myplugin/signPos_entity", name = "", pos = $initPos)
+		AddEntityBuff(entity = $initPosNpcW, cfg = "myplugin/wait_point_buff")
+	}
+}
+
+ENTITY_DIE(debug = false){
+    If($cause == "ACTIONS_DAMAGE"){
+        Selector{
+            SendPlayDeadAction(entity = $obj1, actionCfgName = "squashed")
+            SendPlayDeadAction(entity = $obj1, actionCfgName = "die")
+        }
+    }
+    ElseIf($cause == "ENGINE_MELEE_ATTACK"){
+        SendPlayDeadAction(entity = $obj1, actionCfgName = "die")
+	}
+	$obj1.killFrom = $obj2
+}
+
+CHECK_GAME_OVER_BY_DIE_OF_TEAM {
+	$validTeamCount = 0
+	$otherAllDie = DictionaryGet(dict = @gameOverCondition, key = "otherAllDie")	
+	If($otherAllDie)
+	{
+		ForLoop(from = 1, to = ArraySize(array = GetWorldVar(key = "team")), key = "teamId"){
+			$entitys = GetTeamEntityList(teamId = $teamId)
+			ForeachDictionary(dict = NewDictionary($entitys), keyName = "entityId", valueName = "entity"){
+				If(IsPlayer(entity = $entity) and not $entity.disRevive){
+					$validTeamCount = $validTeamCount + 1
+					Break()
+				}
+			}
+		}
+		If($validTeamCount <= 1 and not @game_over){
+			-- over
+			Test("CHECK_GAME_OVER_BY_TEAM")
+			@game_over = true
+			@dont_show_game_result_again = true
+			SendGameResult(reachCond = "otherAllDie", isGameOver = true)
+			StopDeadCountDown()
+			GameOver()
+		}
+	}
+}
+
+CHECK_GAME_OVER_BY_DIE_OF_PERSON {
+	Test("CHECK_GAME_OVER_BY_PERSON")
+	$validTeamCount = 0
+	$otherAllDie = DictionaryGet(dict = @gameOverCondition, key = "otherAllDie")
+	If($otherAllDie)
+	{
+		$allPlayer = GetAllPlayers()
+		Foreach(array = $allPlayer, key = "entity")
+		{
+			If(not $entity.disRevive)
+			{
+				$validTeamCount = $validTeamCount + 1
+			}
+		}
+		If($validTeamCount <= 1 and not @game_over){
+			Test("CHECK_GAME_OVER_BY_PERSON")
+			@game_over = true
+			@dont_show_game_result_again = true
+			SendGameResult(reachCond = "otherAllDie", isGameOver = true)
+			StopDeadCountDown()
+			GameOver()
+		}
+	}
+}
+
+GAME_OVER{
+	If(GetGameGoTime() + 20 < GetWorldVar(key = "playTime") or GetWorldVar(key = "playTime") <= 0){
+		Return()
+	}
+	If(DictionaryGet(dict = @gameOverCondition, key = "noCondition")){
+		$players = GetAllPlayers()
+		Foreach(array = $players, key = "player"){
+			ShowOverPopView(entity = $player, type = "time_over", eventSure = "SEND_EXIT_GAME")
+		}
+		Return()
+	}
+	$timeOver = DictionaryGet(dict = @gameOverCondition, key = "timeOver")
+	$enable = DictionaryGet(dict = NewDictionary($timeOver), key = "enable")
+	@game_over = true
+	If($enable){
+		Test("CHECK_GAME_OVER_BY_TIME_OUT")
+		SendGameResult(reachCond = "timeOver", isGameOver = true)
+	}Else{
+		If(not @dont_show_game_result_again){
+			SendGameResult(isGameOver = true)
+		}
+	}
+	StopDeadCountDown()
+}
+
+-- 击杀人物时调用
+CHECK_GAME_OVER_BY_KILL_COUNT{
+	$winKillCount = NewDictionary(DictionaryGet(dict = @gameOverCondition, key = "killCount"))
+	$enable = DictionaryGet(dict = $winKillCount, key = "enable")
+	$killCount = DictionaryGet(dict = $winKillCount, key = "value")
+	$teamID = GetEntityTeam(entity = $obj1)
+	If($enable and $killCount)
+	{
+		
+		If($teamID ~= 0)
+		{
+			$curKillPlayerCount = GetTeamVar(teamId = $teamID, key = "killPlayerCount")
+
+		}
+		Else
+		{
+			$curKillPlayerCount = $obj1.killPlayerCount
+		}
+		If($curKillPlayerCount >= $killCount and not @game_over)
+		{
+			Test("CHECK_GAME_OVER_BY_KILL_COUNT")
+			@game_over = true
+			@dont_show_game_result_again = true
+			SendGameResult(reachCond = "killCount", isGameOver = true)
+			StopDeadCountDown()
+			GameOver()
+		}
+
+	}
+}
+
+-- 增加分数时调用
+CHECK_GAME_OVER_BY_SCORE {
+	$winScore = NewDictionary(DictionaryGet(dict = @gameOverCondition, key = "attainScore"))
+	$enable = DictionaryGet(dict = $winScore, key = "enable")
+	$_score = DictionaryGet(dict = $winScore, key = "value")
+	$teamID = GetEntityTeam(entity = $obj1)
+	If($enable and $_score)
+	{
+		Test($teamID, "teamID")
+		
+		If($teamID ~= 0)
+		{
+			$score = GetTeamVar(teamId = $teamID, key = "score")
+		}
+		Else
+		{
+			$score = $obj1.score
+		}
+		If($score >= $_score and not @game_over)
+		{
+			Test("CHECK_GAME_OVER_BY_SCORE")
+			@game_over = true
+			@dont_show_game_result_again = true
+			SendGameResult(reachCond = "attainScore", isGameOver = true)
+			StopDeadCountDown()
+			GameOver()
+		}
+
+	}
+}
+
+-- 击杀不能复活人物时
+CHECK_GAME_OVER_BY_DIE {
+	$team = GetWorldVar(key = "team")
+	If(not $team or ArraySize(array = $team) == 0){
+		CallTrigger(event = "CHECK_GAME_OVER_BY_DIE_OF_PERSON")
+	}Else{
+		CallTrigger(event = "CHECK_GAME_OVER_BY_DIE_OF_TEAM")
+	}
+}
+
+ENTITY_CLICK(debug = false) {
+	$merchantGroupName = GetConfigVar(obj = $obj1, key = "shopGroupName")
+	If(not $merchantGroupName)
+	{
+		Return()
+	}
+    ShowMerchantShop(entity = $obj2, merchantGroupName = $merchantGroupName)
+}
+
+ENTITY_ENTER(){
+	SetMerchantHeadText(entity = $obj1)
+	SetMerchantBehavior(entity = $obj1)
+}
+ENTITY_DAMAGE
+{
+	CallTrigger(event = "DOWN_KILL_FROM", obj1 = $obj1, obj2 = $obj2)
+}
+DOWN_KILL_FROM()
+{
+	$obj1.killFrom2 = $obj2
+	If($obj1.killnilTimer)
+	{
+		StopTimer(timer = $obj1.killnilTimer)
+	}
+	$obj1.killnilTimer = StartTimer(time = 60, event = "KILL_FROM_NIL", from = $obj1)
+}
+KILL_FROM_NIL()
+{
+	$from.killFrom2 = nil
+}
+
+CREATE_DROP_ITEM{
+	$map = GetEntityMap(entity = $entity)
+	Foreach(array = $dropItemList, key = "dropItem"){
+        $fullName = ArrayGet(array = $dropItem, index = 4)
+		$drop = ArrayGet(array = $dropItem, index = 1)
+        If($fullName == "myplugin/green_currency")
+        {
+            SpawnItemToWorld(
+                fullName = $fullName,
+                count = ArrayGet(array = $dropItem, index = 2),
+                pos = $pos,
+                map = $map,
+                moveDistance = Table(x = Random(min = -1.0, max = 1.0), y = 3, z = Random(min = -1.0, max = 1.0)),
+                moveTime = 10
+            )
+            Continue()
+        }
+        ForLoop(from = 1,to = ArrayGet(array = $dropItem, index = 2)){
+            If($drop == "item"){
+				--如果是buff直接加
+				$isBuff = GetItemCfg(fullName = $fullName, key = "isBuff") or GetItemCfg(fullName = $fullName, key = "itembuff")
+				$isAttach = GetItemCfg(fullName = $fullName, key = "isAttach") or GetItemCfg(fullName = $fullName, key = "attachBuff")-- 如果是附魔
+				If(($isBuff or $isAttach) and  $killFrom and IsPlayer(entity = $killFrom))
+				{
+					CallTrigger(event = "PLAYER_ADD_BUFF_ATTACH_ITEM", object = $killFrom, itemName = $fullName)
+					Continue()
+				}
+				SpawnItemToWorld(
+                    fullName = $fullName,
+                    count = 1,
+                    pos = $pos,
+                    map = $map,
+                    moveDistance = Table(x = Random(min = -1.0, max = 1.0), y = 3, z = Random(min = -1.0, max = 1.0)),
+                    moveTime = 10
+                )
+            }ElseIf($drop == "entity"){
+                CreateNpc(
+                    cfgName = $fullName, 
+                    pos = $pos,
+                    map = $map
+                )   
+            }
+            ElseIf($drop == "block"){
+                CreateDropBlock(
+                    blockName = $fullName, 
+                    pos = $pos,
+                    map = $map
+                )   
+            }
+        }
+    }
+}
+
+BLOCK_BREAK_DROP_ITEM{
+	CallTrigger(event = "CREATE_DROP_ITEM", entity = $obj1, dropItemList = $dropItemList or {}, pos = $pos)
+}
+
+ENTITY_DIE_DROP_ITEM(debug1 = true)
+{
+	CallTrigger(event = "CREATE_DROP_ITEM", entity = $from, dropItemList = GetEntityEditorVar(entity = $from, key = "dropItem") or {}, killFrom = $from.killFrom2 or $from.killFrom, pos = GetEntityPosition(entity = $from))
+}
+
+VECTOR_SPAW()
+{
+	If($type == "item")
+	{
+		CreateDropItem(item = $fullName, count = $count, map = $map, pos = $pos)
+	}ElseIf($type == "block"){
+		CreateDropBlock(blockName = $fullName, count = $count, map = $map, pos = $pos)
+	}
+}
+
+BLOCK_CAN_BREAK{
+	$canBreak = CanBreakBlock(pos = $pos, map = $map)
+}

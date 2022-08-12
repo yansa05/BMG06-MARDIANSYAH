@@ -1,0 +1,17 @@
+{
+    "actorName": "object_jumppad.actor",
+    "icon": "icon.png",
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            0.5,
+            1
+        ]
+    },
+    "name": "",
+    "collision": true,
+    "bounceHeight": 8,
+    "viewDistance": 32,
+	"disableShadow": true
+}

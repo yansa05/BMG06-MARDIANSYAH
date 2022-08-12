@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="direction_control.png" name="direction_control" nativeHorzRes="256" nativeVertRes="512" resourceGroup="imagesets" version="2">
+	<Image height="226" name="drag_bg" width="226" xPos="0" yPos="60"/>
+	<Image height="13" name="drag_point_1" width="13" xPos="0" yPos="0"/>
+	<Image height="19" name="drag_point_2" width="19" xPos="13" yPos="0"/>
+	<Image height="22" name="drag_point_3" width="22" xPos="32" yPos="0"/>
+	<Image height="60" name="drag_point_4" width="60" xPos="54" yPos="0"/>
+</Imageset>

@@ -1,0 +1,172 @@
+{"frames": {
+
+"icon_fire_act.png":
+{
+	"frame": {"x":70,"y":70,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_fire_nor.png":
+{
+	"frame": {"x":161,"y":70,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_fireball_act.png":
+{
+	"frame": {"x":252,"y":70,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_fireball_nor.png":
+{
+	"frame": {"x":343,"y":70,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_jump_act.png":
+{
+	"frame": {"x":96,"y":252,"w":184,"h":184},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":184,"h":184},
+	"sourceSize": {"w":184,"h":184}
+},
+"icon_jump_nor.png":
+{
+	"frame": {"x":285,"y":252,"w":184,"h":184},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":184,"h":184},
+	"sourceSize": {"w":184,"h":184}
+},
+"icon_missile_act.png":
+{
+	"frame": {"x":5,"y":161,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_missile_nor.png":
+{
+	"frame": {"x":96,"y":161,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_openMir_act.png":
+{
+	"frame": {"x":187,"y":161,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_openMir_nor.png":
+{
+	"frame": {"x":278,"y":161,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_run_act.png":
+{
+	"frame": {"x":5,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_run_nor.png":
+{
+	"frame": {"x":70,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_sprint_act.png":
+{
+	"frame": {"x":135,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_sprint_nor.png":
+{
+	"frame": {"x":200,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_squat_act.png":
+{
+	"frame": {"x":265,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_squat_nor.png":
+{
+	"frame": {"x":330,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_throw_act.png":
+{
+	"frame": {"x":369,"y":161,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_throw_nor.png":
+{
+	"frame": {"x":5,"y":252,"w":86,"h":86},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":86,"h":86},
+	"sourceSize": {"w":86,"h":86}
+},
+"icon_walk_act.png":
+{
+	"frame": {"x":395,"y":5,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+"icon_walk_nor.png":
+{
+	"frame": {"x":5,"y":70,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bed_mainui_icon.png",
+	"format": "RGBA8888",
+	"size": {"w":474,"h":441},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5625121a988e26603214ef8d3dc49160:b6e2725a99531efa207dcfa419307679:c930dce3ee29c5acfde9bf805b1ac7b1$"
+}
+}

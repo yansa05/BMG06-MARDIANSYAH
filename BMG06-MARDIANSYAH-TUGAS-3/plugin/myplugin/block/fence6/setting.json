@@ -1,0 +1,27 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":270
+		},
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/fence6",
+				"block:myplugin\/fence6",
+				"fence6"
+			]
+		],
+		"editBaseFunc":"block_breakTime",
+		"base":"fence3"
+	}

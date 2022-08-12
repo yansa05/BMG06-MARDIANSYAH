@@ -1,0 +1,21 @@
+{
+    "icon": "",
+    "actorName": "empty.actor",
+    "enableAI": false,
+    "canClick": false,
+    "moveSpeed": 0.14,
+    "collision": false,
+    "canjump": true,
+    "canMove": true,
+    "meetCollisionBackRun": true,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+    "viewDistance": 32,
+	"disableShadow": true
+}

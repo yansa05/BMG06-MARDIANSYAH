@@ -1,0 +1,33 @@
+{
+    "unassailable": 1,
+    "undamageable": 1,
+    "actorName": "resource_point.actor",
+    "hurtInColor": {
+        "a": 255,
+        "r": 255,
+        "g": 255,
+        "b": 255
+    },
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+    "icon": "icon.png",
+    "name": "",
+    "gravity": 0,
+    "entityDerive": "resPoint",
+    "disableShadow": true,
+    "uiShowList": [
+        "setting",
+        "setPosition",
+        "delete"
+    ],
+    "itemname": "myplugin/resPoint_itemname",
+    "desc": "myplugin/resPoint_base_desc",
+    "baseDesc": "myplugin/resPoint_base_desc",
+    "maxSpawCount": 50
+}

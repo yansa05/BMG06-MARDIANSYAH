@@ -1,0 +1,41 @@
+{
+	"minDiffuse": 30,
+	"maxDiffuse": 70,
+	"moveDiffuse": 50,
+	"showLevel": 0,
+	"shrinkVal": 5,
+	"onlyFpShow": false,
+	"List":
+	[
+		{
+			"type":"Image",
+			"Image":
+			[
+				{
+                    "path":"up.png",
+					"hitPath":"up1.png",
+					"hitFriendlyPath":"up2.png",
+				    "initPos":{"x":0,"y":-20}
+                },
+				{
+                    "path":"up.png",
+					"hitPath":"up1.png",
+					"hitFriendlyPath":"up2.png",
+				    "initPos":{"x":0,"y":20}
+                },
+                {
+                   "path":"left.png",
+				   "hitPath":"left1.png",
+				   "hitFriendlyPath":"left2.png",
+				   "initPos":{"x":-20,"y":0}
+                },
+                {
+                   "path":"left.png",
+				   "hitPath":"left1.png",
+				   "hitFriendlyPath":"left2.png",
+				   "initPos":{"x":20,"y":0}
+                }
+			]
+		}
+	]
+}

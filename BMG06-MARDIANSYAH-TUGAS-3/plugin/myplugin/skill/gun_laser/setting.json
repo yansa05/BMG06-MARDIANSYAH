@@ -1,0 +1,56 @@
+{
+    "castAction": "pistol_shoot",
+    "cdTime": 0,
+    "castInterval": 0,
+    "frontSight": "myplugin/frontsight_1",
+    "hitEntityHeadSkill": "myplugin/test_gun_hit",
+    "hitEntitySkill": "myplugin/test_gun_hit",
+    "icon": "gun.png",
+    "trackCamera": true,
+    "container": {
+      "autoReloadSkill": "myplugin/snipe_reload",
+      "takeNum": 1
+  },
+     "iconArea": {
+          "VA": -250,
+          "VAlign": 2,
+          "HA": -50,
+          "HAlign": 2,
+          "width": 145,
+          "height": 145
+      },
+    "isClick": true,
+    "isJump": false,
+    "rayLenth": 50,
+    "startOffset": {
+       "yaw": -10,
+       "pitch": -6,
+       "len": 1.5
+    },
+    "hitduration": 500,
+    "duration": 100,
+    "fPStartOffset" :{
+        "len": 0.3,
+         "x": 73,
+         "y": 29,
+         "effectScale": {
+            "x": 0.08,
+            "y": 0.08,
+            "z": 0.08
+        }
+    },
+    "dontPenetrate": true,
+    "muzzleEffectScale": {
+      "x": 0.2,
+      "y": 0.2,
+      "z": 0.2
+    },
+    "muzzleEffect": "Continuous_gun_electricity_blue_flame.effect.effect",
+    "trajectoryEffect":"Track_gun_electricity_blue.effect.effect",
+    "trajectoryEffect1":"BulletEff.effect",
+    "startAction": "",
+    "sustainAction": "",
+    "hitEffect": "effect_gun_be_shot.effect",
+    "hitHeadEffect": "headshot.effect",
+    "type": "Ray"
+  }

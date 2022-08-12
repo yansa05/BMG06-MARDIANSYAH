@@ -1,0 +1,20 @@
+ENTITY_ENTER {
+	$teamID = GetEntityEditorVar(entity = $obj1, key = "teamID")
+	$obj1.teamID = $teamID or 0
+}
+ENTITY_CLICK(debug1 = true){
+	If($obj1.teamID ~= 0 and $obj1.teamID ~= GetEntityTeam(entity = $obj2)){
+		ShowTip(entity = $obj2, tipType = 2, textKey = "tip.other.team.cannot.open.chest")
+		Return()
+	}
+	If($obj2.openChestBuff){--already opened
+		Return()
+	}
+	If($obj1.canOpenNow){
+		OpenNpcChest(player = $obj2, chest = $obj1, closeEvent = "ON_CLOSE_NPC_CHEST")
+	}
+	Else{
+		StartTimer(object = $obj2, event = "ON_OPEN_NPC_CHEST", rep = false, time = 20, chest = $obj1)
+	}
+	$obj2.openChestBuff = AddEntityBuff(entity = $obj1, cfg = "myplugin/open_chest")
+}

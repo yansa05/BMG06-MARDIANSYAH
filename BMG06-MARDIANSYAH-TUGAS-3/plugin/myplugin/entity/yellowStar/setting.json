@@ -1,0 +1,19 @@
+{
+    "icon": "star.png",
+    "actorName": "object_star.actor",
+    "base": "baseStar",
+    "addScore": 4000,
+    "name": "",
+    "addBuff": "myplugin/invincible_buff",
+    "hideHp": 1,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.99,
+            1,
+            0.99
+        ]
+    },
+    "viewDistance": 32,
+	"disableShadow": true
+}

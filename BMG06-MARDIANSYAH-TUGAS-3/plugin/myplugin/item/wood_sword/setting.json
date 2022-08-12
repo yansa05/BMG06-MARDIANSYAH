@@ -1,0 +1,61 @@
+{
+    "attachType": [
+        "fire",
+        "damage",
+        "deArmour"
+    ],
+    "base": "sword_base",
+    "mesh": "mujian.mesh",
+    "baseDesc": "myplugin/wood_sword_base_desc",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            5
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "canAbandon": true,
+    "desc": "{myplugin/wood_sword_base_desc}\n{props_attack}5\n",
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_wood_sword[handBuff",
+    "icon": "wood_sword.png",
+    "itemintroduction": "wood_sword.intro",
+    "itemname": "myplugin/wood_sword_itemname",
+    "needSave": true,
+    "skill": [
+        "myplugin/wood_sword_skill"
+    ],
+    "stack_count_max": 1,
+    "matItem_first": {
+        "rotateX": 10,
+        "rotateY": 0,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.4,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.1
+        }
+    }
+}

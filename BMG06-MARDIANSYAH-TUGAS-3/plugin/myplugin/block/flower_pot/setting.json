@@ -1,0 +1,168 @@
+{
+    "base": "base_block",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/flower_pot",
+                    "block:myplugin/flower_pot",
+                    "myplugin/flower_pot_itemname"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+	"blockType": "wood",
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/tree_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "resource/blocksound/tree_break.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "resource/blocksound/tree_final.mp3",
+        "selfOnly": false,
+        "sound": "",
+        "volume": 1
+    },
+    "blockObjectOnCollision": false,
+    "breakTime": 20,
+    "collisionBoxes": [],
+    "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/flower_pot",
+            "block:myplugin/flower_pot",
+            "myplugin/flower_pot_itemname"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "isOpaqueFullCube": false,
+    "itemname": "myplugin/flower_pot_itemname",
+    "lightOpacity": 0,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 0.6,
+                    "y": 1,
+                    "z": 0.32
+                },
+                {
+                    "x": 0.6,
+                    "y": 0,
+                    "z": 0.32
+                },
+                {
+                    "x": 0.4,
+                    "y": 0,
+                    "z": 0.32
+                },
+                {
+                    "x": 0.4,
+                    "y": 1,
+                    "z": 0.32
+                }
+            ],
+            "texture": "flower_pot.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.53,
+                    "y": 1,
+                    "z": 0.6
+                },
+                {
+                    "x": 0.53,
+                    "y": 0,
+                    "z": 0.6
+                },
+                {
+                    "x": 0.53,
+                    "y": 0,
+                    "z": 0.2
+                },
+                {
+                    "x": 0.53,
+                    "y": 1,
+                    "z": 0.2
+                }
+            ],
+            "texture": "flower_pot.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.4,
+                    "y": 1,
+                    "z": 0.48
+                },
+                {
+                    "x": 0.4,
+                    "y": 0,
+                    "z": 0.48
+                },
+                {
+                    "x": 0.6,
+                    "y": 0,
+                    "z": 0.48
+                },
+                {
+                    "x": 0.6,
+                    "y": 1,
+                    "z": 0.48
+                }
+            ],
+            "texture": "flower_pot.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 0.46,
+                    "y": 1,
+                    "z": 0.2
+                },
+                {
+                    "x": 0.46,
+                    "y": 0,
+                    "z": 0.2
+                },
+                {
+                    "x": 0.46,
+                    "y": 0,
+                    "z": 0.6
+                },
+                {
+                    "x": 0.46,
+                    "y": 1,
+                    "z": 0.6
+                }
+            ],
+            "texture": "flower_pot.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    }
+}

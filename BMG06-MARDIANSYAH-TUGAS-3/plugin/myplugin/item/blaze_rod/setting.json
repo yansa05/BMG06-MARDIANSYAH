@@ -1,0 +1,58 @@
+{
+    "base": "sword_base",
+    "baseDesc": "myplugin/blaze_rod_base_desc",
+    "basePropDesc": {
+        "props_accelerate_bonus": [
+            0.0
+        ],
+        "props_attack": [
+            20
+        ],
+        "props_defense_bonus": [
+            0
+        ],
+        "props_jump": [
+            0
+        ],
+        "props_max_hp": [
+            0
+        ],
+        "props_repel_bonus": [
+            2
+        ],
+        "props_shield_bonus": [
+            0
+        ]
+    },
+    "canAbandon": true,
+    "desc": "{myplugin/blaze_rod_base_desc}\n{props_attack}20\n{props_repel_bonus}2\n",
+    "equipTemporaryShield": 0,
+    "handBuff": "myplugin/item_buff_blaze_rod[handBuff",
+    "icon": "blaze_rod.png",
+    "itemname": "myplugin/blaze_rod_itemname",
+    "needSave": true,
+    "skill": [
+        "myplugin/blaze_rod_skill"
+    ],
+    "mesh": "jituibang.mesh",
+    "stack_count_max": 1,
+    "matItem_first": {
+        "rotateX": -10,
+        "rotateY": -10,
+        "rotateZ": 0,
+        "scale": 1,
+        "translate": {
+            "x": 0.2,
+            "y": -0.7,
+            "z": 0.1
+        }
+    },
+    "dropMatItem": {
+        "scale": 0.5,
+        "translate": {
+            "x": 0,
+            "y": 0,
+            "z": 0.5
+        }
+    }
+}

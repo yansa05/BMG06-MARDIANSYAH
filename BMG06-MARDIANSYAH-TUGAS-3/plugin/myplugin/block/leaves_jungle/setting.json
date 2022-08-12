@@ -1,0 +1,33 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/leaves_jungle",
+            "block:myplugin/leaves_jungle",
+            "leaves_jungle"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "isOpaqueFullCube": false,
+    "texture": [
+        "leaves_jungle.png",
+        "leaves_jungle.png",
+        "leaves_jungle.png",
+        "leaves_jungle.png",
+        "leaves_jungle.png",
+        "leaves_jungle.png"
+    ],
+     
+    "base": "base_block"
+}

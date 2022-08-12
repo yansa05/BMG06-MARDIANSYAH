@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/wool_10",
+            "block:myplugin/wool_10",
+            "wool_10"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "wool_colored_purple_wool_10.png",
+        "wool_colored_purple_wool_10.png",
+        "wool_colored_purple_wool_10.png",
+        "wool_colored_purple_wool_10.png",
+        "wool_colored_purple_wool_10.png",
+        "wool_colored_purple_wool_10.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+  "base": "base_block",
+  "blockType": "wool"
+}

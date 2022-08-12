@@ -1,0 +1,70 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/glass_light_blue",
+          "block:myplugin/glass_light_blue",
+          "myplugin/glass_light_blue_itemname"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/glass_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/glass_final.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": false,
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/glass_light_blue",
+      "block:myplugin/glass_light_blue",
+      "myplugin/glass_light_blue_itemname"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "itemname": "myplugin/glass_light_blue_itemname",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "glass_light_blue.png",
+    "glass_light_blue.png",
+    "glass_light_blue.png",
+    "glass_light_blue.png",
+    "glass_light_blue.png",
+    "glass_light_blue.png"
+  ]
+}

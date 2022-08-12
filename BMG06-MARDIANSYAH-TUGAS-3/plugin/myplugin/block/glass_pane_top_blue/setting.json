@@ -1,0 +1,179 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/glass_pane_top_blue",
+            "block:myplugin/glass_pane_top_blue",
+            "glass_pane_top_blue"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "blockObjectOnCollision": false,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "glass_pane_top_blue.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "glass_pane_top_blue.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                }
+            ],
+            "texture": "glass_pane_top_blue.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "glass_pane_top_blue.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.45,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0.45,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.45,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.45,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "glass_blue_glass_pane_top_blue.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.55,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0.55,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.55,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.55,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "glass_blue_glass_pane_top_blue.png"
+        }
+    ],
+    "base": "base_block"
+}

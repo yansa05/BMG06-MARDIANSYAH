@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/concrete_powder_green",
+            "block:myplugin/concrete_powder_green",
+            "concrete_powder_green"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "concrete_powder_green.png",
+        "concrete_powder_green.png",
+        "concrete_powder_green.png",
+        "concrete_powder_green.png",
+        "concrete_powder_green.png",
+        "concrete_powder_green.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

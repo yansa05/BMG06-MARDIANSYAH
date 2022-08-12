@@ -1,0 +1,42 @@
+[
+  {
+    "coinName": "green_currency",
+    "item": {
+      "type": "Item",
+      "name": "myplugin/green_currency"
+    },
+    "showUi": false
+  },
+  {
+    "coinName": "iron_ingot",
+    "item": {
+      "type": "Item",
+      "name": "myplugin/iron_ingot"
+    },
+    "showUi": false
+  },
+  {
+    "coinName": "gold_ingot",
+    "item": {
+      "type": "Item",
+      "name": "myplugin/gold_ingot"
+    },
+    "showUi": false
+  },
+  {
+    "coinName": "diamond",
+    "item": {
+      "type": "Item",
+      "name": "myplugin/diamond"
+    },
+    "showUi": false
+  },
+  {
+    "coinName": "emerald",
+    "item": {
+      "type": "Item",
+      "name": "myplugin/emerald"
+    },
+    "showUi": false
+  }
+]

@@ -1,0 +1,12 @@
+SKILL_CAST(){ -- 旋转
+	StartTimer(object = $obj1, event = "ADD_SPEED", time = 20)
+}
+
+ADD_SPEED {
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_mushroomMonsterBig", buffTime = 20)
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_mushroomMonsterBig", buffTime = 20)
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_mushroomMonsterBig", buffTime = 20)
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_mushroomMonsterBig", buffTime = 20)
+
+
+}

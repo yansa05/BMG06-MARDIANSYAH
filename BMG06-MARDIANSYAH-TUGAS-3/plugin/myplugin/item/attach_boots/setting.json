@@ -1,0 +1,20 @@
+{
+    "itemname": "item.diamond_boots.name",
+    "stack_count_max": 1,
+     "equip_skin": {
+        "armor_foot": "diamond"
+    },
+    "tray": [
+        4
+    ],
+    "icon": "leather_boots.png",
+    "candrop":true,
+	"canAbandon": true,
+    "droplifetime":100,
+    "itemintroduction": "item.diamond_boots.intro",
+	"auto_equip_by_bts":true,
+	"attachType": ["jump", "damage", "deDamage"],
+	"syncVars": {
+      "attachVar": {}
+	}
+}

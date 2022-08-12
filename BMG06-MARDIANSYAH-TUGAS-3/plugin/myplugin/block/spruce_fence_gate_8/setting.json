@@ -1,0 +1,22 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/spruce_fence_gate_8",
+				"block:myplugin\/spruce_fence_gate_8",
+				"spruce_fence_gate_8"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"block_breakTime",
+		"base":"spruce_fence_gate"
+	}

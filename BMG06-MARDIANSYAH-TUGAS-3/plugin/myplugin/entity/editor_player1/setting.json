@@ -1,0 +1,318 @@
+{
+  "damageViewBobbing": [
+    {
+      "count": 2,
+      "rotate": {
+        "x": 0,
+        "y": 0,
+        "z": 6
+      }
+    },
+    {
+      "count": 4,
+      "rotate": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "firstPRVActorName": "firstPrvActor.actor",
+  "firstPRVHandBoneName": "s_wuqi",
+  "bodyTurnMax": 60,
+  "backMoveResetOffsetYaw": true,
+  "enableBackMovementAction": true,
+  "fallAtSwimming": false,
+  "randomPlayDeadActions": [
+    "die_front",
+    "die_back"
+  ],
+  "~actorName": "editor_boy.actor",
+  "actorName": "character_new_blue_mario.actor",
+  "aerialLandingSkill": [
+    "myplugin/aerial_landing_skill"
+  ],
+  "aerialLandingSkill2": [
+    "myplugin/aerial_landing_skill"
+  ],
+  "disableShadow": true,
+  "allowFly": false,
+  "attackFeedback": {
+    "hideSmooth": true,
+    "hideTime": 40,
+    "hitNpc": true,
+    "hitPlayer": true
+  },
+  "movementUpdateBodyYaw": false,
+  "attackNpc": false,
+  "autoAttack": false,
+  "baseDesc": "",
+  "beAttackedFeedback": {
+    "fromNpc": true,
+    "fromPlayer": true,
+    "hideSmooth": true,
+    "hideTime": 15
+  },
+  "beginMoveRunSkill": [
+    "myplugin/moving_change_skill_1"
+  ],
+  "beginMoveSprintSkill": [
+    "myplugin/moving_change_skill_1"
+  ],
+  "bodyTurnMin": 1,
+  "boundingVolume": {
+    "params": [
+      0.6,
+      1.8,
+      0.6
+    ],
+    "type": "Box"
+  },
+  "canAttackObject": true,
+  "canBoat": false,
+  "canClick": false,
+  "canJump": true,
+  "canMove": true,
+  "canPickOnDie": false,
+  "canTouch": false,
+  "chaseDistance": 0,
+  "clickBlockDistance": 5,
+  "clickDistance": 4,
+  "climbBuff": [
+    "myplugin/run_ladder"
+  ],
+  "collision": false,
+  "collisionCamp": 3,
+  "damage": 0,
+  "damageProtectionTime": 40,
+  "deadSound": {
+    "delayTime": 0,
+    "loop": false,
+    "selfOnly": false,
+    "sound": "",
+    "volume": 0
+  },
+  "deathEffect": {
+    "effect": "death_boy.effect",
+    "time": 50
+  },
+  "deathHideTime": 0,
+  "defaultSkills": [
+    "/click",
+    "/attack",
+    "/break",
+    "/empty"
+  ],
+  "desc": "{}\n",
+  "destroyTime": 0,
+  "disableTemporaryShieldBar": false,
+  "dropDamageEnable": true,
+  "dropDamageStart": 0.82,
+  "enableAI": false,
+  "enableDamageProtection": 0,
+  "endMoveRunSkill": [
+    "myplugin/moving_change_skill_1"
+  ],
+  "equipTrays": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "eyeHeight": 1.62,
+  "fixedIncSprintSpeed": 0.1,
+  "fly2swim": [
+    "myplugin/fly2swim"
+  ],
+  "gravity": 0.08,
+  "hideDeepOther": 0.01,
+  "hideHolder": false,
+  "hideHp": 0,
+  "homeSize": 0,
+  "hpBarColor": 4294967551,
+  "hpBarHeight": 0.2,
+  "hpBarWidth": 1,
+  "hurtResistantTime": 18,
+  "hurtSound": {
+    "loop": false,
+    "path": "resource/sound/player_attacked2.mp3",
+    "selfOnly": true,
+    "sound": "",
+    "volume": 0.5
+  },
+  "hurtTime": 5,
+  "idleProb": 0,
+  "idleTime": [
+    0,
+    0
+  ],
+  "ignorePlayerSkin": false,
+  "ignoreVpConsume": 0,
+  "infoValues": [
+    {
+      "name": "gui.info.hp",
+      "value": "hpPercent"
+    },
+    {
+      "name": "gui.info.prop.shield",
+      "value": "TemporaryShield"
+    },
+    {
+      "langKey": "{[0-9]+}",
+      "name": "gui.info.prop.defense",
+      "value": "prop.defense"
+    },
+    {
+      "name": "gui.info.prop.damage",
+      "value": "AttackDamage"
+    },
+    {
+      "multiply": 100,
+      "name": "gui.info.prop.moveSpeed",
+      "value": "prop.moveSpeed"
+    },
+    {
+      "name": "gui.info.prop.jumpSpeed",
+      "value": "prop.jumpSpeed"
+    },
+    {
+      "name": "gui.info.prop.efficient",
+      "value": "ValEfficient"
+    },
+    {
+      "name": "gui.info.prop.hurtDistance",
+      "value": "ValHurtDistance"
+    }
+  ],
+  "jumpBobbingAngle": 0,
+  "jumpBobbingRange": 0,
+  "jumpBobbingSpeed": 0,
+  "jumpHeight": 1.2,
+  "jumpSkill": [
+    "myplugin/take_off_skill"
+  ],
+  "jumpSpeed": 0.6,
+  "maxHp": 20,
+  "maxVp": 100,
+  "moveAcc": 0.2,
+  "moveFactor": 1,
+  "moveSpeed": 0.2,
+  "moveSpeedRelatedBuffs": {
+    "myplugin/in_lava_retard_buff": -0.2
+  },
+  "moveStateSwithBuffCfgs": [
+    {
+      "cfgKey": "climbBuff",
+      "newState": "CLIMB",
+      "oldState": "ALL"
+    },
+    {
+      "cfgKey": "fly2swim",
+      "newState": "SWIMMING_IDLE",
+      "oldState": "FLY"
+    }
+  ],
+  "moveStateSwithSkillCfgs": [
+    {
+      "cfgKey": "skipSkill",
+      "newState": "IDLE",
+      "oldState": "SPRINT"
+    },
+    {
+      "cfgKey": "beginMoveRunSkill",
+      "newState": "RUN",
+      "oldState": "ALL"
+    },
+    {
+      "cfgKey": "endMoveRunSkill",
+      "newState": "IDLE",
+      "oldState": "RUN"
+    },
+    {
+      "cfgKey": "beginMoveSprintSkill",
+      "newState": "SPRINT",
+      "oldState": "ALL"
+    },
+    {
+      "cfgKey": "jumpSkill",
+      "newState": "JUMP",
+      "oldState": "ALL"
+    },
+    {
+      "newState": "JUMP",
+      "oldState": "FALLING"
+    },
+    {
+      "newState": "JUMP",
+      "oldState": "AERIAL"
+    },
+    {
+      "cfgKey": "aerialLandingSkill",
+      "newState": "AERIAL",
+      "oldState": "ALL"
+    },
+    {
+      "cfgKey": "aerialLandingSkill2",
+      "newState": "SWIMMING",
+      "oldState": "ALL"
+    },
+    {
+      "cfgKey": "resetMoveStatus",
+      "newState": "IDLE",
+      "oldState": "EMPTY"
+    }
+  ],
+  "name": "0dde4c98-bde4-22ab-d62d-8a3c8faf4b9e",
+  "oriDamage": 3,
+  "patrolDistance": 0,
+  "posSyncDelay": 1,
+  "resetMoveStatus": [
+    "myplugin/reset_move_status"
+  ],
+  "skillList": [],
+  "skills": [],
+  "skipSkill": [
+    "myplugin/moving_change_skill",
+    "myplugin/moving_change_skill_1"
+  ],
+  "sprintBobbingAngle": 0.5,
+  "sprintBobbingRange": 0.8,
+  "sprintBobbingSpeed": 1.2,
+  "stepHeight": 0.6,
+  "swimmingBuff": [
+    "myplugin/swimmingBuff"
+  ],
+  "swimSpeed": 0.2,
+  "touchdownDamage": 10000,
+  "trays": [
+    {
+      "cap": 1,
+      "class": "equip",
+      "maxCap": 1,
+      "type": 1
+    },
+    {
+      "cap": 1,
+      "class": "equip",
+      "maxCap": 1,
+      "type": 2
+    },
+    {
+      "cap": 1,
+      "class": "equip",
+      "maxCap": 1,
+      "type": 3
+    },
+    {
+      "cap": 1,
+      "class": "equip",
+      "maxCap": 1,
+      "type": 4
+    }
+  ],
+  "twiceJumpSkill": "myplugin/twice_jump_skill",
+  "walkBobbingAngle": 0.5,
+  "walkBobbingRange": 0.35,
+  "walkBobbingSpeed": 1,
+  "waterline": 0
+}

@@ -1,0 +1,20 @@
+ENTITY_BUFF_ADD {
+	If(not IsPlayer(entity = $entity)){
+		Return()
+	}
+	If(not $entity.hotSpringTimer){
+		$dict = NewDictionary($cfg)
+		$addStep = DictionaryGet(dict = $dict, key = "addStep")
+		$entity.hotSpringTimer = StartTimer(rep = true, event = "HOT_SPRING_BUFF", object = $entity, time =  20, addStep = $addStep)
+	}
+}
+
+ENTITY_BUFF_REMOVE {
+	If(not IsPlayer(entity = $entity)){
+		Return()
+	}
+	If($entity.hotSpringTimer){
+		StopTimer(timer = $entity.hotSpringTimer)
+		$entity.hotSpringTimer = nil
+	}
+}

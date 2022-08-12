@@ -1,0 +1,56 @@
+{
+  "attachType": [
+    "deDamage"
+  ],
+  "auto_equip_by_bts": true,
+  "base": "equip_base",
+  "baseDesc": "myplugin/equip_clothes_diamond_base_desc",
+  "basePropDesc": {
+    "props_accelerate_bonus": [
+      0.0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      4
+    ],
+    "props_jump": [
+      0
+    ],
+    "props_max_hp": [
+      0
+    ],
+    "props_shield_bonus": [
+      0
+    ]
+  },
+  "canAbandon": true,
+  "desc": "{myplugin/equip_clothes_diamond_base_desc}\n{props_defense_bonus}4\n",
+  "equip_buff": "myplugin/item_buff_equip_clothes_diamond[equip_buff",
+  "equip_skin": {
+    "armor_chest": "diamond"
+  },
+  "equipTemporaryShield": 0,
+  "icon": "clothes.png",
+  "itemintroduction": "equip_clothes_diamond.intro",
+  "itemname": "myplugin/equip_clothes_diamond_itemname",
+  "quality": 3,
+  "stack_count_max": 1,
+  "statusFuncName": "IsEquiping",
+  "tray": [
+    2
+  ],
+  "type": "clothes",
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 0.7,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  }
+}

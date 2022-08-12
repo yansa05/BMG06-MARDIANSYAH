@@ -1,0 +1,17 @@
+{
+  "canCastOnDying": true,
+  "castAction": "smg_reload",
+  "castSound": {
+    "sound": "/sound/rifle_reload.mp3",
+    "volume": 1
+  },
+  "cdTime": 1,
+  "jack": "B",
+  "enableCdMask": true,
+  "icon": "set:gta_main.json image:reload",
+  "isDecontrolSkill": true,
+  "reloadTime": 30,
+  "reloadType": "Custom",
+  "touchIcon": "set:gta_main.json image:reload_select",
+  "type": "Reload"
+}

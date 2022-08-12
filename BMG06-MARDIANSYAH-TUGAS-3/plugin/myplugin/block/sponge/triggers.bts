@@ -1,0 +1,27 @@
+BLOCK_SPAWN 
+{
+	$areaId = AddNoWaterArea(center = $pos, radius = 3, map = $map)
+	StartTimer(event = "REMOVE_SPONGE", rep = false, time = 300, map = $map, areaId = $areaId, center = $pos)
+}
+
+BLOCK_PLACE 
+{
+	$areaId = AddNoWaterArea(center = $pos, radius = 3, map = GetEntityMap(entity = $obj1))
+	StartTimer(event = "REMOVE_SPONGE", rep = false, time = 300, map = $map, areaId = $areaId, center = $pos)
+}
+
+BLOCK_REMOVED
+{
+	$posY = NumberFloor(p1 = GetPosY(pos = $pos))
+	$radius = 3
+	ForLoop(from = -$radius - 1, to = $radius + 1, key = "offset")
+	{
+		$posX = NumberFloor(p1 = GetPosX(pos = $pos)) + $offset
+		
+		$posZ = NumberFloor(p1 = GetPosZ(pos = $pos)) + $radius + 1 - NumberAbs(p1 = $offset)
+		AddWaterSpreadPos(map = $map, pos = {x = $posX, y = $posY, z = $posZ})
+		
+		$posZ = NumberFloor(p1 = GetPosZ(pos = $pos)) - $radius - 1 + NumberAbs(p1 = $offset)
+		AddWaterSpreadPos(map = $map, pos = {x = $posX, y = $posY, z = $posZ})
+	}
+}

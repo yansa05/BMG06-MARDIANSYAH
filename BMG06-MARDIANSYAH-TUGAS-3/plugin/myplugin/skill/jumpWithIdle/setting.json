@@ -1,0 +1,11 @@
+{
+    "icon": "",
+    "type": "Any",
+    "castAction": "jump37",
+    "castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "jump.mp3"
+    }
+}

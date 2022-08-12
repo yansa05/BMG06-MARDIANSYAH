@@ -1,0 +1,15 @@
+{
+  "targetType": "Camera",
+  "startPos": {
+    "x": 0,
+    "y": -0.1,
+    "z": -0.85
+  },
+  "type": "Missile",
+  "missileCfg":"myplugin/grenade_missile",
+  "startPitch1": [
+    1
+  ],
+  "priority": 2,
+  "frontSight":"myplugin/frontsight_1"
+}

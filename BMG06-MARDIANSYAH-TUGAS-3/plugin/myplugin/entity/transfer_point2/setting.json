@@ -1,0 +1,10 @@
+{
+  "actorName": "object_tube_green.actor",
+  "maxPairCount": 5,
+  "oneWay": false,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "base": "transfer_point1",
+  "viewDistance": 32,
+  "desc": "transfer_point2_desc",
+  "disableShadow": true
+}

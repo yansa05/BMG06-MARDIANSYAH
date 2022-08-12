@@ -1,0 +1,40 @@
+{
+    "stack_count_max": 1,
+    "candestroy": true,
+    "needSave": false,
+    "cansell": false,
+	"canDrop": true,
+	"showBoundBox": true,
+    "equipTemporaryShield": 10,
+    "syncVars": {
+        "equipTemporaryShield": true,
+		"attachVar": {}
+    },
+    "saveVars": {
+        "equipTemporaryShield": true
+	},
+	"canAbandon": true,
+	"auto_equip_by_bts":true,
+    "isAddItem":true,
+    "droplifetime":100,
+	"attachType": ["deDamage"],
+	"base": "equip_base",
+	"boundingVolume": {
+		"params": [
+		  1,
+		  1,
+		  1
+		],
+		"type": "Box"
+	},
+	"editBuffList":"equipBuffList",
+	"editBaseFunc":"equipPropEdit",
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	}
+}

@@ -1,0 +1,18 @@
+{
+    "type": "Any",
+    "isTouch": true,
+    "touchTime": 999999,
+    "startAction": "",
+    "sustainAction": "",
+    "stopAction": "",
+    "touchTimeMax": 10,
+    "progressIcon": "set:bed_mainui_icon.json image:icon_squat_act.png",
+    "progressShowInEnd": true,
+    "progress": 10,
+    "startSound": {
+        "volumn": 5,
+        "selfOnly": true,
+        "loop": false,
+        "sound": "squat_skill_touch.mp3"
+    }
+}

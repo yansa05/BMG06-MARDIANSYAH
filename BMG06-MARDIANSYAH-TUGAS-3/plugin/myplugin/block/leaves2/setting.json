@@ -1,0 +1,51 @@
+{
+  "base": "base_block",
+  "renderpass":4,
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/leaves2",
+          "block:myplugin/leaves2",
+          "leaves2"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1.0
+    ]
+  },
+  
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/leaves2",
+      "block:myplugin/leaves2",
+      "leaves2"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "leaves_oak.png",
+    "leaves_oak.png",
+    "leaves_oak.png",
+    "leaves_oak.png",
+    "leaves_oak.png",
+    "leaves_oak.png"
+  ]
+}

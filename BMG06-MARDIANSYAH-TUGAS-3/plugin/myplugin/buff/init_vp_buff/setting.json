@@ -1,0 +1,10 @@
+{
+  "moveVpConsume": 0.01,
+  "sprintVpConsume": 0.1,
+  "swimVpConsume": 0.015,
+  "normalJumpVpConsume": 0.2,
+  "sprintJumpVpConsume": 0.8,
+  "damageVpConsume": 0.3,
+  "attackVpConsume": 0.3,
+  "breakBlockVpConsume": 0.025
+}

@@ -1,0 +1,4 @@
+{ "showIcon":"set:buff_icon.json image:pressing.png",
+  "attachType": "pressing",
+  "pressing": 2
+}

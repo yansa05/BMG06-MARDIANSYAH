@@ -1,0 +1,14 @@
+{
+    "base": "huoba",
+    "attackSide": "1:0:0",
+    "rotation": {
+        "x": 30,
+        "y": 270,
+        "z": 0
+    },
+    "translation": {
+        "x": -0.3,
+        "y": 0.2,
+        "z": 0
+    }
+}

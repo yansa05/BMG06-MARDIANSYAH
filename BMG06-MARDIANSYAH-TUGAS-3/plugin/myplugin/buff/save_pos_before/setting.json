@@ -1,0 +1,13 @@
+{
+	"effect": {
+		"pos": {
+            "x": 0,
+            "y": 0,
+            "z": -0.1
+        },
+        "effect": "flag_halo_3.effect",
+		"yaw": 0,
+		"once": false,
+		"selfOnly": false
+	}
+}

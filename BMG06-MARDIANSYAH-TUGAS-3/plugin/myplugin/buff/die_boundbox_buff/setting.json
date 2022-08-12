@@ -1,0 +1,6 @@
+{
+    "boundingBox":{
+        "type" : "Box",
+        "params": [ 0.01, 0.01, 0.01 ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/coarse_dirt",
+            "block:myplugin/coarse_dirt",
+            "coarse_dirt"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "coarse_dirt.png",
+        "coarse_dirt.png",
+        "dirt.png",
+        "dirt.png",
+        "dirt.png",
+        "dirt.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

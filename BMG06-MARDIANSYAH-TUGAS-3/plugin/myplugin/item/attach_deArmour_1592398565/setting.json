@@ -1,0 +1,29 @@
+{
+		"itemname":"attack_deArmour",
+		"editBaseFunc":"attach_deArmour",
+		"basePropDesc":{
+			"attack_deArmour":[
+				48,
+				"attack_deArmour"
+			],
+			"team":[
+				true
+			]
+		},
+		"icon2":"deArmour.png",
+		"attachType":"deArmour",
+		"icon_path":"plugin\/myplugin\/item\/attach_deArmour\/deArmour_self.png",
+		"attachBuff":"myplugin\/attach_deArmour_1592398565",
+		"isAttach":true,
+		"desc":"{attack_deArmour}48{attack_deArmour}\n{team}\n",
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"forTeam":true,
+		"icon":"set:buff_icon.json image:deArmour_self.png"
+	}

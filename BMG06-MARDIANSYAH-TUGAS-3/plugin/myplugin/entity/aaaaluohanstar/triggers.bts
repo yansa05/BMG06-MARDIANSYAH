@@ -1,0 +1,36 @@
+ENTITY_ENTER{
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/yellow_star_effect_buff")
+}
+
+ENTITY_TOUCH_ALL{ -- 碰到无敌道具/entity，5S无敌加分
+	If(( IsPlayer(entity = $obj2) or $obj2.master) and $obj1 and not $obj1.dead){
+
+		AddEntityBuff(entity = $obj2, cfg = "myplugin/eat_yellow_star_buff", buffTime = 60)
+
+        $obj1.dead = true
+		$addplayer = IsPlayer(entity = $obj2) and $obj2
+        If($obj2.master){
+            $addplayer = GetObject(objID = $obj2.master)
+        }
+		If(not $addplayer or not IsValidObject(object = $addplayer) or not IsPlayer(entity = $addplayer))
+        {
+            Return()
+        }
+        -- AddEntityBuff(entity = $addplayer, cfg = GetConfigVar(obj = $obj1, key = "addBuff"), buffTime = 100)
+        UpdateStageScore(player = $addplayer, score = GetConfigVar(obj = $obj1, key = "addScore"))
+        CallTrigger(event = "ADD_SCORE", object = $addplayer, score = GetConfigVar(obj = $obj1, key = "addScore"))
+        StartTimer(event = "KILL_OWNER", time = 2, object = $obj1)
+		AddStageStars(player = $obj2, index = $obj1.index, light = true)
+		--CallTrigger(event = "STOP_BGM", obj1 = $obj2)
+		--StartTimer(event = "PLAY_BGM", object = $obj2, time = 100)
+    }
+}
+
+KILL_OWNER{
+    KillEntity(entity = $obj1)
+}
+
+ENTITY_HITTED{
+	CallTrigger(event = "ENTITY_TOUCH_ALL", obj1 = $obj1, obj2 = $obj2)
+}
+

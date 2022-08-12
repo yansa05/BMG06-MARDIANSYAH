@@ -1,0 +1,12 @@
+
+
+ENTITY_TOUCH_ALL(debug = false){
+	If(not IsPlayer(entity = $obj2) or GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/invincible_buff")){
+		Return()
+	}
+	CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+}
+
+ENTITY_REBIRTH{
+	UpdateScaleWhenRebirth(entity = $obj1)
+}

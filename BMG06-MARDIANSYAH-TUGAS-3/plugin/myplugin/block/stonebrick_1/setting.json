@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/stonebrick_1",
+            "block:myplugin/stonebrick_1",
+            "stonebrick_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "mossy_stone_brick_back_stonebrick_1.png",
+        "mossy_stone_brick_back_stonebrick_1.png",
+        "mossy_stone_brick_back_stonebrick_1.png",
+        "mossy_stone_brick_back_stonebrick_1.png",
+        "mossy_stone_brick_back_stonebrick_1.png",
+        "mossy_stone_brick_back_stonebrick_1.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

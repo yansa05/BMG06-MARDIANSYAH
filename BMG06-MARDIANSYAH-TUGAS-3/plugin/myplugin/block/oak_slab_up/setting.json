@@ -1,0 +1,192 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/oak_slab_up",
+            "block:myplugin/oak_slab_up",
+            "oak_slab_up"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 1,
+                "x": 1,
+                "y": 1
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0.5
+            }
+        }
+    ],
+    "quads": [
+        {
+            "texture": "oak_back02_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "texture": "oak_back02_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "texture": "oak_back02_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "texture": "oak_back02_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                }
+            ]
+        },
+        {
+            "texture": "oak_back_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0.5
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0.5
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0.5
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0.5
+                }
+            ]
+        },
+        {
+            "texture": "oak_back_oak_slab_up.png",
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                }
+            ]
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 15,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

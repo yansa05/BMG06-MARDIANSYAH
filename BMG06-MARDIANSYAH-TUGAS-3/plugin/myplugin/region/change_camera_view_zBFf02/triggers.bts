@@ -1,0 +1,12 @@
+REGION_ENTER(debug = false){
+	If(IsPlayer(entity = $obj1)){
+		ChangeCameraView(entity = $obj1, pitch = 20,yaw = 270,distance =17,offset = {x = 0,y = -0.5,z = 1}, smooth = 3)
+		FillBlockMask(entity = $obj1, id = 36, min={x=16,y=23,z=57}, max={x=16,y=29,z=68})
+	}
+}
+
+REGION_LEAVE(debug = false){
+	If(IsPlayer(entity = $obj1)){
+		FillBlockMask(entity = $obj1, id = 0, min={x=16,y=23,z=57}, max={x=16,y=29,z=68})
+	}
+}

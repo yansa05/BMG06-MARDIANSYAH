@@ -1,0 +1,9 @@
+REGION_ENTER {
+	--进入温泉，buff起效
+	CallTrigger(event = "HOTSPRING_TAKE_EFFECT", object = $obj1, region = $region)
+}
+
+REGION_LEAVE {
+	--离开失效
+	CallTrigger(event = "HOTSPRING_LOSE_EFFECT", object = $obj1, region = $region)
+}

@@ -1,0 +1,72 @@
+{
+  "base": "cobblestone",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/lapis_ore",
+          "block:myplugin/lapis_ore",
+          "lapis_ore"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/ore_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockHp": 90,
+  "blockType": "stone",
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/lapis_ore",
+      "block:myplugin/lapis_ore",
+      "lapis_ore"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "fall": false,
+  "reward": 120,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "lapis_ore.png",
+    "lapis_ore.png",
+    "lapis_ore.png",
+    "lapis_ore.png",
+    "lapis_ore.png",
+    "lapis_ore.png"
+  ]
+}

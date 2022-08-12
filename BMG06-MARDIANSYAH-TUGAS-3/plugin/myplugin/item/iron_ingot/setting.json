@@ -1,0 +1,19 @@
+{
+  "baseDesc": "myplugin/iron_ingot_base_desc",
+  "canAbandon": true,
+  "desc": "{myplugin/iron_ingot_base_desc}\n",
+  "icon": "iron_ingot.png",
+  "itemname": "myplugin/iron_ingot_itemname",
+  "stack_count_max": 64,
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  }
+}

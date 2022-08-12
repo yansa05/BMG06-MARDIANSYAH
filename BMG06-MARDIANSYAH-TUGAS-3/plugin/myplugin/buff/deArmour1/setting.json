@@ -1,0 +1,4 @@
+{ "showIcon":"set:buff_icon.json image:deArmour.png",
+  "attachType": "deArmour",
+  "deArmour": 1
+}

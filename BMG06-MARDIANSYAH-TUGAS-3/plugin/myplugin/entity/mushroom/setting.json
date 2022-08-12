@@ -1,0 +1,22 @@
+{
+    "icon": "mushroom.png",
+    "actorName": "object_mushroom.actor",
+    "base": "baseMushroom",
+    "addScore": 1000,
+    "name": "",
+    "addHp": 1,
+    "meetCollisionBackRun": true,
+    "StraightPoint": true,
+    "hideHp": 1,
+    "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+    "unassailable": 1,
+    "deadSound": {
+        "sound": "eat_mushroom.mp3",
+        "selfOnly": false,
+        "loop": false,
+        "volume": 1
+    },
+    "viewDistance": 32,
+	"disableShadow": true
+}

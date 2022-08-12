@@ -1,0 +1,28 @@
+{
+		"attachType":"pressing",
+		"itemname":"pressing_buff",
+		"icon2":"deArmour.png",
+		"forTeam":true,
+		"attachBuff":"myplugin\/attach_pressing_1590639888",
+		"desc":"{props_effectiveness}1\n{队伍}true\n",
+		"isAttach":true,
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"attach_pressing",
+		"icon":"set:buff_icon.json image:pressing_self.png",
+		"icon_path":"set:buff_icon.json image:pressing_self.png",
+		"basePropDesc":{
+			"props_effectiveness":[
+				1
+			],
+			"队伍":[
+				true
+			]
+		}
+	}

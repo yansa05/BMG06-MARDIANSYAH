@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/orange_glazed_terracotta",
+            "block:myplugin/orange_glazed_terracotta",
+            "orange_glazed_terracotta"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "orange_glazed_terracotta.png",
+        "orange_glazed_terracotta.png",
+        "orange_glazed_terracotta.png",
+        "orange_glazed_terracotta.png",
+        "orange_glazed_terracotta.png",
+        "orange_glazed_terracotta.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

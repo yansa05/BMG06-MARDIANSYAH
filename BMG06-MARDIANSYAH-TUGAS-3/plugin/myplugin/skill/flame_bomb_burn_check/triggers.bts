@@ -1,0 +1,7 @@
+SKILL_CAST {
+	$undamageable = GetObjectVar(obj = $obj2, key = "undamageable") or 0
+	If($undamageable <= 0){
+		CastSkill(skill = "myplugin/flame_bomb_burn", packet = {targetID = GetObjectID(object = $obj2)}, from = $obj1)
+	}
+	CastSkill(skill = "myplugin/bomb_block", packet = {targetPos = $pos}, from = $obj1)
+}

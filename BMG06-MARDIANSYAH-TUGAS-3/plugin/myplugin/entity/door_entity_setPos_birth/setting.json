@@ -1,0 +1,25 @@
+{
+    "hpBarColor": 0,
+    "actorName": "boytouming.actor",
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+	"passiveBuffs": [
+        {
+            "name": "myplugin/start_point_buff",
+            "time": -1
+        }
+    ],
+    "headUIHeight": -1,
+    "name": "",
+    "gravity": 0,
+    "viewDistance": 32,
+	"disableShadow": true,
+	"entityDerive": "pointEntity",
+	"dontCreateDynamically": true
+}

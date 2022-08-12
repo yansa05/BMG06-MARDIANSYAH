@@ -1,0 +1,12 @@
+﻿{
+  "actionMap": {
+    "idle": "smg_idle",
+    "jump": "smg_jump",
+    "jump2": "smg_jump_3",
+    "run": "smg_run",
+    "sneak": "smg_sneak_1",
+    "walk": "smg_walk"
+  },
+  "sync": "all",
+  "type": "HandBuff"
+}

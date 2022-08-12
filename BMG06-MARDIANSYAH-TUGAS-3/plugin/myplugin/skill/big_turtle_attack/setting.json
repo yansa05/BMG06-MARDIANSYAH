@@ -1,0 +1,13 @@
+{
+    "castAction": "spin",
+    "type": "base",
+    "castActionTime": 60,
+	"cdTime": 100,
+	"castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "big_turtle_attack.mp3"
+    },
+    "prepareTime": 5
+}

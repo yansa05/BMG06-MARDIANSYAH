@@ -1,0 +1,9 @@
+{
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+		"sound": "save.mp3"
+	},
+	"removeBuff": ["myplugin/save_point_sound"]
+}

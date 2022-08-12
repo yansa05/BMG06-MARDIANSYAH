@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/redstone_wire_level8",
+            "block:myplugin/redstone_wire_level8",
+            "redstone_wire_level8"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "redstone_dust_line_redstone_wire_level8.png",
+        "redstone_dust_line_overlay_redstone_wire_level8.png",
+        "redstone_dust_line_overlay_redstone_wire_level8.png",
+        "redstone_dust_line_redstone_wire_level8.png",
+        "redstone_dust_line_overlay_redstone_wire_level8.png",
+        "redstone_dust_line_redstone_wire_level8.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

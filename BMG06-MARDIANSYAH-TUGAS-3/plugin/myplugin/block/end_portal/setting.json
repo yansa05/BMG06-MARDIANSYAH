@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/end_portal",
+            "block:myplugin/end_portal",
+            "end_portal"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "portal_end_portal.png",
+        "portal_end_portal.png",
+        "portal_end_portal.png",
+        "portal_end_portal.png",
+        "portal_end_portal.png",
+        "portal_end_portal.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/red_mushroom_block_5",
+            "block:myplugin/red_mushroom_block_5",
+            "red_mushroom_block_5"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "mushroom_block_inside_red_mushroom_block_5.png",
+        "mushroom_block_skin_red_red_mushroom_block_5.png",
+        "mushroom_block_inside_red_mushroom_block_5.png",
+        "mushroom_block_inside_red_mushroom_block_5.png",
+        "mushroom_block_inside_red_mushroom_block_5.png",
+        "mushroom_block_inside_red_mushroom_block_5.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

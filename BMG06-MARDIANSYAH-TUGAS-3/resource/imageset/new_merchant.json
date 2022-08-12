@@ -1,0 +1,108 @@
+{"frames": {
+
+"bg.png":
+{
+	"frame": {"x":0,"y":0,"w":1137,"h":561},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":1137,"h":561},
+	"sourceSize": {"w":1137,"h":561}
+},
+"buy_btn.png":
+{
+	"frame": {"x":1137,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"commodity.png":
+{
+	"frame": {"x":1178,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"currency_bg.png":
+{
+	"frame": {"x":1219,"y":0,"w":108,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":108,"h":42},
+	"sourceSize": {"w":108,"h":42}
+},
+"desc_tip.png":
+{
+	"frame": {"x":1327,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"item_icon.png":
+{
+	"frame": {"x":1368,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"limit.png":
+{
+	"frame": {"x":1409,"y":0,"w":90,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":90,"h":37},
+	"sourceSize": {"w":90,"h":37}
+},
+"select.png":
+{
+	"frame": {"x":1499,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"tab_bg.png":
+{
+	"frame": {"x":1540,"y":0,"w":73,"h":73},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":73,"h":73},
+	"sourceSize": {"w":73,"h":73}
+},
+"tab_normal.png":
+{
+	"frame": {"x":1613,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"tab_push.png":
+{
+	"frame": {"x":1654,"y":0,"w":41,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":41,"h":42},
+	"sourceSize": {"w":41,"h":42}
+},
+"tip_bg.png":
+{
+	"frame": {"x":1696,"y":0,"w":40,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":40,"h":42},
+	"sourceSize": {"w":40,"h":42}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "new_merchant.png",
+	"format": "RGBA8888",
+	"size": {"w":1736,"h":561},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:719fe6c941b12e677b83527e2592946f:60160d24e2da15583749219e340e5ef5:b55235470c0549af9bec13321809849d$"
+}
+}

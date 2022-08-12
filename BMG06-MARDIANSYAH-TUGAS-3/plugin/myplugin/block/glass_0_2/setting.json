@@ -1,0 +1,98 @@
+{
+    "base": "base_block",
+    "baseDesc": "myplugin/glass_0_2_base_desc",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/glass_0_2",
+                    "block:myplugin/glass_0_2",
+                    "myplugin/glass_0_2_itemname"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+    "placeBlockSound": {
+        "loop": false,
+        "path": "resource/blocksound/stone_place.mp3",
+        "sound": "",
+        "volume": 1
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "plugin/myplugin/sound/glass1.mp3",
+        "selfOnly": false,
+        "sound": "glass1.mp3",
+        "volume": 1
+    },
+    "breakBlockAfterSound": {
+        "loop": false,
+        "path": "plugin/myplugin/sound/glass2.mp3",
+        "selfOnly": false,
+        "sound": "glass2.mp3",
+        "volume": 1
+    },
+    "boundingVolume": {
+        "params": [
+            1,
+            1,
+            1
+        ],
+        "type": "Box"
+    },
+    "breakTime": 20,
+    "changeGroup": [
+        "glass_red",
+        "glass_yellow",
+        "glass_blue",
+        "glass_green"
+    ],
+    "colorBlocks": {
+        "BLUE": "myplugin/glass_blue",
+        "GREEN": "myplugin/glass_green",
+        "RED": "myplugin/glass_red",
+        "YELLOW": "myplugin/glass_yellow"
+    },
+    "desc": "{myplugin/glass_0_2_base_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/glass_0_2",
+            "block:myplugin/glass_0_2",
+            "myplugin/glass_0_2_itemname"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "isDropItem": true,
+    "isOpaqueFullCube": false,
+    "itemname": "myplugin/glass_0_2_itemname",
+    "jumpBuff": [
+        "myplugin/jump_sound"
+    ],
+    "lightOpacity": 0,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "showBoundBox": true,
+    "texture": [
+        "glass_glass_0_2.png",
+        "glass_glass_0_2.png",
+        "glass_glass_0_2.png",
+        "glass_glass_0_2.png",
+        "glass_glass_0_2.png",
+        "glass_glass_0_2.png"
+    ]
+}

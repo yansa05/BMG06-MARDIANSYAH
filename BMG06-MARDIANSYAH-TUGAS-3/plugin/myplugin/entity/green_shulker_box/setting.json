@@ -1,0 +1,27 @@
+{
+  "enableAI": true,
+  "canHitching": true,
+  "jumpSpeed": 0,
+  "collision": true,
+  "actorName": "boytouming.actor",
+  "entityDerive": "moveBlock",
+  "posSyncDelay": 2,
+  "meetCollisionEmptyRun": true,
+  "gravity": 0,
+  "idleTime": [
+    0,
+    0
+  ],
+  "collisionCamp": 1,
+  "stopRotationRender": true,
+  "name": "",
+  "canClick": false,
+  "canFly": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "unassailable": 1,
+  "viewDistance": 128,
+  "uiType": "2",
+  "desc": "green_shulker_box_desc",
+  "disableShadow": true
+}

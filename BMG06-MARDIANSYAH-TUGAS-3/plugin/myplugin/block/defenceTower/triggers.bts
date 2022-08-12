@@ -1,0 +1,12 @@
+
+BLOCK_PLACE 
+{
+	$teamId = GetEntityTeam(entity = $obj1)
+	$fullName = GetDefenceTowerFullName(teamID = $teamId)
+	If(not $fullName)
+	{
+		Return()
+	}
+	
+	StartTimer(event = "DO_BUILDING", object = $obj1, blockPos = $pos, time = 10, fullName = $fullName)
+}

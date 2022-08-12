@@ -1,0 +1,100 @@
+{"frames": {
+
+"button_green.png":
+{
+	"frame": {"x":0,"y":506,"w":132,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":132,"h":53},
+	"sourceSize": {"w":132,"h":53}
+},
+"button_red.png":
+{
+	"frame": {"x":258,"y":0,"w":131,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":131,"h":53},
+	"sourceSize": {"w":131,"h":53}
+},
+"content_bg.png":
+{
+	"frame": {"x":193,"y":0,"w":65,"h":506},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":65,"h":506},
+	"sourceSize": {"w":65,"h":506}
+},
+"icon_team_blue.png":
+{
+	"frame": {"x":38,"y":0,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+"icon_team_green.png":
+{
+	"frame": {"x":68,"y":0,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+"icon_team_red.png":
+{
+	"frame": {"x":98,"y":0,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+"icon_team_yellow.png":
+{
+	"frame": {"x":128,"y":0,"w":30,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":30,"h":31},
+	"sourceSize": {"w":30,"h":31}
+},
+"sort_bg_other.png":
+{
+	"frame": {"x":0,"y":0,"w":19,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":19,"h":36},
+	"sourceSize": {"w":19,"h":36}
+},
+"sort_bg_self.png":
+{
+	"frame": {"x":19,"y":0,"w":19,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":19,"h":36},
+	"sourceSize": {"w":19,"h":36}
+},
+"title_big.png":
+{
+	"frame": {"x":0,"y":559,"w":509,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":509,"h":84},
+	"sourceSize": {"w":509,"h":84}
+},
+"title_small.png":
+{
+	"frame": {"x":158,"y":0,"w":35,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":35,"h":58},
+	"sourceSize": {"w":35,"h":58}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bed_summer.png",
+	"format": "RGBA8888",
+	"size": {"w":509,"h":643},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:356c6971e91e7aedc9cf38daeff4d885:8841be39e4fdc021b7751e964e9b4467:1e3f94006d6f322710aea5e630230db7$"
+}
+}

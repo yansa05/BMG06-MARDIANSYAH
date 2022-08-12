@@ -1,0 +1,13 @@
+{
+	"showIcon": "set:buff_icon.json image:jump_self.png",
+	"type": "jumpSpeed", 
+	"_iconArea": {
+		"width": 50,
+		"height": 50,
+		"VAlign": "BOTTOM",
+		"HAlign": "CENTER",
+		"VA": -100,
+		"HA": 200
+	},
+    "jumpSpeed": 1
+}

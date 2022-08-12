@@ -1,0 +1,47 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/trip_wire",
+            "block:myplugin/trip_wire",
+            "trip_wire"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            },
+            "min": {
+                "z": 0,
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "texture": [
+        "trip_wire.png",
+        "trip_wire.png",
+        "trip_wire.png",
+        "trip_wire.png",
+        "trip_wire.png",
+        "trip_wire.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+     
+    "isOpaqueFullCube": false,
+    "base": "base_block"
+}

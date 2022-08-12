@@ -1,0 +1,10 @@
+SKILL_CAST(){
+    If(not GetEntityOnGround(entity = $obj1) or IsEntitySwimming(entity = $obj1)){
+        Return()
+    }
+    -------------------------------------------------------------  加速跑停下播放刹车动作
+    If($obj1.skidWithSprintAndSprintJumpTimer){
+        StopTimer(timer = $obj1.skidWithSprintAndSprintJumpTimer)
+    }
+    $obj1.skidWithSprintAndSprintJumpTimer = StartTimer(event = "SKIP_WITH_MOVE_AND_JUMP", time = 1, object = $obj1)
+}

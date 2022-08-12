@@ -1,0 +1,25 @@
+{
+	"skill": 
+	[
+        "myplugin/kill_bed"
+    ],
+	"attachType": ["pressing"],
+	"syncVars": {
+	  "equipTemporaryShield": true,
+      "attachVar": {}
+	},
+	"saveVars": {
+        "equipTemporaryShield": true
+    },
+	"editBuffList":"toolBuffList",
+	"showBoundBox": true,
+	"editBaseFunc":"toolPropEdit",
+	"settingUI":{
+		"tabList":[
+			{
+				"leftName": "editor.ui.baseProp",
+				"wndName":"BaseProp"
+			}
+		]
+	}
+}

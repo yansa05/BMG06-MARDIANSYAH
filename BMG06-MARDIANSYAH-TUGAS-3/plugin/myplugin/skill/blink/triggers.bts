@@ -1,0 +1,15 @@
+SKILL_CAST {
+	
+	$blinkPos = $startPos or $pos
+	$tarPosY = GetPosY(pos = $blinkPos)
+	--防止下陷
+	$tarPosY = $tarPosY + 0.1
+	
+	--防止卡在前方方块
+	$tarPos = {	x = GetPosX(pos = $blinkPos), 
+				y = $tarPosY, 
+				z = GetPosZ(pos = $blinkPos)}
+
+	$delay = GetMissileVar(fullName = "myplugin/blink_pearl_missile", key = "vanishTime")
+	StartTimer(event = "DO_BLINK", object = $obj1, tarPos = $tarPos, time = $delay + 1)
+}

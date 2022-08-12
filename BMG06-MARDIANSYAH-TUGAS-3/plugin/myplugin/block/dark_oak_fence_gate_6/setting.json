@@ -1,0 +1,22 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/dark_oak_fence_gate_6",
+				"block:myplugin\/dark_oak_fence_gate_6",
+				"dark_oak_fence_gate_6"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"block_breakTime",
+		"base":"dark_oak_fence_gate_14"
+	}

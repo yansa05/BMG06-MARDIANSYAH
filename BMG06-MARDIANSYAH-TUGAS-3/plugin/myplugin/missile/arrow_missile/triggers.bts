@@ -1,0 +1,18 @@
+HIT_ENTITY {
+    $cast = NewDictionary(DictionaryGet(dict = NewDictionary(DictionaryGet(dict = NewDictionary($missile), key = "params")), key = "cast"))
+    $packet = NewDictionary(DictionaryGet(dict = $cast, key = "packet"))
+    $skill = NewDictionary(DictionaryGet(dict = $cast, key = "skill"))
+    $touckTime = DictionaryGet(dict = $packet, key = "touchTime")
+    $sustainTime = DictionaryGet(dict = $packet, key = "sustainTime")
+    $chargeDamage = DictionaryGet(dict = $skill, key = "chargeDamage")
+    $minDamage = ArrayGet(array = $chargeDamage, index = 1)
+    $maxDamage = ArrayGet(array = $chargeDamage, index = 2)
+    Return() --不用拉满伤害
+    If(not $minDamage or $minDamage < 0 or not $maxDamage or $maxDamage <= 0 or $minDamage > $maxDamage){
+        Return()
+    }
+    If(not IsValidObject(object = $obj1)){
+        Return()
+    }
+    Damage(entity = $obj1, from = $obj2, damage = $minDamage + NumberFloor(p1 = ($maxDamage - $minDamage)*($sustainTime/$touckTime)))
+}

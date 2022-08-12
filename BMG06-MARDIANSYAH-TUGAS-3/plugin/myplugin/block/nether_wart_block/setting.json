@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/nether_wart_block",
+            "block:myplugin/nether_wart_block",
+            "nether_wart_block"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "nether_wart_block.png",
+        "nether_wart_block.png",
+        "nether_wart_block.png",
+        "nether_wart_block.png",
+        "nether_wart_block.png",
+        "nether_wart_block.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

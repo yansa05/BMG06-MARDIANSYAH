@@ -1,0 +1,42 @@
+{
+  "icon": "turtle.png",
+  "actorName": "mob_new_turtle_shell.actor",
+  "deadInRed": false,
+  "attackEffect": "attack_range.effect",
+  "idleProb": 1,
+  "enableAI": false,
+  "canClick": false,
+  "collision": true,
+  "canJump": false,
+  "moveSpeed": 0.5,
+  "liveTime": 600,
+  "jumpSpeed": 0,
+  "maxHp": 99999,
+  "defense": 0,
+  "damage": 0,
+  "textHeight": 2,
+  "hpBarWidth": 2,
+  "addScore": 200,
+  "gravity": 0.6,
+  "entityDerive": "monster",
+  "canKill": true,
+  "meetCollisionBackRun": true,
+  "needCheckTouch": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "skillList": [],
+  "deathEffect": {
+    "effect": "death.effect",
+    "time": 20
+  },
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      0.9,
+      0.9,
+      0.9
+    ]
+  },
+  "name": "",
+  "disableShadow": true
+}

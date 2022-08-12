@@ -1,0 +1,6 @@
+{
+    "type": "base",
+    "castAction":"walk",
+	"castActionTime": 20,
+	"canMove": true
+}

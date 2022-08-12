@@ -1,0 +1,117 @@
+{
+  "actorName": "duck.actor",
+  "addScore": 0,
+  "aiTickInterval": 1,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "autoAttack": true,
+  "avoidCliffHight": 1,
+  "base": "monster_base",
+  "baseDesc": "myplugin/duck_base_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      0
+    ],
+    "monster_hp": [
+      5
+    ],
+    "monster_rebirth_time": [
+      false,
+      "monster_rebirth_time_unit"
+    ],
+    "monster_score": [
+      0
+    ]
+  },
+  "boundingVolume": {
+    "params": [
+      1,
+      1,
+      1
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canJump": true,
+  "canKill": true,
+  "canMove": true,
+  "chaseDistance": 10,
+  "collision": true,
+  "damage": 0,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.4
+    }
+  },
+  "deadSound": {
+    "delayTime": 5,
+    "loop": false,
+    "path": "resource/sound/duck_death.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{myplugin/duck_base_desc}\n{monster_hp}5\n",
+  "destroyTime": 26,
+  "disableShadow": true,
+  "editorEnableReviveTime": false,
+  "editorReviveTime": 20.0,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "headBoneName": "Bip001_Head",
+  "hideHp": 1,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/duck_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "duck.png",
+  "idleProb": 0.2,
+  "idleTime": [
+    10,
+    20
+  ],
+  "itemname": "myplugin/duck_itemname",
+  "maxHp": 5,
+  "maxVisualAngle": 360,
+  "meetCliffBackRun": true,
+  "missDuringDay": false,
+  "moveSpeed": 0.1,
+  "name": "",
+  "patrolDistance": 10,
+  "posSyncDelay": 2,
+  "reactionTime": 20,
+  "ShowSettingUI": true,
+  "skillList": [
+    {
+      "attackDis": 2,
+      "fullName": "myplugin/monster_jinzhan_base_attack",
+      "hpRateMax": 1,
+      "hpRateMin": 0,
+      "prioity": 1
+    }
+  ],
+  "textHeight": 2.3,
+  "uiType": "1",
+  "viewDistance": 32
+}

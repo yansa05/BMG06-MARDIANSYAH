@@ -1,0 +1,43 @@
+{
+  "icon": "ladybird_enable_fly.png",
+  "actorName": "object_spikepole_v.actor",
+  "attackNpc": false,
+  "attackEffect": "attack_range.effect",
+  "enableAI": true,
+  "canClick": false,
+  "collision": true,
+  "cantTouchKill": true,
+  "canjump": true,
+  "hideHeadText": true,
+  "canMove": true,
+  "ShowSettingUI": true,
+  "idleProb": 0.2,
+  "moveSpeed": 0.14,
+  "maxHp": 2,
+  "noShowBagHp": true,
+  "noShowHeadUi":true,
+  "gravity": 0,
+  "defense": 0,
+  "damage": 1,
+  "hurtResistantTime ": 5,
+  "entityDerive": "monster",
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      0.7,
+      4,
+      0.7
+    ]
+  },
+  "posSyncDelay": 1,
+  "name": "",
+  "viewDistance": 32,
+  "uiType": "4",
+  "route": true,
+  "desc": "wolf_fangs_1_desc",
+  "disableShadow": true,
+  "unassailable": 1,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "reboundMissile" : true
+}

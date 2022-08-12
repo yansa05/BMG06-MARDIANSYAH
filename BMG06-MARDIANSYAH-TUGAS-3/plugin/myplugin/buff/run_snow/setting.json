@@ -1,0 +1,8 @@
+{"sound": {
+    "loop": true,
+    "selfOnly": true,
+    "sound": "snow2.mp3",
+    "volume": 1
+  },
+  "sync": "other"
+}

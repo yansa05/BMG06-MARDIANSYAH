@@ -1,0 +1,12 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "buff_maxHp",
+	"attachInit": [
+		"myplugin/attach_damageSword"
+	],
+	"canAbandon": true,
+	"attachType": ["jump", "damage", "deArmour","fire"],
+	"syncVars": {
+      "attachVar": {}
+	}
+}

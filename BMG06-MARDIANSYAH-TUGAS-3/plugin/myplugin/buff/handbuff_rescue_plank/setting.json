@@ -1,0 +1,5 @@
+{
+  "damage": 4,
+  "skill": "myplugin/rescue_plank_skill",
+  "type": "HandBuff"
+}

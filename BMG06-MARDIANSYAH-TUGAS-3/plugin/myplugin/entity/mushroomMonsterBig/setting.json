@@ -1,0 +1,114 @@
+{
+  "actorName": "mob_mushroom_monster_big.actor",
+  "addScore": 0,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "autoAttack": true,
+  "avoidCliff": true,
+  "avoidCliffHight": 1,
+  "base": "monster_base",
+  "baseDesc": "mushroomMonsterBig_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      3
+    ],
+    "monster_hp": [
+      4
+    ],
+    "monster_score": [
+      0
+    ]
+  },
+  "bodyTurnMin": 3,
+  "boundingVolume": {
+    "params": [
+      0.8,
+      1.5,
+      0.8
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canJump": false,
+  "canKill": true,
+  "chaseDistance": 10,
+  "collision": true,
+  "collisionCamp": 2,
+  "damage": 3,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.4
+    }
+  },
+  "deadSound": {
+    "delayTime": 18,
+    "loop": false,
+    "path": "resource/sound/mushroom_death.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 0.5,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{mushroomMonsterBig_desc}\n{monster_attack}3\n{monster_hp}4\n",
+  "destroyTime": 26,
+  "dieInColor": {
+    "a": 255,
+    "b": 255,
+    "g": 255,
+    "r": 255
+  },
+  "disableShadow": true,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "hideHp": 0,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/mushroom_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "mushroomMonsterBig.png",
+  "idleProb": 0.2,
+  "maxHp": 4,
+  "maxVisualAngle": 360,
+  "meetCliffBackRun": true,
+  "missDuringDay": true,
+  "moveSpeed": 0.28,
+  "name": "",
+  "patrolDistance": 10,
+  "posSyncDelay": 1,
+  "ShowSettingUI": true,
+  "skillList": [
+    {
+      "attackDis": 20,
+      "castActionTime": 5,
+      "fullName": "myplugin/ai_accelerated_mushroomMonsterBig",
+      "hpRateMax": 1,
+      "hpRateMin": 0,
+      "moveTarget": true,
+      "prioity": 1
+    }
+  ],
+  "textHeight": 1.7,
+  "uiType": "1",
+  "viewDistance": 32
+}

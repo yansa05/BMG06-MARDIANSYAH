@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="new_merchant.png" name="new_merchant" nativeHorzRes="2048" nativeVertRes="1024" resourceGroup="imagesets" version="2">
+	<Image height="561" name="bg" width="1137" xPos="0" yPos="0"/>
+	<Image height="42" name="buy_btn" width="41" xPos="1137" yPos="0"/>
+	<Image height="42" name="commodity" width="41" xPos="1178" yPos="0"/>
+	<Image height="42" name="currency_bg" width="108" xPos="1219" yPos="0"/>
+	<Image height="42" name="desc_tip" width="41" xPos="1327" yPos="0"/>
+	<Image height="42" name="item_icon" width="41" xPos="1368" yPos="0"/>
+	<Image height="37" name="limit" width="90" xPos="1409" yPos="0"/>
+	<Image height="42" name="select" width="41" xPos="1499" yPos="0"/>
+	<Image height="73" name="tab_bg" width="73" xPos="1540" yPos="0"/>
+	<Image height="42" name="tab_normal" width="41" xPos="1613" yPos="0"/>
+	<Image height="42" name="tab_push" width="41" xPos="1654" yPos="0"/>
+	<Image height="42" name="tip_bg" width="40" xPos="1696" yPos="0"/>
+</Imageset>

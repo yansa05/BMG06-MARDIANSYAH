@@ -1,0 +1,6 @@
+{
+  "buffCfg": "myplugin/disappear",
+  "buffTime": 600.0,
+  "target": "self",
+  "type": "Buff"
+}

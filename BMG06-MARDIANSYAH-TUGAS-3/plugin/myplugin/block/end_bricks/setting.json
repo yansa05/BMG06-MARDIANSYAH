@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/end_bricks",
+            "block:myplugin/end_bricks",
+            "end_bricks"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "end_bricks.png",
+        "end_bricks.png",
+        "end_bricks.png",
+        "end_bricks.png",
+        "end_bricks.png",
+        "end_bricks.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

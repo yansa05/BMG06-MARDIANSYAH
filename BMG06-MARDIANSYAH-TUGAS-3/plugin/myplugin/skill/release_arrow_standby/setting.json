@@ -1,0 +1,14 @@
+{
+    "throwDistance": 4,
+    "targetType": "Camera",
+    "type": "Missile",
+    "missileCfg": "myplugin\/arrow_missile",
+    "startPitch":-1,
+    "startPos1":{
+      "x":0.1,
+      "y":0.008,
+      "z":0.1
+    },
+    "chargeDamage":[2,6],
+    "castAction": ""
+  }

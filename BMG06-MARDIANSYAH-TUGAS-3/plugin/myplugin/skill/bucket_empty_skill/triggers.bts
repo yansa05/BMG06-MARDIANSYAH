@@ -1,0 +1,12 @@
+SKILL_CAST {
+	$handItem = GetEntityHandItem(entity = $obj1)
+	If(GetItemCfgByItemClass(item = $handItem, key = "fullName") ~= "myplugin/bucket_empty" or not $blockPos){
+		Return()
+	}
+	$blockType = GetBlockTypeByPos(map = GetEntityMap(entity = $obj1), pos = $blockPos)
+	If($blockType == "water"){
+		ReplaceHandItem(entity = $obj1, name = "myplugin/bucket_water")
+	}ElseIf($blockType == "lava"){
+		ReplaceHandItem(entity = $obj1, name = "myplugin/bucket_lava")
+	}
+}

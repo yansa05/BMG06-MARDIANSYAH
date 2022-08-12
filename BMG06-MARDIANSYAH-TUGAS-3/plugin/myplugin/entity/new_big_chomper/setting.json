@@ -1,0 +1,122 @@
+{
+  "actorName": "mob_Chomper_red_huge.actor",
+  "addScore": 0.0,
+  "attackEffect": "attack_range.effect",
+  "attackNpc": false,
+  "autoAttack": true,
+  "base": "monster_base",
+  "baseDesc": "new_big_chomper_desc",
+  "basePropDesc": {
+    "momster_collision_damage": [
+      false
+    ],
+    "monster_attack": [
+      10.0
+    ],
+    "monster_hp": [
+      20.0
+    ],
+    "monster_rebirth_time": [
+      false,
+      "monster_rebirth_time_unit"
+    ],
+    "monster_score": [
+      0.0
+    ]
+  },
+  "bodyTurnMin": 3,
+  "boundingVolume": {
+    "params": [
+      1.5,
+      2,
+      1.5
+    ],
+    "type": "Box"
+  },
+  "canClick": false,
+  "canJump": false,
+  "canKill": true,
+  "chaseDistance": 10,
+  "collision": true,
+  "damage": 10.0,
+  "damageByCollision": false,
+  "deadActions": {
+    "die": {
+      "name": "die",
+      "time": 26
+    },
+    "squashed": {
+      "scaleY": 0.4
+    }
+  },
+  "deadSound": {
+    "delayTime": 18,
+    "loop": false,
+    "path": "resource/sound/mushroom_death.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 0.5
+  },
+  "deathEffect": {
+    "delayTime": 18,
+    "effect": "Burst_mario_die.effect",
+    "pos": {
+      "x": 0,
+      "y": 1,
+      "z": 0
+    },
+    "time": 80
+  },
+  "defense": 0,
+  "desc": "{new_big_chomper_desc}\n{monster_hp}20.0\n{monster_attack}10.0\n",
+  "destroyTime": 40,
+  "dieInColor": {
+    "a": 255,
+    "b": 255,
+    "g": 255,
+    "r": 255
+  },
+  "disableShadow": true,
+  "editorEnableReviveTime": false,
+  "editorReviveTime": 20.0,
+  "enableAI": true,
+  "entityDerive": "monster",
+  "hideHp": 1,
+  "homeSize": 10,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "hurtSound": {
+    "path": "resource/sound/chomper_hurt.mp3",
+    "sound": "",
+    "volume": 0.5
+  },
+  "icon": "chomper.png",
+  "idleProb": 0.2,
+  "maxHp": 20.0,
+  "maxVisualAngle": 360,
+  "missDuringDay": true,
+  "moveSpeed": 0,
+  "name": "",
+  "patrolDistance": 10,
+  "ShowSettingUI": true,
+  "skillList": [
+    {
+      "attackDis": 7,
+      "fullName": "myplugin/new_big_chomper_attack",
+      "hpRateMax": 1,
+      "hpRateMin": 0,
+      "prioity": 1,
+      "sameLevel": true
+    }
+  ],
+  "textHeight": 4.7,
+  "uiShowList": [
+    "changMonsterModle",
+    "setting",
+    "setPosition",
+    "shopSetting",
+    "delete"
+  ],
+  "uiType": "5",
+  "viewDistance": 32
+}

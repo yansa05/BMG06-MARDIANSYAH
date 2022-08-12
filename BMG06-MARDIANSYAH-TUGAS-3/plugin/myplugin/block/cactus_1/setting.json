@@ -1,0 +1,192 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/cactus_1",
+            "block:myplugin/cactus_1",
+            "cactus_1"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": [
+        {
+            "max": {
+                "z": 0.75,
+                "x": 0.75,
+                "y": 1
+            },
+            "min": {
+                "z": 0.25,
+                "x": 0.25,
+                "y": 0
+            }
+        }
+    ],
+    "blockObjectOnCollision": true,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0.06,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0.06,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.06,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.06,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "cactus_side_cactus_1.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 0.94,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0.94,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0.94,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0.94,
+                    "y": 1
+                }
+            ],
+            "texture": "cactus_side_cactus_1.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.94,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 0.94,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0.94,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 0.94,
+                    "x": 1,
+                    "y": 1
+                }
+            ],
+            "texture": "cactus_side_cactus_1.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 0.06,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0.06,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.06,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0.06,
+                    "y": 1
+                }
+            ],
+            "texture": "cactus_side_cactus_1.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 0
+                }
+            ],
+            "texture": "cactus_top_cactus_1.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "z": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "z": 1,
+                    "x": 0,
+                    "y": 1
+                }
+            ],
+            "texture": "cactus_bottom_cactus_1.png"
+        }
+    ],
+    "base": "base_block"
+}

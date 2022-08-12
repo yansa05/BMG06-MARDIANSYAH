@@ -1,0 +1,58 @@
+{
+  "base": "food_base",
+  "baseDesc": "food_meat_chicken_desc",
+  "basePropDesc": {
+    "jump_bonus_duration": [
+      10,
+      "jump_bonus_duration_unit"
+    ],
+    "props_accelerate_bonus": [
+      0
+    ],
+    "props_attack": [
+      0
+    ],
+    "props_defense_bonus": [
+      0
+    ],
+    "props_jump": [
+      0
+    ],
+    "recover_vp": [
+      5
+    ],
+    "restore_hp": [
+      5
+    ]
+  },
+  "buffContinueTime": 200,
+  "canAbandon": true,
+  "canUse": true,
+  "desc": "{food_meat_chicken_desc}\n{jump_bonus_duration}10.0{jump_bonus_duration_unit}\n{restore_hp}5\n{recover_vp}5\n",
+  "dropMatItem": {
+    "scale": 0.8,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "food_buff": "myplugin/item_buff_food_meat_chicken[food_buff",
+  "icon": "meat_chicken.png",
+  "itemname": "food_meat_chicken",
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 2,
+    "translate": {
+      "x": 0.1,
+      "y": 0.05,
+      "z": 0
+    }
+  },
+  "mesh": "jirou.mesh",
+  "needSave": true,
+  "recoverHpStep": 5,
+  "recoverVpStep": 5
+}

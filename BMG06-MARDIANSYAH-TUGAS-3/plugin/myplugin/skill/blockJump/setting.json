@@ -1,0 +1,13 @@
+{
+    "icon": "",
+    "type": "Any",
+    "cdTime": 1,
+    "castAction": "jump",
+    "isResetAction": true,
+    "castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "blockjump.mp3"
+    }
+}

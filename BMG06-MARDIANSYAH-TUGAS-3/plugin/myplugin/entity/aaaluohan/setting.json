@@ -1,0 +1,94 @@
+{
+  "icon": "mushroomMonsterBig.png",
+  "actorName": "mob_mushroom_monster_big.actor",
+  "avoidCliff": true,
+  "posSyncDelay": 1,
+  "canHitching": true,
+  "avoidCliffHight": 1,
+  "meetCliffBackRun": true,
+  "attackNpc": false,
+  "dieInColor": {
+    "a": 255,
+    "r": 255,
+    "g": 255,
+    "b": 255
+  },
+  "attackEffect": "attack_range.effect",
+  "autoAttack": true,
+  "enableAI": false,
+  "canClick": false,
+  "collision": true,
+  "canJump": false,
+  "ShowSettingUI": true,
+  "chaseDistance": 10,
+  "maxVisualAngle": 360,
+  "patrolDistance": 10,
+  "idleProb": 0.2,
+  "homeSize": 6,
+  "idleTime": [
+    60,
+    60
+  ],
+  "moveSpeed": 0.28,
+  "maxHp": 1,
+  "defense": 0,
+  "damage": 0,
+  "textHeight": 2,
+  "bodyTurnMin": 3,
+  "hpBarWidth": 2,
+  "hurtResistantTime ": 5,
+  "autoMove": true,
+  "entityDerive": "monster",
+  "canKill": true,
+  "skillList": [
+    {
+      "prioity": 1,
+      "hpRateMax": 1,
+      "attackDis": 20,
+      "hpRateMin": 0,
+      "castActionTime": 5,
+      "fullName": "myplugin/ai_accelerated_mushroomMonsterBig",
+      "moveTarget": true
+    }
+  ],
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      0.8,
+      1.5,
+      0.8
+    ]
+  },
+  "name": "",
+  "hideHp": 1,
+  "deadActions": {
+    "squashed": {
+      "scaleY": 0.4
+    },
+    "die": {
+      "name": "die",
+      "time": 26
+    }
+  },
+  "destroyTime": 26,
+  "deathEffect": {
+    "effect": "Burst_mario_die.effect",
+    "time": 80,
+    "pos": {
+      "z": 0,
+      "y": 0.5,
+      "x": 0
+    },
+    "delayTime": 18
+  },
+  "deadSound": {
+    "sound": "monster_die2.mp3",
+    "selfOnly": false,
+    "loop": false,
+    "volume": 1,
+    "delayTime": 18
+  },
+  "addScore": 200,
+  "viewDistance": 32,
+  "disableShadow": true
+}

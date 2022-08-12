@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="gold_apple.png" name="gold_apple" nativeHorzRes="64" nativeVertRes="64" resourceGroup="imagesets" version="2">
+	<Image height="30" name="gold_apple" width="30" xPos="0" yPos="0"/>
+	<Image height="18" name="gold_apple_hp" width="36" xPos="0" yPos="30"/>
+</Imageset>

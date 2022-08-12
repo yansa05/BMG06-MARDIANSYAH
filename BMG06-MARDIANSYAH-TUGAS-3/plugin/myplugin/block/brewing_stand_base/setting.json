@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/brewing_stand_base",
+            "block:myplugin/brewing_stand_base",
+            "brewing_stand_base"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "brewing_stand_base.png",
+        "brewing_stand_base.png",
+        "brewing_stand_base.png",
+        "brewing_stand_base.png",
+        "brewing_stand_base.png",
+        "brewing_stand_base.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

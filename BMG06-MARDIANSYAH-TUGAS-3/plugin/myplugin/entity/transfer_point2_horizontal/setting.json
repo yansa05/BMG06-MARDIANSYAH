@@ -1,0 +1,32 @@
+{
+  "actorName": "object_tube_green_horizontal.actor",
+  "oneWay": false,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "rotateY": true,
+  "dirOffset":{
+    "0": {
+		"x": 0,
+		"y": 0,
+		"z": 3
+	  },
+	  "90": {
+	"x": -3,
+	"y": 0,
+	"z": 0
+  },
+	  "180": {
+	"x": 0,
+	"y": 0,
+	"z": -3
+  },
+	  "270": {
+		"x": 3,
+		"y": 0,
+		"z": 0
+	  }
+  },
+  "base": "transfer_point1",
+  "viewDistance": 32,
+  "disableShadow": true
+}

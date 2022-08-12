@@ -1,0 +1,9 @@
+{
+    "effect": {
+			"effect": "Burst_bubble_pop.effect",
+			"once": false,
+			"pos": {"x":0,"y":1,"z":0},
+			"yaw": 180
+	},
+	"fixTime": "reset"
+}

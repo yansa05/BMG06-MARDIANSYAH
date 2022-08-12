@@ -1,0 +1,21 @@
+{
+    "stack_count_max": 64,
+    "itemname": "item.diamond_axe.name",
+    "icon": "diamond_axe.png",
+    "candrop": true,
+    "isAddItem": true,
+    "droplifetime": 100,
+    "itemintroduction": "item.diamond_axe.intro",
+    "dropSpeed": 0.1,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            0.5,
+            0.5,
+            0.5
+        ]
+    },
+    "skill":[
+        "myplugin/test_gun"
+    ]
+}

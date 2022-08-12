@@ -1,0 +1,15 @@
+SKILL_CAST {
+	$handItem = GetEntityHandItem(entity = $obj1)
+	If(GetItemCfgByItemClass(item = $handItem, key = "fullName") ~= "myplugin/bucket_water"){
+		Return()
+	}
+	ReplaceHandItem(entity = $obj1, name = "myplugin/bucket_empty")
+	$map = GetEntityMap(entity = $obj1)
+	$placePos = $blockPos
+	If (not GetBlockConfig(map = $map, pos = $blockPos, key = "waterCfg")){
+		$placePos = {x = NumberFloor(p1 = GetPosX(pos = $blockPos)), y = NumberFloor(p1 = GetPosY(pos = $blockPos)) + 1, z = NumberFloor(p1 = GetPosZ(pos = $blockPos))}
+	}
+	--CreateBlock(map = $map, block = "myplugin/water_0_4", pos = $placePos)
+	--AddWaterSpreadPos(map = $map, pos = $placePos)
+	AddWaterSource(map = $map, pos = $placePos, waterType = "water")
+}

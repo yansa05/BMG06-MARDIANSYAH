@@ -1,0 +1,6 @@
+{
+	"moveSpeed": -99,
+	"gravity": 0.5,
+	"undamageable":1,
+	"unassailable":1
+}

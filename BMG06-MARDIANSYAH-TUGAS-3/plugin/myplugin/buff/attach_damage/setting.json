@@ -1,0 +1,4 @@
+{ "showIcon":"set:buff_icon.json image:attack_self.png",
+  "damage": 1,
+  "attachType": "damage"
+}

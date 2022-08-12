@@ -1,0 +1,129 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/lever_10",
+            "block:myplugin/lever_10",
+            "lever_10"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "collisionBoxes": {},
+    "quads": [
+        {
+            "pos": [
+                {
+                    "z": 0.38,
+                    "x": 0.6,
+                    "y": 1
+                },
+                {
+                    "z": 0.38,
+                    "x": 0.6,
+                    "y": 0
+                },
+                {
+                    "z": 0.38,
+                    "x": 0.4,
+                    "y": 0
+                },
+                {
+                    "z": 0.38,
+                    "x": 0.4,
+                    "y": 1
+                }
+            ],
+            "texture": "lever_lever_10.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.6,
+                    "x": 0.52,
+                    "y": 1
+                },
+                {
+                    "z": 0.6,
+                    "x": 0.52,
+                    "y": 0
+                },
+                {
+                    "z": 0.2,
+                    "x": 0.52,
+                    "y": 0
+                },
+                {
+                    "z": 0.2,
+                    "x": 0.52,
+                    "y": 1
+                }
+            ],
+            "texture": "lever_lever_10.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.42,
+                    "x": 0.4,
+                    "y": 1
+                },
+                {
+                    "z": 0.42,
+                    "x": 0.4,
+                    "y": 0
+                },
+                {
+                    "z": 0.42,
+                    "x": 0.6,
+                    "y": 0
+                },
+                {
+                    "z": 0.42,
+                    "x": 0.6,
+                    "y": 1
+                }
+            ],
+            "texture": "lever_lever_10.png"
+        },
+        {
+            "pos": [
+                {
+                    "z": 0.2,
+                    "x": 0.48,
+                    "y": 1
+                },
+                {
+                    "z": 0.2,
+                    "x": 0.48,
+                    "y": 0
+                },
+                {
+                    "z": 0.6,
+                    "x": 0.48,
+                    "y": 0
+                },
+                {
+                    "z": 0.6,
+                    "x": 0.48,
+                    "y": 1
+                }
+            ],
+            "texture": "lever_lever_10.png"
+        }
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "lightOpacity": 0,
+    "isOpaqueFullCube": false,
+    "blockObjectOnCollision": false,
+    "base": "base_block"
+}

@@ -1,0 +1,15 @@
+{
+	"effect": {
+		"effect": "Continuous_dust.effect",
+		"once": false,
+		"pos": {"x":0,"y":0.16,"z":-0.2},
+		"yaw": 180
+	},
+	"sound": {
+        "volume": 1,
+        "loop": true,
+        "selfOnly": false,
+        "sound": "sprint_sound_1.mp3"
+	},
+    "sync": "other"
+}

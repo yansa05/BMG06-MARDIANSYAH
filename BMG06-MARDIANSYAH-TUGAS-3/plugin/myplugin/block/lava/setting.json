@@ -1,0 +1,46 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/lava",
+          "block:myplugin/lava",
+          "lava"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1.0
+    ]
+  },
+  "collisionBoxes": [],
+  "emissionScale": 6,
+  "isOpaqueFullCube": false,
+  "lightEmitted": 1,
+  "lightEmittedB": 1,
+  "lightEmittedG": 1,
+  "lightEmittedR": 1,
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1.0\n",
+  "editBaseFunc": "block_breakTime",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "lava.png",
+    "lava.png",
+    "lava.png",
+    "lava.png",
+    "lava.png",
+    "lava.png"
+  ]
+}

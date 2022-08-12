@@ -1,0 +1,40 @@
+VECTOR_SPAW {
+	$pos = ComputeV3(op = "add", p1 = $pos, p2 = {x = 0.5, y = 1, z = 0.5})
+	$map = GetEntityMap(entity = $player)
+	$entity = CreateNpc(cfgName = "myplugin/greenMushroom", pos = $pos, map = $map)
+	$yaw = GetEntityYaw(entity = $player)
+	SetAiData(entity = $entity, key = "StartRunYaw", value = $yaw)
+	StartAI(entity = $entity)
+}
+
+ENTITY_TOUCH_ALL{ -- 碰到加血道具/entity，加血加分，如果是被龟壳碰到，加到踩龟壳的人身上
+	$damageByCollision = GetConfigVar(obj = $obj1, key = "damageByCollision")
+	If(not $damageByCollision)
+	{
+		Return()
+	}
+	If((IsPlayer(entity = $obj2) or $obj2.master) and $obj1 and not $obj1.dead){
+        $obj1.dead = true
+		$addplayer = IsPlayer(entity = $obj2) and $obj2
+        If($obj2.master){
+            $addplayer = GetObject(objID = $obj2.master)
+        }
+        If(not $addplayer or not IsValidObject(object = $addplayer) or not IsPlayer(entity = $addplayer))
+        {
+            Return()
+        }
+        AddEntityHp(entity = $addplayer, step = 1)
+		 UpdateStageScore(player = $addplayer, score = GetConfigVar(obj = $obj1, key = "addScore"))
+        CallTrigger(event = "ADD_SCORE", object = $addplayer, score = GetConfigVar(obj = $obj1, key = "addScore"))
+        --KillEntity(entity = $obj1)
+        StartTimer(event = "KILL_OWNER", time = 2, object = $obj1)
+    }
+}
+
+KILL_OWNER{
+    KillEntity(entity = $obj1)
+}
+
+ENTITY_HITTED{
+	CallTrigger(event = "ENTITY_TOUCH_ALL", object = $obj1, obj2 = $obj2)
+}

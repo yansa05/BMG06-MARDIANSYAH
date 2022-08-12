@@ -1,0 +1,16 @@
+{
+  "actorName": "object_tube_blue_reversed.actor",
+  "oneWay": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "dirOffset":{
+    "0": {
+		"x": 0,
+		"y": -3,
+		"z": 0
+	  }
+  },
+  "base": "transfer_point1",
+	"viewDistance": 32,
+  "disableShadow": true
+}

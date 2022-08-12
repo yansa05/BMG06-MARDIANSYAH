@@ -1,0 +1,5 @@
+REGION_ENTER(debug = false){
+	If(IsPlayer(entity = $obj1)){
+		ChangeCameraView(entity = $obj1, pitch = 35,yaw = 90,distance = 9,offset = {x = 0,y = 2,z = 0}, smooth = 2)
+	}
+}

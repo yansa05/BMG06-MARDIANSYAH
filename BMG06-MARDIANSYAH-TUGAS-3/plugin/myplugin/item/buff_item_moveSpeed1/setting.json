@@ -1,0 +1,8 @@
+{
+    "icon": "item_moveSpeed.png",
+    "itemname": "item.moveSpeed_1.name",
+    "itemintroduction": "item.moveSpeed_1.intro",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/moveSpeed1"
+}

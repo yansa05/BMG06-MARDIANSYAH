@@ -1,0 +1,4 @@
+{ "showIcon":"set:buff_icon.json image:deDamage.png",
+  "attachType": "deDamage",
+  "deDamage": 4
+}

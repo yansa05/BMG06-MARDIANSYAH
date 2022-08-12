@@ -1,0 +1,24 @@
+ENTITY_ENTER {
+	
+}
+
+ENTITY_DAMAGE {
+
+}
+
+ENTITY_REBIRTH{
+	UpdateScaleWhenRebirth(entity = $obj1)
+}
+
+ENTITY_DIE {   
+    $obj1.killFrom = $obj2 
+    CallTrigger(event = "ENTITY_DIE_DROP_ITEM", from = $obj1)
+   
+}
+
+ENTITY_TOUCH_ON { -- 怪物被踩，玩家不在无敌状态时，踩到=死，并且给玩家二次跳跃
+    $invincibleBuff = GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/invincible_buff")
+    If(IsPlayer(entity = $obj2) and not $invincibleBuff){
+        Damage(damage = 1, entity = $obj1)
+    }
+}

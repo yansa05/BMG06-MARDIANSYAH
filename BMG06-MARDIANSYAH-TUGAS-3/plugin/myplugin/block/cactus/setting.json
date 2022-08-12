@@ -1,0 +1,230 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/cactus",
+          "block:myplugin/cactus",
+          "cactus"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/stone_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/stone_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "blockObjectOnCollision": true,
+  "breakTime": 20,
+  "collisionBoxes": [
+    {
+      "max": {
+        "x": 0.75,
+        "y": 1,
+        "z": 0.75
+      },
+      "min": {
+        "x": 0.25,
+        "y": 0,
+        "z": 0.25
+      }
+    }
+  ],
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dontBeCheckFullCub": true,
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/cactus",
+      "block:myplugin/cactus",
+      "cactus"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "lightOpacity": 0,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0.06
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0.06
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.06
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0.06
+        }
+      ],
+      "texture": "cactus_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0.94,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 0.94,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0.94,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0.94,
+          "y": 1,
+          "z": 0
+        }
+      ],
+      "texture": "cactus_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0.94
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0.94
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0.94
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0.94
+        }
+      ],
+      "texture": "cactus_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0.06,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0.06,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0.06,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0.06,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "cactus_side.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        }
+      ],
+      "texture": "cactus_top.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "z": 1
+        }
+      ],
+      "texture": "cactus_bottom.png"
+    }
+  ],
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

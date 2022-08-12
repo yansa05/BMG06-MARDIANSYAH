@@ -1,0 +1,23 @@
+{
+	"desc":"{buff_attack}1.0\n",
+	"basePropDesc":{
+		"buff_attack":[
+			1
+		]
+	},
+	"icon": "set:buff_icon.json image:attack_self.png",
+	"icon_path": "plugin/myplugin/item/buff_item_damage/attack_self.png",
+	"icon2": "attack.png",
+	"itemname": "attack_boot",
+	"isAttach": true,
+	"attachBuff": "myplugin/attach_damage",
+	"settingUI":{
+	"tabList":[
+		{
+			"leftName": "editor.ui.baseProp",
+			"wndName":"BaseProp"
+		}
+	]
+},
+"editBaseFunc":"buff_item_damage"
+}

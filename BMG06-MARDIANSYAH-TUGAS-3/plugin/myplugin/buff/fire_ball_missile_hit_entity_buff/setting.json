@@ -1,0 +1,8 @@
+{
+	"sound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": true,
+        "sound": "fire_ball_missile_hit_entity.mp3"
+	}
+}

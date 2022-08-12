@@ -1,0 +1,31 @@
+{
+    "base": "base_block",
+    "blockType": "lava",
+    "editBaseFunc": "lava_prop_edit",
+    "breakTime": 20,
+    "canBreak": false,
+    "canSwim": true,
+    "collisionBoxes": [],
+    "emissionScale": 6,
+    "isOpaqueFullCube": false,
+    "lightEmitted": 3,
+    "lightEmittedB": 3,
+    "lightEmittedG": 3,
+    "lightEmittedR": 3,
+    "renderPass": 2,
+    "texture": [
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png",
+        "/lava_flow.png"
+    ],
+    "waterCfg": {
+        "dir": 9,
+        "heigh": 8
+    },
+    "itemname": "myplugin/lava_9_itemname",
+    "desc": "myplugin/lava_9_base_desc",
+    "baseDesc": "myplugin/lava_9_base_desc"
+}

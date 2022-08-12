@@ -1,0 +1,10 @@
+{
+    "icon": "item_jumpSpeed_self.png",
+    "itemname": "item_jumpSpeed_self_1.name",
+    "itemintroduction": "item_jumpSpeed_self_1.intro",
+    "itembuff": "myplugin/jumpSpeed_self_1",
+    "isBuff": true,
+    "forTeam": false,
+    "statusFuncName": "IsUsing"
+
+}

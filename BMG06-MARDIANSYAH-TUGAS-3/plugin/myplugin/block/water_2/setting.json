@@ -1,0 +1,40 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/water_2",
+            "block:myplugin/water_2",
+            "water_2"
+        ]
+    ],
+	"blockType": "water",
+    "isOpaqueFullCube": false,
+    "breakTime": -1,
+    "collisionBoxes": {},
+    "texture": [
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png",
+        "/water_flow.png"
+    ],
+    "emitLightInMaxLightMode": true,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "editBaseFunc": "block_breakTime",
+    "focusable": false,
+    "renderPass": 4,
+    "lightOpacity": 1,
+    "clickPenetrate" : true,"canSwim": true,
+    "willLodCull": false,
+    "base": "base_block"
+}

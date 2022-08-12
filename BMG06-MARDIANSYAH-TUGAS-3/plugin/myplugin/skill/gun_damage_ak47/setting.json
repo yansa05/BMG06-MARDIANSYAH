@@ -1,0 +1,13 @@
+{
+  "castAction": "",
+  "castSound": {
+    "loop": false,
+    "selfOnly": false,
+    "sound": "/sound/shot.mp3",
+    "volume": 4
+  },
+  "damageType": 0,
+  "hurtDistance": 0,
+  "range": 150,
+  "type": "MeleeAttack"
+}

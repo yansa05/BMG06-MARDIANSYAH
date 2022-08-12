@@ -1,0 +1,68 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/lime_shulker_box",
+          "block:myplugin/lime_shulker_box",
+          "lime_shulker_box"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "breakBlockSound": {
+    "loop":true,
+    "path":"resource/blocksound/ore_break.mp3",
+    "sound":"",
+    "volume":1
+  },
+  "breakBlockAfterSound": {
+    "loop": false,
+    "path": "resource/blocksound/ore_final.mp3",
+    "selfOnly": false,
+    "sound": "",
+    "volume": 1
+  },
+  "breakTime": 20,
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/lime_shulker_box",
+      "block:myplugin/lime_shulker_box",
+      "lime_shulker_box"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "shulker_top_lime.png",
+    "shulker_top_lime.png",
+    "shulker_top_lime.png",
+    "shulker_top_lime.png",
+    "shulker_top_lime.png",
+    "shulker_top_lime.png"
+  ]
+}

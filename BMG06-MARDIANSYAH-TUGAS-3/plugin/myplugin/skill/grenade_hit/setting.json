@@ -1,0 +1,9 @@
+{
+	"blowDist": 1,
+	"combustionDist": 2,
+	"burnEffeft": "plugin/myplugin/buff/flame_bomb_burn_buff/Continuous_fireball.effect",
+	"burnTime": 2000,
+	"damage": 8,
+	"hurtDistance": 0.7,
+	"type": "MeleeAttack"
+}

@@ -1,0 +1,21 @@
+SKILL_CAST(){ 
+    If(GetEntityOnGround(entity = $obj1)){
+        $obj1.hadSquatSkillClick = nil
+    }
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/aggravation_buff")
+    If($buff){
+        RemoveEntityBuff(entity = $obj1, buff = $buff)
+    }
+    If($obj1.checkSquatMove){
+        StopTimer(timer = $obj1.checkSquatMove)
+    }
+    $obj1.checkSquatMove = StartTimer(event = "CHECK_SQUAT_MOVE", time = 2, object = $obj1)
+
+    If($obj1.checkSprintMove){
+        StopTimer(timer = $obj1.checkSprintMove)
+    }
+    $obj1.checkSprintMove = StartTimer(event = "CHECK_SPRINT_MOVE", time = 1, object = $obj1)
+    If(IsEntitySwimming(entity = $obj1)){
+        CallTrigger(event = "REMOVE_SQUAT_BUFF", obj1 = $obj1)
+    }
+}

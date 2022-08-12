@@ -1,0 +1,13 @@
+{
+    "showIcon": "jumpProgressIcon.png",
+	"iconArea":
+	{
+      "VA": -10,
+      "VAlign": 2,
+      "HA": -10,
+      "HAlign": 2,
+      "width": 210,
+      "height": 210
+    },
+	"guide_btn":1
+}

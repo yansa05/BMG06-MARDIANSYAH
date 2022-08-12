@@ -1,0 +1,65 @@
+ENTITY_TOUCH_ALL { 
+	If(not $hadCall){
+        CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ALL", obj2 = $obj1, obj1 = $obj2, hadCall = true)
+    }
+    If(not IsPlayer(entity = $obj2)){
+		Return()
+	}
+    If(GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/invincible_buff")){
+        KillEntity(entity = $obj1, from = $obj2)
+    }
+	If(IsEntityTouchTop(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_TOP", obj2 = $obj1, obj1 = $obj2)
+	}ElseIf(IsEntityTouchOn(entity1 = $obj2, entity2 = $obj1)){
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_ON", obj2 = $obj1, obj1 = $obj2)
+	}Else{
+		CallTrigger(object = $obj2, event = "ENTITY_TOUCH_AROUND", obj2 = $obj1, obj1 = $obj2)
+	}
+}
+
+-- 木箱  可以被任意状态的玩家  顶爆/砸爆
+ENTITY_TOUCH_ON{
+    If(GetEntityTypeBuff(entity = $obj2, key = "fullName", value = "myplugin/squat_buff_break_vector") and not $obj1.hadBreak){
+        $obj1.hadBreak = true
+        KillEntity(entity = $obj1, from = $obj2)
+    }
+}
+
+ENTITY_TOUCH_TOP{
+    If(not $obj1.hadBreak){
+        $obj1.hadBreak = true
+        KillEntity(entity = $obj1, from = $obj2)
+    }
+}
+
+ENTITY_DIE{ -- 掉落物散落效果
+    If($obj2.guideStep == 3 and $obj2.playerStep == 3)
+    {
+        
+        RemoveEntityTypeBuff(entity = $obj2, key = "guide_btn", value = 3)
+        $obj2.guideStep = 4
+        $obj2.playerStep = 4
+        --SetGuidePostion(entity = $obj2, pos = nil)
+		KillEntity(entity = $obj2.GUIDE, from = $obj2)
+    }
+    If($obj2){
+        AddEntityBuff(entity = $obj2, cfg = "myplugin/vector_block_wood_break_sound_buff", buffTime = 60)
+    }
+    $count = GetEntityEditorVar(entity = $obj1, key = "count") or 0
+    If(0 == $count){
+        Return()
+    }
+    $type = GetEntityEditorVar(entity = $obj1, key = "type")
+	$fullName = GetEntityEditorVar(entity = $obj1, key = "fullName")
+	$index = GetEntityEditorVar(entity = $obj1, key = "index")
+    $pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+    ForLoop(from = 1,to = $count){
+		VectorBlockSpaw(pos = $pos, map = $map , block=$obj1, player = $obj2, fullName = $fullName, type = $type, touchTop = true, index = $index)
+    }
+}
+
+ENTITY_HITTED{
+    $obj1.hadBreak = true
+    KillEntity(entity = $obj1, from = $obj2)
+}

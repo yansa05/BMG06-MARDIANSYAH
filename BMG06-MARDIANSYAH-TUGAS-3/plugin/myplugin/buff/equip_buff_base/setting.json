@@ -1,0 +1,22 @@
+{
+    "maxHp": 0,
+    "maxMp": 0,
+    "damage": 0,
+    "defense": 0,
+    "gravity": 0.0,
+    "moveSpeed": 0,
+    "moveFactor": 0.0,
+    "moveAcc": 0.0,
+    "jumpSpeed": 0.0,
+    "dropDamageRatio": 0,
+    "upgradePrice": 0,
+    "hurtTime": 0,
+    "hide": 0,
+    "upgradeBuff": false,
+    "unassailable": null,
+    "undamageable": null,
+    "dropDamageStart": null,
+    "reachDistance": null,
+    "needSave": true,
+    "base": "equip_buff_base"
+}

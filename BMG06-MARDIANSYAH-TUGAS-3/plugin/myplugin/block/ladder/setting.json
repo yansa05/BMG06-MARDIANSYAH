@@ -1,0 +1,157 @@
+{
+    "base": "base_block",
+    "attackSide": "0:0:-1",
+    "baseDesc": "myplugin/ladder_base_desc",
+    "basePropDesc": {
+        "block.die.drop.title": [
+            [
+                [
+                    "block",
+                    1,
+                    1,
+                    "myplugin/ladder",
+                    "block:myplugin/ladder",
+                    "myplugin/ladder_itemname"
+                ]
+            ]
+        ],
+        "golden_apple_hardness": [
+            1
+        ]
+    },
+    "blockObjectOnCollision": false,
+    "boundingVolume": {
+        "params": [
+            1,
+            1,
+            1
+        ],
+        "type": "Box"
+    },
+    "breakBlockSound": {
+        "loop": true,
+        "path": "plugin/myplugin/sound/wood.mp3",
+        "selfOnly": false,
+        "sound": "cloth1.mp3",
+        "volume": 1
+    },
+    "breakTime": 20,
+    "canClick": false,
+    "canSwim": false,
+    "changers": {
+        "-1:0:0": "myplugin/ladder_4",
+        "0:0:-1": "myplugin/ladder",
+        "0:0:1": "myplugin/ladder_3",
+        "1:0:0": "myplugin/ladder_5"
+    },
+    "climbBuff": [
+        "myplugin/run_ladder"
+    ],
+    "climbDirType": 0,
+    "climbSpeed": 0.05,
+    "collisionBoxes": [],
+    "color": [
+        1,
+        1,
+        1,
+        1
+    ],
+    "desc": "{myplugin/ladder_base_desc}\n{golden_apple_hardness}:1\n",
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/ladder",
+            "block:myplugin/ladder",
+            "myplugin/ladder_itemname"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "emitLightInMaxLightMode": true,
+    "fall": false,
+    "isDropItem": true,
+    "isOpaqueFullCube": false,
+    "itemintroduction": "ladder.intro",
+    "itemname": "myplugin/ladder_itemname",
+    "lightEmitted": 0,
+    "lightOpacity": 15,
+    "maxFallSpeed": 1.5,
+    "maxSpeed": 0.05,
+    "mountBlock": false,
+    "placeBlockSound": {
+        "loop": false,
+        "path": "plugin/myplugin/sound/ladder.mp3",
+        "selfOnly": false,
+        "sound": "ladder.mp3",
+        "volume": 1
+    },
+    "quads": [
+        {
+            "pos": [
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.98
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.98
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.98
+                },
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.98
+                }
+            ],
+            "texture": "ladder.png"
+        },
+        {
+            "pos": [
+                {
+                    "x": 1,
+                    "y": 1,
+                    "z": 0.98
+                },
+                {
+                    "x": 1,
+                    "y": 0,
+                    "z": 0.98
+                },
+                {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.98
+                },
+                {
+                    "x": 0,
+                    "y": 1,
+                    "z": 0.98
+                }
+            ],
+            "texture": "ladder.png"
+        }
+    ],
+    "recycle": false,
+    "recycleTime": 20,
+    "renderable": true,
+    "renderPass": 0,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "showBoundBox": true,
+    "spring": 0,
+    "checkPlaceFullCube": true,
+    "blockType": "wood"
+}

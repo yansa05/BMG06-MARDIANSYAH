@@ -1,0 +1,9 @@
+{
+	"type": "Click",
+	"priority": -2,
+	"isTouch": true,
+	"startAction": "attack7",
+    "castAction": "attack7",
+	"sustainAction": "attack7",
+ 	"cycleSustainActionTime": 5
+}

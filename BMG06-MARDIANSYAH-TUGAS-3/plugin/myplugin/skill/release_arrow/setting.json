@@ -1,0 +1,6 @@
+{
+    "targetType": "Camera",
+    "type": "Missile",
+    "missileCfg": "myplugin/arrow_missile",
+    "Editor_NameKey": "tr.10783"
+}

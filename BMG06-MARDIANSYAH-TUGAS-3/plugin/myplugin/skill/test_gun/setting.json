@@ -1,0 +1,32 @@
+{
+  "castAction": "pistol_shoot",
+  "castActionTime": 10,
+  "cdTime": 5,
+  "castInterval": 1,
+  "enableCdMask":true,
+  "consumeVp": 0,
+  "frontSight": "myplugin/frontsight_1",
+  "hitEntityHeadSkill": "myplugin/test_gun_hit",
+  "hitEntitySkill": "myplugin/test_gun_hit",
+  "icon": "gun.png",
+   "iconArea": {
+        "VA": -250,
+        "VAlign": 2,
+        "HA": -50,
+        "HAlign": 2,
+        "width": 145,
+        "height": 145
+    },
+  "isClick": true,
+  "isHitPointRandom": false,
+  "isJump": false,
+  "isTouch": false,
+  "rayLenth": 150,
+  "recoil": 0,
+  "trajectoryEffect":"BulletEff.effect",
+  "startAction": "",
+  "sustainAction": "",
+  "hitEffect": "effect_gun_be_shot.effect",
+  "hitHeadEffect": "headshot.effect",
+  "type": "Ray"
+}

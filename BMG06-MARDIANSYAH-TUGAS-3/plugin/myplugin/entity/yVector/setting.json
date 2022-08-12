@@ -1,0 +1,16 @@
+{
+    "icon": "gold_sword.png",
+    "actorName": "object_container_block_qm.actor",
+    "collision": true,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            1,
+            1,
+            1
+        ]
+    },
+    "entityDerive": "vectorBlock",
+    "name": "",
+	"disableShadow": true
+}

@@ -1,0 +1,5 @@
+{
+    "showIcon":"set:buff_icon.json image:addStep_other.png",
+    "type": "create",
+    "addStep": 100
+}

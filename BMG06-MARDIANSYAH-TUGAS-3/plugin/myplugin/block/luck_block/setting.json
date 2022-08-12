@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/luck_block",
+            "block:myplugin/luck_block",
+            "luck_block"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "texture": [
+        "lucky.png",
+        "lucky.png",
+        "lucky.png",
+        "lucky.png",
+        "lucky.png",
+        "lucky.png"
+    ],
+    "blockObjectOnCollision": true,
+    "base": "base_block"
+}

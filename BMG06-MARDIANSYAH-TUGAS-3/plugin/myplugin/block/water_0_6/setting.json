@@ -1,0 +1,32 @@
+{
+		"rotation":{
+			"z":0,
+			"x":0,
+			"y":270
+		},
+		"editBaseFunc":"block_breakTime",
+		"waterCfg":{
+			"dir":6,
+			"heigh":7
+		},
+		"blockType": "water",
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/water_0_6",
+				"block:myplugin\/water_0_6",
+				"water_0_6"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"base":"water_0_0"
+	}

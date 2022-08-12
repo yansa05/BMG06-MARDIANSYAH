@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/prismarine_2",
+            "block:myplugin/prismarine_2",
+            "prismarine_2"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "prismarine_dark.png",
+        "prismarine_dark.png",
+        "prismarine_dark.png",
+        "prismarine_dark.png",
+        "prismarine_dark.png",
+        "prismarine_dark.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

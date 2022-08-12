@@ -1,0 +1,13 @@
+ENTITY_ENTER(debug = false){
+	$pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+    $regionCfg = GetConfigVar(obj = $obj1, key = "regionCfg")
+    $ry = GetEntityEditorVar(entity = $obj1, key = "ry")
+	$region = Table(max = V3(0, -1, 0) + $pos, min = V3(-1, -3, -1) + $pos)
+	$region = AddRegion(map = $map, region = $region, regionCfg = $regionCfg)
+	SetRegionOwner(owner = $obj1, region = $region)
+	$obj1.effectBuff = AddEntityBuff(entity = $obj1, cfg = "myplugin/halo_effect_down")
+}
+ENTITY_DIE(debug = false){
+	RemoveEntityBuff(entity = $obj1, buff = $obj1.effectBuff)
+}

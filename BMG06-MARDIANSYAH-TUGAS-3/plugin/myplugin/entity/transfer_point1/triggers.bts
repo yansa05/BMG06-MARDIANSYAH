@@ -1,0 +1,33 @@
+ENTITY_ENTER(debug = false){
+	$pos = GetEntityPosition(entity = $obj1)
+	$map = GetEntityMap(entity = $obj1)
+	$regionCfg = GetConfigVar(obj = $obj1, key = "regionCfg")
+	$region = Table(max = V3(0, 2, 0) + $pos, min = V3(-1, 2, -1) + $pos)
+	$region = AddRegion(map = $map, region = $region, regionCfg = $regionCfg)
+	SetRegionOwner(owner = $obj1, region = $region)
+	$obj1.effectBuff = AddEntityBuff(entity = $obj1, cfg = "myplugin/halo_effect_up")
+	If(GetConfigVar(obj = $obj1, key = "oneWay") and GetEntityEditorVar(entity = $obj1, key = "order") == 2){ -- move to waiting hall; hide it
+		$pairID = GetEntityEditorVar(entity = $obj1, key = "pairID")
+		$objKey = Concat(p1 = "teleEntity_", p2 = GetEntityMapId(entity = $obj1))
+		$objKey = Concat(p1 = $objKey, p2 = "_")
+		$objKey = Concat(p1 = $objKey, p2 = $pairID)
+		Test(key = $objKey)
+		@[$objKey] = $obj1
+		@[Concat(p1 = "telePos_", p2 = $pairID)] = GetEntityPosition(entity = $obj1)
+		CallTrigger(event = "ENTITY_MOVE_INVISIBLE", object = $obj1)
+	}
+}
+ENTITY_DIE(debug = false){
+	RemoveEntityBuff(entity = $obj1, buff = $obj1.effectBuff)
+}
+ENTITY_HIDE_WITH_EFFECT(debug = false){
+	If($obj1.invisibleBuff){
+		Return()
+	}
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/hide_effect", buffTime = 40)
+	StartTimer(object = $obj1, event = "ENTITY_MOVE_INVISIBLE", rep = false, time = 40)
+}
+ENTITY_MOVE_INVISIBLE(debug = false){
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/tube_invisible")
+	$obj1.invisibleBuff = true
+}

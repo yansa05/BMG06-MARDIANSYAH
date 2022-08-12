@@ -1,0 +1,1 @@
+{"door_entity":{"guideLineMaxDistance":200},"monster_base":{"guideLineMaxDistance":200},"viewDistance":32,"disableShadow":true,"gravity":0,"actorName":"boytouming.actor","boundingVolume":{"type":"Box","params":[0.01,0.01,0.01]},"guideLineMaxDistance":200}

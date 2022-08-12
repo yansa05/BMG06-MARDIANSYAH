@@ -1,0 +1,39 @@
+{
+	"vanishTime": 9,
+	"lifeTime": 100,
+	"vanishEffect": {
+		"yaw": 0,
+		"pos": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"effect": "Burst_explosion.effect"
+	},
+	"boundingVolume":{
+		"type":"Box",
+		"params":[
+			0.1,
+			0.1,
+			0.1
+		]
+	},
+	"modelMesh": "bed_grenade.mesh",
+	"hitBlockSkill": "myplugin/grenade_hit",
+	"hitEntitySkill": "myplugin/grenade_hit",
+	"rotateSpeed": 0,
+	"followTarget": false,
+	"moveAcc": 0,
+	"hitInterval": 5,
+	"moveSpeed": 1.5,
+	"hitCount": 1,
+	"collideBlock": 4,
+	"collideEntity": 1,
+	"gravity": 0.05,
+	"hitSound":{
+		"loop": false,
+        "volume": 1,
+        "sound": "tnt.mp3",
+        "selfOnly": false
+	}
+}

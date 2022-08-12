@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/concrete_powder_orange",
+            "block:myplugin/concrete_powder_orange",
+            "concrete_powder_orange"
+        ]
+    ],
+    "blockType": "stone",
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "concrete_powder_orange.png",
+        "concrete_powder_orange.png",
+        "concrete_powder_orange.png",
+        "concrete_powder_orange.png",
+        "concrete_powder_orange.png",
+        "concrete_powder_orange.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

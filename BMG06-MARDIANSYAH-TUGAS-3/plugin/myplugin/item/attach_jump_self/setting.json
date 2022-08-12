@@ -1,0 +1,8 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "buff_maxHp",
+	"isBuff": true,
+	"forTeam": false,
+	"attachType": "jump",
+	"attachBuff": "myplugin/attach_jump_buff"
+}

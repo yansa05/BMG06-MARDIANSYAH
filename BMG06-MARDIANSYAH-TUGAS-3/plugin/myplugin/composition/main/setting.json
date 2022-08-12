@@ -1,0 +1,9 @@
+{
+  "composites": [
+    {
+      "group": "editor",
+      "groupName": "editor.main",
+      "recipes": []
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+SKILL_CAST {
+	$blowDist = GetSkillVar(fullName = $fullName, key = "blowDist")--ÆÆ»µ·¶Î§
+	ExplodeAreaBlockHandle(blowDist = $blowDist, pos = $pos, entity = $obj1, excludeBlocks = [])
+}

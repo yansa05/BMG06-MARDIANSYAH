@@ -1,0 +1,7 @@
+{
+    "icon": "wood_sword.png",
+    "itemname": "boost_create",
+    "isBuff": true,
+    "forTeam": true,
+	"itembuff": "myplugin/boost_create2"
+}

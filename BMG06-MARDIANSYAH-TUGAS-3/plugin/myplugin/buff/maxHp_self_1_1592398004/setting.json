@@ -1,0 +1,5 @@
+{
+		"showIcon":"set:buff_icon.json image:maxHp_self2.png",
+		"maxHp":5,
+		"type":"maxHp"
+	}

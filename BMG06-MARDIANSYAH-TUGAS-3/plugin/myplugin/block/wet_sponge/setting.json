@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/wet_sponge",
+            "block:myplugin/wet_sponge",
+            "wet_sponge"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "sponge_wet.png",
+        "sponge_wet.png",
+        "sponge_wet.png",
+        "sponge_wet.png",
+        "sponge_wet.png",
+        "sponge_wet.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="body_status.png" name="body_status" nativeHorzRes="256" nativeVertRes="64" resourceGroup="imagesets" version="2">
+	<Image height="16" name="hp" width="1" xPos="0" yPos="0"/>
+	<Image height="20" name="hp_bg" width="1" xPos="1" yPos="0"/>
+	<Image height="40" name="hp_empty" width="40" xPos="2" yPos="0"/>
+	<Image height="40" name="hp_full" width="40" xPos="42" yPos="0"/>
+	<Image height="40" name="hp_half" width="40" xPos="82" yPos="0"/>
+	<Image height="16" name="vp" width="1" xPos="122" yPos="0"/>
+	<Image height="40" name="vp_empty" width="40" xPos="123" yPos="0"/>
+	<Image height="40" name="vp_full" width="40" xPos="163" yPos="0"/>
+	<Image height="40" name="vp_half" width="40" xPos="203" yPos="0"/>
+</Imageset>

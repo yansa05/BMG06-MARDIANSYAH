@@ -1,0 +1,5 @@
+{
+  "moveSpeed": -9999,
+  "bodyTurnMin": -40,
+  "bodyTurnSpeed": 15
+}

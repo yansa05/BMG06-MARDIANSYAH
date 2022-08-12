@@ -1,0 +1,30 @@
+{
+    "followTarget": false,
+    "collideBlock": 1,
+    "collideEntity": 4,
+    "hitCount":1,
+    "hitInterval": 1,
+    "rotateSpeed": 0,
+    "moveSpeed": 0.5,
+    "lifeTime": 50,
+    "gravity": 0,
+    "hitEntitySkill": "myplugin/fire_ball_attack_1",
+    "moveAcc": 0,
+    "startEffect": {
+        "yaw": 0,
+        "pos": {
+            "x": 0,
+            "y": 0.5,
+            "z": 0
+        },
+        "effect": "fireball1.effect"
+    },
+    "boundingVolume": {
+        "params": [
+            1,
+            1,
+            1
+        ],
+        "type": "Box"
+    }
+}

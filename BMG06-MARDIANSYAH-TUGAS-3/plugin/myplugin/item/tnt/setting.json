@@ -1,0 +1,66 @@
+{
+  "base": "item_base",
+  "baseDesc": "myplugin/tnt_base_desc",
+  "basePropDesc": {
+    "tnt_continuous_damage": [
+      3,
+      "tnt_continuous_damage_unit"
+    ],
+    "tnt_continuous_time": [
+      5,
+      "tnt_continuous_time_unit"
+    ],
+    "tnt_explosion_damage": [
+      5
+    ],
+    "use_cd": [
+      5,
+      "use_cd_unit"
+    ]
+  },
+  "canAbandon": true,
+  "canUse": true,
+  "castFromClient": true,
+  "cooldown": 100,
+  "desc": "{myplugin/tnt_base_desc}\n{tnt_continuous_time}5{tnt_continuous_time_unit}\n{tnt_explosion_damage}5.0\n{use_cd}5.0{use_cd_unit}\n{tnt_continuous_damage}3.0{tnt_continuous_damage_unit}\n",
+  "dropMatItem": {
+    "rotateZ": 20,
+    "scale": 0.5,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0.1
+    }
+  },
+  "editBaseFunc": "tntPropEdit",
+  "handBuff": "myplugin/handbuff_tnt",
+  "icon": "tnt.png",
+  "itemintroduction": "item.tnt.intro",
+  "itemname": "myplugin/tnt_itemname",
+  "matItem_first": {
+    "rotateX": 0,
+    "rotateY": 0,
+    "rotateZ": 0,
+    "scale": 1,
+    "translate": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    }
+  },
+  "mesh": "gun_tnt_03.mesh",
+  "model": 46,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "skillName": "myplugin/throw_tnt",
+  "stack_count_max": 64,
+  "startAction": "throw2",
+  "useAction": "throw2",
+  "useTime": 20
+}

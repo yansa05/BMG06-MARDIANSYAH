@@ -1,0 +1,29 @@
+{
+  "icon": "gold_sword.png",
+  "actorName": "object_breakable_block_brown.actor",
+  "boundingVolume": {
+    "type": "Box",
+    "params": [
+      1,
+      1,
+      1
+    ]
+  },
+  "entityDerive": "vectorBlock",
+  "textHeight": 1,
+  "isStatic": true,
+  "name": "",
+  "collision": true,
+  "needCheckTouch": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "unassailable": 1,
+  "gravity": 0,
+  "maxHp": 10000,
+  "canHitching": true,
+
+  "reboundMissile": true,
+  "viewDistance": 32,
+  "disableShadow": true,
+  "uiType": "3"
+}

@@ -1,0 +1,41 @@
+{
+  "base": "aa_door_down",
+  "rotation": {
+    "z": 0,
+    "x": 0,
+    "y": 180
+  },
+  "placeCombination": [
+    {
+      "blockName": "myplugin/aa_door_down_360",
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "blockName": "myplugin/aa_door_up_360",
+      "pos": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      }
+    }
+  ],
+  "placef":{
+    "func": "door",
+    "params":[
+      {
+        "pos":{
+          "z": 0,
+          "x": 1,
+          "y": 0
+        },
+        "fullName": "myplugin/aa_door_down_360",
+        "mirrorBlockName": "myplugin/aa_door_down_360_mirror"
+      }
+    ]
+  },
+  "clickChangeBlock": "myplugin/aa_door_down_360_open"
+}

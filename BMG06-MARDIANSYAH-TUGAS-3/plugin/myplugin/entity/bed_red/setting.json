@@ -1,0 +1,23 @@
+{
+    "base": "base_revive",
+    "isEgg": false,
+    "actorName": "bed_red.actor",
+    "maxHp": 200,
+	"canAttack": true,
+    "textHeight": 2,
+    "collision": true,
+    "boundingVolume": {
+        "type": "Box",
+        "params": [
+            2,
+            1,
+            1
+        ]
+    },
+    "deadSound": {
+        "volume": 3,
+        "loop": false,
+        "sound": "/sound/dungeon_binglong_die.mp3"
+    },
+	"entityDerive":"pointEntity"
+}

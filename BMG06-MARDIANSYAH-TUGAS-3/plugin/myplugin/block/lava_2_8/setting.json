@@ -1,0 +1,23 @@
+{
+  "base": "lava_2_0",
+  "blockType": "lava",
+  "breakTime": 20,
+  "canBreak": false,
+  "canSwim": true,
+  "collisionBoxes": [],
+  "emissionScale": 6,
+  "isOpaqueFullCube": false,
+  "lightEmitted": 1,
+  "lightEmittedB": 1,
+  "lightEmittedG": 1,
+  "lightEmittedR": 1,
+  "rotation": {
+    "x": 0,
+    "y": 180,
+    "z": 0
+  },
+  "waterCfg": {
+    "dir": 8,
+    "heigh": 5
+  }
+}

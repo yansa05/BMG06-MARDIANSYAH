@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/mrlon_block",
+            "block:myplugin/mrlon_block",
+            "mrlon_block"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "melon_top.png",
+        "melon_top.png",
+        "melon_side.png",
+        "melon_side.png",
+        "melon_side.png",
+        "melon_side.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

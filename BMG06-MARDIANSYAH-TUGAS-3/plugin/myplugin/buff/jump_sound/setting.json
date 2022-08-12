@@ -1,0 +1,8 @@
+{"sound": {
+    "loop": false,
+    "selfOnly": false,
+    "sound": "cloth1.mp3",
+    "volume": 0.5
+  },
+  "sync": "other"
+}

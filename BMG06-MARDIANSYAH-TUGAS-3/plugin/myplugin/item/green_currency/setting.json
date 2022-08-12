@@ -1,0 +1,22 @@
+{
+  "baseDesc": "myplugin/green_currency_base_desc",
+  "candrop": true,
+  "desc": "{myplugin/green_currency_base_desc}\n",
+  "droplifetime": 100,
+  "icon": "green_currency.png",
+  "isAddItem": true,
+  "itemintroduction": "item.diamond_axe.intro",
+  "itemname": "myplugin/green_currency_itemname",
+  "stack_count_max": 64,
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": -30,
+    "scale": 0.6,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  }
+}

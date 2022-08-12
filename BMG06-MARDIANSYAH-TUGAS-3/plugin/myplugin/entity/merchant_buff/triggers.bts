@@ -1,0 +1,4 @@
+ENTITY_CLICK {
+    $merchantGroupName = GetEntityEditorVar(obj = $obj1, key = "merchantGroupName") or "shop_2"
+    ShowMerchantShop(entity = $obj2, merchantGroupName = $merchantGroupName)
+}

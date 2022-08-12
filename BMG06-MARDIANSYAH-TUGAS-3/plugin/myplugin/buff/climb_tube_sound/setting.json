@@ -1,0 +1,9 @@
+{
+    "needSave": false,
+	"sound":{
+		"volume": 0.2,
+        "loop": false,
+		"selfOnly": true,
+        "sound": "vectorBlockWoodBreak.mp3"
+	}
+}

@@ -1,0 +1,83 @@
+{
+  "icon": "ghost_turtle.png",
+  "actorName": "mob_new_ghost_turtle.actor",
+  "name": "",
+  "hideHp": 1,
+  "maxHp": 1,
+  "gravity": 0,
+  "collision": true,
+  "freeDrop": true,
+  "boundingVolume": {
+    "type": "Box",
+    "params": [ 1.2, 1.5, 1.2 ]
+  },
+  "deathHideTime": 100,
+  "reviveTime": 100,
+  "destroyTime": 30,
+  "revive": {
+    "action": "revive",
+    "actionTime": 40,
+    "changeActor": "mob_new_ghost_turtle_dead.actor",
+    "effect": {
+      "name": "Surround_ghost_turtle_aura.effect",
+      "time": 600,
+      "pos": {
+        "x": 0,
+        "y": 0.7,
+        "z": 0
+      }
+    }
+  },
+  "dieInColor": {
+    "a": 255,
+    "r": 255,
+    "g": 255,
+    "b": 255
+  },
+  "deadActions": {
+    "die": {
+      "changeActor": "mob_new_ghost_turtle_dead.actor",
+      "name": "die",
+      "time": 30
+    }
+  },
+  "attackNpc": false,
+  "attackEffect": "attack_range.effect",
+  "deathEffect": {
+    "effect": "Burst_mario_die.effect",
+    "time": 200
+  },
+  "deadSound": {
+    "sound": "ghost_turtle_die.mp3",
+    "selfOnly": false,
+    "loop": false,
+    "volume": 0.6,
+    "delayTime": 2
+  },
+  "rebirthSound": {
+    "sound": "ghost_turtle_revive.mp3",
+    "selfOnly": false,
+    "loop": false,
+    "volume": 0.6,
+    "delayTime": 0
+  },
+  "autoAttack": true,
+  "enableAI": true,
+  "autoMove": true,
+  "canClick": false,
+  "canJump": false,
+  "canMove": true,
+  "ShowSettingUI": true,
+  "maxVisualAngle": 360,
+  "patrolDistance": 7,
+  "chaseDistance": 7,
+  "homeSize": 15,
+  "idleProb": 0.1,
+  "moveSpeed": 0.2,
+  "textHeight": 2,
+  "addScore": 200,
+  "entityDerive": "monster",
+  "canKill": true,
+  "viewDistance": 32,
+  "disableShadow": true
+}

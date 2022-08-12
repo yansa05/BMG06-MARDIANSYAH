@@ -1,0 +1,32 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/lit_redstone_ore",
+            "block:myplugin/lit_redstone_ore",
+            "lit_redstone_ore"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "redstone_ore.png",
+        "redstone_ore.png",
+        "redstone_ore.png",
+        "redstone_ore.png",
+        "redstone_ore.png",
+        "redstone_ore.png"
+    ],
+    "lightEmitted": 15,
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

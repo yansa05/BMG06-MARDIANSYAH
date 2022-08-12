@@ -1,0 +1,16 @@
+{
+    "icon": "set:bed_mainui_icon.json image:icon_walk_nor.png",
+    "type": "Any",
+    "posKey":"move",
+    "castAction":"",
+    "customizeSkill": true,
+    "verticalAlignment":1,
+    "horizontalAlignment":2,
+    "area":
+    [
+        [0,-30],
+        [0,-70],
+        [0,70],
+        [0,70]
+    ]
+}

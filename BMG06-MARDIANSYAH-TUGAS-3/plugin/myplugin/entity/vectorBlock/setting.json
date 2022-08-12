@@ -1,0 +1,27 @@
+{
+  "icon": "gold_sword.png",
+  "actorName": "object_container_block_qm.actor",
+  "boundingVolume": {
+    "type": "Box",
+    "params": [ 1, 1, 1 ]
+  },
+  "entityDerive": "vectorBlock",
+  "name": "",
+  "collision": true,
+  "needCheckTouch": true,
+  "undamageable": 1,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "unassailable": 1,
+  "isStatic": true,
+  "gravity": 0,
+  "maxHp": 10000,
+  "textHeight":1,
+  "canHitching": true,
+  "reboundMissile": true,
+  "hurtInColor": {"a":255,"r":255,"g":255,"b":255},
+  "viewDistance": 32,
+  "uiType": "3",
+"base": "vector_base",
+  "desc": "vectorBlock_desc",
+  "disableShadow": true
+}

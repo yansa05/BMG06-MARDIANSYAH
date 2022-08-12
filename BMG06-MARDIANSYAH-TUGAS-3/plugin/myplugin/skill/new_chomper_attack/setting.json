@@ -1,0 +1,18 @@
+{
+    "cdTime": 40,
+    "startWait": [
+        0
+    ],
+    "targetType": "Camera",
+    "missileCfg": "myplugin/new_chomper",
+    "followTarget": true,
+    "type": "Missile",
+    "castAction": "attack",
+    "castActionTime": 26,
+	"castSound":{
+		"volume": 1,
+        "loop": false,
+		"selfOnly": false,
+        "sound": "chomper.mp3"
+	}
+}

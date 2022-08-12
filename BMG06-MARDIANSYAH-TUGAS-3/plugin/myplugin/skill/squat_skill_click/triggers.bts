@@ -1,0 +1,31 @@
+SKILL_CAST{
+    If(IsEntitySwimming(entity = $obj1))
+    {
+        Return()
+    }
+    CallTrigger(event = "CHECK_PORTAL", object = $obj1)
+    ------------------------------------------------------------- 如果在地上或者有跳蹲状态则不能触发(跳蹲只能在空中触发一次)
+    If(GetEntityOnGround(entity = $obj1)){
+        CastSkill(skill = "myplugin/squatWithClick" ,from = $obj1 ,packet = {needPre = true}) -- 地上单击就伯格动作
+        $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_progress_base_buff")
+        If(not $buff){
+            AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_progress_base_buff", buffTime = 5)
+        }
+        Return()
+    } 
+    If(IsEntitySwimming(entity = $obj1)){
+        Return()
+    }
+    If($obj1.hadSquatSkillClick){
+        Return()
+    }
+    $obj1.hadSquatSkillClick = true
+    $buff = GetEntityTypeBuff(entity = $obj1, key = "fullName", value = "myplugin/squat_progress_base_buff")
+    If(not $buff){
+        AddEntityBuff(entity = $obj1, cfg = "myplugin/squat_progress_base_buff", buffTime = 10)
+    }
+    ------------------------------------------------------------- 设置跳蹲状态，起跳状态
+    $obj1.takeoffStatus = "squat"
+    AddEntityBuff(entity = $obj1, cfg = "myplugin/cant_bounce", buffTime = 20)
+    CallTrigger(object = $obj1, event = "PLAY_SQUAT_CLICK_CAST")
+}

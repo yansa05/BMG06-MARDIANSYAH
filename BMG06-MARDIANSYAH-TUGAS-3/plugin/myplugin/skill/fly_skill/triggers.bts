@@ -1,0 +1,20 @@
+SKILL_CAST{
+	RemoveSkill(entity = $obj1, name = "myplugin/fly_skill")
+	RemoveSkill(entity = $obj1, name = "myplugin/squat_skill_base")
+	RemoveBuffByFullName(entity = $obj1, buff = "myplugin/squat_buff_move")
+	RemoveBuffByFullName(entity = $obj1, buff = "myplugin/squat_buff_break_vector")
+	
+	AddSkill(entity = $obj1, name = "myplugin/fly_skill_cancel")
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/fly_buff")
+	$obj1.checkFlyStateTimer = StartTimer(time = 2, event = "CHECK_ENTITY_FLY_STATE", object = $obj1, rep = true)
+
+	$unit = {x = 0, y = 1.2, z = 0}
+	$pos = GetEntityPosition(entity = $obj1)
+	$upPos = ComputeV3(op = "add", p1 = $pos, p2 = $unit)
+	$downPos = ComputeV3(op = "sub", p1 = $pos, p2 = {x = 0, y = 0.5, z = 0})
+	$blockId = GetPosBlockId(map = GetEntityMap(entity = $obj1), pos = $downPos)
+	$objID = GetObjectIdUnderFoot(entity = $obj1)
+	If($blockId > 0 or $objID > 0){
+		SetEntityPosition(entity = $obj1, pos = $upPos)
+	}
+}

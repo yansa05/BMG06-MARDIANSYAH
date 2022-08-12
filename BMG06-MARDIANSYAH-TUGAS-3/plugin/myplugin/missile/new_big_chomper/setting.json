@@ -1,0 +1,21 @@
+{
+    "followTarget": false,
+    "collideBlock": 0,
+    "collideEntity": 4,
+    "hitCount":1,
+    "hitInterval": 1,
+    "rotateSpeed": 0,
+    "moveSpeed": 0.25,
+    "lifeTime": 18,
+    "gravity": 0,
+    "hitEntitySkill": "myplugin/fire_ball_attack_1",
+    "moveAcc": 0.12,
+    "boundingVolume": {
+        "params": [
+            1,
+            3,
+            1
+        ],
+        "type": "Box"
+    }
+}

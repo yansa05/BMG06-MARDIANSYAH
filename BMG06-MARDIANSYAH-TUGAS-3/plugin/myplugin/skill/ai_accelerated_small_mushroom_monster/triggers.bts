@@ -1,0 +1,3 @@
+SKILL_CAST(){
+	AddEntityBuff(entity = $obj1, cfg = "myplugin/accelerate_small_mushroom_monster", buffTime = 10)
+}

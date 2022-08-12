@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Imageset autoScaled="vertical" imagefile="rankTeamSet.png" name="rankTeamSet" nativeHorzRes="512" nativeVertRes="64" resourceGroup="imagesets" version="2">
+	<Image height="16" name="icon_death_icon" width="16" xPos="0" yPos="0"/>
+	<Image height="48" name="icon_open_2_icon" width="57" xPos="16" yPos="0"/>
+	<Image height="24" name="icon_open_icon" width="36" xPos="73" yPos="0"/>
+	<Image height="48" name="icon_title_bg_icon" width="218" xPos="109" yPos="0"/>
+</Imageset>

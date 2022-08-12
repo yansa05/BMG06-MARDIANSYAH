@@ -1,0 +1,28 @@
+{"frames": {
+
+"gold_apple.png":
+{
+	"frame": {"x":0,"y":0,"w":30,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30}
+},
+"gold_apple_hp.png":
+{
+	"frame": {"x":0,"y":30,"w":36,"h":18},
+	"rotated": false,
+	"trimmed": false,
+	"offset": {"x":0,"y":0,"w":36,"h":18},
+	"sourceSize": {"w":36,"h":18}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "gold_apple.png",
+	"format": "RGBA8888",
+	"size": {"w":36,"h":48},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:d09ec479ef6c8fbe79776a95df36cb85:c95a033b23e922f05d7e8f1a234f3678:83ba34ad21931e59b6111a306d68d850$"
+}
+}

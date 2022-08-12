@@ -1,0 +1,50 @@
+{
+    "icon": "set:gun.json image:RightShoot",
+    "cdTime": 20,
+    "startWait": [
+        0
+    ],
+    "container": {
+        "autoReloadSkill": "myplugin/snipe_reload",
+        "takeNum": 1
+    },
+    "targetType": "trayRange",
+    "startFrom": "trayTarget",
+    "missileCount": 3,
+    "frontSight": "myplugin/frontsight_2",
+    "missileCfg": "myplugin/missile_shotgun",
+    "type": "Missile",
+    "castSound": {
+        "volume": 1,
+        "selfOnly": false,
+        "loop": false,
+        "sound": "fire_ball.mp3"
+    },
+    "castAction": "pistol_shoot",
+    "enableCdMask": true,
+    "iconArea": {
+        "VA": -250,
+        "VAlign": 2,
+        "HA": -50,
+        "HAlign": 2,
+        "width": 145,
+        "height": 145
+    },
+    "maskIcon": "plugin\/myplugin\/skill\/fire_ball\/base_progress.png",
+    "muzzleEffect": {
+        "effect": "effect_gun_default_flame.effect",
+        "time": 300,
+        "scale": {"x": 8, "y": 8, "z":8},
+        "FPscale": {"x": 2, "y": 2, "z":2}
+    },
+	"muzzleOffset": {
+		"yaw": -10,
+		"pitch": -6,
+		"len": 1.5
+	 },
+	 "fPSmuzzleOffset" :{
+		 "len": 0.3,
+		  "x": 95,
+		  "y": 25
+	 }
+}

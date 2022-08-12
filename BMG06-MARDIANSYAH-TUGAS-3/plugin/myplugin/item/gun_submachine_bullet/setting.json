@@ -1,0 +1,19 @@
+{
+  "baseDesc": "myplugin/bullet_base_desc",
+  "canAbandon": true,
+  "desc": "{myplugin/bullet_base_desc}\n",
+  "icon": "icon_Submachine_bullet.png",
+  "itemname": "myplugin/gun_submachine_bullet",
+  "stack_count_max": 64,
+  "matItem_first": {
+    "rotateX": -30,
+    "rotateY": 0,
+    "rotateZ": -30,
+    "scale": 0.5,
+    "translate": {
+      "x": 0,
+      "y": -0.2,
+      "z": 0.05
+    }
+  }
+}

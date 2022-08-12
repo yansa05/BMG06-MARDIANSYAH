@@ -1,0 +1,7 @@
+{
+  "damage": 10,
+  "defense": 0,
+  "jumpSpeed": 0,
+  "moveSpeed": 0,
+  "type": "FoodBuff"
+}

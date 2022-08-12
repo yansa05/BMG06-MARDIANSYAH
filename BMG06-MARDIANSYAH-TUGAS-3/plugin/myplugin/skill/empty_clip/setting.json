@@ -1,0 +1,11 @@
+{
+	"type": "Base",
+	"cdTime": 4,
+	"castAction": "pistol_shoot",
+	"castSound": {
+		"loop": false,
+        "selfOnly": false,
+        "sound": "No_Bullet.mp3",
+        "volume": 1
+	}
+}

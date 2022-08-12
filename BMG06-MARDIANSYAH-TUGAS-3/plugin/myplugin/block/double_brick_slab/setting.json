@@ -1,0 +1,31 @@
+{
+    "dropItemList": [
+        [
+            "block",
+            1,
+            1,
+            "myplugin/double_brick_slab",
+            "block:myplugin/double_brick_slab",
+            "double_brick_slab"
+        ]
+    ],
+    "editBaseFunc": "block_breakTime",
+    "breakTime": 20,
+    "texture": [
+        "brick_double_brick_slab.png",
+        "brick_double_brick_slab.png",
+        "brick_double_brick_slab.png",
+        "brick_double_brick_slab.png",
+        "brick_double_brick_slab.png",
+        "brick_double_brick_slab.png"
+    ],
+    "settingUI": {
+        "tabList": [
+            {
+                "leftName": "editor.ui.baseProp",
+                "wndName": "BaseProp"
+            }
+        ]
+    },
+    "base": "base_block"
+}

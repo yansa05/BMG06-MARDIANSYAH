@@ -1,0 +1,30 @@
+{
+		"itemname":"fire_attach",
+		"editBaseFunc":"attach_fire_self2",
+		"basePropDesc":{
+			"flame_buff_duration":[
+				5,
+				"flame_buff_duration_unit"
+			],
+			"flame_buff_continuous_damage":[
+				2,
+				"flame_buff_continuous_damage_unit"
+			]
+		},
+		"icon2":"flame.png",
+		"attachType":"fire",
+		"icon_path":"plugin\/myplugin\/item\/attach_fire_self2\/flame_self.png",
+		"attachBuff":"myplugin\/attach_fire2_1592400724",
+		"isAttach":true,
+		"desc":"{flame_buff_duration}5.0{flame_buff_duration_unit}\n{flame_buff_continuous_damage}2{flame_buff_continuous_damage_unit}\n",
+		"settingUI":{
+			"tabList":[
+				{
+					"wndName":"BaseProp",
+					"leftName":"editor.ui.baseProp"
+				}
+			]
+		},
+		"forTeam":false,
+		"icon":"set:buff_icon.json image:flame_self.png"
+	}

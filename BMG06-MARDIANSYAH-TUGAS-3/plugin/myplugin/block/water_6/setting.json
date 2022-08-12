@@ -1,0 +1,208 @@
+{
+  "base": "base_block",
+  "basePropDesc": {
+    "block.die.drop.title": [
+      [
+        [
+          "block",
+          1,
+          1,
+          "myplugin/water_6",
+          "block:myplugin/water_6",
+          "water_6"
+        ]
+      ]
+    ],
+    "golden_apple_hardness": [
+      1
+    ]
+  },
+  "placeBlockSound": {
+    "loop": false,
+    "path": "resource/blocksound/water_place.mp3",
+    "sound": "",
+    "volume": 1
+  },
+  "blockType": "water",
+  "breakTime": 20,
+  "canSwim": true,
+  "clickPenetrate": true,
+  "collisionBoxes": [],
+  "desc": "{base_block_desc}\n{golden_apple_hardness}:1\n",
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/water_6",
+      "block:myplugin/water_6",
+      "water_6"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "emitLightInMaxLightMode": true,
+  "focusable": false,
+  "isOpaqueFullCube": false,
+  "lightOpacity": 0,
+  "quads": [
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.4,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 1
+        },
+        {
+          "x": 1,
+          "y": 0.4,
+          "z": 0
+        }
+      ],
+      "texture": "/water_still.png"
+    },
+    {
+      "pos": [
+        {
+          "x": 0,
+          "y": 0,
+          "z": 1
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 0
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "z": 1
+        }
+      ],
+      "texture": "/water_still.png"
+    }
+  ],
+  "renderPass": 5,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  }
+}

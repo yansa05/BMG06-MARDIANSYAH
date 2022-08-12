@@ -1,0 +1,22 @@
+{
+		"dropItemList":[
+			[
+				"block",
+				1,
+				1,
+				"myplugin\/birch_fence_gate_9",
+				"block:myplugin\/birch_fence_gate_9",
+				"birch_fence_gate_9"
+			]
+		],
+		"settingUI":{
+			"tabList":[
+				{
+					"leftName":"editor.ui.baseProp",
+					"wndName":"BaseProp"
+				}
+			]
+		},
+		"editBaseFunc":"block_breakTime",
+		"base":"birch_fence_gate_11"
+	}

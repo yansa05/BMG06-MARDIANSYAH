@@ -1,0 +1,33 @@
+{
+  "base": "base_block",
+  "breakTime": 20,
+
+  "dropItemList": [
+    [
+      "block",
+      1,
+      1,
+      "myplugin/leaves_spruce_opaque",
+      "block:myplugin/leaves_spruce_opaque",
+      "leaves_spruce_opaque"
+    ]
+  ],
+  "editBaseFunc": "block_breakTime",
+  "isOpaqueFullCube": false,
+  "settingUI": {
+    "tabList": [
+      {
+        "leftName": "editor.ui.baseProp",
+        "wndName": "BaseProp"
+      }
+    ]
+  },
+  "texture": [
+    "leaves_spruce_opaque.png",
+    "leaves_spruce_opaque.png",
+    "leaves_spruce_opaque.png",
+    "leaves_spruce_opaque.png",
+    "leaves_spruce_opaque.png",
+    "leaves_spruce_opaque.png"
+  ]
+}
